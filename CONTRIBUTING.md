@@ -42,7 +42,6 @@ Next, develop your resources in your own module repository. Make sure you:
 
 TODO: What actually happens at the end here? Does ownership of the module and repository transfer to us? Or they just submit a pull request for us to add it as a submodule to DscResources? Or do we fork it and become the new de-facto for that module, including it as part of DscResources and having people submit new code to us? 
 
-1 repository  for common tests:
 
 ## Style guidelines
 
