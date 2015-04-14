@@ -8,7 +8,14 @@ Hi there! We're thrilled that you'd like to contribute to this project. Your hel
 ### Contributing to documentation
 One of the easiest way to contribute to a PowerShell project is by helping to write and edit documentation. To [edit an existing file](https://help.github.com/articles/editing-files-in-another-user-s-repository/), simply navigate to it and click the "Edit" button. GitHub will automatically create your own fork of our repository where you can make your changes. Once you're finished, save your edits and submit a pull request to get your changes merged upstream. 
 
-If you want to contribute new documentation, first check for [issues tagged as "Documentation"](https://github.com/PowerShell/DscResources/labels/documentation) to make sure you're not duplicating efforts. If no one seems to be working on what you have planned, create a fork of our repository and start adding new files to it. Please use [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) to write your 
+If you want to contribute new documentation, first check for [issues tagged as "Documentation"](https://github.com/PowerShell/DscResources/labels/documentation) to make sure you're not duplicating efforts. If no one seems to be working on what you have planned, create a fork of our repository and start adding new files to it. Please use [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) in the style of [this example](DscResourcesExampleHelp.md).
+
+### Improving test coverage for existing resources
+
+All DSC modules in the DscResources should have tests written using [Pester](TODO) included in a Tests folder. 
+
+TODO: more
+
 
 ### Creating a new resource in an existing module
 
@@ -16,9 +23,9 @@ If you would like to add a DSC resource:
 * [Open an issue tagged as "TODO"](TODO) in the module repository where you'd like to add a DSC resource
 * Fork the *development* branch of the module repository you'd like to improve
 * In your own forked branch, add and develop your new resources. Make sure you:
-    - TODO: Write tests using Pester
+    - TODO: Write tests using [Pester](TODO)
     - TODO: Write documentation using GitHub Flavored Markdown 
-    - Write (or alter) an example configuration demonstrating how your resource should be used
+    - Write (or alter) an example configuration in the Examples subdirectory demonstrating how your resource should be used
     - DO NOT change the *.psd1 ModuleVersion (we will be updating this before releasing to the Gallery)
     - TODO: Something with appveyor?
     - TODO: Follow our style guidelines
@@ -51,6 +58,7 @@ When contributing to any PowerShell repositories, please follow the following gu
 
 * For all indentation, use 4 spaces instead of tab stops
 * Make sure all files are encoding using UTF-8. 
+* Windows handles [newlines](http://en.wikipedia.org/wiki/Newline) using CR+LF instead of just CR. For interoperability reasons, we recommend that you follow [these instructions](TODO SETUP/INTRO.md?) when installing Git on Windows. 
 
 ## Branches structure
 
