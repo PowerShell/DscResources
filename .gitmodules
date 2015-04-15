@@ -4,3 +4,135 @@
 [submodule "xDscResources/xAdcsDeployment"]
 	path = xDscResources/xAdcsDeployment
 	url = https://github.com/PowerShell/xAdcsDeployment
+[submodule "xDscResources/xAzure"]
+	path = xDscResources/xAzure
+	url = https://github.com/PowerShell/xAzure
+[submodule "xDscResources/xAzurePack"]
+	path = xDscResources/xAzurePack
+	url = https://github.com/PowerShell/xAzurePack
+[submodule "xDscResources/xBitlocker"]
+	path = xDscResources/xBitlocker
+	url = https://github.com/PowerShell/xBitlocker
+[submodule "xDscResources/xChrome"]
+	path = xDscResources/xChrome
+	url = https://github.com/PowerShell/xChrome
+[submodule "xDscResources/xComputerManagement"]
+	path = xDscResources/xComputerManagement
+	url = https://github.com/PowerShell/xComputerManagement
+[submodule "xDscResources/xCredSSP"]
+	path = xDscResources/xCredSSP
+	url = https://github.com/PowerShell/xCredSSP
+[submodule "xDscResources/xDatabase"]
+	path = xDscResources/xDatabase
+	url = https://github.com/PowerShell/xDatabase
+[submodule "xDscResources/xDhcpServer"]
+	path = xDscResources/xDhcpServer
+	url = https://github.com/PowerShell/xDhcpServer
+[submodule "xDscResources/xDismFeature"]
+	path = xDscResources/xDismFeature
+	url = https://github.com/PowerShell/xDismFeature
+[submodule "xDscResources/xDnsServer"]
+	path = xDscResources/xDnsServer
+	url = https://github.com/PowerShell/xDnsServer
+[submodule "xDscResources/xDscDiagnostics"]
+	path = xDscResources/xDscDiagnostics
+	url = https://github.com/PowerShell/xDscDiagnostics
+[submodule "xDscResources/xDSCResourceDesigner"]
+	path = xDscResources/xDSCResourceDesigner
+	url = https://github.com/PowerShell/xDSCResourceDesigner
+[submodule "xDscResources/xExchange"]
+	path = xDscResources/xExchange
+	url = https://github.com/PowerShell/xExchange
+[submodule "xDscResources/xFailOverCluster"]
+	path = xDscResources/xFailOverCluster
+	url = https://github.com/PowerShell/xFailOverCluster
+[submodule "xDscResources/xFirefox"]
+	path = xDscResources/xFirefox
+	url = https://github.com/PowerShell/xFirefox
+[submodule "xDscResources/xHyper-V"]
+	path = xDscResources/xHyper-V
+	url = https://github.com/PowerShell/xHyper-V
+[submodule "xDscResources/xInternetExplorerHomePage"]
+	path = xDscResources/xInternetExplorerHomePage
+	url = https://github.com/PowerShell/xInternetExplorerHomePage
+[submodule "xDscResources/xJea"]
+	path = xDscResources/xJea
+	url = https://github.com/PowerShell/xJea
+[submodule "xDscResources/xMySql"]
+	path = xDscResources/xMySql
+	url = https://github.com/PowerShell/xMySql
+[submodule "xDscResources/xNetworking"]
+	path = xDscResources/xNetworking
+	url = https://github.com/PowerShell/xNetworking
+[submodule "xDscResources/xPendingReboot"]
+	path = xDscResources/xPendingReboot
+	url = https://github.com/PowerShell/xPendingReboot
+[submodule "xDscResources/xPhp"]
+	path = xDscResources/xPhp
+	url = https://github.com/PowerShell/xPhp
+[submodule "xDscResources/xPowerShellExecutionPolicy"]
+	path = xDscResources/xPowerShellExecutionPolicy
+	url = https://github.com/PowerShell/xPowerShellExecutionPolicy
+[submodule "xDscResources/xPSDesiredStateConfiguration"]
+	path = xDscResources/xPSDesiredStateConfiguration
+	url = https://github.com/PowerShell/xPSDesiredStateConfiguration
+[submodule "xDscResources/xRemoteDesktopAdmin"]
+	path = xDscResources/xRemoteDesktopAdmin
+	url = https://github.com/PowerShell/xRemoteDesktopAdmin
+[submodule "xDscResources/xRemoteDesktopSessionHost"]
+	path = xDscResources/xRemoteDesktopSessionHost
+	url = https://github.com/PowerShell/xRemoteDesktopSessionHost
+[submodule "xDscResources/xSafeHarbor"]
+	path = xDscResources/xSafeHarbor
+	url = https://github.com/PowerShell/xSafeHarbor
+[submodule "xDscResources/xSCDPM"]
+	path = xDscResources/xSCDPM
+	url = https://github.com/PowerShell/xSCDPM
+[submodule "xDscResources/xSCOM"]
+	path = xDscResources/xSCOM
+	url = https://github.com/PowerShell/xSCOM
+[submodule "xDscResources/xSCSMA"]
+	path = xDscResources/xSCSMA
+	url = https://github.com/PowerShell/xSCSMA
+[submodule "xDscResources/xSCSPF"]
+	path = xDscResources/xSCSPF
+	url = https://github.com/PowerShell/xSCSPF
+[submodule "xDscResources/xSCSR"]
+	path = xDscResources/xSCSR
+	url = https://github.com/PowerShell/xSCSR
+[submodule "xDscResources/xSCVMM"]
+	path = xDscResources/xSCVMM
+	url = https://github.com/PowerShell/xSCVMM
+[submodule "xDscResources/xSmbShare"]
+	path = xDscResources/xSmbShare
+	url = https://github.com/PowerShell/xSmbShare
+[submodule "xDscResources/xSqlPs"]
+	path = xDscResources/xSqlPs
+	url = https://github.com/PowerShell/xSqlPs
+[submodule "xDscResources/xSQLServer"]
+	path = xDscResources/xSQLServer
+	url = https://github.com/PowerShell/xSQLServer
+[submodule "xDscResources/xSystemSecurity"]
+	path = xDscResources/xSystemSecurity
+	url = https://github.com/PowerShell/xSystemSecurity
+[submodule "xDscResources/xTimeZone"]
+	path = xDscResources/xTimeZone
+	url = https://github.com/PowerShell/xTimeZone
+[submodule "xDscResources/xWebAdministration"]
+	path = xDscResources/xWebAdministration
+	url = https://github.com/PowerShell/xWebAdministration
+[submodule "xDscResources/xWebDeploy"]
+	path = xDscResources/xWebDeploy
+	url = https://github.com/PowerShell/xWebDeploy
+[submodule "xDscResources/xWindowsRestore"]
+	path = xDscResources/xWindowsRestore
+	url = https://github.com/PowerShell/xWindowsRestore
+[submodule "xDscResources/xWindowsUpdate"]
+	path = xDscResources/xWindowsUpdate
+	url = https://github.com/PowerShell/xWindowsUpdate
+[submodule "xDscResources/xWinEventLog"]
+	path = xDscResources/xWinEventLog
+	url = https://github.com/PowerShell/xWinEventLog
+[submodule "xDscResources/xWordPress"]
+	path = xDscResources/xWordPress
+	url = https://github.com/PowerShell/xWordPress
