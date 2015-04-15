@@ -1,4 +1,4 @@
-# Contribute to [PowerShell](https://github.com/powershell) repositories
+# Contribute to DscResources repository
 
 Hi there! We're thrilled that you'd like to contribute to this project. Your help is essential to keeping it great. 
 
