@@ -6,36 +6,39 @@ Hi there! We're thrilled that you'd like to contribute to this project. Your hel
 ## Contributing to existing resources
 
 ### Contributing to documentation
-One of the easiest way to contribute to a PowerShell project is by helping to write and edit documentation. To [edit an existing file](https://help.github.com/articles/editing-files-in-another-user-s-repository/), simply navigate to it and click the "Edit" button. GitHub will automatically create your own fork of our repository where you can make your changes. Once you're finished, save your edits and submit a pull request to get your changes merged upstream. 
+One of the easiest way to contribute to a PowerShell project is by helping to write and edit documentation. 
+To [edit an existing file](https://help.github.com/articles/editing-files-in-another-user-s-repository/), simply navigate to it and click the "Edit" button. 
+GitHub will automatically create your own fork of our repository where you can make your changes. 
+Once you're finished, save your edits and submit a pull request to get your changes merged upstream. 
 
-If you want to contribute new documentation, first check for [issues tagged as "Documentation"](https://github.com/PowerShell/DscResources/labels/documentation) to make sure you're not duplicating efforts. If no one seems to be working on what you have planned, create a fork of our repository and start adding new files to it. Please use [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) in the style of [this example](DscResourcesExampleHelp.md).
+If you want to contribute new documentation, first check for [issues tagged as "Documentation"](https://github.com/PowerShell/DscResources/labels/documentation) to make sure you're not duplicating efforts.
+If no one seems to be working on what you have planned, create a fork of our repository and start adding new files to it.
+Please use [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) in the style of [this example](DscResourcesExampleHelp.md).
 
 ### Improving test coverage for existing resources
 
-All DSC modules in the DscResources should have tests written using [Pester](TODO) included in a Tests folder. 
+All DSC modules in the DscResources should have tests written using [Pester](https://github.com/pester/Pester) included in a Tests folder. 
 
-TODO: more
-
+One of the most effective way to report a bug is to provide a pester test that fails. 
+It's dramatically simplifies work for the person who will fix it, increases code coverage and prevents regressions.
 
 ### Creating a new resource in an existing module
 
 If you would like to add a DSC resource:
-* [Open an issue tagged as "TODO"](TODO) in the module repository where you'd like to add a DSC resource
-* Fork the *development* branch of the module repository you'd like to improve
+* Open an issue in the module repository where you'd like to add a DSC resource to coordinate your work with others.
+* Fork the the module repository you'd like to improve. 
+* Use *dev* branch as a baseline for work (`git checkout dev; git checkout -b my_awesome_resource`).
 * In your own forked branch, add and develop your new resources. Make sure you:
-    - TODO: Write tests using [Pester](TODO)
-    - TODO: Write documentation using GitHub Flavored Markdown 
+    - Write pester tests.
+    - Write documentation using GitHub Flavored Markdown 
     - Write (or alter) an example configuration in the Examples subdirectory demonstrating how your resource should be used
     - DO NOT change the *.psd1 ModuleVersion (we will be updating this before releasing to the Gallery)
-    - TODO: Something with appveyor?
-    - TODO: Follow our style guidelines
-
 
 ## Contributing a new DSC resource module
 
-If you would like to share your DSC resource module or create a brand new module, first [open an issue](TODO) with following information:
+If you would like to share your DSC resource module or create a brand new module, first [open an issue](https://github.com/PowerShell/DscResources/issues) with following information:
 
-Use template from [TODO] which provides boilerplate files like [appveyor.yml](appveyor.yml) for CI integration.
+Use template from [DscResource.Template folder](DscResource.Template) which provides boilerplate files like [appveyor.yml](appveyor.yml) for CI integration.
 
 * What system will your DSC resources be managing?
     - For example, [xActiveDirectory](https://github.com/powershell/xActiveDirectory) models and manages Active Directory
@@ -43,30 +46,28 @@ Use template from [TODO] which provides boilerplate files like [appveyor.yml](ap
 
 Next, develop your resources in your own module repository. Make sure you:
 
-* Follow our style guidelines (TODO)
-* Write a set of test cases specific to your resources using [Pester](TODO). Place them in a Tests directory (TODO?)
-* Run all common tests located in [xDSCResources.Tests](https://github.com/PowerShell/xDSCResources.Tests)
+* Write a set of test cases specific to your resources using pester. Place them in a `Tests` directory.
+* Run all common tests located in [xDSCResources.Tests](https://github.com/PowerShell/DscResource.Tests)
 
-TODO: What actually happens at the end here? Does ownership of the module and repository transfer to us? Or they just submit a pull request for us to add it as a submodule to DscResources? Or do we fork it and become the new de-facto for that module, including it as part of DscResources and having people submit new code to us? 
+Follow up in the opened issue to discuss ownership strategy with PowerShell team.
+The are two options:
+* Transfer ownership to PowerShell organization.
+* Fork your repository in PowerShell organization.
 
+PowerShell team will include repo (or fork) as a git submodule to [DscResources](https://github.com/PowerShell/DscResources).
 
 ## Style guidelines
-
-TODO: Could use some guidance here about encoding, text editors, setting up Git properly on Windows with CR+LF -> CR, etc. 
 
 When contributing to any PowerShell repositories, please follow the following guidelines: 
 
 * For all indentation, use 4 spaces instead of tab stops
 * Make sure all files are encoding using UTF-8. 
-* Windows handles [newlines](http://en.wikipedia.org/wiki/Newline) using CR+LF instead of just CR. For interoperability reasons, we recommend that you follow [these instructions](TODO SETUP/INTRO.md?) when installing Git on Windows. 
+* Windows handles [newlines](http://en.wikipedia.org/wiki/Newline) using CR+LF instead of just CR. For interoperability reasons, we recommend that you follow [these instructions](GettingStartedWithGitHub.md#setup-git) when installing Git on Windows. 
 
 ## Branches structure
 
 We are using [git flow](http://nvie.com/posts/a-successful-git-branching-model/) model for development.
 We recommend that you create local working branches that target a specific scope of change. 
-Each branch should be limited to a single feature/bugfix both to streamline work flow and reduce the possibility of merge conflicts.  
+Each branch should be limited to a single feature/bugfix both to streamline work flow and reduce the possibility of merge conflicts.
+Please, read this excellent [overview of git flow](http://nvie.com/posts/a-successful-git-branching-model/) for more information (20 minutes reading).
 ![git flow picture](http://nvie.com/img/git-model@2x.png)
-
-## Releasing
-
-TODO
