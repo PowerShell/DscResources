@@ -1,7 +1,7 @@
 ## Register on Github
 
-[Create](https://github.com/join) GitHub account
-(TODO: add SignUp.png)
+[Create](https://github.com/join) GitHub account:
+![SignUp](Images/SignUp.png)
 
 ## Install git
 Download and install git from the official web-site http://git-scm.com/
@@ -9,7 +9,10 @@ Download and install git from the official web-site http://git-scm.com/
 During install:
 
 1. Choose "Use git from the Windows command prompt".
+![Git-Setup-Path](Images/Git-Setup-Path.png)
+
 2. Choose "Checkout Windows-style, commit Unit-style line endings"
+![Git-Setup-Endings](Images/Git-Setup-Endings.png)
 
 You will have two option for git command line: "powershell.exe" or "git bash". Open one of them.
 
