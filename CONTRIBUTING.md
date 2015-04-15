@@ -47,7 +47,7 @@ Use template from [DscResource.Template folder](DscResource.Template) which prov
 Next, develop your resources in your own module repository. Make sure you:
 
 * Write a set of test cases specific to your resources using pester. Place them in a `Tests` directory.
-* Run all common tests located in [xDSCResources.Tests](https://github.com/PowerShell/DscResource.Tests)
+* Run all common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests)
 
 Follow up in the opened issue to discuss ownership strategy with PowerShell team.
 The are two options:
@@ -55,6 +55,19 @@ The are two options:
 * Fork your repository in PowerShell organization.
 
 PowerShell team will include repo (or fork) as a git submodule to [DscResources](https://github.com/PowerShell/DscResources).
+
+## AppVeyor
+
+We use [AppVeyor](http://www.appveyor.com/) as a continious integration system.
+AppVeyor builds and runs tests on every Pull Request and provides quick feedback about it.
+
+![AppVeyor-Github](Images/AppVeyor-Github.png)
+
+## Common Tests
+There are common dsc resources tests. 
+They primarly concentrate on things like code style, encoding, modules versions consistency.
+`appveyor.yml` file (describes build / test sequence for CI).
+It include step to get the latest [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) runs them as part of all tests.
 
 ## Style guidelines
 
