@@ -14,6 +14,8 @@ Pull request lifecycle:
 Always create Pull Request to `dev` branch, see [branches structure](#branches-structure) for details.
 If it's relate to existing github issue, it's a good idea to put an issue reference in the description.
 
+* If it's your first contribution to DscResources, you would be asked to sign-up contributors agreement.
+
 * CI system [runs a build with tests](#appveyor) and updates pull request status.
 
 * One of module maintainers (it can be somebody from PowerShell team or a community member) will do a code review.
