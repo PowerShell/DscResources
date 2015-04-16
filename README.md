@@ -1,5 +1,11 @@
 # DSC Resources
 
+Windows PowerShell Desired State Configuration (DSC) provides a configuration platform built into Windows that is based on open standards. 
+DSC is flexible enough to function reliably and consistently in each stage of the deployment lifecycle (development, test, pre-production, production), as well as during scale-out, which is required in the cloud world. 
+
+To learn more about Windows PowerShell Desired State Configuration, check out the blog posts on the [PowerShell Blog](http://blogs.msdn.com/b/powershell/) ([this](http://blogs.msdn.com/b/powershell/archive/2013/11/01/configuration-in-a-devops-world-windows-powershell-desired-state-configuration.aspx) is a good starting point).
+There are also great community resources, such as [PowerShell.org](http://powershell.org/wp/tag/dsc/), or [PowerShell Magazine](http://www.powershellmagazine.com/tag/dsc/).
+
 ## Repository structure
 This is the central repository for PowerShell Desired State Configuration (DSC) resources.
 DSC resources are packaged in PowerShell modules, along with tests, documentation, and examples, each in their own GitHub repositories. 
