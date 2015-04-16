@@ -200,6 +200,16 @@ However, you should still submit pull requests to our fork in order to take your
 ## AppVeyor
 
 We use [AppVeyor](http://www.appveyor.com/) as a continious integration (CI) system.
+
+In the `README.md` of every DSC resource module repo at the top you can see AppVeyor badge.
+It indicates the last build status of master branch.
+Hopefuly it's green
+
+![AppVeyor-Badge-Green.png](Images/AppVeyor-Badge-Green.png)
+
+This badge is **clickable**, you can open corresponding build page with logs, artifacts and tests results.
+From there you can easily navigate to the whole build history.
+
 AppVeyor builds and runs tests on every pull request and provides quick feedback about it.
 
 ![AppVeyor-Github](Images/AppVeyor-Github.png)
