@@ -22,12 +22,6 @@ Or just download the respository's structure and documentation
 git clone https://github.com/PowerShell/DscResources.git
 ```
 
-## Use GitHub, Git, and this repository
-
-Start by reading our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
-
-To understand the key concepts of Git, we recommend taking 20 minutes out of your day to read Vincent Driessen's excellent post on [a successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/). 
-
 ## Reporting bugs or suggesting features
 If you've found a bug in a particular DSC module, or you have a suggestion for how to improve it, submit an issue in the module's repository. 
 
