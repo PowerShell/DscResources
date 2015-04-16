@@ -126,7 +126,7 @@ If no one seems to be working on what you have planned:
 #### Standard markdown
 
 All of the articles in this repository use Markdown.  
-While a complete introduction (and listing of all the syntax) can be found here [Markdown Home][https://help.github.com/articles/github-flavored-markdown/], the relevant basics will be covered here.
+While a complete introduction (and listing of all the syntax) can be found here [Markdown Home](https://help.github.com/articles/github-flavored-markdown/), the relevant basics will be covered here.
 
 If you are looking for a good editor, try [Markdown Pad](http://markdownpad.com/).
 Or use web browser: GitHub web interface provides good markdown edit expirience by itself, with syntax highlighting and Preview. 
