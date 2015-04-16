@@ -123,8 +123,6 @@ If no one seems to be working on what you have planned:
 * When you're ready to contribute your documentation, submit a pull request to the *dev* branch
 
 
-### How to use markdown format
-
 #### Standard markdown
 
 All of the articles in this repository use Markdown.  
