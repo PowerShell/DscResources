@@ -4,7 +4,7 @@
 ![SignUp](Images/SignUp.png)
 
 ## Install git
-Download and install git from the official web-site http://git-scm.com/
+Download and install git for win from the [official web-site](http://git-scm.com/download/win).
 
 During install:
 
