@@ -111,7 +111,6 @@ If it's relate to existing github issue, it's a good idea to put an issue refere
 ### Contributing to documentation
 One of the easiest ways to contribute to a PowerShell project is by helping to write and edit documentation. 
 All of our documentation hosted on GitHub is written using [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) in the style of [this example](DscResourcesExampleHelp.md).
-Please make sure to also follow our [style guidelines](#style-guidelines) when writing documentation. 
 
 To [edit an existing file](https://help.github.com/articles/editing-files-in-another-user-s-repository/), simply navigate to it and click the "Edit" button. 
 GitHub will automatically create your own fork of our repository where you can make your changes. 
@@ -122,6 +121,38 @@ If no one seems to be working on what you have planned:
 * Open a new issue tagged as "Documentation" to tell others what you're working on
 * Create a fork of our repository and start adding new Markdown-based documentation to it
 * When you're ready to contribute your documentation, submit a pull request to the *dev* branch
+
+
+### How to use markdown format
+
+#### Standard markdown
+
+All of the articles in this repository use Markdown.  
+While a complete introduction (and listing of all the syntax) can be found here [Markdown Home][https://help.github.com/articles/github-flavored-markdown/], the relevant basics will be covered here.
+
+If you are looking for a good editor, try [Markdown Pad](http://markdownpad.com/).
+Or use web browser: GitHub web interface provides good markdown edit expirience by itself, with syntax highlighting and Preview. 
+
+Below is a list of the most common markdown syntax.
+
+*   **Line breaks vs. paragraphs:** In Markdown there is no HTML `<br />` element. 
+Instead, a new paragraph is designated by an empty line between two blocks of text.
+Keep one line per sentence.
+It will simplify diffs and history.
+*   **Italics:** The HTML `<i>some text</i>` is written `*some text*`
+*   **Bold:** The HTML `<strong>some text</strong>` element is written `**some text**`
+*   **Headings:** HTML headings are designated by an number of `#` characters at the start of the line.  The number of `#` characters corresponds to the hierarchical level of the heading (for example, `#` = h1 and `###` = h3).
+*   **Numbered lists:** To make an numbered (ordered) list start the line with `1. `.  If you want multiple elements within a single list element, format your list as follows:
+        
+        1.  Notice that this line is tabbed over after the '.'
+        
+            Now notice that there is a line break between the two paragraphs in the list element, and that the indentation here matches the indentation of the line above.
+
+*   **Bulleted lists:** Bulleted (unordered) lists are almost identical to ordered lists except that the `1. ` is replaced with either `* `, `- `, or `+ `.  Multiple element lists work the same way as with ordered lists.
+*   **Links:** The base syntax for a link is `[visible link text](link url)`.
+
+    Links can also have references, which will be discussed in the "Link and Image References" section below.
+
 
 ### Improving test coverage for existing resources
 
