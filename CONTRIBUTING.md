@@ -5,6 +5,21 @@ Hi there! We're thrilled that you'd like to contribute to this project. Your hel
 
 ## Contributing to existing DSC resources
 
+GitHub provides contribution model with [Pull Requests](https://help.github.com/articles/using-pull-requests/).
+Once you [fork](https://help.github.com/articles/fork-a-repo/) a repository you have a full control on your fork.
+To contribute changes you made back to our repository, you create a pull request.
+Pull request lifecycle:
+
+* when you create a pull request, describe what's the purpose of it in description. 
+Always create Pull Request to `dev` branch, see [branches structure](#branches-structure) for details.
+If it's relate to existing github issue, it's a good idea to put an issue reference in the description.
+
+* CI system [runs a build with tests](#appveyor) and updates pull request status.
+
+* One of module maintainers (it can be somebody from PowerShell team or a community member) will do a code review.
+
+* Once code review done, merge conflicts resolved and CI build is green, maintainer will merge your changes.
+
 ### Contributing to documentation
 One of the easiest ways to contribute to a PowerShell project is by helping to write and edit documentation. 
 All of our documentation hosted on GitHub is written using [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) in the style of [this example](DscResourcesExampleHelp.md).
