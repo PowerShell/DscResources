@@ -77,6 +77,7 @@ There are two options:
 * Transfer full ownership of your module to the PowerShell organization.
 This means we will have full control and permissions to the module repository.
 In the future, you will have to fork and submit pull requests to commit changes as if it were any other submodule in [DscResources](https://github.com/PowerShell/DscResources).
+![Transfer-Ownership](Images/GitHub-Transfer-Ownership.png)
 * Allow the PowerShell organization to fork your repository and use that fork as a submodule of [DscResources](https://github.com/DscResources).
 This means that you can continue to operate as you wish on your own branch of the module.
 However, you should still submit pull requests to our fork in order to take your changes into the "official" version of the module. 
