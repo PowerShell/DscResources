@@ -139,6 +139,9 @@ They primarly concentrate on things like code style, encoding, and module versio
 The `appveyor.yml` file in each module repository describes the build and test sequence for CI. 
 Make sure to run these tests before submitting a pull request. 
 
+[DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) contains **Fixers** where it's possible.
+I.e. you can use [MetaFixers](https://github.com/PowerShell/DscResource.Tests/blob/master/MetaFixers.psm1) to convert all indentations and file encodings.
+
 ## Style guidelines
 
 When contributing to any PowerShell repositories, please follow the following guidelines: 
