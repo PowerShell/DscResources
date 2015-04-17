@@ -14,8 +14,10 @@ To contribute changes you made back to our repository, you create a pull request
 Pull request lifecycle:
 
 * when you create a pull request, describe what's the purpose of it in description. 
-Always create Pull Request to `dev` branch, see [branches structure](#branches-structure) for details.
+**Always create Pull Request to `dev` branch**, see [branches structure](#branches-structure) for details.
 If it's relate to existing github issue, it's a good idea to put an issue reference in the description.
+
+![Github-PR-dev.png](Images/Github-PR-dev.png)
 
 * If it's your first contribution to DscResources, you would be asked to sign-up contributors agreement.
 
