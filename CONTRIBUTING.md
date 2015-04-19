@@ -8,24 +8,25 @@ Start by reading our [guide to getting started with GitHub](GettingStartedWithGi
 
 ## Contributing to existing DSC resources
 
-GitHub provides contribution model with [Pull Requests](https://help.github.com/articles/using-pull-requests/).
-Once you [fork](https://help.github.com/articles/fork-a-repo/) a repository you have a full control on your fork.
-To contribute changes you made back to our repository, you create a pull request.
-Pull request lifecycle:
+### Forks and Pull Requests
 
-* when you create a pull request, describe what's the purpose of it in description. 
-**Always create Pull Request to `dev` branch**, see [branches structure](#branches-structure) for details.
-If it's relate to existing github issue, it's a good idea to put an issue reference in the description.
+GitHub fosters collaboration through the notion of [pull requests](https://help.github.com/articles/using-pull-requests/).
+On GitHub, anyone can [fork](https://help.github.com/articles/fork-a-repo/) an existing repository into their own branch where they can make private changes to the original repository. 
+To contribute these changes back into the original repository, a user simply creates a pull request in order to "request" that the changes be taken "upstream". 
+
+#### Lifecycle of a pull reqeust
+
+* **Always create pull requests to the `dev` branch of a repository**. 
+For more information, learn about our [branch structure](#branch-structure).
 
 ![Github-PR-dev.png](Images/Github-PR-dev.png)
 
-* If it's your first contribution to DscResources, you would be asked to sign-up contributors agreement.
-
-* CI system [runs a build with tests](#appveyor) and updates pull request status.
-
-* One of module maintainers (it can be somebody from PowerShell team or a community member) will do a code review.
-
-* Once code review done, merge conflicts resolved and CI build is green, maintainer will merge your changes.
+* When you create a pull request, fill out the description with a summary of what's included in your changes. 
+If the changes are related to an existing GitHub issue, please reference the issue in your description.
+* If this is your first contribution to DscResources, you may be asked to sign a Contribution Licensing Agreement (CLA) before your changes will be accepted. 
+* After submitting your pull request, our CI system (Appveyor) [will run a suite of tests](#appveyor) and automatically update the status of the pull request.
+* After a successful test pass, the module's maintainers will do a code review, commenting on any changes that might need to be made. 
+* Once the code review is done, all merge conflicts are resolved, and the Appveyor build status is passing, a maintainer will merge your changes.
 
 ### Contributing to documentation
 One of the easiest ways to contribute to a PowerShell project is by helping to write and edit documentation. 
@@ -42,34 +43,40 @@ If no one seems to be working on what you have planned:
 * When you're ready to contribute your documentation, submit a pull request to the *dev* branch
 
 
-#### Standard markdown
+#### GitHub Flavored Markdown (GFM)
 
-All of the articles in this repository use Markdown.  
-While a complete introduction (and listing of all the syntax) can be found here [Markdown Home](https://help.github.com/articles/github-flavored-markdown/), the relevant basics will be covered here.
+All of the articles in this repository use [GitHub Flavored Markdown (GFM)](https://help.github.com/articles/github-flavored-markdown/).
 
-If you are looking for a good editor, try [Markdown Pad](http://markdownpad.com/).
-Or use web browser: GitHub web interface provides good markdown edit expirience by itself, with syntax highlighting and Preview. 
+If you are looking for a good editor, try [Markdown Pad](http://markdownpad.com/) or 
+GitHub also provides a web interface for Markdown editing with syntax highlighting and the ability to preview changes. 
 
-Below is a list of the most common markdown syntax.
+Some of the more basic GFM syntax includes:
 
-*   **Line breaks vs. paragraphs:** In Markdown there is no HTML `<br />` element. 
+* **Line breaks vs. paragraphs:** In Markdown there is no HTML `<br />` or `<p />` element. 
 Instead, a new paragraph is designated by an empty line between two blocks of text.
-Keep one line per sentence.
+(Note: Please add a single newline after each sentence to simplify the command-line output of diffs and history.)
 It will simplify diffs and history.
-*   **Italics:** The HTML `<i>some text</i>` is written `*some text*`
-*   **Bold:** The HTML `<strong>some text</strong>` element is written `**some text**`
-*   **Headings:** HTML headings are designated by an number of `#` characters at the start of the line.  The number of `#` characters corresponds to the hierarchical level of the heading (for example, `#` = h1 and `###` = h3).
-*   **Numbered lists:** To make an numbered (ordered) list start the line with `1. `.  If you want multiple elements within a single list element, format your list as follows:
-        
-        1.  Notice that this line is tabbed over after the '.'
-        
-            Now notice that there is a line break between the two paragraphs in the list element, and that the indentation here matches the indentation of the line above.
+* **Italics:** The HTML `<em>some text</em>` is written as `*some text*`
+* **Bold:** The HTML `<strong>some text</strong>` element is written as `**some text**`
+* **Headings:** HTML headings are designated using `#` characters at the start of the line. 
+The number of `#` characters corresponds to the hierarchical level of the heading (for example, `#` = `<h1>` and `###` = ```<h3>```).
+* **Numbered lists:** To make a numbered (ordered) list start the line with `1. `.  
+If you want multiple elements within a single list element, format your list as follows:
+```        
+1.  For the first element (like this one), insert a tab stop after the 1. 
 
-*   **Bulleted lists:** Bulleted (unordered) lists are almost identical to ordered lists except that the `1. ` is replaced with either `* `, `- `, or `+ `.  Multiple element lists work the same way as with ordered lists.
-*   **Links:** The base syntax for a link is `[visible link text](link url)`.
+    To include a second element (like this one), insert a line break after the first and align indentations.
+```
+to get this output:
 
-    Links can also have references, which will be discussed in the "Link and Image References" section below.
+1.  For the first element (like this one), insert a tab stop after the 1. 
 
+    To include a second element (like this one), insert a line break after the first and align indentations.
+
+* **Bulleted lists:** Bulleted (unordered) lists are almost identical to ordered lists except that the `1. ` is replaced with either `* `, `- `, or `+ `. 
+Multiple element lists work the same way as with ordered lists.
+* **Links:** The syntax for a hyperlink is `[visible link text](link url)`.
+Links can also have references, which will be discussed in the "Link and Image References" section below.
 
 ### Improving test coverage for existing resources
 
@@ -78,7 +85,7 @@ All DSC modules in the DscResources should have tests written using [Pester](htt
 One of the most effective ways to report a bug is to provide a Pester test that fails. 
 It dramatically simplifies work for the person who will fix it, increases code coverage, and prevents regressions in the future.
 
-### Creating a new resource in an existing module
+### Creating a new DSC resource in an existing module
 
 If you would like to add a DSC resource:
 * Open an issue in the module repository where you'd like to add a DSC resource to coordinate your work with others.
@@ -102,7 +109,8 @@ If you would like to share your DSC resource module or create a brand new module
 
 Next, develop your DSC resources in your own module repository. Make sure you:
 
-* Write a set of test cases specific to your resources using Pester. Place them in a `Tests` directory.
+* Write a set of test cases specific to your resources using Pester. 
+Place them in a `Tests` directory.
 * Use the template from the [DscResource.Template folder](DscResource.Template) as a boilerplate [appveyor.yml](appveyor.yml) for continuous integration (CI).
 * Run all common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests)
 
@@ -154,7 +162,7 @@ For interoperability reasons, we recommend that you follow [these instructions](
 GitHub will still render the sentences as a single paragraph, but the readability of `git diff` will be greatly improved. 
 
 
-## Branches structure
+## Branch structure
 
 We are using a [git flow](http://nvie.com/posts/a-successful-git-branching-model/) model for development.
 We recommend that you create local working branches that target a specific scope of change. 
