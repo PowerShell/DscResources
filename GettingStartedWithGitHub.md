@@ -124,6 +124,29 @@ Active branch is marked with `*`.
 ![Gitk.png](Images/Gitk.png)
 
 * After that can **push** changes to your fork with `git push my <branch>` command, i.e. `git push my awesome_feature`.
+
+## Sending pull request
+ 
+Now you should be able to see your branch in your fork on GitHub
+
+![GitHub-Select-Branch.png](Images/GitHub-Select-Branch.png)
+
+You can create a new pull request on the same pag
+
+![GitHub-Create-PR.png](Images/GitHub-Create-PR.png)
+
+Follow instructions from [pull request lifecycle](CONTRIBUTING.md#lifecycle-of-a-pull-reqeust) to finish Pull request creating.
+
+## Updating pull request
+
+To update Pull Request, simply push more commits to the same branch in your GitHub fork, that you use to create the pull request.
+
+```
+git commit -a -m "Update my awesome feature with codereview feedback"
+git push my awesome_feature
+```
+
+GitHub would automatically update pull request.
  
 ## Delete a branch
 
