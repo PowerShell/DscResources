@@ -30,3 +30,7 @@ If you've found a bug in a particular DSC module, or you have a suggestion for h
 ## Contributing
 
 See our [contribution guidelines](CONTRIBUTING.md).
+
+## Maintaining
+
+See our [guidelines for DSC resource maintainers](Maintainers.md).
