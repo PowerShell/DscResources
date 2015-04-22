@@ -6,6 +6,8 @@ DSC is flexible enough to function reliably and consistently in each stage of th
 To learn more about Windows PowerShell Desired State Configuration, check out the blog posts on the [PowerShell Blog](http://blogs.msdn.com/b/powershell/) ([this](http://blogs.msdn.com/b/powershell/archive/2013/11/01/configuration-in-a-devops-world-windows-powershell-desired-state-configuration.aspx) is a good starting point).
 There are also great community resources, such as [PowerShell.org](http://powershell.org/wp/tag/dsc/), or [PowerShell Magazine](http://www.powershellmagazine.com/tag/dsc/).
 
+If you would like to use DSC on Linux, there is a step by step guide available on the [Building Clouds Blog](http://blogs.technet.com/b/privatecloud/archive/2014/05/19/powershell-dsc-for-linux-step-by-step.aspx) and the source is available in the [Microsoft OpenTech repo](https://github.com/MSFTOSSMgmt/WPSDSCLinux).
+
 ## Repository structure
 This is the central repository for PowerShell Desired State Configuration (DSC) resources.
 DSC resources are packaged in PowerShell modules, along with tests, documentation, and examples, each in their own GitHub repositories. 
