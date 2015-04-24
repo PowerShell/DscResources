@@ -150,6 +150,18 @@ Make sure to run these tests before submitting a pull request.
 [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) contains **Fixers** where it's possible.
 I.e. you can use [MetaFixers](https://github.com/PowerShell/DscResource.Tests/blob/master/MetaFixers.psm1) to convert all indentations and file encodings.
 
+### Run common tests locally
+
+To run these common tests on your machine, you should clone [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) to resource directory that you want to test.
+Then run `Invoke-Pester` from root.
+
+```
+git clone https://github.com/PowerShell/DscResource.Tests
+Invoke-Pester
+```
+
+Avoid adding **DSCResource.Tests** folder to your changes.
+
 ## Style guidelines
 
 When contributing to any PowerShell repositories, please follow the following guidelines: 
