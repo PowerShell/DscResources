@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/powershell/dscresources.png?label=ready&title=Ready)](https://waffle.io/powershell/dscresources)
 # DSC Resources
 
 Windows PowerShell Desired State Configuration (DSC) provides a configuration platform built into Windows that is based on open standards. 
