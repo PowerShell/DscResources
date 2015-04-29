@@ -165,7 +165,7 @@ Avoid adding **DSCResource.Tests** folder to your changes.
 
 ## Style guidelines
 
-When contributing to any PowerShell repositories, please follow the following [Style Guideline](StyleGuideline.md)
+When contributing to any PowerShell repositories, please follow the following [Style Guideline](StyleGuidelines.md)
 
 ## Branch structure
 
