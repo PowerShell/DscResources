@@ -170,7 +170,7 @@ When contributing to any PowerShell repositories, please follow the following gu
 * Make sure all files are encoding using UTF-8. 
 * Windows handles [newlines](http://en.wikipedia.org/wiki/Newline) using CR+LF instead of just CR. 
 For interoperability reasons, we recommend that you follow [these instructions](GettingStartedWithGitHub.md#setup-git) when installing Git on Windows so that newlines saved to GitHub are simply CRs. 
-* When writing Markdown, if a paragraph includes more than one setence, end each sentence with a newline.
+* When writing Markdown, if a paragraph includes more than one sentence, end each sentence with a newline.
 GitHub will still render the sentences as a single paragraph, but the readability of `git diff` will be greatly improved. 
 
 
