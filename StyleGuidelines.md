@@ -17,25 +17,29 @@ PowerShell Coding Style Guidelines
 Code should not contain multiple blank lines in a row
 ---------------------------------------------------
 
-    Function Get-MyValue
-    {
-        Write-Verbose 'Getting MyValue'
-    
-    
-        return $MyValue
-    }
+```powershell
+Function Get-MyValue
+{
+    Write-Verbose 'Getting MyValue'
+
+
+    return $MyValue
+}
+```
 
 The above code breaks this rule by having two new lines between the write-verbose and the return.
 
 Opening curly brackets should not be followed by a blank line
 -------------------------------------------------------------
 
-    Function Get-MyValue
-    {
+```powershell
+Function Get-MyValue
+{
 
-        Write-Verbose 'Getting MyValue'
-    
-        return $MyValue
-    }
+    Write-Verbose 'Getting MyValue'
+
+    return $MyValue
+}
+```
 
 The code above breaks this rule by leaving a blank line after the opening curly brackets.
