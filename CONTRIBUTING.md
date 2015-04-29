@@ -162,17 +162,10 @@ Invoke-Pester
 
 Avoid adding **DSCResource.Tests** folder to your changes.
 
+
 ## Style guidelines
 
-When contributing to any PowerShell repositories, please follow the following guidelines: 
-
-* For all indentation, use 4 spaces instead of tab stops
-* Make sure all files are encoding using UTF-8. 
-* Windows handles [newlines](http://en.wikipedia.org/wiki/Newline) using CR+LF instead of just CR. 
-For interoperability reasons, we recommend that you follow [these instructions](GettingStartedWithGitHub.md#setup-git) when installing Git on Windows so that newlines saved to GitHub are simply CRs. 
-* When writing Markdown, if a paragraph includes more than one sentence, end each sentence with a newline.
-GitHub will still render the sentences as a single paragraph, but the readability of `git diff` will be greatly improved. 
-
+When contributing to any PowerShell repositories, please follow the following [Style Guideline](StyleGuideline.md)
 
 ## Branch structure
 
