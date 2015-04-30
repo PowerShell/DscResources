@@ -141,6 +141,9 @@ AppVeyor builds and runs tests on every pull request and provides quick feedback
 
 ![AppVeyor-Github](Images/AppVeyor-Github.png)
 
+These green checkboxes and red crosses are **clickable** as well. 
+They will bring you to the corresponding page with details. 
+
 ## Common Tests
 We have provided a set of common tests for DSC resources in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests)
 They primarly concentrate on things like code style, encoding, and module version consistency.
