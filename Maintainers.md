@@ -21,5 +21,5 @@ If you are maintainer, please follow these rules:
 1. **DO** encourage people to write pester tests for all new functionality.
 1. **DO** wait for [CI system](CONTRIBUTING.md#appveyor) build for pull requests.
 1. **DON'T** merge pull requests with failed CI build.
-1. **DON'T** merge pull requests, without lable `cla-signed` or `cla-not-required` by Microsoft CLA bot.
+1. **DON'T** merge pull requests, without label `cla-signed` or `cla-not-required` by Microsoft CLA bot.
 
