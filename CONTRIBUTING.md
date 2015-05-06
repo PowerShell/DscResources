@@ -146,7 +146,7 @@ They will bring you to the corresponding page with details.
 
 ## Common Tests
 We have provided a set of common tests for DSC resources in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests)
-They primarly concentrate on things like code style, encoding, and module version consistency.
+They primarily concentrate on things like code style, encoding, and module version consistency.
 The `appveyor.yml` file in each module repository describes the build and test sequence for CI. 
 Make sure to run these tests before submitting a pull request. 
 
