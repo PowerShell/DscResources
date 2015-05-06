@@ -105,7 +105,7 @@ If you would like to share your DSC resource module or create a brand new module
 
 * What system will your DSC resources be managing?
     - For example, [xActiveDirectory](https://github.com/powershell/xActiveDirectory) models and manages Active Directory
-* Will your module include [MOF-based resources](TODO) (compatible with PS/WMF 4.0 and 5.0+) or [class-based resources](TODO) (only compatible with PS/WMF 5.0+)
+* Will your module include [MOF-based resources](https://technet.microsoft.com/en-us/library/dn956964.aspx) (compatible with PS/WMF 4.0 and 5.0+) or [class-based resources](https://technet.microsoft.com/en-us/library/dn948461.asp) (only compatible with PS/WMF 5.0+)
 
 Next, develop your DSC resources in your own module repository. Make sure you:
 
