@@ -1,5 +1,7 @@
 # DSC Resources
 
+[![Join the chat at https://gitter.im/PowerShell/DscResources](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/PowerShell/DscResources?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Windows PowerShell Desired State Configuration (DSC) provides a configuration platform built into Windows that is based on open standards. 
 DSC is flexible enough to function reliably and consistently in each stage of the deployment lifecycle (development, test, pre-production, production), as well as during scale-out, which is required in the cloud world. 
 
