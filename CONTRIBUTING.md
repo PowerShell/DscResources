@@ -23,7 +23,7 @@ For more information, learn about our [branch structure](#branch-structure).
 
 * When you create a pull request, fill out the description with a summary of what's included in your changes. 
 If the changes are related to an existing GitHub issue, please reference the issue in your description.
-* If this is your first contribution to DscResources, you may be asked to sign a Contribution Licensing Agreement (CLA) before your changes will be accepted. 
+* If this is your first contribution to DscResources, you may be asked to sign a [Contribution Licensing Agreement](https://cla.microsoft.com/) (CLA) before your changes will be accepted.
 * After submitting your pull request, our CI system (Appveyor) [will run a suite of tests](#appveyor) and automatically update the status of the pull request.
 * After a successful test pass, the module's maintainers will do a code review, commenting on any changes that might need to be made. 
 * Once the code review is done, all merge conflicts are resolved, and the Appveyor build status is passing, a maintainer will merge your changes.
