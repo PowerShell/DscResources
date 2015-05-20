@@ -101,7 +101,10 @@ If you would like to add a DSC resource:
 
 ## Contributing a new DSC resource module
 
-If you would like to share your DSC resource module or create a brand new module, first [open an issue](https://github.com/PowerShell/DscResources/issues) with following information:
+If you would like to share your DSC resource module or create a brand new module, first check [existing issues](https://github.com/PowerShell/DscResources/issues): maybe **somebody is already working** on the similar module.
+If so, left a comment in the issue, **express your interest** or offer help. Use this issue to **coordinate your efforts**.
+
+If none of the existing issues look related, [open a new issue](https://github.com/PowerShell/DscResources/issues) with the following information:
 
 * What system will your DSC resources be managing?
     - For example, [xActiveDirectory](https://github.com/powershell/xActiveDirectory) models and manages Active Directory
