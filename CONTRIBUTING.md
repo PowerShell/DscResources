@@ -89,8 +89,7 @@ It is required that you provide adequate coverage for the code you change.  The 
 One of the most effective ways to report a bug is to provide a Pester test that fails. 
 It dramatically simplifies work for the person who will fix it, increases code coverage, and prevents regressions in the future.
 
-We should focus on good unit tests automation before focusing on integration test automation.  Many scenarios require unit testing/mocking to test effectively.    
-In other words, we should have unit test with good coverage that fail fast, and a few key integration tests that cover important cases.
+We should focus on good unit tests automation before focusing on integration test automation.  Many scenarios require unit testing/mocking to test effectively.  In other words, we should have unit test with good coverage that fail fast, and a few key integration tests that cover important cases.
 
 When it is time to add intergration tests, tests should be structured as so:
 * One Folder `Tests` in the root of the repo
