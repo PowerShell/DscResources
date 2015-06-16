@@ -142,3 +142,6 @@
 [submodule "xDscResources/xSharePoint"]
 	path = xDscResources/xSharePoint
 	url = https://github.com/PowerShell/xSharePoint.git
+[submodule "xDscResources/xCertificate"]
+	path = xDscResources/xCertificate
+	url = https://github.com/powershell/xCertificate
