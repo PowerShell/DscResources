@@ -148,3 +148,6 @@
 [submodule "xDscResources/xRobocopy"]
 	path = xDscResources/xRobocopy
 	url = https://github.com/powershell/xRobocopy
+[submodule "xDscResources/xWindowsEventForwarding"]
+	path = xDscResources/xWindowsEventForwarding
+	url = https://github.com/powershell/xWindowsEventForwarding
