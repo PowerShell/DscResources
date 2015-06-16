@@ -145,3 +145,6 @@
 [submodule "xDscResources/xCertificate"]
 	path = xDscResources/xCertificate
 	url = https://github.com/powershell/xCertificate
+[submodule "xDscResources/xRobocopy"]
+	path = xDscResources/xRobocopy
+	url = https://github.com/powershell/xRobocopy
