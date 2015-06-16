@@ -151,3 +151,6 @@
 [submodule "xDscResources/xWindowsEventForwarding"]
 	path = xDscResources/xWindowsEventForwarding
 	url = https://github.com/powershell/xWindowsEventForwarding
+[submodule "xDscResources/xStorage"]
+	path = xDscResources/xStorage
+	url = https://github.com/powershell/xStorage
