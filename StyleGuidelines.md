@@ -151,3 +151,48 @@ function New-Log
     Write-Host $message
 }
 ```
+
+Support comment-based help
+-------------------------------------------------------------
+
+When commenting functions, use comment-based help syntax
+
+**Bad:**
+# Writes event
+function New-EtwEvent
+{
+    param 
+    (
+        [Parameter(Mandatory=$true)]
+        [ValidateNotNullOrEmpty()]
+        [String] $message,
+        [ValidateSet("operational", "debug", "analytic")]
+        [String] $chanel = "operational"
+    )
+    # Implementation
+ }
+
+**Good:**
+```powershell
+<#
+    .SYNOPSIS Writes event to ETW
+    .PARAM
+        message Message to write to ETW
+    .PARAM 
+        chanel ETW channel where message should be stored
+    .EXAMPLE
+        New-EtwEvent -message "Attempting to connect to server" -chanel "debug"
+#>
+function New-EtwEvent
+{
+    param 
+    (
+        [Parameter(Mandatory=$true)]
+        [ValidateNotNullOrEmpty()]
+        [String] $message,
+        [ValidateSet("operational", "debug", "analytic")]
+        [String] $chanel = "operational"
+    )
+    # Implementation
+ }
+```
