@@ -14,7 +14,7 @@ GitHub fosters collaboration through the notion of [pull requests](https://help.
 On GitHub, anyone can [fork](https://help.github.com/articles/fork-a-repo/) an existing repository into their own branch where they can make private changes to the original repository. 
 To contribute these changes back into the original repository, a user simply creates a pull request in order to "request" that the changes be taken "upstream". 
 
-#### Lifecycle of a pull reqeust
+#### Lifecycle of a pull request
 
 * **Always create pull requests to the `dev` branch of a repository**. 
 For more information, learn about our [branch structure](#branch-structure).
