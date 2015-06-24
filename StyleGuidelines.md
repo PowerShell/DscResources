@@ -158,6 +158,7 @@ Support comment-based help
 When commenting functions, use comment-based help syntax
 
 **Bad:**
+```powershell
 # Writes event
 function New-EtwEvent
 {
@@ -171,6 +172,7 @@ function New-EtwEvent
     )
     # Implementation
  }
+```
 
 **Good:**
 ```powershell
