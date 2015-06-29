@@ -132,9 +132,9 @@ If none of the existing issues look related, [open a new issue](https://github.c
 Next, develop your DSC resources in your own module repository. Make sure you:
 
 * Write a set of test cases specific to your resources using Pester. 
-Place them in a `Tests` directory.
-* Use the template from the [DscResource.Template folder](DscResource.Template) as a boilerplate [appveyor.yml](appveyor.yml) for continuous integration (CI).
-* Run all common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests)
+Place them in a `Tests` directory. ([See details regarding test folder structure](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md#improving-test-coverage-for-existing-resources))
+* Use the template from the [DscResource.Template folder](DscResource.Template) as a boilerplate for continuous integration configuration file ([appveyor.yml](https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/appveyor.yml)) and readme.md  ([readme.md](https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/README.md)).
+* Run all common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) (preferably using AppVeyor)
 
 Follow up in the issue you opened to discuss repo ownership with the PowerShell team.
 There are two options:
