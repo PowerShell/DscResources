@@ -14,7 +14,7 @@ GitHub fosters collaboration through the notion of [pull requests](https://help.
 On GitHub, anyone can [fork](https://help.github.com/articles/fork-a-repo/) an existing repository into their own branch where they can make private changes to the original repository. 
 To contribute these changes back into the original repository, a user simply creates a pull request in order to "request" that the changes be taken "upstream". 
 
-#### Lifecycle of a pull reqeust
+#### Lifecycle of a pull request
 
 * **Always create pull requests to the `dev` branch of a repository**. 
 For more information, learn about our [branch structure](#branch-structure).
@@ -23,6 +23,14 @@ For more information, learn about our [branch structure](#branch-structure).
 
 * When you create a pull request, fill out the description with a summary of what's included in your changes. 
 If the changes are related to an existing GitHub issue, please reference the issue in your description.
+* Include update for `README.md` file in your pull request to reflect changes for future versions changelog. Put them in `Unreleased` section (create one if doesn't exist). This would simplify the release process for [Maintainers](Maintainers.md). Example:
+    ```
+    ## Versions
+    
+    ### Unreleased
+    
+    -  Added support for `-FriendlyName` in `Update-xDscResource`.
+    ```
 * If this is your first contribution to DscResources, you may be asked to sign a [Contribution Licensing Agreement](https://cla.microsoft.com/) (CLA) before your changes will be accepted.
 * After submitting your pull request, our CI system (Appveyor) [will run a suite of tests](#appveyor) and automatically update the status of the pull request.
 * After a successful test pass, the module's maintainers will do a code review, commenting on any changes that might need to be made. 
@@ -80,10 +88,21 @@ Links can also have references, which will be discussed in the "Link and Image R
 
 ### Improving test coverage for existing resources
 
-All DSC modules in the DscResources should have tests written using [Pester](https://github.com/pester/Pester) included in a Tests folder. 
+All DSC modules in the DscResources should have tests written using [Pester](https://github.com/pester/Pester) included in a Tests folder.
+It is required that you provide adequate coverage for the code you change.  The following projects have tests which you can use as examples:
+* [xDhcpServer](https://github.com/PowerShell/xDhcpServer/tree/master/Tests)
+* [xNetwork](https://github.com/PowerShell/xNetworking/tree/dev/Tests) 
+* [xSharepoint](https://github.com/PowerShell/xSharePoint/tree/master/Tests/xSharePoint)
 
 One of the most effective ways to report a bug is to provide a Pester test that fails. 
 It dramatically simplifies work for the person who will fix it, increases code coverage, and prevents regressions in the future.
+
+We should focus on good unit tests automation before focusing on integration test automation.  Many scenarios require unit testing/mocking to test effectively.  In other words, we should have unit test with good coverage that fail fast, and a few key integration tests that cover important cases.
+
+When it is time to add intergration tests, tests should be structured as so:
+* One Folder `Tests` in the root of the repo
+* If integration tests are presented, I would create sub-folders `Tests\Unit` and `Tests\Integration`. 
+* For every resource `xMyAwesomeResource` in the module, I would create a file `Tests\Unit\xMyAwesomeResource.Tests.ps1` with Unit Tests and `Tests\Integration\xMyAwesomeResource.Integration.Tests.ps1`.
 
 ### Creating a new DSC resource in an existing module
 
@@ -113,9 +132,10 @@ If none of the existing issues look related, [open a new issue](https://github.c
 Next, develop your DSC resources in your own module repository. Make sure you:
 
 * Write a set of test cases specific to your resources using Pester. 
-Place them in a `Tests` directory.
-* Use the template from the [DscResource.Template folder](DscResource.Template) as a boilerplate [appveyor.yml](appveyor.yml) for continuous integration (CI).
-* Run all common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests)
+Place them in a `Tests` directory. ([See details regarding test folder structure](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md#improving-test-coverage-for-existing-resources))
+* Use the template from the [DscResource.Template folder](DscResource.Template) as a boilerplate for [appveyor.yml] (https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/appveyor.yml) (continuous integration configuration file) and [README.md](https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/README.md).
+
+* Run all common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) 
 
 Follow up in the issue you opened to discuss repo ownership with the PowerShell team.
 There are two options:

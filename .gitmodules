@@ -136,9 +136,6 @@
 [submodule "xDscResources/xWordPress"]
 	path = xDscResources/xWordPress
 	url = https://github.com/PowerShell/xWordPress
-[submodule "xDscResources/xDisk"]
-	path = xDscResources/xDisk
-	url = https://github.com/PowerShell/xDisk.git
 [submodule "xDscResources/xSharePoint"]
 	path = xDscResources/xSharePoint
 	url = https://github.com/PowerShell/xSharePoint.git
