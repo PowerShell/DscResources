@@ -131,7 +131,7 @@ Now you should be able to see your branch in your fork on GitHub
 
 ![GitHub-Select-Branch.png](Images/GitHub-Select-Branch.png)
 
-You can create a new pull request on the same pag
+You can create a new pull request on the same page
 
 ![GitHub-Create-PR.png](Images/GitHub-Create-PR.png)
 
