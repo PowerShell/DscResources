@@ -151,3 +151,6 @@
 [submodule "xDscResources/xStorage"]
 	path = xDscResources/xStorage
 	url = https://github.com/powershell/xStorage
+[submodule "xDscResources/xdefender"]
+	path = xDscResources/xdefender
+	url = https://github.com/powershell/xdefender
