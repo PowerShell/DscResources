@@ -154,3 +154,6 @@
 [submodule "xDscResources/xDefender"]
 	path = xDscResources/xDefender
 	url = https://github.com/powershell/xDefender
+[submodule "xDscResources/xSharePoint"]
+	path = xDscResources/xSharePoint
+	url = https://github.com/powershell/xSharePoint
