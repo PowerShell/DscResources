@@ -67,9 +67,6 @@
 [submodule "xDscResources/xPendingReboot"]
 	path = xDscResources/xPendingReboot
 	url = https://github.com/PowerShell/xPendingReboot
-[submodule "xDscResources/xPhp"]
-	path = xDscResources/xPhp
-	url = https://github.com/PowerShell/xPhp
 [submodule "xDscResources/xPowerShellExecutionPolicy"]
 	path = xDscResources/xPowerShellExecutionPolicy
 	url = https://github.com/PowerShell/xPowerShellExecutionPolicy
