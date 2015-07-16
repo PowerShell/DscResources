@@ -33,7 +33,7 @@ If the changes are related to an existing GitHub issue, please reference the iss
     ```
 * If this is your first contribution to DscResources, you may be asked to sign a [Contribution Licensing Agreement](https://cla.microsoft.com/) (CLA) before your changes will be accepted.
 * After submitting your pull request, our CI system (Appveyor) [will run a suite of tests](#appveyor) and automatically update the status of the pull request.
-* After a successful test pass, the module's maintainers will do a code review, commenting on any changes that might need to be made. 
+* After a successful test pass, the module's maintainers will do a code review, commenting on any changes that might need to be made. If you are not designated as a module's maintainer, feel free to review others' Pull Requests as well, additional feedback is always welcome (leave your comments even if everything looks good - simple "Looks good to me" or "LGTM" will suffice, so that we know someone has already taken a look at it)! 
 * Once the code review is done, all merge conflicts are resolved, and the Appveyor build status is passing, a maintainer will merge your changes.
 
 ### Contributing to documentation
