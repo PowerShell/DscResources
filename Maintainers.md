@@ -20,6 +20,8 @@ If you are maintainer, please follow these rules:
 **DON'T** merge pull requests to **master** branch.
 1. **DO** encourage people to write pester tests for all new functionality.
 1. **DO** wait for [CI system](CONTRIBUTING.md#appveyor) build for pull requests.
+1. **DO** encourage people to refer issue in PR title/description (e.g. ```Closes #11```). Edit title if necessary
+1. **DO** encourage people to create meningful titles of PR. Edit title if necessary.
 1. **DON'T** merge pull requests with failed CI build.
 1. **DON'T** merge pull requests, without label `cla-signed` or `cla-not-required` by Microsoft CLA bot.
 1. **DON'T** merge pull requests, that doesn't [reflect changes](CONTRIBUTING.md#lifecycle-of-a-pull-request) in **Unreleased** version in `README.md`.
