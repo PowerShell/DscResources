@@ -22,7 +22,8 @@ For more information, learn about our [branch structure](#branch-structure).
 ![Github-PR-dev.png](Images/Github-PR-dev.png)
 
 * When you create a pull request, fill out the description with a summary of what's included in your changes. 
-If the changes are related to an existing GitHub issue, please reference the issue in pull request title or description (e.g. ```Closes #11```).
+If the changes are related to an existing GitHub issue, please reference the issue in pull request title or description (e.g. ```Closes #11```). See [this](https://help.github.com/articles/closing-issues-via-commit-messages/) for more details.
+
 * Include update for `README.md` file in your pull request to reflect changes for future versions changelog. Put them in `Unreleased` section (create one if doesn't exist). This would simplify the release process for [Maintainers](Maintainers.md). Example:
     ```
     ## Versions
