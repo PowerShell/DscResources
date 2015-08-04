@@ -100,7 +100,7 @@ It dramatically simplifies work for the person who will fix it, increases code c
 
 We should focus on good unit tests automation before focusing on integration test automation.  Many scenarios require unit testing/mocking to test effectively.  In other words, we should have unit test with good coverage that fail fast, and a few key integration tests that cover important cases.
 
-When it is time to add intergration tests, tests should be structured as so:
+When it is time to add integration tests, tests should be structured as so:
 * One Folder `Tests` in the root of the repo
 * If integration tests are presented, I would create sub-folders `Tests\Unit` and `Tests\Integration`. 
 * For every resource `xMyAwesomeResource` in the module, I would create a file `Tests\Unit\xMyAwesomeResource.Tests.ps1` with Unit Tests and `Tests\Integration\xMyAwesomeResource.Integration.Tests.ps1`.
