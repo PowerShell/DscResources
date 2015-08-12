@@ -27,6 +27,7 @@ git clone https://github.com/PowerShell/DscResources.git
 ```
 
 ## Reporting bugs or suggesting features
+
 If you've found a bug in a particular DSC module, or you have a suggestion for how to improve it, submit an issue in the module's repository. 
 
 [Learn more](http://www.joelonsoftware.com/articles/fog0000000029.html) about writing useful bug reports.
@@ -35,9 +36,53 @@ If you've found a bug in a particular DSC module, or you have a suggestion for h
 
 See our [contribution guidelines](CONTRIBUTING.md).
 
-### Dashboard
-You can see dashboard of all open issues and pull requests acrross DSC Resource here: [![Stories in Ready](https://badge.waffle.io/powershell/dscresources.png?label=ready&title=Ready)](https://waffle.io/powershell/dscresources) 
-
 ## Maintaining
 
 See our [guidelines for DSC resource maintainers](Maintainers.md).
+
+## Production releases
+
+To see a list of all released DSC Resource Kit modules, go to the [PowerShell Gallery](https://www.powershellgallery.com/) and display [all modules tagged as DSCResourceKit](https://www.powershellgallery.com/packages?q=Tags%3A%22DSCResourceKit%22). You can also type a module’s name in the search box on the upper right side of the PowerShell Gallery to find a specific module.
+
+Another way is to go directly to a specific module by typing it’s URL:
+
+http://www.powershellgallery.com/packages/MODULE_NAME
+
+e.g.:
+
+[http://www.powershellgallery.com/packages/xWebAdministration](http://www.powershellgallery.com/packages/xWebAdministration)
+
+Of course, you can always use PowerShellGet (available in [WMF 5.0](http://www.microsoft.com/en-us/download/details.aspx?id=44987)) as well:
+
+```
+Find-DscResource
+```
+
+## Development builds
+
+Nuget feeds with most recent development builds are available for all our modules under:
+
+https://ci.appveyor.com/nuget/MODULE_NAME
+
+e.g.:
+
+[https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration](https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration)
+
+To list all available versions of xPSDesiredStateConfiguration module:
+```
+nuget.exe list -source https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration -allversions
+```
+
+To install most recent version of xPSDesiredStateConfiguration:
+```
+nuget.exe install xpsdesiredstateconfiguration -source https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration -outputdirectory C:\git\nugetinstalls
+```
+
+To install specific version (here: 3.4.0.86) of xPSDesiredStateConfiguration:
+```
+nuget.exe install xpsdesiredstateconfiguration -source https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration -outputdirectory C:\git\nugetinstalls -version 3.4.0.86
+```
+
+## Dashboard
+
+You can see dashboard of all open issues and pull requests acrross DSC Resource here: [![Stories in Ready](https://badge.waffle.io/powershell/dscresources.png?label=ready&title=Ready)](https://waffle.io/powershell/dscresources) 
