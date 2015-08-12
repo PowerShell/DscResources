@@ -26,20 +26,6 @@ Or just download the respository's structure and documentation
 git clone https://github.com/PowerShell/DscResources.git
 ```
 
-## Reporting bugs or suggesting features
-
-If you've found a bug in a particular DSC module, or you have a suggestion for how to improve it, submit an issue in the module's repository. 
-
-[Learn more](http://www.joelonsoftware.com/articles/fog0000000029.html) about writing useful bug reports.
-
-## Contributing
-
-See our [contribution guidelines](CONTRIBUTING.md).
-
-## Maintaining
-
-See our [guidelines for DSC resource maintainers](Maintainers.md).
-
 ## Production releases
 
 To see a list of all released DSC Resource Kit modules, go to the [PowerShell Gallery](https://www.powershellgallery.com/) and display [all modules tagged as DSCResourceKit](https://www.powershellgallery.com/packages?q=Tags%3A%22DSCResourceKit%22). You can also type a module’s name in the search box on the upper right side of the PowerShell Gallery to find a specific module.
@@ -82,6 +68,20 @@ To install specific version (here: 3.4.0.86) of xPSDesiredStateConfiguration:
 ```
 nuget.exe install xpsdesiredstateconfiguration -source https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration -outputdirectory C:\git\nugetinstalls -version 3.4.0.86
 ```
+
+## Reporting bugs or suggesting features
+
+If you've found a bug in a particular DSC module, or you have a suggestion for how to improve it, submit an issue in the module's repository. 
+
+[Learn more](http://www.joelonsoftware.com/articles/fog0000000029.html) about writing useful bug reports.
+
+## Contributing
+
+See our [contribution guidelines](CONTRIBUTING.md).
+
+## Maintaining
+
+See our [guidelines for DSC resource maintainers](Maintainers.md).
 
 ## Dashboard
 
