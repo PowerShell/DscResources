@@ -1,8 +1,29 @@
+################################################################################
+# This is template for appveyor.yml
+# Before using it in your repository, modify places marked with # TODO Modify
+################################################################################
+
+#---------------------------------# 
+#      environment configuration  # 
+#---------------------------------# 
+version: 1.0.0.{build} # TODO Modify version
 install: 
-    - cinst -y pester
-    - git clone https://github.com/PowerShell/DscResource.Tests
+  - cinst -y pester
+  - git clone https://github.com/PowerShell/DscResource.Tests
+  - ps: Push-Location
+  - cd DscResource.Tests
+  - ps: Import-Module .\TestHelper.psm1 -force
+  - ps: Pop-Location
+
+#---------------------------------# 
+#      build configuration        # 
+#---------------------------------# 
 
 build: false
+
+#---------------------------------# 
+#      test configuration         # 
+#---------------------------------# 
 
 test_script:
     - ps: |
@@ -12,14 +33,37 @@ test_script:
         if ($res.FailedCount -gt 0) { 
             throw "$($res.FailedCount) tests failed."
         }
-on_finish:
-    - ps: |
-        $stagingDirectory = (Resolve-Path ..).Path
-        $zipFile = Join-Path $stagingDirectory "$(Split-Path $pwd -Leaf).zip"
-        Add-Type -assemblyname System.IO.Compression.FileSystem
-        [System.IO.Compression.ZipFile]::CreateFromDirectory($pwd, $zipFile)
-        @(
-            # You can add other artifacts here
-            (ls $zipFile)
-        ) | % { Push-AppveyorArtifact $_.FullName }
+    
+#---------------------------------# 
+#      deployment configuration   # 
+#---------------------------------# 
+
+# scripts to run before deployment 
+before_deploy: 
+  - ps: |
+      # Creating project artifact
+      $stagingDirectory = (Resolve-Path ..).Path
+      $manifest = Join-Path $pwd "xWordPress.psd1" # TODO Modify psd1 name
+      (Get-Content $manifest -Raw).Replace("1.0.0.0", $env:APPVEYOR_BUILD_VERSION) | Out-File $manifest # TODO Modify version
+      $zipFilePath = Join-Path $stagingDirectory "$(Split-Path $pwd -Leaf).zip"
+      Add-Type -assemblyname System.IO.Compression.FileSystem
+      [System.IO.Compression.ZipFile]::CreateFromDirectory($pwd, $zipFilePath)
+      
+      # Creating NuGet package artifact
+      New-Nuspec -packageName $env:APPVEYOR_PROJECT_NAME -version $env:APPVEYOR_BUILD_VERSION -author "Microsoft" -owners "Microsoft" -licenseUrl "https://github.com/PowerShell/DscResources/blob/master/LICENSE" -projectUrl "https://github.com/$($env:APPVEYOR_REPO_NAME)" -packageDescription $env:APPVEYOR_PROJECT_NAME -tags "DesiredStateConfiguration DSC DSCResourceKit" -destinationPath .
+      nuget pack ".\$($env:APPVEYOR_PROJECT_NAME).nuspec" -outputdirectory .
+      $nuGetPackageName = $env:APPVEYOR_PROJECT_NAME + "." + $env:APPVEYOR_BUILD_VERSION + ".nupkg"
+      $nuGetPackagePath = (Get-ChildItem $nuGetPackageName).FullName
+      
+      @(
+          # You can add other artifacts here
+          $zipFilePath,
+          $nuGetPackagePath
+      ) | % { 
+          Write-Host "Pushing package $_ as Appveyor artifact"
+          Push-AppveyorArtifact $_
+        }
+        
+        
+
 
