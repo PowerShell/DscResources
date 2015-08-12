@@ -46,7 +46,7 @@ Find-DscResource
 
 ## Development builds
 
-Nuget feeds with most recent development builds are available for all our modules under:
+Nuget feeds with development builds (created every time we merge PR/push commit) are available for all our modules under:
 
 https://ci.appveyor.com/nuget/MODULE_NAME
 
