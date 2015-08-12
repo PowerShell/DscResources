@@ -61,12 +61,12 @@ nuget.exe list -source https://ci.appveyor.com/nuget/xpsdesiredstateconfiguratio
 
 To install most recent version of xPSDesiredStateConfiguration:
 ```
-nuget.exe install xpsdesiredstateconfiguration -source https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration -outputdirectory C:\git\nugetinstalls
+nuget.exe install xpsdesiredstateconfiguration -source https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration -outputdirectory C:\nuget
 ```
 
 To install specific version (here: 3.4.0.86) of xPSDesiredStateConfiguration:
 ```
-nuget.exe install xpsdesiredstateconfiguration -source https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration -outputdirectory C:\git\nugetinstalls -version 3.4.0.86
+nuget.exe install xpsdesiredstateconfiguration -source https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration -outputdirectory C:\nuget -version 3.4.0.86
 ```
 
 ## Reporting bugs or suggesting features
