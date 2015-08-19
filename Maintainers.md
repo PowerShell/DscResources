@@ -16,6 +16,7 @@ They can:
 If you are maintainer, please follow these rules:
 
 1. **DO** reply to the new issues and pull requests (while reviewing PRs, leave your comment even if everything looks good - simple "Looks good to me" or "LGTM" will suffice, so that we know someone has already taken a look at it).
+1. **DO** make sure process described in [contributing guide](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md) is being followed.
 1. **DO** ask people to resend pull request, if it targets [a wrong branch](CONTRIBUTING.md#lifecycle-of-a-pull-request).
 **DON'T** merge pull requests to **master** branch.
 1. **DO** encourage people to write pester tests for all new functionality.
