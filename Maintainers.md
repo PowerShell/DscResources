@@ -27,6 +27,7 @@ If you are maintainer, please follow these rules:
 1. **DON'T** merge pull requests with failed CI build.
 1. **DON'T** merge pull requests, without label `cla-signed` or `cla-not-required` by Microsoft CLA bot.
 1. **DON'T** merge pull requests, that doesn't [reflect changes](CONTRIBUTING.md#lifecycle-of-a-pull-request) in **Unreleased** version in `README.md`.
+1. **DON'T** merge your own pull requests before they were reviewed by someone else.
 
 ## Labeling workflows
 
