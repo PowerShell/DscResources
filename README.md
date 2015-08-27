@@ -54,19 +54,43 @@ e.g.:
 
 [https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration](https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration)
 
-To list all available versions of xPSDesiredStateConfiguration module:
+
+To use it, first register new PSRepository using PowerShellGet:
+
 ```
-nuget.exe list -source https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration -allversions
+Register-PSRepository -Name <Repository_Name> -SourceLocation https://ci.appveyor.com/nuget/<Module_Name>
+```
+e.g.
+```
+Register-PSRepository -Name xExchangeDev -SourceLocation https://ci.appveyor.com/nuget/xexchange
 ```
 
-To install most recent version of xPSDesiredStateConfiguration:
+Use Find-Module to list available versions of the module:
+
 ```
-nuget.exe install xpsdesiredstateconfiguration -source https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration -outputdirectory C:\nuget
+Find-Module -Repository <Repository_Name>
+```
+e.g.
+```
+Find-Module -Repository xExchangeDev
 ```
 
-To install specific version (here: 3.4.0.86) of xPSDesiredStateConfiguration:
+To install latest development version, use the following command:
 ```
-nuget.exe install xpsdesiredstateconfiguration -source https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration -outputdirectory C:\nuget -version 3.4.0.86
+Install-Module -Name <Module_Name> -Repository <Repository_Name>
+```
+e.g.
+```
+Install-Module -Name xExchange -Repository xExchangeDev
+```
+ 
+You can also install specific version of the module by adding –RequiredVersion parameter:
+```
+Install-Module -Name <Module_Name> -Repository <Repository_Name> -RequiredVersion <Version_Number>
+```
+e.g.
+```
+Install-Module -Name xExchange -Repository xExchangeDev -RequiredVersion 1.2.0.48
 ```
 
 ## Reporting bugs or suggesting features
