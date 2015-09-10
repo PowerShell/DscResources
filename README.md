@@ -38,7 +38,7 @@ e.g.:
 
 [http://www.powershellgallery.com/packages/xWebAdministration](http://www.powershellgallery.com/packages/xWebAdministration)
 
-Of course, you can always use PowerShellGet (available in [WMF 5.0](http://www.microsoft.com/en-us/download/details.aspx?id=44987)) as well:
+Of course, you can always use PowerShellGet (available in [WMF 5.0](http://go.microsoft.com/fwlink/?LinkID=398175)) as well:
 
 ```
 Find-DscResource
