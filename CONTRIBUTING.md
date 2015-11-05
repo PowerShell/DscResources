@@ -21,6 +21,8 @@ For more information, learn about our [branch structure](#branch-structure).
 
 ![Github-PR-dev.png](Images/Github-PR-dev.png)
 
+* Add meaningful title of the PR describing what change you want to check in. Don't simply put: "Fixes issue #5". Better example is: "Added Ensure parameter to xFile resource. Fixes #5". 
+
 * When you create a pull request, fill out the description with a summary of what's included in your changes. 
 If the changes are related to an existing GitHub issue, please reference the issue in pull request title or description (e.g. ```Closes #11```). See [this](https://help.github.com/articles/closing-issues-via-commit-messages/) for more details.
 
