@@ -39,7 +39,7 @@ If you are maintainer, please follow these rules:
   1. If issue is duplicate of another issue, ```duplicate``` label is added and issue is closed
   1. If for some reason issue should not be fixed, ```wontfix``` label is added and comment with explaination should be provided.
 1. Maintainer assigns ```up for grabs``` label to let contributors know this issue needs someone who will take care of it
-1. Once one of the maintainers or contributors volunteers to work on given issue, ```help wanted``` label is replaced with ```in progress```
+1. Once one of the maintainers or contributors volunteers to work on given issue, ```up for grabs``` label is replaced with ```in progress```
 1. Once issue is fixed, we replace label ```in progress``` with ```ready```
 
 ### Labeling of pull requests
