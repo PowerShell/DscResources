@@ -89,7 +89,7 @@ Multiple element lists work the same way as with ordered lists.
 * **Links:** The syntax for a hyperlink is `[visible link text](link url)`.
 Links can also have references, which will be discussed in the "Link and Image References" section below.
 
-### Improving test coverage for existing resources
+### Adding test coverage for DSC resources
 
 All DSC modules in the DscResources should have tests written using [Pester](https://github.com/pester/Pester) included in a Tests folder.
 It is required that you provide adequate coverage for the code you change.  The following projects have tests which you can use as examples:
