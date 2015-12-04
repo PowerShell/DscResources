@@ -1,5 +1,9 @@
 # DSC Resource Style Guidelines
 
+In order to provide clean and consistent code, please follow the coding conventions listed below when contributing to this repository and all [DSC Resource Kit repositories](https://github.com/PowerShell/DscResources/tree/master/xDscResources).
+
+For general PowerShell best practices, please refer to [PowerShell Best Practices](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/PowerShellBestPractices.md) document.
+
 General Rules
 ----------------
 
