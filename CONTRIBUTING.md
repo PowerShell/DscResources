@@ -42,7 +42,7 @@ If the changes are related to an existing GitHub issue, please reference the iss
     
     Also, if change is related to specific resource, please prefix the description with the resource name:
     
-      * Instead of "New parameter 'ConnectionName' in xDatabase resource", write "xDatabase: added parameter 'ConnectionName'"
+      * Instead of "New parameter 'ConnectionCredential' in xMySqlDatabase resource", write "xMySqlDatabase: added parameter 'ConnectionCredential'"
     
 * If this is your first contribution to DscResources, you may be asked to sign a [Contribution Licensing Agreement](https://cla.microsoft.com/) (CLA) before your changes will be accepted.
 * After submitting your pull request, our CI system (Appveyor) [will run a suite of tests](#appveyor) and automatically update the status of the pull request.
