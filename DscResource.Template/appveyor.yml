@@ -39,7 +39,7 @@ test_script:
 #---------------------------------# 
 
 # scripts to run before deployment 
-before_deploy: 
+deploy_script: 
   - ps: |
       # Creating project artifact
       $stagingDirectory = (Resolve-Path ..).Path
