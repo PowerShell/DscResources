@@ -147,8 +147,7 @@ Next, develop your DSC resources in your own module repository. Make sure you:
 * Write a set of Unit and Integration test cases specific to your resources using Pester using the test templates from the [Tests.Template folder](Tests.Template).
 Place them in `Tests\Unit` and `Tests\Integration` directories. ([See details regarding adding tests](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md#adding-test-coverage-for-dsc-resources))
 * Use the template from the [DscResource.Template folder](DscResource.Template) as a boilerplate for [appveyor.yml] (https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/appveyor.yml) (continuous integration configuration file) and [README.md](https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/README.md).
-* If you have used the [Tests.Template folder](Tests.Template) to create your unit and integration tests then the common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) will be automatically installed for you when your tests are run. 
-* If you did not use the [Tests.Template folder](Tests.Template) for your unit and integration testts, run all common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) 
+* When you run tests based on the templates the common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) will be automatically installed into the root folder of your module when your tests are run. 
 
 Follow up in the issue you opened to discuss repo ownership with the PowerShell team.
 There are two options:
@@ -191,7 +190,6 @@ I.e. you can use [MetaFixers](https://github.com/PowerShell/DscResource.Tests/bl
 
 ### Test Templates
 We have provided a set of test templates for you to use to create new tests using. There is single file for unit and two for integration tests. These test templates are availabing in the [Tests.Template folder](Tests.Template).
-
 For instructions on how to use these templates, please read the [Tests Guidlines Document](TestsGuidelines.md).
 
 ### Run common tests locally

@@ -19,19 +19,19 @@ General Rules
  * Ensure that the .gitignore file for the resource module contains **DSCResource.Tests** so that this folder is not accidentally included in a commit to your resource repository. 
 
 Creating DSC Resource Unit Test Instructions
-============================================
+--------------------------------------------
  1. Copy the ```\Tests.Template\unit_template.ps1``` to the ```\Tests\Integration\``` folder and rename to ```MSFT_x<ResourceName>.tests.ps1```
  2. Open ```MSFT_x<ResourceName>.tests.ps1``` and customize TODO sections.
 
 Creating DSC Resource Integration Test Instructions
-===================================================
+---------------------------------------------------
  1. Copy the ```\Tests.Template\integration_template.ps1``` to ```\Tests\Integration\``` folder and rename ```MSFT_x<ResourceName>.Integration.tests.ps1```
  2. Open ```MSFT_x<ResourceName>.Integration.tests.ps1``` and customize TODO sections.
  3. Copy the ```\Tests.Template\integration_comfig_template.ps1``` to ```\Tests\Integration\``` folder and rename ```MSFT_x<ResourceName>.config.ps1```
  4. Open ```MSFT_x<ResourceName>.config.ps1``` and customize TODO sections.
  
 Running Tests Locally
-=====================
+---------------------
 All tests are automatically run via AppVeyor when the repository is updated. However, it is recommended that all tests be run locally before being committed.
 
 Requirements for running all tests locally:
@@ -40,7 +40,7 @@ Requirements for running all tests locally:
  3. An internet connection is available so that the DSCResource.Tests repository can be downloaded or updated using Git.
  
 Example Tests
-=============
+-------------
 To see examples of the Unit/Integration tests in practice, see the xNetworking MSFT_xFirewall resource:
 - [Unit Tests](https://github.com/PowerShell/xNetworking/blob/dev/Tests/Unit/MSFT_xFirewall.Tests.ps1)
 - [Integration Tests](https://github.com/PowerShell/xNetworking/blob/dev/Tests/Integration/MSFT_xFirewall.Integration.Tests.ps1)
