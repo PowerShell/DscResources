@@ -4,13 +4,13 @@ General Rules
 -------------
 
  * Each DSC module should contain the following Test folder structure:
-
+```
        Tests
        |---Unit
        |---Integration
-
- * The Tests\Unit folder must contain a Test Script for each DSC Resource in the DSC Module with the filename ```MSFT_<<ResourceName>>.tests.ps1```.
- * The Tests\Integration folder should, whenever possible, contain a Test Script for each DSC Resource in the DSC Module with the filename ```MSFT_<<ResourceName>>.integration.tests.ps1```.
+```
+ * The Tests\Unit folder must contain a Test Script for each DSC Resource in the DSC Module with the filename ```MSFT_<ResourceName>.tests.ps1```.
+ * The Tests\Integration folder should, whenever possible, contain a Test Script for each DSC Resource in the DSC Module with the filename ```MSFT_<ResourceName>.integration.tests.ps1```.
  * Each Test Script should contain [Pester](https://github.com/pester/Pester) based tests.
  * Integration tests should be created when possible, but for some DSC resources this may not be possible. For example, when integration tests would cause the testing computer configuration to be damaged. 
  * Unit and Integration tests should be created using the Template files that are located in the [Tests.Template](Tests.Template) folder in this repository.
