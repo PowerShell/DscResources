@@ -4,9 +4,13 @@ General Rules
 -------------
 
  * Each DSC module should contain the following Test folder structure:
+
        Tests
+
        |---Unit
+
        |---Integration
+
  * The Tests\Unit folder must contain a Test Script for each DSC Resource in the DSC Module with the filename MSFT_<ResourceName>.tests.ps1.
  * The Tests\Integration folder should, whenever possible, contain a Test Script for each DSC Resource in the DSC Module with the filename MSFT_<ResourceName>.integration.tests.ps1.
  * Each Test Script should contain [Pester](https://github.com/pester/Pester) based tests.
@@ -33,13 +37,13 @@ Running Tests Locally
 All tests are automatically run via AppVeyor when the repository is updated. However, it is recommended that all tests be run locally before being commited.
 
 Requirements for running all tests locally:
-1. Git is installed and the Git.exe can be found in the %PATH% variable.
-2. The latest [Pester Module](https://github.com/pester/Pester) is installed, either manually or via PowerShellGet.
-3. An internet connection is available so that the DSCResource.Tests repository can be downloaded using Git. This only needs to be done once and so is only required the first time the tests are run.
+ 1. Git is installed and the Git.exe can be found in the %PATH% variable.
+ 2. The latest [Pester Module](https://github.com/pester/Pester) is installed, either manually or via PowerShellGet.
+ 3. An internet connection is available so that the DSCResource.Tests repository can be downloaded using Git. This only needs to be done once and so is only required the first time the tests are run.
  
 Example Tests
 =============
 To see examples of the Unit/Integration tests in practice, see the xNetworking MSFT_xFirewall resource:
-[Unit Tests](https://github.com/PowerShell/xNetworking/blob/dev/Tests/Unit/MSFT_xFirewall.Tests.ps1)
-[Integration Tests](https://github.com/PowerShell/xNetworking/blob/dev/Tests/Integration/MSFT_xFirewall.Integration.Tests.ps1)
-[Resource DSC Configuration](https://github.com/PowerShell/xNetworking/blob/dev/Tests/Integration/MSFT_xFirewall.config.ps1)
+- [Unit Tests](https://github.com/PowerShell/xNetworking/blob/dev/Tests/Unit/MSFT_xFirewall.Tests.ps1)
+- [Integration Tests](https://github.com/PowerShell/xNetworking/blob/dev/Tests/Integration/MSFT_xFirewall.Integration.Tests.ps1)
+- [Resource DSC Configuration](https://github.com/PowerShell/xNetworking/blob/dev/Tests/Integration/MSFT_xFirewall.config.ps1)
