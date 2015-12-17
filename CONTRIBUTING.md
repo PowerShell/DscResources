@@ -144,11 +144,11 @@ If none of the existing issues look related, [open a new issue](https://github.c
 
 Next, develop your DSC resources in your own module repository. Make sure you:
 
-* Write a set of test cases specific to your resources using Pester. 
-Place them in a `Tests` directory. ([See details regarding adding tests](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md#adding-test-coverage-for-dsc-resources))
+* Write a set of Unit and Integration test cases specific to your resources using Pester using the test templates from the [Tests.Template folder](Tests.Template).
+Place them in `Tests\Unit` and `Tests\Integration` directories. ([See details regarding adding tests](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md#adding-test-coverage-for-dsc-resources))
 * Use the template from the [DscResource.Template folder](DscResource.Template) as a boilerplate for [appveyor.yml] (https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/appveyor.yml) (continuous integration configuration file) and [README.md](https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/README.md).
-
-* Run all common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) 
+* If you have used the [Tests.Template folder](Tests.Template) to create your unit and integration tests then the common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) will be automatically installed for you when your tests are run. 
+* If you did not use the [Tests.Template folder](Tests.Template) for your unit and integration testts, run all common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) 
 
 Follow up in the issue you opened to discuss repo ownership with the PowerShell team.
 There are two options:
@@ -189,9 +189,15 @@ Make sure to run these tests before submitting a pull request.
 [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) contains **Fixers** where it's possible.
 I.e. you can use [MetaFixers](https://github.com/PowerShell/DscResource.Tests/blob/master/MetaFixers.psm1) to convert all indentations and file encodings.
 
-### Run common tests locally
+### Test Templates
+We have provided a set of test templates for you to use to create new tests using. There is single file for unit and two for integration tests. These test templates are availabing in the [Tests.Template folder](Tests.Template).
 
-To run these common tests on your machine, you should clone [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) to resource directory that you want to test.
+For instructions on how to use these templates, please read the [Tests Guidlines Document](TestsGuidelines.md).
+
+### Run common tests locally
+If you have created your tests using the [Tests.Template](Tests.Template) files then the [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) will automatically be downloaded into the module folder when the tests are invoked.
+
+If you did not use the [Tests.Template](Tests.Template) to create your tests then you will need to run these common tests on your machine, you should clone [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) to resource directory that you want to test.
 Then run `Invoke-Pester` from root.
 
 ```
