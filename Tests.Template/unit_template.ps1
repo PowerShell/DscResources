@@ -3,7 +3,7 @@
    Template for creating DSC Resource Unit Tests
 .DESCRIPTION
    To Use:
-     1. Copy to \Tests\Integration\ folder and rename MSFT_x<ResourceName>.tests.ps1
+     1. Copy to \Tests\Unit\ folder and rename MSFT_x<ResourceName>.tests.ps1
      2. Customize TODO sections.
 
 .NOTES
