@@ -1,51 +1,51 @@
-# File
+# FooDscModule
 
-## Synopsis
-A simple File resource
+A synopsis of the system that FooDscModule is modeling or the purpose for which FooDscModule is used. 
 
-## Syntax
-```powershell
-File <String>
-{
-	DestinationPath = <String>
-	Ensure = <Ensure> { Present | Absent}
-	SourcePath = <String>	
-}
-```
+## Contributing
+Please check out common DSC Resources [contributing guidelines](https://github.com/PowerShell/DscResource.Kit/blob/master/CONTRIBUTING.md).
 
-## Description
-This is a File resource that has been reimplemented using PS classes
+## Resources
 
-## Properties
-`Path = <String>`
-  The destination path that is Ensured to be Present or Absent. Can be a file or a directory.
+* **FooResource1** performs some function Bar
+* **FooResource2** performs some other function Baz
 
-| Required | Key?  | Default value |
-| -------- | ----- | ------------- |
-| True     | True  | none          |
+## FooResource1
 
-`Ensure = <Ensure>`
-  Possible values are Present and Absent. 
+* **Name**: The name of FooResource1
+* **Option**: This property has a fixed set of values: {Value1 | Value2 }
 
-| Required | Key?  | Default value |
-| -------- | ----- | ------------- |
-| True     | False | none          |
+## FooResource2
 
-`SourcePath = <String>`
-  The file that must exist (or be absent) at Path. Will copy from this  location if it does not.
+* **FooResource2Prop1**: A property for FooResource2
+* **Ensure**: Ensures that FooResource 2 is **Present** or **Absent**
 
-| Required | Key?  | Default value |
-| -------- | ----- | ------------- |
-| True     | False | none          |
+## Versions
+
+### Unreleased
+
+* Any update, new feature, or bugfix that has not been put into the latest Gallery-published of the module.
+
+### 1.1.0.0
+
+* A minor fix to FooResource1 that fixes some bug
+* Added the FooResource2 resource
+
+### 1.0.0.0
+
+* The initial release of FooDscModule with the following resources:
+  - FooResource1
 
 ## Examples
 ### Example 1
 
-This describes an example of some Configuration that does something with this resource
+This describes an example of some Configuration that does something with this resource module
+
 ```powershell
 Configuration {
+    Import-DscResource -ModuleName FooDscModule
     Node localhost {
-        FileResource myInstance { 
+        FooResource1 myInstance { 
             …
         }
     }
