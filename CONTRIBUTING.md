@@ -189,7 +189,7 @@ Make sure to run these tests before submitting a pull request.
 I.e. you can use [MetaFixers](https://github.com/PowerShell/DscResource.Tests/blob/master/MetaFixers.psm1) to convert all indentations and file encodings.
 
 ### Test Templates
-We have provided a set of test templates for you to use to create new tests using. There is single file for unit and two for integration tests. These test templates are availabing in the [Tests.Template folder](Tests.Template).
+We have provided a set of test templates for you to use to create new tests. There is single file for unit tests and two for integration tests. These test templates are availabing in the [Tests.Template folder](Tests.Template).
 For instructions on how to use these templates, please read the [Tests Guidlines Document](TestsGuidelines.md).
 
 ### Run common tests locally
