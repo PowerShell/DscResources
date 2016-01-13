@@ -129,6 +129,7 @@ If you would like to add a DSC resource:
     - Write documentation using GitHub Flavored Markdown 
     - Write (or alter) an example configuration in the Examples subdirectory demonstrating how your resource should be used
     - DO NOT change the *.psd1 ModuleVersion (we will be updating this before releasing to the Gallery)
+    - DO NOT change the *.schema.mof ClassVersion. (If this ever needs updating, we will be updating before releasing to the Gallery.)
 
 
 ## Contributing a new DSC resource module
