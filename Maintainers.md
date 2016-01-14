@@ -4,7 +4,7 @@ Maintainers are the group of trusted people with knowledges in the resouce domai
 
 ## Maintainers
 
-Maintainers have [write access](https://help.github.com/articles/permission-levels-for-an-organization-repository/) to the repository.
+Maintainers (also known as coordinators) have [write access](https://help.github.com/articles/permission-levels-for-an-organization-repository/) to the repository.
 They can:
 
 1. `push`.
