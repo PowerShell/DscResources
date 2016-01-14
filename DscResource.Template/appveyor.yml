@@ -6,7 +6,7 @@
 #---------------------------------# 
 #      environment configuration  # 
 #---------------------------------# 
-version: 1.0.0.{build} # TODO Modify version
+version: 1.0.{build}.0 # TODO Modify version
 install: 
   - cinst -y pester
   - git clone https://github.com/PowerShell/DscResource.Tests
