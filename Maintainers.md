@@ -1,10 +1,10 @@
 # Maintaining a DSC resource
 
-Maintainers are the group of trusted people with knowledges in the resouce domain.
+Maintainers (also referred to as coordinators) are the group of trusted people with knowledges in the resouce domain.
 
 ## Maintainers
 
-Maintainers (also known as coordinators) have [write access](https://help.github.com/articles/permission-levels-for-an-organization-repository/) to the repository.
+Maintainers have [write access](https://help.github.com/articles/permission-levels-for-an-organization-repository/) to the repository.
 They can:
 
 1. `push`.
