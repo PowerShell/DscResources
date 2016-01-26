@@ -133,6 +133,35 @@ function Get-TargetResource
 }
 ```
 
+Parameter names should use PascalCase 
+-------------------------------------------------------------
+
+**Bad:**
+```powershell
+function Get-TargetResource
+{
+    ...
+     param
+     (
+         ...
+         $SOURCEPATH
+         ...
+}
+```
+
+**Good:**
+```powershell
+function Get-TargetResource
+{
+    [CmdletBinding()]
+     param
+     (
+         ...
+         $SourcePath
+         ...
+}
+```
+
 Variable names should use camelCase
 -------------------------------------------------------------
 

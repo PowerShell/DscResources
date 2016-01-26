@@ -1,6 +1,6 @@
 # Maintaining a DSC resource
 
-Maintainers are the group of trusted people with knowledges in the resouce domain.
+Maintainers (also referred to as coordinators) are the group of trusted people with knowledges in the resouce domain.
 
 ## Maintainers
 
@@ -24,6 +24,9 @@ If you are maintainer, please follow these rules:
 1. **DO** encourage people to refer issue in PR title/description (e.g. ```Closes #11```). Edit title if necessary
 1. **DO** encourage people to create meaningful titles of PR. Edit title if necessary.
 1. **DO** verify [style guidelines](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md) are being followed.
+1. **DO** ensure that each contributor has signed a valid Contributor License Agreement (CLA).
+1. **DO** verify compliance with any third party code license terms (e.g., requiring attribution, etc.) if the contribution contains such third party code.
+
 1. **DON'T** merge pull requests with failed CI build.
 1. **DON'T** merge pull requests, without label `cla-signed` or `cla-not-required` by Microsoft CLA bot.
 1. **DON'T** merge pull requests, that doesn't [reflect changes](CONTRIBUTING.md#lifecycle-of-a-pull-request) in **Unreleased** version in `README.md`.
