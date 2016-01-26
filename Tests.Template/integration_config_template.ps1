@@ -15,7 +15,7 @@ configuration 'MSFT_<ResourceName>_config' {
     Import-DscResource -Name 'MSFT_<ResourceName>'
     node localhost {
        # TODO: Modify ResourceName
-       '<ResourceName>' Integration_Test {
+       <ResourceName> Integration_Test {
             # TODO: Fill Configuration Code Here
        }
     }
