@@ -15,8 +15,8 @@ configuration <ResourceName>_config {
     # TODO: Modify ModuleName (e.g. xNetworking)
     Import-DscResource -ModuleName '<ModuleName>'
     node localhost {
-        # TODO: Modify ResourceNameFriendlyName (e.g. xFirewall Integration_Test)
-        <ResourceNameFriendlyName> Integration_Test {
+        # TODO: Modify ResourceFriendlyName (e.g. xFirewall Integration_Test)
+        <ResourceFriendlyName> Integration_Test {
             # TODO: Fill Configuration Code Here
         }
     }
