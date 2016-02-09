@@ -231,3 +231,18 @@ function New-EtwEvent
     # Implementation
  }
 ```
+
+Call cmdlets using all named parameters instead of positional parameters
+------------------------------------------------------------------------
+
+**Bad:**
+```powershell
+Get-Childitem c:\documents *.md
+```
+
+The above code breaks this rule using by calling ```Get-ChildItem``` passing positional parameters instead of named parameters.
+
+**Good:**
+```powershell
+Get-ChildItem -Path c:\documents -filer *.md
+```
