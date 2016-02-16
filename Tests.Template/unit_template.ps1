@@ -3,7 +3,7 @@
    Template for creating DSC Resource Unit Tests
 .DESCRIPTION
    To Use:
-     1. Copy to \Tests\Unit\ folder and rename MSFT_x<ResourceName>.tests.ps1
+     1. Copy to \Tests\Unit\ folder and rename <ResourceName>.tests.ps1 (e.g. MSFT_xFirewall.tests.ps1)
      2. Customize TODO sections.
 
 .NOTES
@@ -13,8 +13,8 @@
 
 
 # TODO: Customize these parameters...
-$Global:DSCModuleName      = 'x<ModuleName>' # Example xNetworking
-$Global:DSCResourceName    = 'MSFT_x<ResourceName>' # Example MSFT_xFirewall
+$Global:DSCModuleName      = '<ModuleName>' # Example xNetworking
+$Global:DSCResourceName    = '<ResourceName>' # Example MSFT_xFirewall
 # /TODO
 
 #region HEADER

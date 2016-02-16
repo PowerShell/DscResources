@@ -3,9 +3,9 @@
    Template for creating DSC Resource Integration Tests
 .DESCRIPTION
    To Use:
-     1. Copy to \Tests\Integration\ folder and rename MSFT_x<ResourceName>.Integration.tests.ps1
+     1. Copy to \Tests\Integration\ folder and rename <ResourceName>.Integration.tests.ps1 (e.g. MSFT_xNeworking.Integration.tests.ps1)
      2. Customize TODO sections.
-     3. Create test DSC Configurtion file MSFT_x<ResourceName>.config.ps1 from integration_config_template.ps1 file.
+     3. Create test DSC Configurtion file <ResourceName>.config.ps1 (e.g. MSFT_xNeworking.config.ps1) from integration_config_template.ps1 file.
 
 .NOTES
    Code in HEADER, FOOTER and DEFAULT TEST regions are standard and may be moved into
@@ -13,8 +13,8 @@
 #>
 
 # TODO: Customize these parameters...
-$Global:DSCModuleName      = 'x<ModuleName>' # Example xNetworking
-$Global:DSCResourceName    = 'MSFT_x<ResourceName>' # Example MSFT_xFirewall
+$Global:DSCModuleName      = '<ModuleName>' # Example xNetworking
+$Global:DSCResourceName    = '<ResourceName>' # Example MSFT_xFirewall
 # /TODO
 
 #region HEADER
