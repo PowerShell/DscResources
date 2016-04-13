@@ -22,6 +22,7 @@ Creating DSC Resource Unit Test Instructions
 --------------------------------------------
  1. Copy the ```\Tests.Template\unit_template.ps1``` to the ```\Tests\Integration\``` folder and rename to ```MSFT_x<ResourceName>.tests.ps1```
  2. Open ```MSFT_x<ResourceName>.tests.ps1``` and customize TODO sections.
+  - **Note: The existing Describe blocks do not have to be used. The blocks included are a common test pattern, but may be completely replaced with a more suitable pattern.**
 
 Creating DSC Resource Integration Test Instructions
 ---------------------------------------------------
@@ -32,7 +33,8 @@ Creating DSC Resource Integration Test Instructions
  
 Running Tests Locally
 ---------------------
-All tests are automatically run via AppVeyor when the repository is updated. However, it is recommended that all tests be run locally before being committed.
+All tests are automatically run via AppVeyor when the repository is updated.
+However, it is recommended that all tests be run locally before being committed.
 
 Requirements for running all tests locally:
  1. Git is installed and the ```Git.exe``` can be found in the ```%PATH%``` variable.

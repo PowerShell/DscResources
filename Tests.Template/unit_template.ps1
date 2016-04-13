@@ -33,49 +33,62 @@ $TestEnvironment = Initialize-TestEnvironment `
     -DSCModuleName $Global:DSCModuleName `
     -DSCResourceName $Global:DSCResourceName `
     -TestType Unit 
-#endregion
+#endregion HEADER
 
 # TODO: Other Optional Init Code Goes Here...
 
 # Begin Testing
 try
 {
+    #region Pester Test Initialization
 
-    #region Pester Tests
+    # TODO: Optionally create any variables here for use by your tests
+    # See https://github.com/PowerShell/xNetworking/blob/dev/Tests/Unit/MSFT_xDhcpClient.Tests.ps1
+    # Mocks that should be applied to all cmdlets being tested may
+    # also be created here if required.
 
-    # The InModuleScope command allows you to perform white-box unit testing on the internal
-    # (non-exported) code of a Script Module.
+    #endregion Pester Test Initialization
+
+    #region Exported Function Unit Tests
+
+    # TODO: Common DSC Resource describe block structure
+    # The following three Describe blocks are included as a common test pattern.
+    # If a different test pattern would be more suitable, then test describe blocks
+    # may be completely replaced.
+
+    #region Function Get-TargetResource
+    Describe "$($Global:DSCResourceName)\Get-TargetResource" {
+        # TODO: Complete Get-TargetResource Tests...
+    }
+    #endregion Function Get-TargetResource
+
+
+    #region Function Test-TargetResource
+    Describe "$($Global:DSCResourceName)\Test-TargetResource" {
+        # TODO: Complete Test-TargetResource Tests...
+    }
+    #endregion Function Test-TargetResource
+
+
+    #region Function Set-TargetResource
+    Describe "$($Global:DSCResourceName)\Set-TargetResource" {
+        # TODO: Complete Set-TargetResource Tests...
+    }
+    #endregion Function Set-TargetResource
+
+    #endregion Exported Function Unit Tests
+
+    #region Non-Exported Function Unit Tests
+
+    # TODO: Pester Tests for any non-exported Helper Cmdlets
+    # If the resource does not contain any non-exported helper cmdlets then
+    # this block may be safetly deleted.
     InModuleScope $Global:DSCResourceName {
-
-        #region Pester Test Initialization
-        # TODO: Optopnal Load Mock for use in Pester tests here...
-        #endregion
-
-
-        #region Function Get-TargetResource
-        Describe "$($Global:DSCResourceName)\Get-TargetResource" {
-            # TODO: Complete Tests...
-        }
-        #endregion
-
-
-        #region Function Test-TargetResource
-        Describe "$($Global:DSCResourceName)\Test-TargetResource" {
-            # TODO: Complete Tests...
-        }
-        #endregion
-
-
-        #region Function Set-TargetResource
-        Describe "$($Global:DSCResourceName)\Set-TargetResource" {
-            # TODO: Complete Tests...
-        }
-        #endregion
-
-        # TODO: Pester Tests for any Helper Cmdlets
+        # The InModuleScope command allows you to perform white-box unit testing
+        # on the internal (non-exported) code of a Script Module.
 
     }
-    #endregion
+    #endregion Non-Exported Function Unit Tests
 }
 finally
 {
