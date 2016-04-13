@@ -103,9 +103,11 @@ Links can also have references, which will be discussed in the "Link and Image R
 
 All DSC modules in the DscResources should have tests written using [Pester](https://github.com/pester/Pester) included in a Tests folder.
 It is required that you provide adequate coverage for the code you change.  The following projects have tests which you can use as examples:
+* [xNetworking](https://github.com/PowerShell/xNetworking/tree/dev/Tests) 
 * [xDhcpServer](https://github.com/PowerShell/xDhcpServer/tree/master/Tests)
-* [xNetwork](https://github.com/PowerShell/xNetworking/tree/dev/Tests) 
 * [xSharepoint](https://github.com/PowerShell/xSharePoint/tree/master/Tests/xSharePoint)
+
+We highly encourage you to use [tests templates](https://github.com/PowerShell/DscResources/tree/master/Tests.Template) when creating tests for DSC resources. Please refer to the [testing guidelines](https://github.com/PowerShell/DscResources/blob/master/TestsGuidelines.md) for information on how to use the templates.
 
 One of the most effective ways to report a bug is to provide a Pester test that fails. 
 It dramatically simplifies work for the person who will fix it, increases code coverage, and prevents regressions in the future.
