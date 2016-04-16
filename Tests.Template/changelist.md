@@ -11,7 +11,6 @@ When the templates are used to create or update tests in a DSC Resource the vers
 ### Version 1.0
 * First release including version number.
 
-
 ## unit_template.ps1
 ### Version 1.0
 * First release including version number.
