@@ -11,7 +11,7 @@
 
 
 # TODO: Modify ResourceName (e.g. MSFT_xFirewall_config)
-# Integration Test Config Template Version: 1.0
+# Integration Test Config Template Version: 1.0.0
 configuration <ResourceName>_config {
     # TODO: Modify ModuleName (e.g. xNetworking)
     Import-DscResource -ModuleName '<ModuleName>'
