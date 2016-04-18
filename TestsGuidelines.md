@@ -16,7 +16,8 @@ General Rules
  * Unit and Integration tests should be created using the Template files that are located in the [Tests.Template](Tests.Template) folder in this repository.
  * The Unit and Integration test templates require that ```Git.exe``` be installed and can be found in the ```%PATH%``` on the testing computer.
  * The Unit and Integration test templates will automatically download or update the [DSCResource.Tests repository](https://github.com/PowerShell/DscResource.Tests) using Git.exe to the DSC Module folder.
- * Ensure that the .gitignore file for the resource module contains **DSCResource.Tests** so that this folder is not accidentally included in a commit to your resource repository. 
+ * Ensure that the .gitignore file for the resource module contains **DSCResource.Tests** so that this folder is not accidentally included in a commit to your resource repository.
+ * Ensure that when creating or updating unit/integration tests from the Test.Templates the Version number of the test template file used remains in the test file.
 
 Creating DSC Resource Unit Test Instructions
 --------------------------------------------
@@ -24,13 +25,26 @@ Creating DSC Resource Unit Test Instructions
  2. Open ```MSFT_x<ResourceName>.tests.ps1``` and customize TODO sections.
   - **Note: The existing Describe blocks do not have to be used. The blocks included are a common test pattern, but may be completely replaced with a more suitable pattern.**
 
+**Important: Please ensure that the test files created retain the version number of the template used to create them.**
+
 Creating DSC Resource Integration Test Instructions
 ---------------------------------------------------
  1. Copy the ```\Tests.Template\integration_template.ps1``` to ```\Tests\Integration\``` folder and rename ```MSFT_x<ResourceName>.Integration.tests.ps1```
  2. Open ```MSFT_x<ResourceName>.Integration.tests.ps1``` and customize TODO sections.
  3. Copy the ```\Tests.Template\integration_comfig_template.ps1``` to ```\Tests\Integration\``` folder and rename ```MSFT_x<ResourceName>.config.ps1```
  4. Open ```MSFT_x<ResourceName>.config.ps1``` and customize TODO sections.
- 
+
+**Important: Please ensure that the test files created retain the version number of the template used to create them.**
+
+Updating DSC Resource Tests
+---------------------------
+It is possible that the Unit and Integration test templates may change in future, either to support new functionality or fix an issue.
+When a change is made to a template, it will be documented in the [Tests.Template\ChangeList.md](Tests.Template\ChangeList.md) file.
+The version number in any current tests can be compared with the Change List to determine what has changed since the tests were updated.
+If any unit or integration tests based on these templates require any enhancements or fixes then they will need to be updated manually.
+
+**Important: Please ensure that when updating a test with the new Test Template content that the Template version number is also updated to match the new template.**
+
 Running Tests Locally
 ---------------------
 All tests are automatically run via AppVeyor when the repository is updated.
