@@ -8,11 +8,11 @@ General Rules
 ----------------
 
  1. For all indentation, use 4 spaces instead of tab stops
- 2. Make sure all files are encoding using UTF-8. 
- 3. Windows handles [newlines](http://en.wikipedia.org/wiki/Newline) using CR+LF instead of just CR. 
-For interoperability reasons, we recommend that you follow [these instructions](GettingStartedWithGitHub.md#setup-git) when installing Git on Windows so that newlines saved to GitHub are simply CRs. 
+ 2. Make sure all files are encoding using UTF-8.
+ 3. Windows handles [newlines](http://en.wikipedia.org/wiki/Newline) using CR+LF instead of just CR.
+For interoperability reasons, we recommend that you follow [these instructions](GettingStartedWithGitHub.md#setup-git) when installing Git on Windows so that newlines saved to GitHub are simply CRs.
  4. When writing Markdown, if a paragraph includes more than one sentence, end each sentence with a newline.
-GitHub will still render the sentences as a single paragraph, but the readability of `git diff` will be greatly improved. 
+GitHub will still render the sentences as a single paragraph, but the readability of `git diff` will be greatly improved.
  5. Files must end with a newline, see [StackOverflow.](http://stackoverflow.com/questions/5813311/no-newline-at-end-of-file) 
 
 PowerShell Coding Style Guidelines
@@ -80,7 +80,7 @@ if ($connected) {
 
 **Good:**
 ```powershell
-if ($connected) 
+if ($connected)
 {
     Write-Verbose 'Connected to server'
 }
@@ -140,12 +140,11 @@ Parameter names should use PascalCase
 ```powershell
 function Get-TargetResource
 {
-    ...
-     param
-     (
-         ...
-         $SOURCEPATH
-         ...
+    [CmdletBinding()]
+    param
+    (
+        $SOURCEPATH
+    )
 }
 ```
 
@@ -154,11 +153,130 @@ function Get-TargetResource
 function Get-TargetResource
 {
     [CmdletBinding()]
-     param
-     (
-         ...
-         $SourcePath
-         ...
+    param
+    (
+        $SourcePath
+    )
+}
+```
+
+Parameter type should be on the same line as parameter name
+-------------------------------------------------------------
+
+**Bad:**
+```powershell
+function Get-TargetResource
+{
+    [CmdletBinding()]
+    param
+    (
+        [String]
+        $SourcePath = 'c:\'
+}
+```
+
+**Good:**
+```powershell
+function Get-TargetResource
+{
+    [CmdletBinding()]
+    param
+    (
+        [String] $SourcePath = 'c:\'
+    )
+}
+```
+
+Parameter type should be separated from name by a space
+-------------------------------------------------------------
+
+**Bad:**
+```powershell
+function Get-TargetResource
+{
+    [CmdletBinding()]
+    param
+    (
+        [String]$SourcePath = 'c:\'
+    )
+}
+```
+
+**Good:**
+```powershell
+function Get-TargetResource
+{
+    [CmdletBinding()]
+    param
+    (
+        [String] $SourcePath = 'c:\'
+    )
+}
+```
+
+Parameter names should be separated by a single line
+-------------------------------------------------------------
+
+**Bad:**
+```powershell
+function New-EtwEvent
+{
+    param
+    (
+        [Parameter(Mandatory=$true)]
+        [ValidateNotNullOrEmpty()]
+        [String] $message,
+        [ValidateSet("operational", "debug", "analytic")]
+        [String] $channel = "operational"
+    )
+}
+```
+
+**Good:**
+```powershell
+function New-EtwEvent
+{
+    param
+    (
+        [Parameter(Mandatory=$true)]
+        [ValidateNotNullOrEmpty()]
+        [String] $message,
+
+        [ValidateSet("operational", "debug", "analytic")]
+        [String] $channel = "operational"
+    )
+}
+```
+
+Parameter attributes should be on separate lines
+-------------------------------------------------------------
+
+**Bad:**
+```powershell
+function New-EtwEvent
+{
+    param
+    (
+        [Parameter(Mandatory=$true)][ValidateNotNullOrEmpty()][String] $message,
+
+        [ValidateSet("operational", "debug", "analytic")][String] $channel = "operational"
+    )
+}
+```
+
+**Good:**
+```powershell
+function New-EtwEvent
+{
+    param
+    (
+        [Parameter(Mandatory=$true)]
+        [ValidateNotNullOrEmpty()]
+        [String] $message,
+
+        [ValidateSet("operational", "debug", "analytic")]
+        [String] $channel = "operational"
+    )
 }
 ```
 
@@ -195,16 +313,17 @@ When commenting functions, use comment-based help syntax
 # Writes event
 function New-EtwEvent
 {
-    param 
+    param
     (
         [Parameter(Mandatory=$true)]
         [ValidateNotNullOrEmpty()]
         [String] $message,
+
         [ValidateSet("operational", "debug", "analytic")]
-        [String] $chanel = "operational"
+        [String] $channel = "operational"
     )
     # Implementation
- }
+}
 ```
 
 **Good:**
@@ -213,23 +332,24 @@ function New-EtwEvent
     .SYNOPSIS Writes event to ETW
     .PARAM
         message Message to write to ETW
-    .PARAM 
-        chanel ETW channel where message should be stored
+    .PARAM
+        channel ETW channel where message should be stored
     .EXAMPLE
-        New-EtwEvent -message "Attempting to connect to server" -chanel "debug"
+        New-EtwEvent -message "Attempting to connect to server" -channel "debug"
 #>
 function New-EtwEvent
 {
-    param 
+    param
     (
         [Parameter(Mandatory=$true)]
         [ValidateNotNullOrEmpty()]
         [String] $message,
+
         [ValidateSet("operational", "debug", "analytic")]
-        [String] $chanel = "operational"
+        [String] $channel = "operational"
     )
     # Implementation
- }
+}
 ```
 
 Call cmdlets using all named parameters instead of positional parameters
