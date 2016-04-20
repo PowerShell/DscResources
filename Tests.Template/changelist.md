@@ -8,9 +8,15 @@ When the templates are used to create or update tests in a DSC Resource the vers
 * First release including version number.
 
 ## integration_template.ps1
+### Version 1.1.0
+* Getting rid of git-dependency.
+ 
 ### Version 1.0.0
 * First release including version number.
 
 ## unit_template.ps1
+### Version 1.1.0
+* Getting rid of git-dependency.
+
 ### Version 1.0.0
 * First release including version number.
