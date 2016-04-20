@@ -366,3 +366,60 @@ The above code breaks this rule using by calling ```Get-ChildItem``` passing pos
 ```powershell
 Get-ChildItem -Path c:\documents -filer *.md
 ```
+
+Hashtable, Array and Object Structure should be consistent
+------------------------------------------------------------------------
+
+**Bad:**
+```powershell
+$Parameters = @(
+    @{ Name = 'Name'; Source = '$FirewallRule.Name'; 
+        Type = 'String' },
+    @{ Name = 'DisplayName'; Source = '$FirewallRule.DisplayName'; Type = 'String' },
+    @{
+        Name = 'Group'
+        Source = '$FirewallRule.Group'
+        Type = 'String'
+    },
+    @{ Name = 'DisplayGroup'; Source = '$FirewallRule.DisplayGroup'; Type = '' }
+)
+```
+
+The above array of hashtable objects is not consistent.
+*Care must be taken that all each hashtable or object does not exceed the 100 character maximum line width rule.*
+
+**Good:**
+```powershell
+$Parameters = @(
+    @{ Name = 'Name';         Source = '$FirewallRule.Name';         Type = 'String' },
+    @{ Name = 'DisplayName';  Source = '$FirewallRule.DisplayName';  Type = 'String' },
+    @{ Name = 'Group';        Source = '$FirewallRule.Group';        Type = 'String' },
+    @{ Name = 'DisplayGroup'; Source = '$FirewallRule.DisplayGroup'; Type = ''       }
+)
+```
+
+**Good:**
+```powershell
+$Parameters = @(
+    @{
+        Name   = 'Name'
+        Source = '$FirewallRule.Name'
+        Type   = 'String'
+    },
+    @{
+        Name   = 'DisplayName'
+        Source = '$FirewallRule.DisplayName'
+        Type   = 'String'
+    },
+    @{
+        Name   = 'Group'
+        Source = '$FirewallRule.Group'
+        Type   = 'String'
+    },
+    @{
+        Name   = 'DisplayGroup'
+        Source = '$FirewallRule.DisplayGroup'
+        Type   = ''
+    }
+)
+```
