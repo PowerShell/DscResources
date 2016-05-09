@@ -54,7 +54,39 @@ Requirements for running all tests locally:
  1. Git is installed and the ```Git.exe``` can be found in the ```%PATH%``` variable.
  2. The latest [Pester Module](https://github.com/pester/Pester) is installed, either manually or via PowerShellGet.
  3. An internet connection is available so that the DSCResource.Tests repository can be downloaded or updated using Git.
- 
+
+Unit Testing Private Functions
+------------------------------
+If a resource contains private (non-exported) functions that need to be tested, then to allow these functions to be tested by Pester, they must be contained in an ```InModuleScope``` Pester block:
+
+```powershell
+InModuleScope $Global:DSCResourceName {
+    Describe "$($Global:DSCResourceName)\Get-FirewallRuleProperty" {
+        # Test Get-FirewallRuleProperty private/non-exported function
+    }
+}
+```
+
+_Note: The core DSC Resource functions ```Get-TargetResource```, ```Set-TargetResource``` and ```Test-TargetResource``` must always be public functions, so do not need to be containined in an ```InModuleScope``` block._
+
+Using Variables Declared by the Module in Tests
+-----------------------------------------------
+It is common for modules to declare variables that are needed inside the module, but may also be required for unit testing.
+One common example of this is the ```LocalizedData``` variable that contains localized messages used by the resource.
+Variables declared at the module scope (private variables) can not be accessed by unit tests that are not inside an ```InModuleScope``` Pester block.
+
+There are two solutions to this:
+1. Use the ```InModuleScope``` to copy the private variable into a variable scoped to the Unit test:
+```powershell
+$LocalizedData = InModuleScope $Global:DSCResourceName {
+    $LocalizedData
+}
+```
+2. Add any variables that are required to be accessed outside the module by unit tests to the ```Export-ModuleMember``` cmdlet in the DSC Resource:
+```powershell
+Export-ModuleMember -Function *-TargetResource -Variables LocalizedData
+```
+
 Example Tests
 -------------
 To see examples of the Unit/Integration tests in practice, see the xNetworking MSFT_xFirewall resource:
