@@ -157,3 +157,6 @@
 [submodule "xDscResources/xSharePoint"]
 	path = xDscResources/xSharePoint
 	url = https://github.com/powershell/xSharePoint
+[submodule "xDscResources/xDFS"]
+	path = xDscResources/xDFS
+	url = https://github.com/PowerShell/xDFS
