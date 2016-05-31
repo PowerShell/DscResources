@@ -429,10 +429,12 @@ Aliases should not be used
 
 **Bad**
 ```powershell
-ls -File -Recurse $root | ? { @('.gitignore', '.gitattributes', '.ps1', '.psm1', '.psd1', '.json', '.xml', '.cmd', '.mof') -contains $_.Extension }
+ls -File -Recurse $root | ? { @('.gitignore', '.mof') -contains $_.Extension }
 ```
 
-**Good**
+When writing functions use the full command not aliases 
+
+**Good** 
 ```Powershell
-Get-ChildItem -File -Recurse $root | Where-Object { @('.gitignore', '.gitattributes', '.ps1', '.psm1', '.psd1', '.json', '.xml', '.cmd', '.mof') -contains $_.Extension } 
+Get-ChildItem -File -Recurse $root | Where-Object { @('.gitignore', '.mof') -contains $_.Extension } 
 ```
