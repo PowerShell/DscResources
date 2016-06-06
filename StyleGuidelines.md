@@ -423,3 +423,18 @@ $Parameters = @(
     }
 )
 ```
+
+Aliases should not be used
+------------------------------------------------------------------------
+
+**Bad**
+```powershell
+ls -File -Recurse $root | ? { @('.gitignore', '.mof') -contains $_.Extension }
+```
+
+When writing functions use the full command not aliases 
+
+**Good** 
+```Powershell
+Get-ChildItem -File -Recurse $root | Where-Object { @('.gitignore', '.mof') -contains $_.Extension } 
+```
