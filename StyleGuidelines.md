@@ -32,7 +32,7 @@ Function Get-MyValue
 }
 ```
 
-The above code breaks this rule by having two new lines between the write-verbose and the return.
+The above code breaks this rule by having two new lines between the Write-Verbose and the return statement.
 
 **Good:**
 ```powershell
@@ -225,9 +225,9 @@ function New-EtwEvent
     (
         [Parameter(Mandatory=$true)]
         [ValidateNotNullOrEmpty()]
-        [String] $message,
+        [String] $Message,
         [ValidateSet("operational", "debug", "analytic")]
-        [String] $channel = "operational"
+        [String] $Channel = "operational"
     )
 }
 ```
@@ -240,10 +240,10 @@ function New-EtwEvent
     (
         [Parameter(Mandatory=$true)]
         [ValidateNotNullOrEmpty()]
-        [String] $message,
+        [String] $Message,
 
         [ValidateSet("operational", "debug", "analytic")]
-        [String] $channel = "operational"
+        [String] $Channel = "operational"
     )
 }
 ```
@@ -257,9 +257,9 @@ function New-EtwEvent
 {
     param
     (
-        [Parameter(Mandatory=$true)][ValidateNotNullOrEmpty()][String] $message,
+        [Parameter(Mandatory=$true)][ValidateNotNullOrEmpty()][String] $Message,
 
-        [ValidateSet("operational", "debug", "analytic")][String] $channel = "operational"
+        [ValidateSet("operational", "debug", "analytic")][String] $Channel = "operational"
     )
 }
 ```
@@ -272,10 +272,10 @@ function New-EtwEvent
     (
         [Parameter(Mandatory=$true)]
         [ValidateNotNullOrEmpty()]
-        [String] $message,
+        [String] $Message,
 
         [ValidateSet("operational", "debug", "analytic")]
-        [String] $channel = "operational"
+        [String] $Channel = "operational"
     )
 }
 ```
@@ -317,10 +317,10 @@ function New-EtwEvent
     (
         [Parameter(Mandatory=$true)]
         [ValidateNotNullOrEmpty()]
-        [String] $message,
+        [String] $Message,
 
         [ValidateSet("operational", "debug", "analytic")]
-        [String] $channel = "operational"
+        [String] $Channel = "operational"
     )
     # Implementation
 }
@@ -331,11 +331,11 @@ function New-EtwEvent
 <#
     .SYNOPSIS Writes event to ETW
     .PARAM
-        message Message to write to ETW
+        Message Message to write to ETW
     .PARAM
-        channel ETW channel where message should be stored
+        Channel ETW channel where message should be stored
     .EXAMPLE
-        New-EtwEvent -message "Attempting to connect to server" -channel "debug"
+        New-EtwEvent -Message "Attempting to connect to server" -Channel "debug"
 #>
 function New-EtwEvent
 {
@@ -343,10 +343,10 @@ function New-EtwEvent
     (
         [Parameter(Mandatory=$true)]
         [ValidateNotNullOrEmpty()]
-        [String] $message,
+        [String] $Message,
 
         [ValidateSet("operational", "debug", "analytic")]
-        [String] $channel = "operational"
+        [String] $Channel = "operational"
     )
     # Implementation
 }
@@ -357,44 +357,44 @@ Call cmdlets using all named parameters instead of positional parameters
 
 **Bad:**
 ```powershell
-Get-Childitem c:\documents *.md
+Get-ChildItem c:\documents *.md
 ```
 
 The above code breaks this rule using by calling ```Get-ChildItem``` passing positional parameters instead of named parameters.
 
 **Good:**
 ```powershell
-Get-ChildItem -Path c:\documents -filer *.md
+Get-ChildItem -Path c:\documents -Filter *.md
 ```
 
-Hashtable, Array and Object Structure should be consistent
+Hash table, Array and Object Structure should be consistent
 ------------------------------------------------------------------------
 
 **Bad:**
 ```powershell
 $Parameters = @(
-    @{ Name = 'Name'; Source = '$FirewallRule.Name'; 
+    @{ Name = 'Name'; Source = $FirewallRule.Name; 
         Type = 'String' },
-    @{ Name = 'DisplayName'; Source = '$FirewallRule.DisplayName'; Type = 'String' },
+    @{ Name = 'DisplayName'; Source = $FirewallRule.DisplayName; Type = 'String' },
     @{
         Name = 'Group'
-        Source = '$FirewallRule.Group'
+        Source = $FirewallRule.Group
         Type = 'String'
     },
-    @{ Name = 'DisplayGroup'; Source = '$FirewallRule.DisplayGroup'; Type = '' }
+    @{ Name = 'DisplayGroup'; Source = $FirewallRule.DisplayGroup; Type = '' }
 )
 ```
 
-The above array of hashtable objects is not consistent.
-*Care must be taken that all each hashtable or object does not exceed the 100 character maximum line width rule.*
+The above array of hash table objects is not consistent.
+*Care must be taken that each hash table or object does not exceed the 100 character maximum line width rule.*
 
 **Good:**
 ```powershell
 $Parameters = @(
-    @{ Name = 'Name';         Source = '$FirewallRule.Name';         Type = 'String' },
-    @{ Name = 'DisplayName';  Source = '$FirewallRule.DisplayName';  Type = 'String' },
-    @{ Name = 'Group';        Source = '$FirewallRule.Group';        Type = 'String' },
-    @{ Name = 'DisplayGroup'; Source = '$FirewallRule.DisplayGroup'; Type = ''       }
+    @{ Name = 'Name';         Source = $FirewallRule.Name;         Type = 'String' },
+    @{ Name = 'DisplayName';  Source = $FirewallRule.DisplayName;  Type = 'String' },
+    @{ Name = 'Group';        Source = $FirewallRule.Group;        Type = 'String' },
+    @{ Name = 'DisplayGroup'; Source = $FirewallRule.DisplayGroup; Type = ''       }
 )
 ```
 
@@ -403,22 +403,22 @@ $Parameters = @(
 $Parameters = @(
     @{
         Name   = 'Name'
-        Source = '$FirewallRule.Name'
+        Source = $FirewallRule.Name
         Type   = 'String'
     },
     @{
         Name   = 'DisplayName'
-        Source = '$FirewallRule.DisplayName'
+        Source = $FirewallRule.DisplayName
         Type   = 'String'
     },
     @{
         Name   = 'Group'
-        Source = '$FirewallRule.Group'
+        Source = $FirewallRule.Group
         Type   = 'String'
     },
     @{
         Name   = 'DisplayGroup'
-        Source = '$FirewallRule.DisplayGroup'
+        Source = $FirewallRule.DisplayGroup
         Type   = ''
     }
 )
