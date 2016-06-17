@@ -4,8 +4,7 @@ In order to provide clean and consistent code, please follow the coding conventi
 
 For general PowerShell best practices, please refer to [PowerShell Best Practices](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/PowerShellBestPractices.md) document.
 
-General Rules
-----------------
+## General Rules
 
  1. For all indentation, use 4 spaces instead of tab stops
  2. Make sure all files are encoding using UTF-8.
@@ -15,11 +14,30 @@ For interoperability reasons, we recommend that you follow [these instructions](
 GitHub will still render the sentences as a single paragraph, but the readability of `git diff` will be greatly improved.
  5. Files must end with a newline, see [StackOverflow.](http://stackoverflow.com/questions/5813311/no-newline-at-end-of-file) 
 
-PowerShell Coding Style Guidelines
-==================================
+## PowerShell Coding Style Guidelines
 
-Code should not contain multiple blank lines in a row
----------------------------------------------------
+- [DSC Resource Style Guidelines](#dsc-resource-style-guidelines)
+    - [General Rules](#general-rules)
+    - [PowerShell Coding Style Guidelines](#powershell-coding-style-guidelines)
+        - [Code should not contain multiple blank lines in a row](#code-should-not-contain-multiple-blank-lines-in-a-row)
+        - [Opening curly brackets should not be followed by a blank line](#opening-curly-brackets-should-not-be-followed-by-a-blank-line)
+        - [Braces should always be on a following line](#braces-should-always-be-on-a-following-line)
+        - [Each line should have less than 100 characters](#each-line-should-have-less-than-100-characters)
+        - [Use verbose, easy to understand names](#use-verbose-easy-to-understand-names)
+        - [Function names should use PascalCase and follow Noun-Verb convention if possible](#function-names-should-use-pascalcase-and-follow-noun-verb-convention-if-possible)
+        - [Parameter names should use PascalCase](#parameter-names-should-use-pascalcase)
+        - [Parameter type should be on the same line as parameter name](#parameter-type-should-be-on-the-same-line-as-parameter-name)
+        - [Parameter type should be separated from name by a space](#parameter-type-should-be-separated-from-name-by-a-space)
+        - [Parameter names should be separated by a single line](#parameter-names-should-be-separated-by-a-single-line)
+        - [Parameter attributes should be on separate lines](#parameter-attributes-should-be-on-separate-lines)
+        - [Variable names should use camelCase](#variable-names-should-use-camelcase)
+        - [Support comment-based help](#support-comment-based-help)
+        - [Call cmdlets using all named parameters instead of positional parameters](#call-cmdlets-using-all-named-parameters-instead-of-positional-parameters)
+        - [Hashtable, Array and Object Structure should be consistent](#hashtable-array-and-object-structure-should-be-consistent)
+        - [Aliases should not be used](#aliases-should-not-be-used)
+
+
+### Code should not contain multiple blank lines in a row
 
 **Bad:**
 ```powershell
@@ -43,8 +61,7 @@ Function Get-MyValue
 }
 ```
 
-Opening curly brackets should not be followed by a blank line
--------------------------------------------------------------
+### Opening curly brackets should not be followed by a blank line
 
 **Bad:**
 ```powershell
@@ -68,8 +85,7 @@ Function Get-MyValue
 }
 ```
 
-Braces should always be on a following line
--------------------------------------------------------------
+### Braces should always be on a following line
 
 **Bad:**
 ```powershell
@@ -86,8 +102,7 @@ if ($connected)
 }
 ```
 
-Each line should have less than 100 characters
--------------------------------------------------------------
+### Each line should have less than 100 characters
 
 **Bad:**
 ```powershell
@@ -101,8 +116,7 @@ $convertToCimUnjoinCredential = New-CimInstance -ClassName MSFT_Credential `
         -Namespace root/microsoft/windows/desiredstateconfiguration -ClientOnly
 ```
 
-Use verbose, easy to understand names
--------------------------------------------------------------
+### Use verbose, easy to understand names
 
 **Bad:**
 ```powershell
@@ -114,8 +128,7 @@ $rdsHost = Get-RdsHost
 $remoteDesktopSessionHost = Get-RemoteDesktopSessionHost
 ```
 
-Function names should use PascalCase and follow Noun-Verb convention if possible
--------------------------------------------------------------
+### Function names should use PascalCase and follow Noun-Verb convention if possible
 
 **Bad:**
 ```powershell
@@ -133,8 +146,7 @@ function Get-TargetResource
 }
 ```
 
-Parameter names should use PascalCase 
--------------------------------------------------------------
+### Parameter names should use PascalCase 
 
 **Bad:**
 ```powershell
@@ -160,8 +172,7 @@ function Get-TargetResource
 }
 ```
 
-Parameter type should be on the same line as parameter name
--------------------------------------------------------------
+### Parameter type should be on the same line as parameter name
 
 **Bad:**
 ```powershell
@@ -187,8 +198,7 @@ function Get-TargetResource
 }
 ```
 
-Parameter type should be separated from name by a space
--------------------------------------------------------------
+### Parameter type should be separated from name by a space
 
 **Bad:**
 ```powershell
@@ -214,8 +224,7 @@ function Get-TargetResource
 }
 ```
 
-Parameter names should be separated by a single line
--------------------------------------------------------------
+### Parameter names should be separated by a single line
 
 **Bad:**
 ```powershell
@@ -248,8 +257,7 @@ function New-EtwEvent
 }
 ```
 
-Parameter attributes should be on separate lines
--------------------------------------------------------------
+### Parameter attributes should be on separate lines
 
 **Bad:**
 ```powershell
@@ -280,8 +288,7 @@ function New-EtwEvent
 }
 ```
 
-Variable names should use camelCase
--------------------------------------------------------------
+### Variable names should use camelCase
 
 Names of variables should use camelCase
 
@@ -289,8 +296,8 @@ Names of variables should use camelCase
 ```powershell
 function New-Log
 {
-    $Message = "New log message" # should start with lower case
-    Write-Host $Message
+    $LogMessage = "New log message" # should start with lower case
+    Write-Host $LogMessage
 }
 ```
 
@@ -298,13 +305,12 @@ function New-Log
 ```powershell
 function New-Log
 {
-    $message = "New log message"
-    Write-Host $message
+    $logMessage = "New log message"
+    Write-Host $logMessage
 }
 ```
 
-Support comment-based help
--------------------------------------------------------------
+### Support comment-based help
 
 When commenting functions, use comment-based help syntax
 
@@ -352,8 +358,7 @@ function New-EtwEvent
 }
 ```
 
-Call cmdlets using all named parameters instead of positional parameters
-------------------------------------------------------------------------
+### Call cmdlets using all named parameters instead of positional parameters
 
 **Bad:**
 ```powershell
@@ -367,8 +372,7 @@ The above code breaks this rule using by calling ```Get-ChildItem``` passing pos
 Get-ChildItem -Path c:\documents -filer *.md
 ```
 
-Hashtable, Array and Object Structure should be consistent
-------------------------------------------------------------------------
+### Hashtable, Array and Object Structure should be consistent
 
 **Bad:**
 ```powershell
@@ -424,8 +428,7 @@ $Parameters = @(
 )
 ```
 
-Aliases should not be used
-------------------------------------------------------------------------
+### Aliases should not be used
 
 **Bad**
 ```powershell
