@@ -1,29 +1,25 @@
 # DSC Resource Style Guidelines
 
-In order to provide clean and consistent code, please follow the coding conventions listed below when contributing to this repository and all [DSC Resource Kit repositories](https://github.com/PowerShell/DscResources/tree/master/xDscResources).
+In order to provide clean and consistent code, please follow the style guidelines listed below when contributing to any [DSC Resource Kit repositories](https://github.com/PowerShell/DscResources/tree/master/xDscResources).
 
-For general PowerShell best practices, please refer to [PowerShell Best Practices](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/PowerShellBestPractices.md) document.
-
-General Rules
-----------------
-
- 1. For all indentation, use 4 spaces instead of tab stops
- 2. Make sure all files are encoding using UTF-8.
- 3. Windows handles [newlines](http://en.wikipedia.org/wiki/Newline) using CR+LF instead of just CR.
+## General Rules
+ 1. For all indentation, use 4 spaces instead of tabs
+ 2. Make sure all files are encoded using UTF-8, except mof files which should be in ASCII.
+ 3. Save [newlines](http://en.wikipedia.org/wiki/Newline) using CR+LF instead of CR.
 For interoperability reasons, we recommend that you follow [these instructions](GettingStartedWithGitHub.md#setup-git) when installing Git on Windows so that newlines saved to GitHub are simply CRs.
- 4. When writing Markdown, if a paragraph includes more than one sentence, end each sentence with a newline.
+ 4. Files must end with a newline, see [StackOverflow.](http://stackoverflow.com/questions/5813311/no-newline-at-end-of-file) 
+
+## Markdown File Guidelines
+ 1. If a paragraph includes more than one sentence, end each sentence with a newline.
 GitHub will still render the sentences as a single paragraph, but the readability of `git diff` will be greatly improved.
- 5. Files must end with a newline, see [StackOverflow.](http://stackoverflow.com/questions/5813311/no-newline-at-end-of-file) 
 
-PowerShell Coding Style Guidelines
-==================================
-
-Code should not contain multiple blank lines in a row
----------------------------------------------------
+## PowerShell Coding Style Guidelines
+### No Multiple Blank Lines
+Code should not contain multiple blank lines in a row.
 
 **Bad:**
 ```powershell
-Function Get-MyValue
+function Get-MyValue
 {
     Write-Verbose 'Getting MyValue'
 
@@ -32,7 +28,28 @@ Function Get-MyValue
 }
 ```
 
-The above code breaks this rule by having two new lines between the Write-Verbose and the return statement.
+**Good:**
+```powershell
+function Get-MyValue
+{
+    Write-Verbose 'Getting MyValue'
+    return $MyValue
+}
+```
+
+### No Blank Line After Brace
+Opening curly braces should not be followed by a blank line.
+
+**Bad:**
+```powershell
+function Get-MyValue
+{
+
+    Write-Verbose 'Getting MyValue'
+
+    return $MyValue
+}
+```
 
 **Good:**
 ```powershell
@@ -43,70 +60,106 @@ Function Get-MyValue
 }
 ```
 
-Opening curly brackets should not be followed by a blank line
--------------------------------------------------------------
+### Braces on Following Line
+Curly braces should be on the following line unless assigning to a variable.
 
 **Bad:**
 ```powershell
-Function Get-MyValue
-{
-
-    Write-Verbose 'Getting MyValue'
-
-    return $MyValue
-}
-```
-
-The code above breaks this rule by leaving a blank line after the opening curly brackets.
-
-**Good:**
-```powershell
-Function Get-MyValue
-{
-    Write-Verbose 'Getting MyValue'
-    return $MyValue
-}
-```
-
-Braces should always be on a following line
--------------------------------------------------------------
-
-**Bad:**
-```powershell
-if ($connected) {
-    Write-Verbose 'Connected to server'
+if ($booleanValue) {
+    Write-Verbose "Boolean is $booleanValue"
 }
 ```
 
 **Good:**
 ```powershell
-if ($connected)
+if ($booleanValue)
 {
-    Write-Verbose 'Connected to server'
+    Write-Verbose "Boolean is $booleanValue"
 }
 ```
 
-Each line should have less than 100 characters
--------------------------------------------------------------
+When assigning to a variable, opening curly braces should be on the same line.
 
 **Bad:**
 ```powershell
-$convertToCimUnjoinCredential = New-CimInstance -ClassName MSFT_Credential -Property @{Username=[string]$UnjoinCredential.UserName; Password=[string]$null} -Namespace root/microsoft/windows/desiredstateconfiguration -ClientOnly
+$scriptBlockVariable =
+{
+    Write-Verbose 'Executing script block'
+}
+```
+
+**Bad:**
+```powershell
+$hashtableVariable =
+@{
+    Key1 = 'Value1'
+    Key2 = 'Value2'
+}
 ```
 
 **Good:**
 ```powershell
-$convertToCimUnjoinCredential = New-CimInstance -ClassName MSFT_Credential `
-        -Property @{Username=[string]$UnjoinCredential.UserName; Password=[string]$null} `
-        -Namespace root/microsoft/windows/desiredstateconfiguration -ClientOnly
+$scriptBlockVariable = {
+    Write-Verbose 'Executing script block'
+}
 ```
 
-Use verbose, easy to understand names
--------------------------------------------------------------
+**Good:**
+```powershell
+$hashtableVariable = @{
+    Key1 = 'Value1'
+    Key2 = 'Value2'
+}
+```
+
+### Line Character Limit
+Each line should have less than **100** characters.
+
+**Bad:**
+```powershell```
+$reallyLongString = '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890'
+```
+
+**Good:**
+```powershell```
+$reallyLongString = '123456789012345678901234567890123456789012345678901234567890' + `
+    '123456789012345678901234567890123456789012345678901234567890'
+```
+
+### Correct Format for Long Function Calls
+When calling a function with many parameters, if the line exceeds the line character limit, separate each parameter onto its own line.
+Make sure hashtable parameters are also properly formatted with multiple lines and the proper indentation.
 
 **Bad:**
 ```powershell
-$rdsHost = Get-RdsHost
+$superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtableParameter @{ MySuperLongKey1 = 'MySuperLongValue1'; MySuperLongKey2 = 'MySuperLongValue2' } -MySuperLongStringParameter '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890' -Verbose
+```
+
+**Good:**
+```powershell
+$superLongVariableName = Get-MySuperLongVariablePlease `
+    -MySuperLongHashtableParameter @{ 
+        MySuperLongKey1 = 'MySuperLongValue1'
+        MySuperLongKey2 = 'MySuperLongValue2'
+    } `
+    -MySuperLongStringParameter '12345678901234567890123456789012345678901234567890' + `         
+        '1234567890123456789012345678901234567890123456789012345678901234567890' `
+    -Verbose
+```
+
+### Descriptive Variable Names 
+Use descriptive, clear, and full names.
+All variable names must be at least more than **2** characters.
+No abbreviations.
+
+**Bad:**
+```powershell
+$r = Get-RdsHost
+```
+
+**Bad:**
+```powershell
+$frtytw = 42
 ```
 
 **Good:**
@@ -114,12 +167,17 @@ $rdsHost = Get-RdsHost
 $remoteDesktopSessionHost = Get-RemoteDesktopSessionHost
 ```
 
+**Bad:**
+```powershell
+$fileCharacterLimit = 42
+```
+
+### Use Pascal Case for Function Names
 Function names should use PascalCase and follow Noun-Verb convention if possible
--------------------------------------------------------------
 
 **Bad:**
 ```powershell
-function getTargetResource
+function get-targetresource
 {
     # ...
 }
@@ -133,8 +191,46 @@ function Get-TargetResource
 }
 ```
 
-Parameter names should use PascalCase 
--------------------------------------------------------------
+### Function Names Must Use Verb-Noun Format
+All function names must follow the standard PowerShell Verb-Noun format.
+
+**Bad:**
+```powershell
+function TargetResourceGetter
+{
+    # ...
+}
+```
+
+**Good:**
+```powershell
+function Get-TargetResource
+{
+    # ...
+}
+```
+
+### Function Names Must Use Approved Verbs
+All function names must use [approved verbs](https://msdn.microsoft.com/en-us/library/ms714428(v=vs.85).aspx).
+
+**Bad:**
+```powershell
+function Normalize-String
+{
+    # ...
+}
+```
+
+**Good:**
+```powershell
+function ConvertTo-NormalizedString
+{
+    # ...
+}
+```
+
+### Parameter Names Should Use Pascal Case
+All parameters should use PascalCase.
 
 **Bad:**
 ```powershell
@@ -144,6 +240,18 @@ function Get-TargetResource
     param
     (
         $SOURCEPATH
+    )
+}
+```
+
+**Bad:**
+```powershell
+function Get-TargetResource
+{
+    [CmdletBinding()]
+    param
+    (
+        $sourcepath
     )
 }
 ```
@@ -160,8 +268,9 @@ function Get-TargetResource
 }
 ```
 
-Parameter type should be on the same line as parameter name
--------------------------------------------------------------
+ # Parameter Type on Same Line
+The parameter type should be on the same line as the parameter name.
+For now, a type of PSCredential needs to go on a separate line above the parameter followed by another separate line with the Credential parameter.
 
 **Bad:**
 ```powershell
@@ -172,6 +281,7 @@ function Get-TargetResource
     (
         [String]
         $SourcePath = 'c:\'
+    )
 }
 ```
 
@@ -187,8 +297,22 @@ function Get-TargetResource
 }
 ```
 
-Parameter type should be separated from name by a space
--------------------------------------------------------------
+**Good:**
+```powershell
+function Get-TargetResource
+{
+    [CmdletBinding()]
+    param
+    (
+        [PSCredential] 
+        [Credential()]
+        $MyCredential
+    )
+}
+```
+
+# Space Between Type and Name
+Parameter or variable type declarations should be separated from the parameter or variable name by a single space
 
 **Bad:**
 ```powershell
@@ -214,227 +338,237 @@ function Get-TargetResource
 }
 ```
 
-Parameter names should be separated by a single line
--------------------------------------------------------------
+### Parameters Separated by One Line
+Parameters should be separated by a single line.
 
 **Bad:**
 ```powershell
-function New-EtwEvent
+function New-Event
 {
     param
     (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
         [String] $Message,
-        [ValidateSet("operational", "debug", "analytic")]
-        [String] $Channel = "operational"
+        [ValidateSet('operational', 'debug', 'analytic')]
+        [String] $Channel = 'operational'
     )
 }
 ```
 
 **Good:**
 ```powershell
-function New-EtwEvent
+function New-Event
 {
     param
     (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
         [String] $Message,
 
-        [ValidateSet("operational", "debug", "analytic")]
-        [String] $Channel = "operational"
+        [ValidateSet('operational', 'debug', 'analytic')]
+        [String] $Channel = 'operational'
     )
 }
 ```
 
-Parameter attributes should be on separate lines
--------------------------------------------------------------
+# Parameter Attributes on Separate Lines
+Parameter attributes should each have their own line.
 
 **Bad:**
 ```powershell
-function New-EtwEvent
+function New-Event
 {
     param
     (
-        [Parameter(Mandatory=$true)][ValidateNotNullOrEmpty()][String] $Message,
+        [Parameter(Mandatory = $true)][ValidateNotNullOrEmpty()][String] $Message,
 
-        [ValidateSet("operational", "debug", "analytic")][String] $Channel = "operational"
+        [ValidateSet('operational', 'debug', 'analytic')][String] $Channel = 'operational'
     )
 }
 ```
 
 **Good:**
 ```powershell
-function New-EtwEvent
+function New-Event
 {
     param
     (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
         [String] $Message,
 
-        [ValidateSet("operational", "debug", "analytic")]
-        [String] $Channel = "operational"
+        [ValidateSet('operational', 'debug', 'analytic')]
+        [String] $Channel = 'operational'
     )
 }
 ```
 
-Variable names should use camelCase
--------------------------------------------------------------
-
-Names of variables should use camelCase
+### Variable Names Use Camel Case
+Variable names should use camelCase.
 
 **Bad:**
 ```powershell
-function New-Log
+function Write-Log
 {
-    $Message = "New log message" # should start with lower case
-    Write-Host $Message
+    $VerboseMessage = 'New log message'
+    Write-Verbose $VerboseMessage
+}
+```
+
+**Bad:**
+```powershell
+function Write-Log
+{
+    $verbosemessage = 'New log message'
+    Write-Verbose $verbosemessage
 }
 ```
 
 **Good:**
 ```powershell
-function New-Log
+function Write-Log
 {
-    $message = "New log message"
-    Write-Host $message
+    $verboseMessage = 'New log message'
+    Write-Verbose $verboseMessage
 }
 ```
 
-Support comment-based help
--------------------------------------------------------------
-
-When commenting functions, use comment-based help syntax
+### All Functions Have Comment-Based Help
+All functions should have comment-based help with the correct syntax directly above the function.
+Comment-help should include at least the SYNOPSIS section and a PARAMETER section for each parameter.
 
 **Bad:**
 ```powershell
-# Writes event
-function New-EtwEvent
+# Creates an event
+function New-Event
 {
     param
     (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
         [String] $Message,
 
-        [ValidateSet("operational", "debug", "analytic")]
-        [String] $Channel = "operational"
+        [ValidateSet('operational', 'debug', 'analytic')]
+        [String] $Channel = 'operational'
     )
-    # Implementation
+    # Implementation...
 }
 ```
 
 **Good:**
 ```powershell
 <#
-    .SYNOPSIS Writes event to ETW
-    .PARAM
-        Message Message to write to ETW
-    .PARAM
-        Channel ETW channel where message should be stored
+    .SYNOPSIS
+        Creates an event
+    
+    .PARAMETER Message
+        Message to write
+        
+    .PARAMETER Channel
+        Channel where message should be stored
+        
     .EXAMPLE
-        New-EtwEvent -Message "Attempting to connect to server" -Channel "debug"
+        New-Event -Message 'Attempting to connect to server' -Channel 'debug'
 #>
-function New-EtwEvent
+function New-Event
 {
     param
     (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
         [String] $Message,
 
-        [ValidateSet("operational", "debug", "analytic")]
-        [String] $Channel = "operational"
+        [ValidateSet('operational', 'debug', 'analytic')]
+        [String] $Channel = 'operational'
     )
     # Implementation
 }
 ```
 
-Call cmdlets using all named parameters instead of positional parameters
-------------------------------------------------------------------------
+### Use Named Parameters Instead of Positional Parameters
+Call cmdlets using named parameters instead of positional parameters.
 
 **Bad:**
 ```powershell
-Get-ChildItem c:\documents *.md
-```
-
-The above code breaks this rule using by calling ```Get-ChildItem``` passing positional parameters instead of named parameters.
-
-**Good:**
-```powershell
-Get-ChildItem -Path c:\documents -Filter *.md
-```
-
-Hash table, Array and Object Structure should be consistent
-------------------------------------------------------------------------
-
-**Bad:**
-```powershell
-$Parameters = @(
-    @{ Name = 'Name'; Source = $FirewallRule.Name; 
-        Type = 'String' },
-    @{ Name = 'DisplayName'; Source = $FirewallRule.DisplayName; Type = 'String' },
-    @{
-        Name = 'Group'
-        Source = $FirewallRule.Group
-        Type = 'String'
-    },
-    @{ Name = 'DisplayGroup'; Source = $FirewallRule.DisplayGroup; Type = '' }
-)
-```
-
-The above array of hash table objects is not consistent.
-*Care must be taken that each hash table or object does not exceed the 100 character maximum line width rule.*
-
-**Good:**
-```powershell
-$Parameters = @(
-    @{ Name = 'Name';         Source = $FirewallRule.Name;         Type = 'String' },
-    @{ Name = 'DisplayName';  Source = $FirewallRule.DisplayName;  Type = 'String' },
-    @{ Name = 'Group';        Source = $FirewallRule.Group;        Type = 'String' },
-    @{ Name = 'DisplayGroup'; Source = $FirewallRule.DisplayGroup; Type = ''       }
-)
+Get-ChildItem C:\Documents *.md
 ```
 
 **Good:**
 ```powershell
-$Parameters = @(
-    @{
-        Name   = 'Name'
-        Source = $FirewallRule.Name
-        Type   = 'String'
-    },
-    @{
-        Name   = 'DisplayName'
-        Source = $FirewallRule.DisplayName
-        Type   = 'String'
-    },
-    @{
-        Name   = 'Group'
-        Source = $FirewallRule.Group
-        Type   = 'String'
-    },
-    @{
-        Name   = 'DisplayGroup'
-        Source = $FirewallRule.DisplayGroup
-        Type   = ''
+Get-ChildItem -Path C:\Documents -Filter *.md
+```
+
+### Correct Format for Hashtables or Objects
+Hashtables and Objects should be written in the following format.
+Each property should be on its own line indented once.
+
+**Bad**:
+```powershell
+$hashtable = @{Key1 = 'Value1';Key2 = 2;Key3 = '3'}
+```
+
+**Bad**:
+```powershell
+$hashtable = @{ Key1 = 'Value1'
+Key2 = 2
+Key3 = '3' }
+```
+
+**Good**:
+```powershell
+$hashtable = @{
+    Key1 = 'Value1'
+    Key2 = 2
+    Key3 = '3'
+}
+```
+
+**Good**:
+```powershell
+$hashtable = @{
+    Key1 = 'Value1'
+    Key2 = 2
+    Key3 = @{
+        Key3Key1 = 'ExampleText'
+        Key3Key2 = 42
     }
+}
+```
+
+### Correct Format for Arrays
+Arrays should be written in the following format.
+Arrays should be writen on one line unless they exceed the line character limit.
+There should be a single space between each element in the array.
+Hashtables should not be declared inside an array.
+
+**Bad**:
+```powershell
+$array = @( 'one', `
+'two', `
+'three' 
 )
 ```
 
-Aliases should not be used
-------------------------------------------------------------------------
+**Good**:
+```powershell
+$hashtable = @{
+    Key = "Value"
+}
+
+$array = @( 'one', 'two', 'three', $hashtable )
+```
+
+### Do Not Use Cmdlet Aliases
+When calling a function use the full command not an alias.
+You can get the full command an alias is using by calling ```Get-Alias```.
 
 **Bad**
 ```powershell
-ls -File -Recurse $root | ? { @('.gitignore', '.mof') -contains $_.Extension }
+ls -File $root -Recurse | ? { @('.gitignore', '.mof') -contains $_.Extension }
 ```
-
-When writing functions use the full command not aliases 
 
 **Good** 
 ```Powershell
-Get-ChildItem -File -Recurse $root | Where-Object { @('.gitignore', '.mof') -contains $_.Extension } 
+Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -contains $_.Extension } 
 ```
