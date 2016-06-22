@@ -195,7 +195,7 @@ function Get-MyVariable
     foreach ($example in $examples)
     {
         Write-Verbose -Message $example #this is a bad comment
-    }#this is a bad comment
+    }
 }
 ```
 
@@ -213,9 +213,6 @@ function Get-MyVariable
         # No commented-out code!
         # Write-Verbose -Message $example
     }
-    
-<# This is a bad comment
-     On multiple lines #>
 }
 ```
 
@@ -233,8 +230,6 @@ function Get-MyVariable
         # This is a good comment
         Write-Verbose -Message $example 
     }
-    
-    # This is a good comment
 }
 ```
 
@@ -253,18 +248,13 @@ function Get-MyVariable
     {
         Write-Verbose -Message $example
     }
-    
-    <# 
-        This is a good comment
-        On multiple lines 
-    #>
 }
 ```
 
 ## Whitespace
 ### Indentation 
-For all indentation, use 4 spaces instead of tabs.
-There should be no tab characters in the file unless they in a here-string.
+For all indentation, use **4** spaces instead of tabs.
+There should be no tab characters in the file unless they are in a here-string.
 
 ### Newline at End of File
 All files must end with a newline, see [StackOverflow.](http://stackoverflow.com/questions/5813311/no-newline-at-end-of-file) 
@@ -411,7 +401,8 @@ function Get-MyValue
 ```
 
 ### Two Newlines After Closing Brace
-Each closing curly brace should be followed by exactly two newlines.
+Each closing curly brace **ending** a function, conditional block, loop, etc. should be followed by exactly two newlines unless it is directly followed by another closing brace.
+If the closing brace is followed by another closing brace or continues a conditional or switch block, there should be only one newline after the closing brace.
 
 **Bad:**
 ```powershell
@@ -427,7 +418,16 @@ function Get-MyValue
 function Get-MyValue
 { Write-Verbose -Message 'Getting MyValue'
 
-    return $MyValue
+    if ($myBoolean)
+    {
+        return $MyValue
+    }
+    
+    else
+    {
+        return 0
+    }
+    
 }
 Get-MyValue
 ```
@@ -437,7 +437,15 @@ Get-MyValue
 function Get-MyValue
 {
     Write-Verbose -Message 'Getting MyValue'
-    return $MyValue
+    
+    if ($myBoolean)
+    {
+        return $MyValue
+    }
+    else
+    {
+        return 0
+    }
 }
 
 Get-MyValue
@@ -849,6 +857,22 @@ function New-Event
         [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
         [String] $Message,
+        [ValidateSet('operational', 'debug', 'analytic')]
+        [String] $Channel = 'operational'
+    )
+}
+```
+
+**Good:**
+```powershell
+function New-Event
+{
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [ValidateNotNullOrEmpty()]
+        [String] $Message,
+        
         [ValidateSet('operational', 'debug', 'analytic')]
         [String] $Channel = 'operational'
     )
