@@ -2,6 +2,9 @@
 
 Hi there! We're thrilled that you'd like to contribute to this project. Your help is essential to keeping it great. 
 
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
 ## Use GitHub, Git, and this repository
 
 Start by reading our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
