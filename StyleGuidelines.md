@@ -268,7 +268,7 @@ function Get-TargetResource
 }
 ```
 
- # Parameter Type on Same Line
+### Parameter Type on Same Line
 The parameter type should be on the same line as the parameter name.
 For now, a type of PSCredential needs to go on a separate line above the parameter followed by another separate line with the Credential parameter.
 
@@ -311,7 +311,7 @@ function Get-TargetResource
 }
 ```
 
-# Space Between Type and Name
+### Space Between Type and Name
 Parameter or variable type declarations should be separated from the parameter or variable name by a single space
 
 **Bad:**
@@ -372,7 +372,7 @@ function New-Event
 }
 ```
 
-# Parameter Attributes on Separate Lines
+### Parameter Attributes on Separate Lines
 Parameter attributes should each have their own line.
 
 **Bad:**
