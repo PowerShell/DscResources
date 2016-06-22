@@ -10,6 +10,9 @@ There are also great community resources, such as [PowerShell.org](http://powers
 
 If you would like to use DSC on Linux, there is a step by step guide available on the [Building Clouds Blog](http://blogs.technet.com/b/privatecloud/archive/2014/05/19/powershell-dsc-for-linux-step-by-step.aspx) and the source is available in the [Microsoft OpenTech repo](https://github.com/MSFTOSSMgmt/WPSDSCLinux).
 
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
 ## Repository structure
 This is the central repository for PowerShell Desired State Configuration (DSC) resources.
 DSC resources are packaged in PowerShell modules, along with tests, documentation, and examples, each in their own GitHub repositories. 
