@@ -72,15 +72,15 @@ try
         }
 
         #TODO: Update the assertions below to align with the expected results of this state
-        It "Should return a specific value in the get method" {
+        It "Get method returns 'something'" {
             Get-TargetResource @testParameters | Should Be "something"
         }
 
-        It "Should return false from the test method" {
+        It "Test method returns false" {
             Test-TargetResource @testParameters | Should be $false
         }
 
-        It "Should set the desired state in the set method" {
+        It "Set method calls Demo-CmdletName" {
             Set-TargetResource @testParameters
 
             #TODO: Assert that the appropriate cmdlets were called
@@ -100,11 +100,11 @@ try
         }
 
         #TODO: Update the assertions below to align with the expected results of this state
-        It "Should return a specific value in the get method" {
+        It "Get method returns 'something'" {
             Get-TargetResource @testParameters | Should Be "something"
         }
 
-        It "Should return true from the test method" {
+        It "Test method returns true" {
             Test-TargetResource @testParameters | Should be $true
         }
     }
