@@ -47,34 +47,68 @@ try
 
     #endregion Pester Test Initialization
 
-    #region Exported Function Unit Tests
-
     # TODO: Common DSC Resource describe block structure
     # The following three Describe blocks are included as a common test pattern.
     # If a different test pattern would be more suitable, then test describe blocks
-    # may be completely replaced.
+    # may be completely replaced. The goal of this pattern should be to describe 
+    # the potential states a system could be in so that the get/test/set cmdlets
+    # can be tested in those states. Any mocks that relate to that specific state
+    # can be included in the relevant describe block. For a more detailed description
+    # of this approach please review https://github.com/PowerShell/DscResources/issues/143 
 
-    #region Function Get-TargetResource
-    Describe "$($Global:DSCResourceName)\Get-TargetResource" {
-        # TODO: Complete Get-TargetResource Tests...
+    # Add as many of these example 'states' as required to simulate the scenarions that
+    # the DSC resource is designed to work with, below a simple "is in desired state" and
+    # "is not in desired state" are used, but there may be more complex combinations of 
+    # factors, depending on how complex your resource is.
+
+    #region Example state 1
+    Describe "The system is not in the desired state" {
+        #TODO: Mock cmdlets here that represent the system not being in the desired state
+
+        #TODO: Create a set of parameters to test your get/test/set methods in this state
+        $testParameters = @{
+            Property1 = "value"
+            Property2 = "value"
+        }
+
+        #TODO: Update the assertions below to align with the expected results of this state
+        It "Get method returns 'something'" {
+            Get-TargetResource @testParameters | Should Be "something"
+        }
+
+        It "Test method returns false" {
+            Test-TargetResource @testParameters | Should be $false
+        }
+
+        It "Set method calls Demo-CmdletName" {
+            Set-TargetResource @testParameters
+
+            #TODO: Assert that the appropriate cmdlets were called
+            Assert-MockCalled Demo-CmdletName 
+        }
     }
-    #endregion Function Get-TargetResource
+    #endregion Example state 1
 
+    #region Example state 2
+    Describe "The system is in the desired state" {
+        #TODO: Mock cmdlets here that represent the system being in the desired state
 
-    #region Function Test-TargetResource
-    Describe "$($Global:DSCResourceName)\Test-TargetResource" {
-        # TODO: Complete Test-TargetResource Tests...
+        #TODO: Create a set of parameters to test your get/test/set methods in this state
+        $testParameters = @{
+            Property1 = "value"
+            Property2 = "value"
+        }
+
+        #TODO: Update the assertions below to align with the expected results of this state
+        It "Get method returns 'something'" {
+            Get-TargetResource @testParameters | Should Be "something"
+        }
+
+        It "Test method returns true" {
+            Test-TargetResource @testParameters | Should be $true
+        }
     }
-    #endregion Function Test-TargetResource
-
-
-    #region Function Set-TargetResource
-    Describe "$($Global:DSCResourceName)\Set-TargetResource" {
-        # TODO: Complete Set-TargetResource Tests...
-    }
-    #endregion Function Set-TargetResource
-
-    #endregion Exported Function Unit Tests
+    #endregion Example state 1
 
     #region Non-Exported Function Unit Tests
 
