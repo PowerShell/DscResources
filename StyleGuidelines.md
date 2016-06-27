@@ -451,20 +451,8 @@ function Get-MyValue
 Get-MyValue
 ```
 
-### One Space Between Type and Variable or Parameter Name
-Parameter or variable type declarations should be separated from the parameter or variable name by a single space.
-
-**Bad:**
-```powershell
-function Get-TargetResource
-{
-    [CmdletBinding()]
-    param
-    (
-        [String]$SourcePath = 'c:\'
-    )
-}
-```
+### One Space Between Type and Variable Name
+If you must declare a variable type, type declarations should be separated from the variable name by a single space.
 
 **Bad:**
 ```powershell
@@ -474,18 +462,6 @@ function Get-TargetResource
     param ()
     
     [Int]$number = 2
-}
-```
-
-**Good:**
-```powershell
-function Get-TargetResource
-{
-    [CmdletBinding()]
-    param
-    (
-        [String] $SourcePath = 'c:\'
-    )
 }
 ```
 
@@ -665,10 +641,12 @@ function New-Event
     (
         [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
-        [String] $Message,
+        [String]
+        $Message,
 
         [ValidateSet('operational', 'debug', 'analytic')]
-        [String] $Channel = 'operational'
+        [String]
+        $Channel = 'operational'
     )
     # Implementation...
 }
@@ -695,10 +673,12 @@ function New-Event
     (
         [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
-        [String] $Message,
+        [String]
+        $Message,
 
         [ValidateSet('operational', 'debug', 'analytic')]
-        [String] $Channel = 'operational'
+        [String]
+        $Channel = 'operational'
     )
     # Implementation
 }
@@ -733,7 +713,8 @@ function Write-Text
     (
         [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
-        [String] $Text
+        [String]
+        $Text
     )
     
     Write-Verbose -Message $Text
@@ -799,7 +780,8 @@ function Write-Text
     (
         [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
-        [String] $Text
+        [String]
+        $Text
     )
     
     Write-Verbose -Message $Text
@@ -856,9 +838,11 @@ function New-Event
     (
         [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
-        [String] $Message,
+        [String]
+        $Message,
         [ValidateSet('operational', 'debug', 'analytic')]
-        [String] $Channel = 'operational'
+        [String]
+        $Channel = 'operational'
     )
 }
 ```
@@ -871,17 +855,19 @@ function New-Event
     (
         [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
-        [String] $Message,
+        [String]
+        $Message,
         
         [ValidateSet('operational', 'debug', 'analytic')]
-        [String] $Channel = 'operational'
+        [String]
+        $Channel = 'operational'
     )
 }
 ```
 
-### Parameter Type on Same Line
-The parameter type must be on the same line as the parameter name.
-For now, a type of PSCredential can go on a separate line above the parameter followed by another separate line with the Credential attribute.
+### Parameter Type on Line Above
+The parameter type must be on its own line above the parameter name.
+If an attribute needs to follow the type, it should also have its own line between the parameter type and the parameter name.
 
 **Bad:**
 ```powershell
@@ -890,8 +876,7 @@ function Get-TargetResource
     [CmdletBinding()]
     param
     (
-        [String]
-        $SourcePath = 'c:\'
+        [String] $SourcePath = 'c:\'
     )
 }
 ```
@@ -903,7 +888,8 @@ function Get-TargetResource
     [CmdletBinding()]
     param
     (
-        [String] $SourcePath = 'c:\'
+        [String]
+        $SourcePath = 'c:\'
     )
 }
 ```
@@ -930,16 +916,19 @@ function New-Event
     (
         [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
-        [String] $Message,
+        [String]
+        $Message,
 
         [ValidateSet('operational', 'debug', 'analytic')]
-        [String] $Channel = 'operational'
+        [String]
+        $Channel = 'operational'
     )
 }
 ```
 
 ### Parameter Attributes on Separate Lines
 Parameter attributes should each have their own line.
+All attributes should go above the parameter type, except those that *must* be between the type and the name.
 
 **Bad:**
 ```powershell
@@ -947,9 +936,11 @@ function New-Event
 {
     param
     (
-        [Parameter(Mandatory = $true)][ValidateNotNullOrEmpty()][String] $Message,
+        [Parameter(Mandatory = $true)][ValidateNotNullOrEmpty()][String]
+        $Message,
 
-        [ValidateSet('operational', 'debug', 'analytic')][String] $Channel = 'operational'
+        [ValidateSet('operational', 'debug', 'analytic')][String]
+        $Channel = 'operational'
     )
 }
 ```
@@ -962,10 +953,12 @@ function New-Event
     (
         [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
-        [String] $Message,
+        [String]
+        $Message,
 
         [ValidateSet('operational', 'debug', 'analytic')]
-        [String] $Channel = 'operational'
+        [String]
+        $Channel = 'operational'
     )
 }
 ```
@@ -1002,8 +995,8 @@ function Write-Log
 }
 ```
 
-### Script and Global Variable Names Include Scope
-Script and global variables must always include their scope in the variable name unless the 'using' scope is needed.
+### Script, Environment and Global Variable Names Include Scope
+Script, environment, and global variables must always include their scope in the variable name unless the 'using' scope is needed.
 The script and global scope specifications should be all in lowercase.
 Script and global variable names following the scope should use camelCase.
 
@@ -1015,7 +1008,7 @@ $GLOBAL:MYRESOURCENAME = 'MyResource'
 function New-File
 {
     $fileCount++
-    Write-Verbose -Message "Adding file to $MYRESOURCENAME."
+    Write-Verbose -Message "Adding file to $MYRESOURCENAME to $ENV:COMPUTERNAME."
 }
 ```
 
@@ -1027,7 +1020,7 @@ $global:myResourceName = 'MyResource'
 function New-File
 {
     $script:fileCount++
-    Write-Verbose -Message "Adding file to $global:myResourceName."
+    Write-Verbose -Message "Adding file to $global:myResourceName to $env:computerName."
 }
 ```
 
