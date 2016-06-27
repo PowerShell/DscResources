@@ -15,10 +15,10 @@ Past Releases:
 - [04/15/15](https://blogs.msdn.microsoft.com/powershell/2015/04/27/dsc-resource-kit-moved-to-github/)
 
 ## Community Calls
-**Next Call: 06/30/16 1-3PM**
+**Next Call: 06/30/16 1-3PM (Pacific Time)**
 
 ### 06/30/16 1-3PM
-We will be hosting a community call for the DSC Resource Kit **1-3PM on Thursday, June 30**.  
+We will be hosting a community call for the DSC Resource Kit **1-3PM on Thursday, June 30 (Pacific Time)**.  
 Call in to ask questions or give feedback about the DSC Resource Kit!
 
 For this call, we will be focusing on the DSC Resource Kit overall as well as the new plans for experimental High Quality Resource Modules (HQRMs).
