@@ -2,11 +2,17 @@
 
 Maintainers (a.k.a. coordinators) are trusted people with knowledge in a resouce module domain.
 
-They have [write access](https://help.github.com/articles/permission-levels-for-an-organization-repository/) one or more DSC Resource Kit repositories which gives them the power to:
+They have [write access](https://help.github.com/articles/permission-levels-for-an-organization-repository/) to one or more DSC Resource Kit repositories which gives them the power to:
 
 1. `push`.
 2. Merge pull requests.
 3. Assign labels, milestones and people to [issues](https://guides.github.com/features/issues/).
+
+## Table of Contents
+- [Rules](#rules)
+- [Issue Workflow](#issue-workflow)
+- [Pull Request Workflow](#pull-request-workflow)
+  - [Abandoned Pull Requests](#abandoned-pull-requests)
 
 ## Rules
 
@@ -28,7 +34,7 @@ If you are maintainer, please follow these rules:
 1. **DON'T** merge pull requests without the label `cla-signed` or `cla-not-required` from the Microsoft CLA bot.
 1. **DON'T** merge pull requests that do not [include all meaningful changes](CONTRIBUTING.md#lifecycle-of-a-pull-request) under the **Unreleased** section in the repository's `README.md`.
 1. **DON'T** merge your own pull requests before they are reviewed by someone else.
-  - If there is **no one** else to review your PR, please wait **24** hours to merge your own PR in case anyone has a comment.
+  - If there is **no one** else to review your pull request, please wait **24** hours to merge it in case anyone comes along and has a comment.
 
 ## Issue Workflow
 
