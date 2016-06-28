@@ -35,11 +35,38 @@ Join by Phone
 Conference ID: 41363796  
 [Forgot your dial-in PIN?](https://join.microsoft.com/dialin) 
 
-
 #### Agenda
 You can ask your own questions about the DSC Resource Kit at any point during the call!
 
-The agenda for this call is not yet finalized. It will be posted shortly.
+We would like some feedback from the community in the following areas:
+- Release Cadence
+  - Are you satisfied with how often releases go out?
+  - What other information you would like in the release blog?
+  - What is the best way to let you know that the the Resource Kit has been/will be released?
+- Experimental High Quality Resource Module (HQRM) Plans
+  - xPSDesiredStateConfiguration
+    - The HQRM plan for xPSDSC is available [here](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/HighQualityResourceModulePlan.md). Do you think completing these steps will ensure that xPSDSC is a HQRM? Why or why not?
+  - xWebAdministration
+    - The HQRM plan for xWebAdministration is available [here](https://github.com/PowerShell/xWebAdministration/blob/dev/HighQualityResourceKitPlan.md). Do you think completing these steps will ensure that xWebAdministration is a HQRM? Why or why not?
+  - SharePointDsc
+    - xSharepoint has recently been converted to SharePointDsc and released as version 1.0 (and 1.1). They do not follow an HQRM plan, but they have exceptional developer response times as well as extensive test coverage. Would you accept this in production as a HQRM? Why or why not?
+  - Which of these 3 methods for updating a module to a HQRM is best?
+- Style Guidelines
+  - We have updated the [Style Guidelines](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md) for the DSC Resource Kit. Please let us know your thoughts or if we've missed anything important.
+- Best Practices
+  - We will be adding a Best Practices document for the DSC Resource Kit soon. What do you think should be in it?
+- Module Maintainers
+  - Are you satisfied with the module maintainers of the repositories you work on? Why or why not?
+  - Are there any updates needed for the [maintainer instructions](https://github.com/PowerShell/DscResources/blob/master/Maintainers.md)?
+  - Announcement: All module maintainers should wait 24 hours before merging their own pull request if there is no one else to review it unless it is an urgent bug fix.
+- Contribution Guidelines
+  - Are there any updates needed for the [contributor instructions](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md)?
+- What are some overall DSC Resource Kit improvements you'd like to see happen?
 
 #### In This Call
-The list of people in this call to answer your questions is not yet finalized. It will be posted shortly.
+
+| Name | Relation to Resource Kit | Topics They Can Discuss | GitHub Handle | Twitter Handle | 
+| ---- | ------------------------ | ----------------------- | ------------- | -------------- | 
+| Katie Keim | <ul><li> Member of the PowerShell DSC Team </li><li> Current owner of the DSC Resource Kit </li><li> Works on xPSDesiredStateConfiguration</li></ul> | <ul><li> Releasing the DSC Resource Kit </li><li> Overall plans for the DSC Resource Kit </li><li> HQRM plan for xPSDesiredStateConfiguration </li></ul> | [@kwirkykat](https://github.com/kwirkykat) | [@katiedsc](https://twitter.com/katiedsc) | 
+| Mariah Breakey | <ul><li> Member of the PowerShell DSC Team </li><li> Works on xWebAdministration </li></ul> | <ul><li> HQRM plan for xWebAdministration </li></ul> | [@mbreakey3](https://github.com/mbreakey3) | [@mbreakey7](https://twitter.com/mbreakey7) |
+| Narayanan Lakshsmanan | <ul><li> Engineering Manager for PowerShell DSC </li></ul> | <ul><li> Anything DSC </li></ul> | [@nanalakshmanan](https://github.com/nanalakshmanan) | [@NanaLakshmanan](https://twitter.com/NanaLakshmanan) |
