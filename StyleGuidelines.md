@@ -2,6 +2,46 @@
 
 In order to provide clean and consistent code, please follow the style guidelines listed below when contributing to any [DSC Resource Kit repositories](https://github.com/PowerShell/DscResources/tree/master/xDscResources).
 
+## Table of Contents
+- [Markdown Files](#markdown-files)  
+- [General](#general)  
+    - [Correct File Encoding](#correct-file-encoding)  
+    - [Line Character Limit](#line-character-limit)  
+    - [Descriptive Names](#descriptive-names)  
+    - [Correct Format for Long Function Calls](#correct-format-for-long-function-calls)  
+    - [Correct Format for Arrays](#correct-format-for-arrays)  
+    - [Correct Format for Hashtables or Objects](#correct-format-for-hashtables-or-objects)  
+    - [Correct Format for Comments](#correct-format-for-comments)  
+- [Whitespace](#whitespace)  
+    - [Indentation](#indentation)  
+    - [Newline at End of File](#newline-at-end-of-file)  
+    - [Newline Character Encoding](#newline-character-encoding)  
+    - [No More Than Two Consecutive Newlines](#no-more-than-two-consecutive-newlines)  
+    - [One Newline Before Braces](#one-newline-before-braces)  
+    - [One Newline After Opening Brace](#one-newline-after-opening-brace)  
+    - [Two Newlines After Closing Brace](#two-newlines-after-closing-brace)  
+    - [One Space Between Type and Variable Name](#one-space-between-type-and-variable-name)  
+    - [One Space on Either Side of Operators](#one-space-on-either-side-of-operators)  
+    - [One Space Between Keyword and Parenthesis](#one-space-between-keyword-and-parenthesis)
+- [Functions](#functions)
+    - [Function Names Use Pascal Case](#function-names-use-pascal-case)
+    - [Function Names Use Verb-Noun Format](#function-names-use-verb-noun-format)
+    - [Function Names Use Approved Verbs](#function-names-use-approved-verbs)
+    - [Functions Have Comment-Based Help](#functions-have-comment-based-help)
+    - [Parameter Block at Top of Function](#parameter-block-at-top-of-function)
+- [Parameters](#parameters)
+    - [Correct Format for Parameter Block](#correct-format-for-parameter-block)
+    - [Parameter Names Use Pascal Case](#parameter-names-use-pascal-case)
+    - [Parameters Separated by One Line](#parameters-separated-by-one-line)
+    - [Parameter Type on Line Above](#parameter-type-on-line-above)
+    - [Parameter Attributes on Separate Lines](#parameter-attributes-on-separate-lines)
+- [Variables](#variables)
+    - [Variable Names Use Camel Case](#variable-names-use-camel-case)
+    - [Script, Environment and Global Variable Names Include Scope](#script-environment-and-global-variable-names-include-scope)
+- [Best Practices](#best-practices)
+    - [Named Parameters Instead of Positional Parameters](#named-parameters-instead-of-positional-parameters)
+    - [No Cmdlet Aliases](#no-cmdlet-aliases)
+
 ## Markdown Files
 If a paragraph includes more than one sentence, end each sentence with a newline.
 GitHub will still render the sentences as a single paragraph, but the readability of `git diff` will be greatly improved.
