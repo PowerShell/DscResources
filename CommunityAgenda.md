@@ -28,6 +28,8 @@ Call in to ask questions or give feedback about the DSC Resource Kit!
 
 For this call, we will be focusing on the DSC Resource Kit overall as well as the new plans for experimental High Quality Resource Modules (HQRMs).
 
+Comments, questions, and feedback about the call can be submitted in issue [#146](https://github.com/PowerShell/DscResources/issues/146).
+
 #### How to Join
 You can access the call through Skype or by phone here:  
 [Join online meeting](https://join.microsoft.com/meet/kakeim/T6UIT4BH)
