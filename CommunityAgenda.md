@@ -1,10 +1,14 @@
 # DSC Resource Kit Community Agenda
 
 ## Releases
-**Next Release: 06/29/16**  
-Latest Release: [05/18/16](https://blogs.msdn.microsoft.com/powershell/2016/05/18/dsc-resource-kit-anniversary-release/)
+### Next Release
+Around the beginning of August
 
-Past Releases:
+### Latest Release
+- [06/29/16](https://blogs.msdn.microsoft.com/powershell/2016/06/29/dsc-resource-kit-june-release/)
+
+### Past Releases
+- [05/18/16](https://blogs.msdn.microsoft.com/powershell/2016/05/18/dsc-resource-kit-anniversary-release/)
 - [04/04/16](https://blogs.msdn.microsoft.com/powershell/2016/04/04/dsc-resource-kit-update/)
 - [02/11/16](https://blogs.msdn.microsoft.com/powershell/2016/02/11/dsc-resource-kit-gets-even-bigger/)
 - [12/04/15](https://blogs.msdn.microsoft.com/powershell/2015/12/04/recent-updates-to-dsc-resource-kit/)
@@ -15,7 +19,8 @@ Past Releases:
 - [04/15/15](https://blogs.msdn.microsoft.com/powershell/2015/04/27/dsc-resource-kit-moved-to-github/)
 
 ## Community Calls
-**Next Call: 06/30/16 1-3PM (Pacific Time)**
+### Next Call
+**06/30/16 1-3PM (Pacific Time)**
 
 ### 06/30/16 1-3PM
 We will be hosting a community call for the DSC Resource Kit **1-3PM on Thursday, June 30 (Pacific Time)**.  
