@@ -1,4 +1,4 @@
-# Communtiy Call - 06/30/16
+# Communtiy Call 06/30/16 Agenda
 We will be hosting a community call for the DSC Resource Kit **1-3PM on Thursday, June 30 (Pacific Time)**.  
 Call in to ask questions or give feedback about the DSC Resource Kit!
 
@@ -34,7 +34,7 @@ We would like some feedback from the community in the following areas:
   - Are there any updates needed for the [contributor instructions](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md)?
 - What are some overall DSC Resource Kit improvements you'd like to see happen?
 
-#### In This Call
+## In This Call
 
 | Name | Relation to Resource Kit | Topics They Can Discuss | GitHub Handle | Twitter Handle | 
 | ---- | ------------------------ | ----------------------- | ------------- | -------------- | 
