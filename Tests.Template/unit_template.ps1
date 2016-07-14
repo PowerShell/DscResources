@@ -13,8 +13,8 @@
 
 
 # TODO: Customize these parameters...
-$Global:DSCModuleName      = '<ModuleName>' # Example xNetworking
-$Global:DSCResourceName    = '<ResourceName>' # Example MSFT_xFirewall
+$script:DSCModuleName      = '<ModuleName>' # Example xNetworking
+$script:DSCResourceName    = '<ResourceName>' # Example MSFT_xFirewall
 # /TODO
 
 #region HEADER
@@ -28,8 +28,8 @@ if ( (-not (Test-Path -Path (Join-Path -Path $moduleRoot -ChildPath 'DSCResource
 
 Import-Module (Join-Path -Path $moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1') -Force
 $TestEnvironment = Initialize-TestEnvironment `
-    -DSCModuleName $Global:DSCModuleName `
-    -DSCResourceName $Global:DSCResourceName `
+    -DSCModuleName $script:DSCModuleName `
+    -DSCResourceName $script:DSCResourceName `
     -TestType Unit 
 #endregion HEADER
 
@@ -115,7 +115,7 @@ try
     # TODO: Pester Tests for any non-exported Helper Cmdlets
     # If the resource does not contain any non-exported helper cmdlets then
     # this block may be safetly deleted.
-    InModuleScope $Global:DSCResourceName {
+    InModuleScope $script:DSCResourceName {
         # The InModuleScope command allows you to perform white-box unit testing
         # on the internal (non-exported) code of a Script Module.
 
