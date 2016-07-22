@@ -160,5 +160,4 @@ To delete your branch follow these steps:
 1. Run `git checkout master` in the command prompt.  This ensures that you aren't in the branch to be deleted (which isn't allowed).
 2.	Next, type `git branch -d <branch name>` in the command prompt.  This will delete the branch on your local machine only if it has been successfully merged to the upstream repository. (You can override this behavior with the `–D` flag, but first be sure you want to do this.)
 3.	Finally, type `git push my :<branch name>` in the command prompt (a space before the colon and no space after it).  This will delete the branch on your github fork.  
-4.	
 
