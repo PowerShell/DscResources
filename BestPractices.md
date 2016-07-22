@@ -66,27 +66,25 @@ if ($null -eq $myArray)
 ```
 
 ### Avoid Global Variables
+Avoid using global variables whenever possible.
+These variables can be editted by any other script that ran before your script or is running at the same time as your script.
+Use them only with extreme caution, and try to use parameters or script/local variables instead.
+
+This rule has a few exceptions:
+    - The use of ```$global:DSCMachineStatus``` is still recommended to restart a machine from a DSC resource.
 
 **Bad:**
 ```powershell
-
+$global:configurationName = 'MyConfigurationName'
+...
+Set-MyConfiguration -ConfigurationName $global:configurationName
 ```
 
 **Good:**
 ```powershell
-
-```
-
-### Avoid Plain Text for Passwords
-
-**Bad:**
-```powershell
-
-```
-
-**Good:**
-```powershell
-
+$script:configurationName = 'MyConfigurationName'
+...
+Set-MyConfiguration -ConfigurationName $script:configurationName
 ```
 
 ### Use Declared Local and Script Variables More Than Once
@@ -129,12 +127,12 @@ if ($null -eq $myArray)
 
 **Bad:**
 ```powershell
-
+[String] $myString = 'My String'
 ```
 
 **Good:**
 ```powershell
-
+$myString = 'My String'
 ```
 
 ## Calling Functions
@@ -170,12 +168,12 @@ Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -con
 
 **Bad:**
 ```powershell
-
+Invoke-Expression -Command "Test-$DSCResourceName"
 ```
 
 **Good:**
 ```powershell
-
+& "Test-$DSCResourceName"
 ```
 
 ### Use the Force Parameter with Calls to ShouldContinue
@@ -194,24 +192,24 @@ Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -con
 
 **Bad:**
 ```powershell
-
+Get-WMIInstance -ClassName Win32_Process
 ```
 
 **Good:**
 ```powershell
-
+Get-CIMInstance -ClassName Win32_Process
 ```
 
 ### Avoid Write-Host
 
 **Bad:**
 ```powershell
-
+Write-Host 'Setting the variable to a value.'
 ```
 
 **Good:**
 ```powershell
-
+Write-Verbose -Message 'Setting the variable to a value.'
 ```
 
 ### Avoid ConvertTo-SecureString
@@ -244,36 +242,62 @@ Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -con
 
 **Bad:**
 ```powershell
-
+function Get-Something
+{
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [String]
+        $Name = 'My Name'
+    )
+    
+    ...
+}
 ```
 
 **Good:**
 ```powershell
-
+function Get-Something
+{
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [String]
+        $Name
+    )
+    
+    ...
+}
 ```
 
 ### Avoid Default Values for Switch Parameters
 
 **Bad:**
 ```powershell
-
+function Get-Something
+{
+    param
+    (
+        [Switch]
+        $MySwitch = $true
+    )
+    
+    ...
+}
 ```
 
 **Good:**
 ```powershell
-
-```
-
-### Avoid a Null or Empty HelpMessage Attribute
-
-**Bad:**
-```powershell
-
-```
-
-**Good:**
-```powershell
-
+function Get-Something
+{
+    param
+    (
+        [Switch]
+        $MySwitch
+    )
+    
+    ...
+}
 ```
 
 ### Include the Force Parameter in Functions with the ShouldContinue Attribute
@@ -458,7 +482,7 @@ Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -con
 
 ```
 
-### Ensure Manifest Contain Correct Fields
+### Ensure Manifest Contains Correct Fields
 
 **Bad:**
 ```powershell
