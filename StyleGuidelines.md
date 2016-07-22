@@ -13,7 +13,8 @@ In order to provide clean and consistent code, please follow the style guideline
     - [Correct Format for Hashtables or Objects](#correct-format-for-hashtables-or-objects)  
     - [Correct Format for Comments](#correct-format-for-comments)  
 - [Whitespace](#whitespace)  
-    - [Indentation](#indentation)  
+    - [Indentation](#indentation)
+    - [No Trailing Whitespace After Backticks](#no-trailing-whitespace-after-backticks)
     - [Newline at End of File](#newline-at-end-of-file)  
     - [Newline Character Encoding](#newline-character-encoding)  
     - [No More Than Two Consecutive Newlines](#no-more-than-two-consecutive-newlines)  
@@ -295,6 +296,9 @@ function Get-MyVariable
 ### Indentation 
 For all indentation, use **4** spaces instead of tabs.
 There should be no tab characters in the file unless they are in a here-string.
+
+### No Trailing Whitespace After Backticks
+Backticks should always be directly followed by a newline
 
 ### Newline at End of File
 All files must end with a newline, see [StackOverflow.](http://stackoverflow.com/questions/5813311/no-newline-at-end-of-file) 
