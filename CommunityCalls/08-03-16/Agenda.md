@@ -1,4 +1,17 @@
 # DSC Resource Kit Community Call - 08/03/2106
+## How to Join
+### Skype for Business
+[Join Skype Meeting](https://join.microsoft.com/meet/kakeim/YVJC8SNV)  
+This is an online meeting for Skype for Business, the professional meetings and communications app formerly known as Lync.
+
+### Phone
++14257063500   (USA - Redmond Campus) 		English (United States)  
++18883203585   (USA - Redmond Campus) 		English (United States)   
+[Find a local number](https://join.microsoft.com/dialin) 
+
+Conference ID: 88745041  
+[Forgot your dial-in PIN?](https://join.microsoft.com/dialin) | [Help](http://o15.officeredir.microsoft.com/r/rlidLync15?clid=1033&p1=5&p2=2009)
+
 ## Agenda
 - Feedback from the last call that was acted upon
   - Hard release date announced well in advance (August 10)
