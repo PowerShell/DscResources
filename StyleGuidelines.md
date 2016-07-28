@@ -141,16 +141,16 @@ $superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtablePara
 
 **Good:**
 ```powershell
-$MySuperLongVariablePleaseParams = @{
-    MySuperLongHashtableParameter @{ 
-        MySuperLongKey1 = 'MySuperLongValue1'
-        MySuperLongKey2 = 'MySuperLongValue2'
+$mySuperLongVariablePleaseParams = @{
+    mySuperLongHashtableParameter @{ 
+        mySuperLongKey1 = 'MySuperLongValue1'
+        mySuperLongKey2 = 'MySuperLongValue2'
     }
-    MySuperLongStringParameter = '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890'
-    Verbose = $true
+    mySuperLongStringParameter = '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890'
+    verbose = $true
 }
 
-$superLongVariableName = Get-MySuperLongVariablePlease @MySuperLongVariablePleaseParams
+$superLongVariableName = Get-MySuperLongVariablePlease @mySuperLongVariablePleaseParams
 ```
 
 ### Correct Format for Arrays
