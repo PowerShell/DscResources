@@ -1,4 +1,4 @@
-# DSC Resource Kit Community Call - 08/03/2106
+# DSC Resource Kit Community Call - 08/03/2016
 **1-2PM on Wednesday, August 3 (PDT)**
 
 ## How to Join
