@@ -12,6 +12,7 @@
 - How to handle Nano Server resources
   - WMF 5.1 just released!
 - Modules currently on track to be released on 08/10/2106 (**This will not be a definitive list and may be subject to change**)
+  - High quality resource module WebAdministrationDsc on track to be released with a few resources from xWebAdministration
 - Modules that are currently blocked from release
 - How the release process works
 - Our overall goals for the DSC Resource Kit
