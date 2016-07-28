@@ -132,12 +132,12 @@ function Set-ServerName
 ```
 
 ### Correct Format for Long Function Calls
-When calling a function with many parameters, if the line exceeds the line character limit, parameter splatting should be used.
-More help on splatting can be found using the command
+When calling a function with many parameters, if the line exceeds the line character limit, use parameter splatting.
+More help on splatting can be found using the command:
 ```powershell
-get-help about_splatting
+Get-Help -Name 'About_Splatting'
 ```
-Make sure hashtable parameters are also properly formatted with multiple lines and the proper indentation.
+Make sure hashtable parameters are still properly formatted with multiple lines and the proper indentation.
 
 **Bad:**
 ```powershell
@@ -147,12 +147,12 @@ $superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtablePara
 **Good:**
 ```powershell
 $getMySuperLongVariablePleaseParams = @{
-    mySuperLongHashtableParameter @{ 
+    MySuperLongHashtableParameter = @{ 
         mySuperLongKey1 = 'MySuperLongValue1'
         mySuperLongKey2 = 'MySuperLongValue2'
     }
-    mySuperLongStringParameter = '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890'
-    verbose = $true
+    MySuperLongStringParameter = '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890'
+    Verbose = $true
 }
 
 $superLongVariableName = Get-MySuperLongVariablePlease @getMySuperLongVariablePleaseParams
