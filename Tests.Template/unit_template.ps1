@@ -44,8 +44,6 @@ try
 
     # TODO: Optionally create any variables here for use by your tests
     # See https://github.com/PowerShell/xNetworking/blob/dev/Tests/Unit/MSFT_xDhcpClient.Tests.ps1
-    # Mocks that should be applied to all cmdlets being tested may
-    # also be created here if required.
 
     #endregion Pester Test Initialization
 
