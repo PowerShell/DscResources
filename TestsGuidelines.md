@@ -21,7 +21,7 @@ General Rules
 
 Creating DSC Resource Unit Test Instructions
 --------------------------------------------
- 1. Copy the ```\Tests.Template\unit_template.ps1``` to the ```\Tests\Integration\``` folder and rename to ```MSFT_x<ResourceName>.tests.ps1```
+ 1. Copy the ```\Tests.Template\unit_template.ps1``` to the ```\Tests\Unit\``` folder and rename to ```MSFT_x<ResourceName>.tests.ps1```
  2. Open ```MSFT_x<ResourceName>.tests.ps1``` and customize TODO sections.
   - **Note: The existing Describe blocks do not have to be used. The blocks included are a common test pattern, but may be completely replaced with a more suitable pattern.**
 

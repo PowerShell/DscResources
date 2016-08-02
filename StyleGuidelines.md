@@ -13,7 +13,8 @@ In order to provide clean and consistent code, please follow the style guideline
     - [Correct Format for Hashtables or Objects](#correct-format-for-hashtables-or-objects)  
     - [Correct Format for Comments](#correct-format-for-comments)  
 - [Whitespace](#whitespace)  
-    - [Indentation](#indentation)  
+    - [Indentation](#indentation)
+    - [No Trailing Whitespace After Backticks](#no-trailing-whitespace-after-backticks)
     - [Newline at End of File](#newline-at-end-of-file)  
     - [Newline Character Encoding](#newline-character-encoding)  
     - [No More Than Two Consecutive Newlines](#no-more-than-two-consecutive-newlines)  
@@ -131,8 +132,12 @@ function Set-ServerName
 ```
 
 ### Correct Format for Long Function Calls
-When calling a function with many parameters, if the line exceeds the line character limit, separate each parameter onto its own line.
-Make sure hashtable parameters are also properly formatted with multiple lines and the proper indentation.
+When calling a function with many parameters, if the line exceeds the line character limit, use parameter splatting.
+More help on splatting can be found using the command:
+```powershell
+Get-Help -Name 'About_Splatting'
+```
+Make sure hashtable parameters are still properly formatted with multiple lines and the proper indentation.
 
 **Bad:**
 ```powershell
@@ -141,14 +146,16 @@ $superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtablePara
 
 **Good:**
 ```powershell
-$superLongVariableName = Get-MySuperLongVariablePlease `
-    -MySuperLongHashtableParameter @{ 
-        MySuperLongKey1 = 'MySuperLongValue1'
-        MySuperLongKey2 = 'MySuperLongValue2'
-    } `
-    -MySuperLongStringParameter '12345678901234567890123456789012345678901234567890' + `         
-        '1234567890123456789012345678901234567890123456789012345678901234567890' `
-    -Verbose
+$getMySuperLongVariablePleaseParams = @{
+    MySuperLongHashtableParameter = @{ 
+        mySuperLongKey1 = 'MySuperLongValue1'
+        mySuperLongKey2 = 'MySuperLongValue2'
+    }
+    MySuperLongStringParameter = '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890'
+    Verbose = $true
+}
+
+$superLongVariableName = Get-MySuperLongVariablePlease @getMySuperLongVariablePleaseParams
 ```
 
 ### Correct Format for Arrays
@@ -295,6 +302,9 @@ function Get-MyVariable
 ### Indentation 
 For all indentation, use **4** spaces instead of tabs.
 There should be no tab characters in the file unless they are in a here-string.
+
+### No Trailing Whitespace After Backticks
+Backticks should always be directly followed by a newline
 
 ### Newline at End of File
 All files must end with a newline, see [StackOverflow.](http://stackoverflow.com/questions/5813311/no-newline-at-end-of-file) 
