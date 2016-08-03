@@ -1,22 +1,21 @@
 <#
-    .SYNOPSIS
-       A sample template for creating DSC Resource Unit Tests mainly for larger resources
-    .DESCRIPTION
-       To Use:
+        .SYNOPSIS
+        A sample template for creating DSC Resource Unit Tests mainly for larger resources
+        .DESCRIPTION
+        To Use:
          1. Copy to \Tests\Unit\ folder and rename <ResourceName>.tests.ps1 (e.g. MSFT_xFirewall.tests.ps1)
          2. Customize TODO sections.
          3. Delete all of the template instructional comments before pushing to git repository
 
-    .NOTES
-       Code in HEADER and FOOTER regions are standard and may be moved into DSCResource.Tools in
-       Future and therefore should not be altered if possible.
+        .NOTES
+        Code in HEADER and FOOTER regions are standard and may be moved into DSCResource.Tools in
+        Future and therefore should not be altered if possible.
 #>
 
 
 # TODO: Customize these parameters...
 $script:dscModuleName      = '<ModuleName>' # Example xNetworking
 $script:dscResourceName    = '<ResourceName>' # Example MSFT_xFirewall
-# /TODO
 
 #region HEADER
 
@@ -42,13 +41,6 @@ try
 {
 
     Initialize-PesterTests
-
-    #region Pester Test Initialization
-
-    # TODO: Optionally create any variables here for use by your tests
-    # See https://github.com/PowerShell/xNetworking/blob/dev/Tests/Unit/MSFT_xDhcpClient.Tests.ps1
-
-    #endregion Pester Test Initialization
 
     # TODO: Common DSC Resource describe block structure
     # The following two Describe blocks are included as a common test pattern.
@@ -97,7 +89,9 @@ try
 
         #region Example state 2
         Context 'When the system is in the desired state' {
-            #TODO: Mock cmdlets here that represent the system being in the desired state
+           BeforeAll {
+                #TODO: Mock cmdlets here that represent the system being in the desired state
+            }
 
             #TODO: Create a set of parameters to test your get/test/set methods in this state
             $testParameters = @{
@@ -137,12 +131,13 @@ finally
 
     #endregion
 
-    # TODO: Other Optional Cleanup Code Goes Here...
 }
 
 function Initialize-PesterTests {
-    
-    # TODO: Optional Init Code Goes Here...
+
+    # TODO: Optionally create any variables here for use by your tests
+    # See https://github.com/PowerShell/xNetworking/blob/dev/Tests/Unit/MSFT_xDhcpClient.Tests.ps1
+    # Optional other init code goes here...
     
 }
 

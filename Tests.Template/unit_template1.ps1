@@ -16,7 +16,6 @@
 # TODO: Customize these parameters...
 $script:dscModuleName      = '<ModuleName>' # Example xNetworking
 $script:dscResourceName    = '<ResourceName>' # Example MSFT_xFirewall
-# /TODO
 
 #region HEADER
 
@@ -41,10 +40,6 @@ $TestEnvironment = Initialize-TestEnvironment `
 try
 {
     Initialize-PesterTests
-
-    # TODO: Optionally create any variables here for use by your tests
-    # See https://github.com/PowerShell/xNetworking/blob/dev/Tests/Unit/MSFT_xDhcpClient.Tests.ps1
-
 
     # TODO: Common DSC Resource describe block structure
     # The following three Describe blocks are included as a common test pattern.
@@ -94,13 +89,16 @@ finally
 
 function Initialize-PesterTests {
     
-    # TODO: Optional Init Code Goes Here...
+    # TODO: Optionally create any variables here for use by your tests
+    # See https://github.com/PowerShell/xNetworking/blob/dev/Tests/Unit/MSFT_xDhcpClient.Tests.ps1
+    # Optional other init code goes here...
     
 }
 
 function Complete-PesterTests {
 
     Restore-TestEnvironment -TestEnvironment $TestEnvironment
+    
     # TODO: Other Optional Cleanup Code Goes Here...
     
 }
