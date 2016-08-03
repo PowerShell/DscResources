@@ -1,5 +1,5 @@
 <#
-        .Synopsis
+        .SYNOPSIS
         A sample template for creating DSC Resource Unit Tests mainly for smaller resources
         .DESCRIPTION
         To Use:
@@ -14,8 +14,8 @@
 
 
 # TODO: Customize these parameters...
-$script:DSCModuleName      = '<ModuleName>' # Example xNetworking
-$script:DSCResourceName    = '<ResourceName>' # Example MSFT_xFirewall
+$script:dscModuleName      = '<ModuleName>' # Example xNetworking
+$script:dscResourceName    = '<ResourceName>' # Example MSFT_xFirewall
 # /TODO
 
 #region HEADER
@@ -30,23 +30,22 @@ if ( (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCR
 
 Import-Module (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1') -Force
 $TestEnvironment = Initialize-TestEnvironment `
-    -DSCModuleName $script:DSCModuleName `
-    -DSCResourceName $script:DSCResourceName `
+    -DSCModuleName $script:dscModuleName `
+    -DSCResourceName $script:dscResourceName `
     -TestType Unit 
 
 #endregion HEADER
 
-# TODO: Other Optional Init Code Goes Here...
+
 
 # Begin Testing
 try
 {
-    #region Pester Test Initialization
+    Initialize-PesterTests
 
     # TODO: Optionally create any variables here for use by your tests
     # See https://github.com/PowerShell/xNetworking/blob/dev/Tests/Unit/MSFT_xDhcpClient.Tests.ps1
 
-    #endregion Pester Test Initialization
 
     # TODO: Common DSC Resource describe block structure
     # The following three Describe blocks are included as a common test pattern.
@@ -56,19 +55,19 @@ try
 
 
     #region Function Get-TargetResource
-    Describe "$($Global:DSCResourceName)\Get-TargetResource" {
+    Describe "$($script:dscResourceName)\Get-TargetResource" {       
         # TODO: Complete Get-TargetResource Tests...
     }
     #endregion Function Get-TargetResource
     
     #region Function Set-TargetResource
-    Describe "$($Global:DSCResourceName)\Set-TargetResource" {
+    Describe "$($script:dscResourceName)\Set-TargetResource" {
         # TODO: Complete Set-TargetResource Tests...
     }
     #endregion Function Set-TargetResource
 
     #region Function Test-TargetResource
-    Describe "$($Global:DSCResourceName)\Test-TargetResource" {
+    Describe "$($script:dscResourceName)\Test-TargetResource" {
         # TODO: Complete Test-TargetResource Tests...
     }
     #endregion Function Test-TargetResource
@@ -79,8 +78,8 @@ try
 
     # TODO: Pester Tests for any non-exported Helper Cmdlets
     # If the resource does not contain any non-exported helper cmdlets then
-    # this block may be safetly deleted.
-    InModuleScope $script:DSCResourceName {
+    # this block may be safely deleted.
+    InModuleScope $script:dscResourceName {
         # The InModuleScope command allows you to perform white-box unit testing
         # on the internal (non-exported) code of a Script Module.
 
@@ -89,11 +88,20 @@ try
 }
 finally
 {
-    #region FOOTER
+ 
+    Complete-PesterTests
+    
+}
+
+function Initialize-PesterTests {
+    
+    # TODO: Optional Init Code Goes Here...
+    
+}
+
+function Complete-PesterTests {
 
     Restore-TestEnvironment -TestEnvironment $TestEnvironment
-
-    #endregion
-
     # TODO: Other Optional Cleanup Code Goes Here...
+    
 }

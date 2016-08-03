@@ -1,21 +1,21 @@
 <#
-.Synopsis
-   A sample template for creating DSC Resource Unit Tests mainly for larger resources
-.DESCRIPTION
-   To Use:
-     1. Copy to \Tests\Unit\ folder and rename <ResourceName>.tests.ps1 (e.g. MSFT_xFirewall.tests.ps1)
-     2. Customize TODO sections.
-     3. Delete all of the template instructional comments before pushing to git repository
+    .SYNOPSIS
+       A sample template for creating DSC Resource Unit Tests mainly for larger resources
+    .DESCRIPTION
+       To Use:
+         1. Copy to \Tests\Unit\ folder and rename <ResourceName>.tests.ps1 (e.g. MSFT_xFirewall.tests.ps1)
+         2. Customize TODO sections.
+         3. Delete all of the template instructional comments before pushing to git repository
 
-.NOTES
-   Code in HEADER and FOOTER regions are standard and may be moved into DSCResource.Tools in
-   Future and therefore should not be altered if possible.
+    .NOTES
+       Code in HEADER and FOOTER regions are standard and may be moved into DSCResource.Tools in
+       Future and therefore should not be altered if possible.
 #>
 
 
 # TODO: Customize these parameters...
-$script:DSCModuleName      = '<ModuleName>' # Example xNetworking
-$script:DSCResourceName    = '<ResourceName>' # Example MSFT_xFirewall
+$script:dscModuleName      = '<ModuleName>' # Example xNetworking
+$script:dscResourceName    = '<ResourceName>' # Example MSFT_xFirewall
 # /TODO
 
 #region HEADER
@@ -30,17 +30,20 @@ if ( (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCR
 
 Import-Module (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1') -Force
 $TestEnvironment = Initialize-TestEnvironment `
-    -DSCModuleName $script:DSCModuleName `
-    -DSCResourceName $script:DSCResourceName `
+    -DSCModuleName $script:dscModuleName `
+    -DSCResourceName $script:dscResourceName `
     -TestType Unit 
 
 #endregion HEADER
 
-# TODO: Other Optional Init Code Goes Here...
+
 
 # Begin Testing
 try
 {
+
+    Initialize-PesterTests
+
     #region Pester Test Initialization
 
     # TODO: Optionally create any variables here for use by your tests
@@ -63,60 +66,64 @@ try
     # factors, depending on how complex your resource is.
 
     #region Example state 1
-    Describe 'The system is not in the desired state' {
-        #TODO: Mock cmdlets here that represent the system not being in the desired state
+    Describe "$($script:dscResourceName)" {
+        Context 'When the system is not in the desired state' {
+            BeforeAll {
+                #TODO: Mock cmdlets here that represent the system not being in the desired state
+            }
 
-        #TODO: Create a set of parameters to test your get/test/set methods in this state
-        $testParameters = @{
-            Property1 = 'value'
-            Property2 = 'value'
+            #TODO: Create a set of parameters to test your get/test/set methods in this state
+            $testParameters = @{
+                Property1 = 'value'
+                Property2 = 'value'
+            }
+
+            #TODO: Update the assertions below to align with the expected results of this state
+            It 'Get method returns something' {
+                Get-TargetResource @testParameters | Should Be 'something'
+            }
+
+            It 'Test method returns false' {
+                Test-TargetResource @testParameters | Should be $false
+            }
+
+            It 'Set method calls Demo-CmdletName' {
+                Set-TargetResource @testParameters
+
+                #TODO: Assert that the appropriate cmdlets were called
+                Assert-MockCalled Demo-CmdletName 
+            }
         }
+        #endregion Example state 1
 
-        #TODO: Update the assertions below to align with the expected results of this state
-        It 'Get method returns something' {
-            Get-TargetResource @testParameters | Should Be 'something'
+        #region Example state 2
+        Context 'When the system is in the desired state' {
+            #TODO: Mock cmdlets here that represent the system being in the desired state
+
+            #TODO: Create a set of parameters to test your get/test/set methods in this state
+            $testParameters = @{
+                Property1 = 'value'
+                Property2 = 'value'
+            }
+
+            #TODO: Update the assertions below to align with the expected results of this state
+            It 'The Get method should return something' {
+                Get-TargetResource @testParameters | Should Be 'something'
+            }
+
+            It 'The Test method Should return true' {
+                Test-TargetResource @testParameters | Should be $true
+            }
         }
-
-        It 'Test method returns false' {
-            Test-TargetResource @testParameters | Should be $false
-        }
-
-        It 'Set method calls Demo-CmdletName' {
-            Set-TargetResource @testParameters
-
-            #TODO: Assert that the appropriate cmdlets were called
-            Assert-MockCalled Demo-CmdletName 
-        }
+        #endregion Example state 2
     }
-    #endregion Example state 1
-
-    #region Example state 2
-    Describe 'The system is in the desired state' {
-        #TODO: Mock cmdlets here that represent the system being in the desired state
-
-        #TODO: Create a set of parameters to test your get/test/set methods in this state
-        $testParameters = @{
-            Property1 = 'value'
-            Property2 = 'value'
-        }
-
-        #TODO: Update the assertions below to align with the expected results of this state
-        It 'Get method returns something' {
-            Get-TargetResource @testParameters | Should Be 'something'
-        }
-
-        It 'Test method returns true' {
-            Test-TargetResource @testParameters | Should be $true
-        }
-    }
-    #endregion Example state 2
 
     #region Non-Exported Function Unit Tests
 
     # TODO: Pester Tests for any non-exported Helper Cmdlets
     # If the resource does not contain any non-exported helper cmdlets then
-    # this block may be safetly deleted.
-    InModuleScope $script:DSCResourceName {
+    # this block may be safely deleted.
+    InModuleScope $script:dscResourceName {
         # The InModuleScope command allows you to perform white-box unit testing
         # on the internal (non-exported) code of a Script Module.
 
@@ -127,9 +134,22 @@ finally
 {
     #region FOOTER
 
-    Restore-TestEnvironment -TestEnvironment $TestEnvironment
+    Complete-PesterTests
 
     #endregion
 
     # TODO: Other Optional Cleanup Code Goes Here...
+}
+
+function Initialize-PesterTests {
+    
+    # TODO: Optional Init Code Goes Here...
+    
+}
+
+function Complete-PesterTests {
+
+    Restore-TestEnvironment -TestEnvironment $TestEnvironment
+    # TODO: Other Optional Cleanup Code Goes Here...
+    
 }
