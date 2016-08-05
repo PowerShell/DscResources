@@ -40,7 +40,7 @@ $TestEnvironment = Initialize-TestEnvironment `
 try
 {
 
-    Initialize-PesterTests
+    Invoke-TestSetup
 
     # TODO: Common DSC Resource describe block structure
     # The following two Describe blocks are included as a common test pattern.
@@ -127,13 +127,13 @@ finally
 {
     #region FOOTER
 
-    Complete-PesterTests
+    Invoke-TestCleanup
 
     #endregion
 
 }
 
-function Initialize-PesterTests {
+function Invoke-TestSetup {
 
     # TODO: Optionally create any variables here for use by your tests
     # See https://github.com/PowerShell/xNetworking/blob/dev/Tests/Unit/MSFT_xDhcpClient.Tests.ps1
@@ -141,7 +141,7 @@ function Initialize-PesterTests {
     
 }
 
-function Complete-PesterTests {
+function Invoke-TestCleanup {
 
     Restore-TestEnvironment -TestEnvironment $TestEnvironment
     # TODO: Other Optional Cleanup Code Goes Here...
