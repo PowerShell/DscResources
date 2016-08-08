@@ -1,4 +1,26 @@
-function Get-MofSchemaObject() 
+<#
+.SYNOPSIS
+
+Get-MofSchemaObject is used to read a .schema.mof file for a DSC resource 
+
+.DESCRIPTION
+
+The Get-MofSchemaObject method is used to read the text content of the .schema.mof file
+that all MOF based DSC resources have. The object that is returned contains all of the 
+data in the schema so it can be processed in other scripts.
+
+.PARAMETER FileName 
+
+The full path to the .schema.mof file to process
+
+.EXAMPLE
+
+This example parses a MOF schema file
+
+    $mof = Get-MofSchemaObject -FileName C:\repos\SharePointDsc\DSCRescoures\MSFT_SPSite\MSFT_SPSite.schema.mof
+
+#>
+function Get-MofSchemaObject 
 {
     param(
         [Parameter(Mandatory=$true)]

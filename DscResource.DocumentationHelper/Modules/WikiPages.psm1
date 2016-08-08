@@ -1,3 +1,32 @@
+<#
+.SYNOPSIS
+
+Write-DscResourceWikiSite generates wiki pages that can be uploaded to GitHub to use as 
+public documentation for a module.
+
+.DESCRIPTION
+
+The Write-DscResourceWikiSite cmdlet will review all of the MOF based resources
+in a specified module directory and will output the Markdown files to the specified directory. 
+These help files include details on the property types for each resource, as well as a text 
+description and examples where they exist.
+
+.PARAMETER OutputPath
+
+Where should the files be saved to
+
+.PARAMETER ModulePath
+
+The path to the root of the DSC resource module (where the PSD1 file is found, not the folder for
+and individual DSC resource)
+
+.EXAMPLE 
+
+This example shows how to generate help for a specific module
+
+    Write-DscResourceWikiSite -ModulePath C:\repos\SharePointdsc -OutputPath C:\repos\SharePointDsc\en-US
+
+#>
 function Write-DscResourceWikiSite {
     param
     (
