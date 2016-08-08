@@ -36,7 +36,6 @@ function Get-MofSchemaObject
         FriendlyName = $null
         ClassName = $null
         Attributes = @()
-        Documentation = $null
     }
 
     $currentComment = ""
@@ -50,11 +49,10 @@ function Get-MofSchemaObject
         elseif($textLine.StartsWith("*/")) 
         {
             $currentlyInCommentBlock = $false
-            $currentResult.Documentation = $currentComment
         } 
         elseif($currentlyInCommentBlock -eq $true) 
         {
-            $currentComment += $textLine + [Environment]::NewLine
+            # Ignore lines in comment blocks
         } 
         elseif ($textLine -match "ClassVersion" -or $textLine -match "FriendlyName") 
         {
