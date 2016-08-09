@@ -26,13 +26,12 @@ Individual resource module hotfixes for urgent issues may be released on a case-
 
 ## Community Calls
 ### Next Call
-- **08/03/16 1-2PM PDT**  
-Instructions for joining the call and the call agenda are available [here](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/08-03-16/Agenda.md).
+TBD
 
 ### Latest Call
-- [06/30/16 1-3PM PDT](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/06-30-16)
+- [08/03/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/08-03-16)
 
 ### Past Calls
-None
+- [06/30/16 1-3PM PDT](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/06-30-16)
 
 
