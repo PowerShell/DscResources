@@ -45,3 +45,4 @@ If you would like to contribute to this repository, please read the DSC Resource
 * Initial release with the following resources:
     * {Resource1}
     * {Resource2}
+    * ...
