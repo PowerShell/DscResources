@@ -2,7 +2,7 @@
 
 # {ModuleName}
 
-{Description of the module}
+{ Description of the module - Please include any requirements for running all resources in this module (e.g. Must run on Windows Server OS, must have Exchange already installed) - Requirements specific to only certain resources in this module may be listed below with the description of those resources. }
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
@@ -18,15 +18,15 @@ If you would like to contribute to this repository, please read the DSC Resource
 
 ### {Resource1}
 
-{Detailed description of resource 1}
+{ Detailed description of resource 1 - Please include any requirements for running this resource (e.g. Must run on Windows Server OS, must have Exchange already installed) }
 
 * {**Property1**: Description of resource 1 property 1}
 * {**Property2**: Description of resource 1 property 2}
 * ...
 
-### {{Resource2}}
+### {Resource2}
 
-{Detailed description of resource 2}
+{ Detailed description of resource 2 - Please include any requirements for running this resource (e.g. Must run on Windows Server OS, must have Exchange already installed) }
 
 * {**Property1**: Description of resource 2 property 1}
 * {**Property2**: Description of resource 2 property 2}
