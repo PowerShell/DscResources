@@ -2,8 +2,8 @@
 
 ## Releases
 ### Next Release
-- **08/10/16**  
-All changes should be merged by midnight on 08/09/16 (PDT).  
+- **09/21/16**  
+All changes should be merged by midnight on 09/20/16 (PDT).  
 We will not hold the release for any pending pull requests.  
 All changes for the release must be merged into the ```dev``` branch before the release (except SharePointDsc which has a release branch).  
 Resource modules with a ```dev``` branch that is not passing tests will not be released.  
@@ -11,9 +11,10 @@ Resource modules with open BLOCKER issues will not be released.
 Individual resource module hotfixes for urgent issues may be released on a case-by-case basis.  
 
 ### Latest Release
-- [06/29/16](https://blogs.msdn.microsoft.com/powershell/2016/06/29/dsc-resource-kit-june-release/)
+- [08/10/16](https://blogs.msdn.microsoft.com/powershell/2016/08/10/dsc-resource-kit-august-release/)
 
 ### Past Releases
+- [06/29/16](https://blogs.msdn.microsoft.com/powershell/2016/06/29/dsc-resource-kit-june-release/)
 - [05/18/16](https://blogs.msdn.microsoft.com/powershell/2016/05/18/dsc-resource-kit-anniversary-release/)
 - [04/04/16](https://blogs.msdn.microsoft.com/powershell/2016/04/04/dsc-resource-kit-update/)
 - [02/11/16](https://blogs.msdn.microsoft.com/powershell/2016/02/11/dsc-resource-kit-gets-even-bigger/)
@@ -26,13 +27,12 @@ Individual resource module hotfixes for urgent issues may be released on a case-
 
 ## Community Calls
 ### Next Call
-- **08/03/16 1-2PM PDT**  
-Instructions for joining the call and the call agenda are available [here](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/08-03-16/Agenda.md).
+TBD
 
 ### Latest Call
-- [06/30/16 1-3PM PDT](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/06-30-16)
+- [08/03/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/08-03-16)
 
 ### Past Calls
-None
+- [06/30/16 1-3PM PDT](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/06-30-16)
 
 
