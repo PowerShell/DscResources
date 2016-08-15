@@ -1,6 +1,6 @@
 <#
         .SYNOPSIS
-        A sample template for creating DSC Resource Unit Tests mainly for smaller resources
+        A sample template for creating DSC Resource Unit Tests
         .DESCRIPTION
         To Use:
         1. Copy to \Tests\Unit\ folder and rename <ResourceName>.tests.ps1 (e.g. MSFT_xFirewall.tests.ps1)
