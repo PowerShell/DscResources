@@ -18,8 +18,7 @@ $script:DSCResourceName    = '<ResourceName>' # Example MSFT_xFirewall
 # /TODO
 
 #region HEADER
-
-# Integration Test Template Version: 1.1.0
+# Integration Test Template Version: 1.1.1
 [String] $script:moduleRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if ( (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))) -or `
      (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1'))) )
@@ -31,7 +30,7 @@ Import-Module (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\
 $TestEnvironment = Initialize-TestEnvironment `
     -DSCModuleName $script:DSCModuleName `
     -DSCResourceName $script:DSCResourceName `
-    -TestType Integration 
+    -TestType Integration
 
 #endregion
 
@@ -48,7 +47,7 @@ try
         #region DEFAULT TESTS
         It 'Should compile without throwing' {
             {
-                Invoke-Expression -Command "$($script:DSCResourceName)_Config -OutputPath `$TestEnvironment.WorkingFolder"
+                & "$($script:DSCResourceName)_Config" -OutputPath $TestEnvironment.WorkingFolder
                 Start-DscConfiguration -Path $TestEnvironment.WorkingFolder `
                     -ComputerName localhost -Wait -Verbose -Force
             } | Should not throw
