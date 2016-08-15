@@ -12,7 +12,7 @@ General Rules
  * The Tests\Unit folder must contain a Test Script for each DSC Resource in the DSC Module with the filename ```MSFT_<ResourceName>.tests.ps1```.
  * The Tests\Integration folder should, whenever possible, contain a Test Script for each DSC Resource in the DSC Module with the filename ```MSFT_<ResourceName>.integration.tests.ps1```.
  * Each Test Script should contain [Pester](https://github.com/pester/Pester) based tests.
- * Integration tests should be created when possible, but for some DSC resources this may not be possible. For example, when integration tests would cause the testing computer configuration to be damaged. 
+ * Integration tests should be created when possible, but for some DSC resources this may not be possible. For example, when integration tests would cause the testing computer configuration to be damaged.
  * Unit and Integration tests should be created using the Template files that are located in the [Tests.Template](Tests.Template) folder in this repository.
  * The Unit and Integration test templates require that ```Git.exe``` be installed and can be found in the ```%PATH%``` on the testing computer.
  * The Unit and Integration test templates will automatically download or update the [DSCResource.Tests repository](https://github.com/PowerShell/DscResource.Tests) using Git.exe to the DSC Module folder.
@@ -85,6 +85,28 @@ $LocalizedData = InModuleScope $Global:DSCResourceName {
 2. Add any variables that are required to be accessed outside the module by unit tests to the ```Export-ModuleMember``` cmdlet in the DSC Resource:
 ```powershell
 Export-ModuleMember -Function *-TargetResource -Variables LocalizedData
+```
+
+Using variables within InModuleScope block that are declared outside InModuleScope block
+----------------------------------------------------------------------------------------
+It is common for tests to include scaffolding variables that are used by the tests, but may also be needed within any InModuleScope blocks.
+One common example of this is the ```$script:DSCResourceName``` variable that contains the name of the resource being tested.
+
+The solution to this is to redeclare these variables in the InModuleScope block using ```Get-Variable```:
+```powershell
+    $testSystemLocale = 'en-US'
+    $badSystemLocale = 'zzz-ZZZ'
+
+    # --- normal tests here ---
+
+    InModuleScope $script:DSCResourceName {
+        # Redeclare these variables so that they can be accessed within the InModuleScope block
+        $testSystemLocale = (Get-Variable -Name 'testSystemLocale').Value
+        $badSystemLocale = (Get-Variable -Name 'badSystemLocale').Value
+        $script:DSCResourceName = (Get-Variable -Name 'DSCResourceName').Value
+
+        # --- InModuleScope tests here ---
+    }
 ```
 
 Example Tests
