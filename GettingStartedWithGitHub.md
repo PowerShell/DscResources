@@ -153,7 +153,8 @@ GitHub would automatically update the pull request.
 
 ## Resolve merge conflicts
 
-If another pull request is merged while yours are in review, then you have to get those new changes into your pull request before yours are allowed to merge.
+If another pull request is merged while yours are in review, then you have to get those new changes into your pull request before yours are allowed to merge.  
+You can read more about how to resolve a merge conflict on the [GitHub help page](https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/).
 
 It's a three step process. 
 1. Get changes from base branch
@@ -179,7 +180,7 @@ CONFLICT (content): Merge conflict in README.md
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-To fix this we need to manually open the file in a editor of your choosing and find the conflict. You find the conflict by searching for seven equals sign: `=======`.  
+To fix this you need to manually open the file in an editor of your choosing and find the conflict. You find the conflict by searching for seven equals sign: `=======`.  
 Below is an example of how it could look like. 
 
 ```
@@ -199,8 +200,8 @@ Below is an example of how it could look like.
 ...
 ```
 
-* Above the equals sign `========` is whats in the `README.md` of your branch.
-* Below the equals sign `========` is whats in the `README.md` of the dev (origin) branch.
+* Above the equals sign `========` is what's in the `README.md` of your branch.
+* Below the equals sign `========` is what's in the `README.md` of the dev (origin) branch.
 
 To resolve this we have to manually change this section manually. In this example we can do it so the resulting `README.md` looks like this. 
 
@@ -217,9 +218,9 @@ To resolve this we have to manually change this section manually. In this exampl
 ### 1.8.0.0
 ...
 ```
-_Note: You must remove the lines `<<<<<<< HEAD`, `========` and `>>>>>>> origin/dev`.
+_Note: You must remove the lines `<<<<<<< HEAD`, `========` and `>>>>>>> origin/dev`._
 
-When your happy with the file. Save it and continue with the next file, if there was more merge conflicts. 
+When you are happy with the file. Save it and continue with the next file, if there was more merge conflicts. 
 
 ### To update your pull request
 This is exactly like you usally update the pull request, but using a standard message so it's clear that the commit is for resolving merge conflicts.
