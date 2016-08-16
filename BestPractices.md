@@ -88,46 +88,75 @@ Set-MyConfiguration -ConfigurationName $script:configurationName
 ```
 
 ### Use Declared Local and Script Variables More Than Once
-
-**Bad:**
-```powershell
-
-```
-
-**Good:**
-```powershell
-
-```
+Don't declare a local or script variable if you're not going to use it.
+This creates excess code that isn't needed
 
 ### Use PSCredential for All Credentials
+PSCredentials are more secure than using plaintext username and passwords.
 
 **Bad:**
 ```powershell
-
+function Get-Settings
+{
+    param
+    (
+        [String]
+        $Username
+        
+        [String]
+        $Password
+    )
+    ...
+}
 ```
 
 **Good:**
 ```powershell
-
+function Get-Settings
+{
+    param
+    (
+        [PSCredential]
+        [Credential()]
+        $UserCredential
+    )
+}
 ```
 
 ### Use Variables Rather Than Extensive Piping
+This is a script not a console. Code should be easy to follow.
+There should be no more than 1 pipe in a line.
+This rule is specific to the DSC Resource Kit - other PowerShell best practices may say differently, but this is our preferred format for readability.
 
 **Bad:**
 ```powershell
-
+Get-Objects | Where-Object { $_.Propery -ieq 'Valid' } | Set-ObjectValue `
+    -Value 'Invalid' | Foreach-Object { Write-Output $_ }
 ```
 
 **Good:**
 ```powershell
+$validPropertyObjects = Get-Objects | Where-Object { $_.Property -ieq 'Valid' }
 
+foreach ($validPropertyObject in $validPropertyObjects)
+{
+    $propertySetResult = Set-ObjectValue $validPropertyObject -Value 'Invalid'
+    Writ-Output $propertySetResult
+}
 ```
 
 ### Avoid Unnecessary Type Declarations
+If it is clear what type a variable is then it is not necessary to explicitly declare its type.
+Extra type declarations can clutter the code.
 
 **Bad:**
 ```powershell
 [String] $myString = 'My String'
+```
+
+**Bad:**
+```powershell
+[System.Boolean] $myBoolean = $true
 ```
 
 **Good:**
@@ -135,10 +164,16 @@ Set-MyConfiguration -ConfigurationName $script:configurationName
 $myString = 'My String'
 ```
 
+**Good:**
+```powershell
+$myBoolean = $true
+```
+
 ## Calling Functions
 
 ### Use Named Parameters Instead of Positional Parameters
 Call cmdlets using named parameters instead of positional parameters.
+Named parameters help other developers who are unfamiliar with your code to better understand your code.
 
 **Bad:**
 ```powershell
@@ -152,7 +187,7 @@ Get-ChildItem -Path C:\Documents -Filter *.md
 
 ### Avoid Cmdlet Aliases
 When calling a function use the full command not an alias.
-You can get the full command an alias is using by calling ```Get-Alias```.
+You can get the full command an alias represents by calling ```Get-Alias```.
 
 **Bad**
 ```powershell
@@ -165,6 +200,8 @@ Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -con
 ```
 
 ### Avoid Invoke-Expression
+Invoke-Expression is vulnerable to string injection attacks. 
+It should not be used in any DSC resources.
 
 **Bad:**
 ```powershell
@@ -189,6 +226,8 @@ Invoke-Expression -Command "Test-$DSCResourceName"
 ```
 
 ### Avoid the WMI Cmdlets
+The WMI cmdlets can all be replaced by CIM cmdlets.
+Use the CIM cmdlets instead because they align with industry standards.
 
 **Bad:**
 ```powershell
@@ -201,6 +240,8 @@ Get-CIMInstance -ClassName Win32_Process
 ```
 
 ### Avoid Write-Host
+[Write-Host is harmful](http://www.jsnover.com/blog/2013/12/07/write-host-considered-harmful/).
+Use alternatives such as Writ-Verbose, Write-Output, Write-Debug, etc.
 
 **Bad:**
 ```powershell
@@ -212,33 +253,36 @@ Write-Host 'Setting the variable to a value.'
 Write-Verbose -Message 'Setting the variable to a value.'
 ```
 
-### Avoid ConvertTo-SecureString
+### Avoid ConvertTo-SecureString with AsPlainText
+SecureStrings should be encrypted.
+When using ConvertTo-SecureString with the AsPlainText parameter specified the SecureString text is not encrypted and thus not secure
+This is allowed in tests/examples when needed, but never in the actual resources.
 
 **Bad:**
 ```powershell
-
-```
-
-**Good:**
-```powershell
-
+ConvertTo-SecureString -String 'mySecret' -AsPlainText -Force
 ```
 
 ### Assign Function Results to Variables Rather Than Extensive Inline Calls
 
 **Bad:**
 ```powershell
-
+Set-Background -Color (Get-Color -Name ((Get-Settings -User (Get-CurrentUser)).ColorName))
 ```
 
 **Good:**
 ```powershell
+$currentUser = Get-CurrentUser
+$userSettings = Get-Settings -User $currentUser
+$backgroundColor = Get-Color -Name $userSettings.ColorName
 
+Set-Background -Color $backgroundColor
 ```
 
 ## Writing Functions
 
 ### Avoid Default Values for Mandatory Parameters
+Default values for mandatory parameters will always be overwritten, thus they are never used and can cause confusion.
 
 **Bad:**
 ```powershell
@@ -271,6 +315,9 @@ function Get-Something
 ```
 
 ### Avoid Default Values for Switch Parameters
+Switch parameters have 2 values - there or not there. 
+The default value is automatically $false so it doesn't need to be declared.
+If you are tempted to set the default value to $true - don't - refactor your code instead.
 
 **Bad:**
 ```powershell
@@ -337,39 +384,65 @@ function Get-Something
 ```
 
 ### Avoid Redefining Reserved Parameters
+[Reserved Parameters](https://msdn.microsoft.com/en-us/library/dd901844(v=vs.85).aspx ) such as Verbose, Debug, etc. are already added to the function at runtime so don't redefine them.
+Add the CmdletBinding attribute to include the reserved parameters in your function.
+
+### Use the CmdletBinding Attribute on Every Function
+The CmdletBinding attribute adds the reserved parameters to your function which is always preferable.
 
 **Bad:**
 ```powershell
-
+function Get-Property
+{
+    param
+    (
+        ...
+    )
+    ...
+}
 ```
 
 **Good:**
 ```powershell
-
-```
-
-### Use the CmdletBindining Attribute on Every Function
-
-**Bad:**
-```powershell
-
-```
-
-**Good:**
-```powershell
-
+function Get-Property
+{
+    [CmdletBinding()]
+    param
+    (
+        ...
+    )
+    ...
+}
 ```
 
 ### Define the OutputType Attribute for All Functions With Output
+The OutputType attribute should be declared if the function has output so that the correct error messages get displayed if the function ever produces an incorrect output type.
 
 **Bad:**
 ```powershell
-
+function Get-MyBoolean
+{
+    [OutputType([Boolean])]
+    param ()
+    
+    ...
+    
+    return $myBoolean
+}
 ```
 
 **Good:**
 ```powershell
-
+function Get-MyBoolean
+{
+    [CmdletBinding()]
+    [OutputType([Boolean])]
+    param ()
+    
+    ...
+    
+    return $myBoolean
+}
 ```
 
 ### Return Only One Object From Each Function
