@@ -149,8 +149,84 @@ git commit -a -m "Update my awesome feature with codereview feedback"
 git push my awesome_feature
 ```
 
-GitHub would automatically update pull request.
- 
+GitHub will automatically update the pull request.
+
+## Resolve merge conflicts
+
+If another pull request is merged while yours are in review, then you have to get those new changes into your pull request before yours are allowed to merge.
+
+It's a three step process. 
+1. Get changes from base branch
+2. Fix merge conflicts
+3. Update your pull request.
+
+### To get changes from the dev branch 
+* In a PowerShell prompt, you need to do the following.
+
+```
+cd <path to cloned repository>      # This is the path to your cloned repository. I.e. cd C:\Source\xActiveDirectory 
+git checkout <your PR branch>       # Checkout (move) to your pull request branch, i.e git checkout awesome_feature
+git fetch origin dev                # Get all changes from origin/dev
+git merge origin/dev                # Merge changes from origin/dev into your pull request branch.
+```
+
+### To fix all merge conflicts
+If you get a message saying something like below, then you have merge conflicts that must me manually resolved. Below there is a conflict between the dev (origin) branch and your pull request branch for the file `README.md`.
+
+```
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+To fix this we need to manually open the file in a editor of your choosing and find the conflict. You find the conflict by searching for seven equals sign: `=======`.  
+Below is an example of how it could look like. 
+
+```
+...
+### Unreleased
+<<<<<<< HEAD
+* Added tests for resources
+  - xSQLServerPermission
+* Fixes in xSQLServerAvailabilityGroupListener
+  - In one case the Get-method did not report that DHCP was configured. 
+=======
+* Added resources
+  - xSQLServerReplication
+>>>>>>> origin/dev
+
+### 1.8.0.0
+...
+```
+
+* Above the equals sign `========` is whats in the `README.md` of your branch.
+* Below the equals sign `========` is whats in the `README.md` of the dev (origin) branch.
+
+To resolve this we have to manually change this section manually. In this example we can do it so the resulting `README.md` looks like this. 
+
+```
+...
+### Unreleased
+* Added resources
+  - xSQLServerReplication
+* Added tests for resources
+  - xSQLServerPermission
+* Fixes in xSQLServerAvailabilityGroupListener
+  - In one case the Get-method did not report that DHCP was configured. 
+
+### 1.8.0.0
+...
+```
+_Note: You must remove the lines `<<<<<<< HEAD`, `========` and `>>>>>>> origin/dev`.
+
+When your happy with the file. Save it and continue with the next file, if there was more merge conflicts. 
+
+### To update your pull request
+This is exactly like you usally update the pull request, but using a standard message so it's clear that the commit is for resolving merge conflicts.
+```
+git commit -a -m "Resolved merge conflicts" 
+git push my awesome_feature
+```
 ## Delete a branch
 
 Once your changes have been successfully merged into the hub repository you can delete the branch you used, as you will no longer need it.  
@@ -161,3 +237,18 @@ To delete your branch follow these steps:
 2.	Next, type `git branch -d <branch name>` in the command prompt.  This will delete the branch on your local machine only if it has been successfully merged to the upstream repository. (You can override this behavior with the `–D` flag, but first be sure you want to do this.)
 3.	Finally, type `git push my :<branch name>` in the command prompt (a space before the colon and no space after it).  This will delete the branch on your github fork.  
 
+## Using .gitignore to exclude files and/or folders
+There are cases when you need to add some files and/or folders to a .gitignore file so changes are not staged for commit. One example is the folder `DSCResource.Tests` that is generated when running tests, that folder should normally not be part of any PR.
+
+### Create a .gitgnore file
+Run the following in a PowerShell prompt. This will add a .gitignore file to the current folder.
+```
+@( 
+    ".gitignore",        # Excludes the .gitignore file itself
+    "DSCResource.Tests", # Excludes the folder that is generated when running tests
+    ".vs",               # Excludes Visual Studio settings folder
+    ".vscode"            # Excludes Visual Studio Code settings folder
+) | Out-File -LiteralPath '.gitignore' -Encoding utf8 -Force 
+```
+
+Make sure this `.gitignore` file is place in the root of your cloned repository.
