@@ -149,7 +149,7 @@ git commit -a -m "Update my awesome feature with codereview feedback"
 git push my awesome_feature
 ```
 
-GitHub will automatically update the pull request.
+GitHub would automatically update the pull request.
 
 ## Resolve merge conflicts
 
