@@ -180,6 +180,11 @@ git rebase origin/dev               # Rebase changes from origin/dev into your l
 ```
 **NOTE! You can get merge conflicts that needs to be resolved before you continue with the next step of rebasing your working branch. Search for the word 'CONFLICT' in the output. See step 3 to learn how to resolve the merge conflicts.**
 
+Force push to your fork dev branch to your forked repository.
+```
+git push my dev --force  
+```
+
 ### 2. Rebase your working branch.
 * In a PowerShell prompt, you need to do the following.
 
