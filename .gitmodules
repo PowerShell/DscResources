@@ -163,3 +163,6 @@
 [submodule "dscresources/SharePointDsc"]
 	path = dscresources/SharePointDsc
 	url = https://github.com/PowerShell/SharePointDsc
+[submodule "DscResources/SystemLocaleDsc"]
+	path = DscResources/SystemLocaleDsc
+	url = https://github.com/PowerShell/SystemLocaleDsc
