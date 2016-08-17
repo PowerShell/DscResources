@@ -106,9 +106,11 @@ origin	https://github.com/PowerShell/xActiveDirectory (push)
 
 ## Making changes and pushing them to the fork
 
-* To make changes, create a new local branch: `git checkout -b <branch>`, i.e. `git checkout -b awesome_feature`.
+* To make changes, create a new local branch: `git checkout -b <branch> my/dev`, i.e. `git checkout -b awesome_feature my/dev`. 
+This will create a new local branch, connect to your forks dev branch as the tracking branch (upstream branch) and then checkout (move) to the new branch.  
+_Note: The tracking branch will later be used for resolving merge conflicts_ 
 * To see all branches, run `git branch -a`
-
+* To see status of all branches (if they are ahead or behind the tracking branch) , run `git branch -v`
 ```
 > git branch -a
 * master
@@ -153,31 +155,51 @@ GitHub would automatically update the pull request.
 
 ## Resolve merge conflicts
 
-If another pull request is merged while yours are in review, then you have to get those new changes into your pull request before yours are allowed to merge.  
-You can read more about how to resolve a merge conflict on the [GitHub help page](https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/).
+If another pull request is merged while yours are in review, then you have to get those new changes into your working branch before your pull request are allowed to merge. To do this we will 'rebase' the branch.
+That means that the changes you made in your working branch for your pull request will be 'replayed' on top of the changes that were recently merged into dev, as though you originally created your branch/fork from the current point that the dev branch is at.  
+_Note: Since it's replayed you might get conflicts several times during the rebase process (for the first `rebase` command, and for each following `rebase --continue`)._
 
-It's a three step process. 
-1. Get changes from base branch
-2. Fix merge conflicts
-3. Update your pull request.
+It's a few steps to get this done.  
+**_Note: These steps require that you have added the remote as described above. Run `git remote -v` to verify that you have the remotes `my` pointing to your fork repository and `origin` pointing to the original repository._**
 
-### To get changes from the dev branch 
+1. Rebase the local dev branch from the base dev branch.
+2. Resolve merge conflicts.
+3. Rebase your working branch.
+4. Resolve merge conflicts.
+5. Update your pull request.
+
+### 1. Rebase the local dev branch from the base dev branch 
 * In a PowerShell prompt, you need to do the following.
 
 ```
-cd <path to cloned repository>      # This is the path to your cloned repository. I.e. cd C:\Source\xActiveDirectory 
-git checkout <your PR branch>       # Checkout (move) to your pull request branch, i.e git checkout awesome_feature
-git fetch origin dev                # Get all changes from origin/dev
-git merge origin/dev                # Merge changes from origin/dev into your pull request branch.
+cd <path to cloned repository>      # This is the path to your cloned repository. I.e. cd C:\Source\xActiveDirectory
+git checkout dev                    # Checkout (move) to your local dev branch.
+git branch -u origin/dev            # If not already tracking the origin base branch, this will make sure.
+git fetch origin dev                # Get all changes from origin/dev. 
+git rebase origin/dev               # Rebase changes from origin/dev into your local dev branch.
 ```
+**NOTE! You can get merge conflicts that needs to be resolved before you continue with the next step of rebasing your working branch. Search for the word 'CONFLICT' in the output. See step 3 to learn how to resolve the merge conflicts.**
 
-### To fix all merge conflicts
-If you get a message saying something like below, then you have merge conflicts that must me manually resolved. Below there is a conflict between the dev (origin) branch and your pull request branch for the file `README.md`.
+### 2. Rebase your working branch.
+* In a PowerShell prompt, you need to do the following.
+
+```
+cd <path to cloned repository>      # This is the path to your cloned repository. I.e. cd C:\Source\xActiveDirectory.
+git checkout <your PR branch>       # Checkout (move) to your working branch, i.e git checkout awesome_feature.
+git branch -u my/dev                # If not already tracking the your forks dev branch when you created the branch, this will make sure.  
+git rebase my/dev                   # This will rebase your working branch from your forks dev branch.
+```
+**NOTE! At this point you will most likly get merge conflicts that needs to be resolved before you continue with the next step. Search for the word 'CONFLICT' in the output. See step 3 to learn how to resolve the merge conflicts.**
+
+### 3. Resolve merge conflicts
+If you get a message saying something like below, then you have merge conflicts that must me manually resolved.
+Below there is a conflict between the dev (origin) branch and your pull request branch for the file `README.md`.  
+You can read more about how to resolve a merge conflict on the [GitHub help page](https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/).
 
 ```
 Auto-merging README.md
 CONFLICT (content): Merge conflict in README.md
-Automatic merge failed; fix conflicts and then commit the result.
+error: Failed to merge in the changes.
 ```
 
 To fix this you need to manually open the file in an editor of your choosing and find the conflict. You find the conflict by searching for seven equals sign: `=======`.  
@@ -194,16 +216,17 @@ Below is an example of how it could look like.
 =======
 * Added resources
   - xSQLServerReplication
->>>>>>> origin/dev
+>>>>>>> my/dev
 
 ### 1.8.0.0
 ...
 ```
 
 * Above the equals sign `========` is what's in the `README.md` of your branch.
-* Below the equals sign `========` is what's in the `README.md` of the dev (origin) branch.
+* Below the equals sign `========` is what's in the `README.md` of the dev branch.
 
-To resolve this we have to manually change this section manually. In this example we can do it so the resulting `README.md` looks like this. 
+To resolve this we have to manually change this section. In this example we can do it so the resulting `README.md` looks like this.  
+_Note: You must remove the lines `<<<<<<< HEAD`, `========` and `>>>>>>> origin/dev`._
 
 ```
 ...
@@ -218,16 +241,27 @@ To resolve this we have to manually change this section manually. In this exampl
 ### 1.8.0.0
 ...
 ```
-_Note: You must remove the lines `<<<<<<< HEAD`, `========` and `>>>>>>> origin/dev`._
 
-When you are happy with the file. Save it and continue with the next file, if there was more merge conflicts. 
+When you are happy with the file, save it and continue with the next file, if there was more merge conflicts. **Only when all the merge conflicts are resolved you can continue with the rebase.**
 
-### To update your pull request
-This is exactly like you usally update the pull request, but using a standard message so it's clear that the commit is for resolving merge conflicts.
+* To continue with the rebase. In the same PowerShell prompt as you started the rebase, you need to do the following.  
+_Note: If not using the same PowerShell promt, make sure you are in the right folder and on the right branch._
 ```
-git commit -a -m "Resolved merge conflicts" 
-git push my awesome_feature
+git status          # (optional) If you unsure of the name, you can use this to see the files that was in conflict.
+git add <file>      # Do this for each file that you fixed merged conflicts in. I.e 'git add README.md'.
+git rebase --continue
 ```
+
+**You can now get more merge conflicts.** If so, then you have to resolve those again. Do the same procedure as before for these new conflicts. **You might need to do this step several times.**  
+
+Continue to step 4 only when you no longer have any merge conflicts you need to resolve (and no longer need to run the command `rebase --continue`).
+
+### 4, Update your pull request
+Force push to your branch to your forked repository. The pull request will then be updated automatically by GitHub.
+```
+git push my <pull request branch> --force     # I.e git push my awesome_feature --force  
+```
+
 ## Delete a branch
 
 Once your changes have been successfully merged into the hub repository you can delete the branch you used, as you will no longer need it.  
