@@ -112,4 +112,8 @@ See our [guidelines for DSC resource maintainers](Maintainers.md).
 
 ## Dashboard
 
-You can see dashboard of all open issues and pull requests across DSC Resource here: [![Stories in Ready](https://badge.waffle.io/powershell/dscresources.png?label=ready&title=Ready)](https://waffle.io/powershell/dscresources) 
+You can see dashboard of all open issues and pull requests across DSC Resource [here](http://waffle.io/powershell/dscresources).
+
+## Throughput
+
+[![Throughput Graph](https://graphs.waffle.io/powershell/dscresources/throughput.svg)](https://waffle.io/powershell/dscresources/metrics/throughput)
