@@ -292,3 +292,58 @@ Run the following in a PowerShell prompt. This will add a .gitignore file to the
 ```
 
 Make sure this `.gitignore` file is place in the root of your cloned repository.
+
+### How to take over a pull request from another contributor
+If the original contributor is unable to continue the work on a pull request, then you can get the changes from the original contributors branch to a new working branch in your fork.  
+This is done by rebasing the changes in the original branch onto your branch. This is pretty much the same as when you have to resolve merge conflicts.  
+Once you have create a new working branch with the original contributors changes, then you can create a new pull request into the original repository. 
+
+* In a PowerShell prompt, you need to do the following.
+
+1. Create a new working branch in your fork.
+```
+cd <path to cloned repository> 
+git checkout -b changes-from-PR#<number>  # Change to the number of the PR you are taking over. I.e. git checkout -b changes-from-PR#34
+```
+
+2. Add a remote to the original contributors fork. _In this example we use the users name as the remotes name._
+```
+git remote add <username> <url>           # I.e git remote add johlju https://github.com/johlju/xSQLServer.git
+```
+
+3. Rebase your working branch using the fork and branch from the original contributor.
+```
+git fetch <username>
+git branch -u <username>/<branch>
+git rebase <username>/<branch>
+```
+
+4. Fix conflicts and when all conflicts are resolved stage all files and continue with the rebase. _This step might have to be done several times until all conflicts are resolved_
+```
+git add <file>                            # i.e git add README.md
+git rebase --continue
+```
+
+5. Push changes to your forked repository 
+```
+git push my changes-from-PR#<number> --force  # Change to the number of the PR you are taking over. You have to use --force. I.e. git push my changes-from-PR#34 --force
+``` 
+
+6. Now we rebase again, this time against my/dev (which should already be rebased against origin/dev, see section Resolving merge conflicts on how to do that).
+```
+git branch -u my/dev
+git rebase my/dev
+```
+
+7. Again, fix conflicts and when all conflicts are resolved stage all files and continue with the rebase. _This step might have to be done several times until all conflicts are resolved_
+```
+git add <file>                            # i.e git add README.md
+git rebase --continue
+```
+
+8. Push to your forked repository again
+```
+git push my changes-from-PR#<number> --force  # Change to the number of the PR you are taking over. You have to use --force. I.e. git push my changes-from-PR#34 --force
+```
+
+9. Now, go to you forked repository on GitHub and create the pull request the normal way.
