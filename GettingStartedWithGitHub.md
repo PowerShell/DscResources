@@ -174,8 +174,8 @@ It's a few steps to get this done.
 ```
 cd <path to cloned repository>      # This is the path to your cloned repository. I.e. cd C:\Source\xActiveDirectory
 git checkout dev                    # Checkout (move) to your local dev branch.
-git branch -u origin/dev            # If not already tracking the origin base branch, this will make sure.
-git fetch origin dev                # Get all changes from origin/dev. 
+git fetch origin dev                # Get all changes from origin/dev (and branch information). 
+git branch -u origin/dev            # If not already tracking the origin base branch, this will make sure. _This sets the tracking (upstream) branch._
 git rebase origin/dev               # Rebase changes from origin/dev into your local dev branch.
 ```
 **NOTE! You can get merge conflicts that needs to be resolved before you continue with the next step of rebasing your working branch. Search for the word 'CONFLICT' in the output. See step 3 to learn how to resolve the merge conflicts.**
@@ -191,7 +191,7 @@ git push my dev --force
 ```
 cd <path to cloned repository>      # This is the path to your cloned repository. I.e. cd C:\Source\xActiveDirectory.
 git checkout <your PR branch>       # Checkout (move) to your working branch, i.e git checkout awesome_feature.
-git branch -u my/dev                # If not already tracking the your forks dev branch when you created the branch, this will make sure.  
+git branch -u my/dev                # If not already tracking the your forks dev branch when you created the branch, this will make sure. _This sets the tracking (upstream) branch._
 git rebase my/dev                   # This will rebase your working branch from your forks dev branch.
 ```
 **NOTE! At this point you will most likly get merge conflicts that needs to be resolved before you continue with the next step. Search for the word 'CONFLICT' in the output. See step 3 to learn how to resolve the merge conflicts.**
@@ -250,7 +250,7 @@ _Note: You must remove the lines `<<<<<<< HEAD`, `========` and `>>>>>>> origin/
 When you are happy with the file, save it and continue with the next file, if there was more merge conflicts. **Only when all the merge conflicts are resolved you can continue with the rebase.**
 
 * To continue with the rebase. In the same PowerShell prompt as you started the rebase, you need to do the following.  
-_Note: If not using the same PowerShell promt, make sure you are in the right folder and on the right branch._
+_Note: If not using the same PowerShell prompt, make sure you are in the right folder and on the right branch._
 ```
 git status          # (optional) If you unsure of the name, you can use this to see the files that was in conflict.
 git add <file>      # Do this for each file that you fixed merged conflicts in. I.e 'git add README.md'.
@@ -293,10 +293,14 @@ Run the following in a PowerShell prompt. This will add a .gitignore file to the
 
 Make sure this `.gitignore` file is place in the root of your cloned repository.
 
-### How to take over a pull request from another contributor
-If the original contributor is unable to continue the work on a pull request, then you can get the changes from the original contributors branch to a new working branch in your fork.  
-This is done by rebasing the changes in the original branch onto your branch. This is pretty much the same as when you have to resolve merge conflicts.  
-Once you have create a new working branch with the original contributors changes, then you can create a new pull request into the original repository. 
+### How to continue working on a pull request when an author (contributor) is unable to complete it
+If the original contributor is unable to continue the work on a pull request, or if the pull request is abandoned for a long time, then there is a possibility for you to continue the work.
+You can do so by getting the changes from the original contributors branch to a new working branch in your fork. Once you have create a new working branch with the original contributors changes,
+then you can create a new pull request into the original repository.   
+It's important that when you create a new pull request from someone elses work, that you point the the original pull request, and also aknowledge the original author and mention the work it is based on.
+For example mention the original author in the descriptive field when you create the new pull request.
+
+So, to continue working on a pull request, this is done by rebasing the changes in the original branch onto your branch. This is pretty much the same as when you have to resolve merge conflicts.  
 
 * In a PowerShell prompt, you need to do the following.
 
