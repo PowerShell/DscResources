@@ -180,7 +180,7 @@ git rebase origin/dev               # Rebase changes from origin/dev into your l
 ```
 **NOTE! You can get merge conflicts that needs to be resolved before you continue with the next step of rebasing your working branch. Search for the word 'CONFLICT' in the output. See step 3 to learn how to resolve the merge conflicts.**
 
-Force push to your fork dev branch to your forked repository.
+Force push to your fork dev branch to your forked repository. _Make sure all conflicts are resolved before running this command._
 ```
 git push my dev --force  
 ```
@@ -300,7 +300,7 @@ then you can create a new pull request into the original repository.
 It's important that when you create a new pull request from someone elses work, that you point the the original pull request, and also aknowledge the original author and mention the work it is based on.
 For example mention the original author in the descriptive field when you create the new pull request.
 
-So, to continue working on a pull request, this is done by rebasing the changes in the original branch onto your branch. This is pretty much the same as when you have to resolve merge conflicts.  
+So, to continue working on a pull request, this is done by rebasing the changes in the original pull request branch onto your new working branch. This is pretty much the same as when you have to resolve merge conflicts.  
 
 * In a PowerShell prompt, you need to do the following.
 
