@@ -290,7 +290,7 @@ Run the following in a PowerShell prompt. This will add a .gitignore file to the
 
 Make sure this `.gitignore` file is placed in the root of your cloned repository.
 
-### How to continue working on a pull request when an author (contributor) is unable to complete it
+## How to continue working on a pull request when an author (contributor) is unable to complete it
 If the original contributor is unable to continue the work on a pull request, or if the pull request is abandoned for a long time, then there is a possibility for you to continue the work.
 You can do so by getting the changes from the original contributors branch to a new working branch in your fork. Once you have create a new working branch with the original contributors changes,
 then you can create a new pull request into the original repository.   
