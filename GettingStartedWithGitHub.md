@@ -178,7 +178,7 @@ git rebase origin/dev               # Rebase changes from origin/dev into your l
 ```
 **NOTE! You can get merge conflicts that need to be resolved before you continue with the next step of rebasing your working branch. Search for the word 'CONFLICT' in the output. See step 3 to learn how to resolve the merge conflicts.**
 
-Force push to your fork dev branch to your forked repository. _Make sure all conflicts are resolved before running this command._
+Force push to your fork's dev branch to your forked repository. _Make sure all conflicts are resolved before running this command._
 ```
 git push my dev --force  
 ```
@@ -227,7 +227,7 @@ Below is an example of how it could look like.
 * Above the equals sign `========` is what's in the `README.md` of your branch.
 * Below the equals sign `========` is what's in the `README.md` of the dev branch.
 
-To resolve this we have to manually change this section. After resolving the conflict, `README.md` looks like this.  
+To resolve this we have to manually change this section. After resolving the conflict, `README.md` looks like this:  
 _Note: You must remove the lines `<<<<<<< HEAD`, `========` and `>>>>>>> origin/dev`._
 
 ```
