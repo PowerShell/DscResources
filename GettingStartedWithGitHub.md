@@ -258,7 +258,7 @@ git rebase --continue
 
 Continue to step 4 only when you no longer have any merge conflicts you need to resolve (and no longer need to run the command `rebase --continue`).
 
-### 4, Update your pull request
+### 4. Update your pull request
 Force push to your branch in your forked repository. The pull request will then be updated automatically by GitHub.
 ```
 git push my <pull request branch> --force     # I.e git push my awesome_feature --force  
