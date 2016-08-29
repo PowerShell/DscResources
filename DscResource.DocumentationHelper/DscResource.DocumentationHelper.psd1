@@ -71,8 +71,7 @@ NestedModules = @("Modules\MofHelper.psm1",
 #FunctionsToExport = '*'
 
 # Cmdlets to export from this module
-CmdletsToExport = @("Get-MofSchemaObject",
-                    "Write-DscResourcePowerShellHelp",
+CmdletsToExport = @("Write-DscResourcePowerShellHelp",
                     "Write-DscResourceWikiSite")
 
 # Variables to export from this module

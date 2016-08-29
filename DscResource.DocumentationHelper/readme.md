@@ -21,7 +21,7 @@ added to a module that the documentation helper will look to include:
 
 ### Details in the MOF Schema
 
-Inside the .schema.mof file for a specific resoruce the script will look for the following
+Inside the .schema.mof file for a specific resource the script will look for the following
 elements automatically:
 
  * Property names and data types
