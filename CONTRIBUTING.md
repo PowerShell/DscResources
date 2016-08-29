@@ -52,6 +52,19 @@ If the changes are related to an existing GitHub issue, please reference the iss
 * After a successful test pass, the module's maintainers will do a code review, commenting on any changes that might need to be made. If you are not designated as a module's maintainer, feel free to review others' Pull Requests as well, additional feedback is always welcome (leave your comments even if everything looks good - simple "Looks good to me" or "LGTM" will suffice, so that we know someone has already taken a look at it)! 
 * Once the code review is done, all merge conflicts are resolved, and the Appveyor build status is passing, a maintainer will merge your changes.
 
+### Breaking Changes
+Breaking changes may be accepted if they make a resource better.  
+Breaking changes usually include:
+- Adding a new mandatory parameter
+- Changing an existing parameter
+- Removing an existing parameter
+- Fundamentally changing an existing functionality of a resource
+
+If you need to submit a breaking change to a module please ensure:   
+1. The issue and PR associated with the breaking change you are submitting include the ```breaking change``` label. Please tag the maintainer of your module or the current owner of the DSC Resource Kit (@kwirkykat) if this label is not included.  
+2. At least one of the bullet points in your addition to the updated release notes starts with 'BREAKING CHANGE:'.    
+3. The title of the PR that includes your breaking change starts with 'BREAKING CHANGE:'.  
+
 ### Contributing to documentation
 One of the easiest ways to contribute to a PowerShell project is by helping to write and edit documentation. 
 All of our documentation hosted on GitHub is written using [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) in the style of [this example](DscResourcesExampleHelp.md).
