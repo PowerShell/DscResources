@@ -13,6 +13,7 @@ They have [write access](https://help.github.com/articles/permission-levels-for-
 - [Issue Workflow](#issue-workflow)
 - [Pull Request Workflow](#pull-request-workflow)
   - [Abandoned Pull Requests](#abandoned-pull-requests)
+- [Breaking Changes](#breaking-changes)
 
 ## Rules
 
@@ -68,4 +69,23 @@ In these cases:
   - If the reviewer's comments are very minor, merge the change, fix the code immediately, and create a new PR with the fixes addressing the minor comments.
   - If the changes required to merge the pull request are significant but needed, create a new branch with the changes and open an issue to merge the code into the dev branch. Mention the original pull request ID in the description of the new issue and close the abandoned pull request. 
   - If the changes in an abandoned pull request are no longer needed (e.g. due to refactoring of the codebase or a design change), simply close the pull request.
+
+## Breaking Changes
+Breaking changes may be accepted if they make a resource better.  
+Breaking changes usually include:
+- Adding a new mandatory parameter
+- Changing an existing parameter
+- Removing an existing parameter
+- Fundamentally changing an existing functionality of a resource
+
+If you need to accept a breaking change in your module please please ensure:   
+1. Any issues or PRs associated with the breaking change include the ```breaking change``` label.  
+2. At least one of the bullet points in the updated release notes starts with 'BREAKING CHANGE:'.  
+3. The title of the PR that includes the breaking change starts with 'BREAKING CHANGE:'.
+
+Upon release, the version of a module with a breaking change will be updated as such:
+* Modules that still have the x... naming are incremented by a full version number if there is a breaking change (2.2.0.0 --> 3.0.0.0). All of these modules are still considered to be in the 'preview' or 'experimental' phase.
+* Modules that have the ...Dsc naming but are still in the 'preview' phase (prior to 1.0.0.0) are incremented only by a sub-version regardless of breaking changes until they are ready to come out of preview (0.3.0.0 --> 0.4.0.0).
+* Modules that have the ...Dsc naming and are out of the 'preview' phase (1.0.0.0 and after) are incremented by a full version number (2.2.0.0 --> 3.0.0.0).
+  
 
