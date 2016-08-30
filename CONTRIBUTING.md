@@ -53,17 +53,17 @@ If the changes are related to an existing GitHub issue, please reference the iss
 * Once the code review is done, all merge conflicts are resolved, and the Appveyor build status is passing, a maintainer will merge your changes.
 
 ### Breaking Changes
-Breaking changes may be accepted if they make a resource better.  
-Breaking changes usually include:
+Breaking changes should first be proposed by opening an issue on the resource and outlining the needed work. This allows the community to discuss the change before the work is done and scopes the breaks to needed areas.  Opening an issue also allows the resource owner or the DSC Resource Kit Owner ([@kwirkykat](https://github.com/kwirkykat)) to tag the issue with the ```breaking change``` label.
+
+Breaking changes may include:
 - Adding a new mandatory parameter
 - Changing an existing parameter
 - Removing an existing parameter
 - Fundamentally changing an existing functionality of a resource
 
-If you need to submit a breaking change to a module please ensure:   
-1. The issue and PR associated with the breaking change you are submitting include the ```breaking change``` label. Please tag the maintainer of your module or the current owner of the DSC Resource Kit (@kwirkykat) if this label is not included.  
-2. At least one of the bullet points in your addition to the updated release notes starts with 'BREAKING CHANGE:'.    
-3. The title of the PR that includes your breaking change starts with 'BREAKING CHANGE:'.  
+Once a PR is ready with the breaking change please include the following:
+1. At least one of the bullet points in your addition to the updated release notes starts with 'BREAKING CHANGE:'    
+2. The title of the PR that includes your breaking change starts with 'BREAKING CHANGE:'
 
 ### Contributing to documentation
 One of the easiest ways to contribute to a PowerShell project is by helping to write and edit documentation. 
