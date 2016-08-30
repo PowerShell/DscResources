@@ -250,7 +250,7 @@ When you are happy with the file, save it and continue with the next file, if th
 _Note: If not using the same PowerShell prompt, make sure you are in the right folder and on the right branch._
 ```
 git status          # (optional) If you unsure of the name, you can use this to see the files that was in conflict.
-git add <file>      # Do this for each file that you fixed merged conflicts in. I.e 'git add README.md'. This stages the file for commit. You could also use 'git *' to stage all files at once.
+git add <file>      # Do this for each file that you fixed merged conflicts in. I.e 'git add README.md'. This stages the file for commit. You could also use 'git add *' to stage all files at once.
 git rebase --continue
 ```
 
@@ -337,7 +337,6 @@ So, to continue working on a pull request, this is done by rebasing the changes 
 6. Now we rebase again, this time against my/dev (which should already be rebased against origin/dev, see section Resolving merge conflicts on how to do that).
 
  ```
- git branch -u my/dev
  git rebase my/dev
  ```
 
