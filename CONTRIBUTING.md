@@ -1,6 +1,6 @@
 # Contributing to the Dsc Resource Kit
 
-Welcome to the DSC Resource Kit! We're thrilled that you'd like to contribute! Our community is essential in creating and maintaining all the DSC Resources. 
+Welcome to the DSC Resource Kit! We're thrilled that you'd like to contribute! Our community is essential to creating and maintaining all the DSC Resources. 
 
 There are a few different ways you can contribute:
 
@@ -8,6 +8,8 @@ There are a few different ways you can contribute:
 * [Fix an issue](#fixing-an-issue)
 * [Write documentation](#writing-documentation)
 * [Review pull requests](#reviewing-pull-requests) 
+* [Submit a new resource](#submitting-a-new-resource)
+* [Submit a new resource module (repository)](#submitting-a-new-resource-module)
 
 If you're just starting out with GitHub, start by reading our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
 
@@ -79,7 +81,7 @@ Once you have filled out the issue title and description, click the submit butto
 ## Fixing an Issue
 Here's the general process of fixing an issue in the DSC Resource Kit:  
 1. Pick out the issue you'd like to work on.  
-2. Create a fork of the module that contains the issue.  
+2. Create a fork of the repository that contains the issue.  
 3. Clone your fork to your machine.  
 4. Create a working branch where you can store your updates to the code.  
 5. Make changes in your working branch to solve the issue.  
@@ -96,32 +98,38 @@ You can see all the issues tagged with ```help wanted``` across all the modules 
 
 If you find an issue that you want to work on, but it does not have the ```help wanted``` label, make sure to read through the issue and ask if you can start working on it.
 
-### Fork a Module
-In the DSC Resource Kit, a repository and a module are usually the same thing since each repository contains one resource module.
-
+### Fork a Respository
 A 'fork' on GitHub is your own personal copy of a repository.
 GitHub's guide to forking a respository is available [here](https://help.github.com/articles/fork-a-repo/).
 You will need a fork to contribute to any of the repositories in the DSC Resource Kit since only the maintainers have the ability to push to the official repositories.
 
-### Clone your Fork
-Once you have created your fork, you can easily access it via the URL: https://github.com/<your GitHub username\>/<module name\>
-To clone your your fork to your machine so that you can begin editing
+Once you have created your fork, you can easily access it via the URL:
+```
+https://github.com/<your GitHub username>/<module name>
+```
 
+### Clone your Fork
+You will want to clone your fork so that you can edit code locally on your machine.
+GitHub's guide to cloning is available [here](https://help.github.com/articles/cloning-a-repository/).
 
 ### Create a Working Branch
-We are using a [git flow](http://nvie.com/posts/a-successful-git-branching-model/) model for development.
-Though you may continue to work and submit pull requests from the default dev branch in your fork, we recommend that you create local working branches that target a specific scope of change. 
-Each branch should be limited to a single issue both to streamline the code review and reduce the possibility of merge conflicts.
+We use a [git flow](http://nvie.com/posts/a-successful-git-branching-model/) model in our official repositories.
 
-Your fork is your personal territory. We may set it up however best suits your workflow.
+Your fork is your personal territory.
+You may set it up however best suits your workflow, but we recommend that you set up a working branch separate from the default dev branch. 
+Creating a working branch separate from the default dev branch will allow you to create other working branches off of dev later while your original working branch is still open for code reviews.
+Limiting your current working branch to a single issue will also both streamline the code review and reduce the possibility of merge conflicts.
+
+The git guide to branching is available [here](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
 
 ### Make Code Changes
 When writing code for any of the modules in the DSC Resource Kit, please follow the DSC Resource Kit [Style Guidelines](StyleGuidelines.md) and [Best Practices](BestPractices.md).
 These guidelines are specific to the DSC Resource Kit and may not always reflect the same PowerShell style as other projects.
 Code reviewers will expect you to follow these guidelines and may ask you to change your code for consistency.
 
-Once you make a code change, save the file, and commit it to your working branch.
-Make sure to push to your working branch to upload your code to the remote working branch of your fork on GitHub, and pay attention to any new code in the official repository.
+If you need help commiting and pushing your code to your fork, please refer to our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
+
+Pay attention to any new code merged into the dev branch of the official repository. If this occurs, you will need to pick-up these changes in your fork using the rebase instructions in our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
 
 If you are making a breaking change, please make sure to read the [Breaking Changes section](#breaking-changes) below.
 
@@ -134,9 +142,9 @@ The tests in the following modules provide excellent examples:
 * [xDhcpServer](https://github.com/PowerShell/xDhcpServer/tree/master/Tests)  
 * [SharePointDsc](https://github.com/PowerShell/SharePointDsc/tree/master/Tests)  
 
-~We highly encourage you to use [tests templates](https://github.com/PowerShell/DscResources/tree/master/Tests.Template) when creating tests for DSC resources.~  
-~Please refer to the [testing guidelines](https://github.com/PowerShell/DscResources/blob/master/TestsGuidelines.md) for information on how to use the templates.~  
-These templates are currently in the midst of a huge overall.
+~~We highly encourage you to use [tests templates](https://github.com/PowerShell/DscResources/tree/master/Tests.Template) when creating tests for DSC resources.
+Please refer to the [testing guidelines](https://github.com/PowerShell/DscResources/blob/master/TestsGuidelines.md) for information on how to use the templates.~~  
+Our test templates and guidelines are currently under construction.
 Use them with caution as they will be changed soon.
 
 Tests should currently be structured like so:
@@ -150,7 +158,7 @@ Tests should currently be structured like so:
 
 Not all resources currently have tests.
 This does not mean that you do not have to write tests for your changes.
-If you find that the test file for a resource is missing or one the folders in the structure outlines above is missing, please create it.
+If you find that the test file for a resource is missing or one the folders in the structure outlined above is missing, please create it.
 You don't have to write the full set of tests for the resource if you are creating the file.
 You only need to test the changes that you made to the resource.
 
@@ -162,77 +170,119 @@ If this section is missing, please add it.
 To update the release notes with your changes, simply add a bullet point (or more) with your changes in the **past** tense under the 'Unreleased' section.  
 For example:  
 ```
-    ## Versions
-    
-    ### Unreleased
-    - Added the FriendlyName parameter to Update-xDscResource
+...
+## Versions
+
+### Unreleased
+- Added the FriendlyName parameter to Update-xDscResource
+
+### 1.4.0.0
+...
 ```
 If a change is related to a specific resource, please add create sub-bullets with your changes under a bullet with the resource name.  
 Like so:
 ```
-    ## Versions
+...
+## Versions
+
+### Unreleased
+- Added the optional FriendlyName parameter to Update-SampleResourceMode
+- xSampleResource
+    - Included support for capitalized names
+    - Fixed error message when negative number is given for durationInMinutes
+- xSampleResource2
+    - Fixed a typo in verbose message 
     
-    ### Unreleased
-	- Added the optional FriendlyName parameter to Update-SampleResourceMode
-    - xSampleResource
-	    - Included support for capitalized names
-	    - Fixed error message when negative number is given for durationInMinutes
-    - xSampleResource2
-	    - Fixed a typo in verbose message 
+### 1.4.0.0
+...
 ```
 
+If you are making a breaking change, please make sure to read the [Breaking Changes section](#breaking-changes) below.
+
 ### Submit a Pull Request
-[Pull requests](https://help.github.com/articles/using-pull-requests/) allow you to easily submit the changes in your fork to the official repository.
+A [pull request](https://help.github.com/articles/using-pull-requests/)(PR) allows you to submit the changes you made in your fork to the official repository.
 
+To open a pull request, go to the Pull Requests tab of either your fork or the official repository.
+![GitHubPullRequestsTabInFork.png](Images/GitHubPullRequestsTabInFork.png)
 
-* **Always create pull requests to the `dev` branch of a repository**. 
-For more information, learn about our [branch structure](#branch-structure).
+Click the New Pull Request button on the right:
+![GitHubNewPullRequestButton.png](Images/GitHubNewPullRequestButton.png)
 
+The base is the repository and branch the pull request will be merging **into**.
+The target is the repository and branch the pull request will be merging **from**.
+For the DSC Resource Kit, always create a pull request with the base as the **dev** branch of the official repository.  
+(Except for *this* repository - DSCResources - which does not have a dev branch because it does not get released to the PowerShellGallery. For this repository you may create a pull request to the master branch.) 
+The target should be your working branch in your fork.
 ![Github-PR-dev.png](Images/Github-PR-dev.png)
 
-* Add meaningful title of the PR describing what change you want to check in. Don't simply put: "Fixes issue #5". Better example is: "Added Ensure parameter to xFile resource. Fixes #5". 
+Once you select the correct base and target, you can review the file and commits that will be included in the pull request by selecting the tabs below the Create Pull Requests Button:
+![GithubPullRequestFileReview.png](Images/GithubPullRequestFileReview.png)
 
-* When you create a pull request, fill out the description with a summary of what's included in your changes. 
-If the changes are related to an existing GitHub issue, please reference the issue in pull request title or description (e.g. ```Closes #11```). See [this](https://help.github.com/articles/closing-issues-via-commit-messages/) for more details.
+If GitHub tells you that your branches cannot automatically be merged, you probably have merge conflicts. These should be fixed before you submit your pull request.
+![GitHubPullRequestPreCreateMergeConflict.png](Images/GitHubPullRequestPreCreateMergeConflict.png)
 
+For help fixing merge conflicts see our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
 
-* If this is your first contribution to DscResources, you may be asked to sign a [Contribution Licensing Agreement](https://cla.microsoft.com/) (CLA) before your changes will be accepted.
-* After submitting your pull request, our CI system (Appveyor) [will run a suite of tests](#appveyor) and automatically update the status of the pull request.
-* After a successful test pass, the module's maintainers will do a code review, commenting on any changes that might need to be made. If you are not designated as a module's maintainer, feel free to review others' Pull Requests as well, additional feedback is always welcome (leave your comments even if everything looks good - simple "Looks good to me" or "LGTM" will suffice, so that we know someone has already taken a look at it)! 
-* Once the code review is done, all merge conflicts are resolved, and the Appveyor build status is passing, a maintainer will merge your changes.
+Once you are ready to submit your pull request, click the Create Pull Request button.
+![GitHubCreatePullRequestButton.png](Images/GitHubCreatePullRequestButton.png)
 
-### Fix Tests in AppVeyor
+#### Pull Request Title
+The title of your PR should *describe* the changes it includes in one line. 
+Simply putting the issue number that the PR fixes is not acceptable.
+If you PR deals with *one* specific resource, please prefix the title with the resource name followed by a colon.
+If your PR does fix an issue please do still include "(Fixes #issue number)" in the title.
+For example, if a PR fixes issues number 11 and 16 which adds the Ensure parameter to the xSample resource:
+"xSample: Added Ensure parameter (Fixes #11, #16)".
+
+#### Pull Request Description
+The description of your PR should include a detailed report of all the changes you made.
+If your PR fixes an issue please include the number in the description.
+Please tag anyone you would specifically like to see this PR with the @ symbol followed by their GitHub username (e.g. @kwirkykat).
+
+Once you are satisfied with the title, description and file changes included, submit the pull request.
+
+#### Contribution License Agreement (CLA)
+If this is your first contribution to the DSC Resource Kit, you may be asked to sign a [Contribution Licensing Agreement](https://cla.microsoft.com/) (CLA) before your changes can be reviewed:
+![GitHubCLARequired.png](Images/GitHubCLARequired.png)
+
+Once you sign the CLA, the Microsoft CLA bot will automatically update your PR:
+![GitHubCLASigned.png](Images/GitHubCLASigned.png)
+
+Once you have signed our CLA once, you shouldn't have to do it again. 
+If you believe you have signed our CLA before, but the Microsoft CLA bot still marks your PR as cla-required, please sign the CLA again.
+Sometimes the little bot makes mistakes.
+
+### Tests in AppVeyor
 The DSC Resource Kit uses [AppVeyor](http://www.appveyor.com/) as a continuous integration (CI) system.
 
-An AppVeyor badge indicating the latest build status of the **master** branch is at the top of the README.md file of every DSC Resource repository.  
-![AppVeyor-Badge-Green.png](Images/AppVeyor-Badge-Green.png)
-
-This badge is **clickable**.
-It opens the corresponding module's AppVeyor page which shows test logs and results.
-From this page you can easily navigate through the build history of the module.
-
-AppVeyor builds and runs tests on every pull request, providing at-a-glance feedback about whether it is passing tests or not.
-
+After submitting your pull request, AppVeyor will run a suite of tests and automatically update the status of the pull request and providing at-a-glance feedback about whether your changes are passing tests or not.
 ![AppVeyor-Github](Images/AppVeyor-Github.png)
 
-These green checkboxes and red crosses are **clickable** as well. 
+All the green checkboxes and red crosses are **clickable**. 
 They will bring you to the corresponding test page with details on which tests are running and why your tests may be failing. 
 
 A maintainer **will not** merge your pull request if these tests are failing, even if they have nothing to do with your changes.
 If test failures are occurring that do not relate to the changes you made, you will have to submit another PR with fixes or that issue or wait until someone else does.
 
+Any commit to the working branch that is the target of the pull request will trigger the tests to run again in AppVeyor.
+If you tag a maintainer, they can also re-run your tests in AppVeyor. 
+
 The appveyor.yml file in each module repository describes the build and test sequence provided to AppVeyor.
+
+An AppVeyor badge indicating the latest build status of the **master** branch is at the top of the README.md file of every DSC Resource repository.  
+![AppVeyor-Badge-Green.png](Images/AppVeyor-Badge-Green.png)
+
+This badge is also **clickable**.
+It opens the corresponding module's AppVeyor page which shows test logs and results.
+From this page you can easily navigate through the build history of the module.
 
 #### Common Tests
 There is a set of common tests for all DSC Resources located in the [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) repository. 
-These tests primarily concentrate on code style, file encoding, module version consistency, correct module schema, and PS Script Analyzer issues.
+These tests primarily concentrate on code style, file encoding, correct module schema, and PS Script Analyzer issues.
 
 You should run these tests before submitting a pull request. 
 
-The [MetaFixers](https://github.com/PowerShell/DscResource.Tests/blob/master/MetaFixers.psm1) module contains fix-helper methods where possible such as a function to convert all tab indentations to 4 spaces and a function to fix file encodings.
-
-##### Running Common Tests Locally
-For some modules, the common DSC Resources tests are automatically downloaded into the module folder when tests are invoked.
+For some modules, the common DSC Resources tests are automatically downloaded into the root module folder when tests are invoked.
 
 If this is not happening for your module, you will need to clone [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) into the root folder of the module that you want to test.
 Then simply run `Invoke-Pester` from the root folder.
@@ -247,22 +297,20 @@ Invoke-Pester
 Please avoid adding the **DSCResource.Tests** folder to your changes.
 DSCResource.Tests should be in the .gitignore file so that git will automatically ignore this folder.
 If DSCResource.Tests is not in the .gitignore file, please add it.
-If there is no .gitignore file for your module, instructions on how to add one are available in the [Getting Started with GitHub](GettingStartedWithGitHub.md) instructions.
+If there is no .gitignore file for your module, instructions on how to add one are available in our [getting started with GitHub](GettingStartedWithGitHub.md) instructions.
+
+The [MetaFixers](https://github.com/PowerShell/DscResource.Tests/blob/master/MetaFixers.psm1) module also in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) contains a few fix-helper methods such as a function to convert all tab indentations to 4 spaces and a function to fix file encodings.
 
 ### Fix Merge Conflicts
 If you have merge conflicts, please use git rebasing to fix them instead of git merging.
-An introduction to the correct way to use git rebasing is available in the [Getting Started with GitHub](GettingStartedWithGitHub.md) instructions.
+An introduction to git rebasing is available in the [getting started with GitHub](GettingStartedWithGitHub.md) instructions.
 
 ### Get your Code Reviewed
-We currently don't have dedicated maintainers for many modules, so it may take a while for a maintainer to get around to reviewing your code.
-Our maintainers (other than @kwirkykat and @mbreakey3) are volunteers.
-There is no SLA
+Anyone other than you can *review* your code, but only maintainers may *merge* your code.
+If you have a specific contributor/maintainer you want to review your code, be sure to tag them in your pull request.
 
-Anyone other than you can *review* your code.
-Only maintainers may *merge* your code.
-Module maintainers will make sure that code is reviewed and give it a quick glance-over before merging.
-
-### Forks and Pull Requests
+We don't currently have dedicated maintainers for most modules, so it may take a while for a general maintainer to get around to your pull request.
+Please be patient.
 
 ## Breaking Changes
 Breaking changes should first be proposed by opening an issue on the resource and outlining the needed work.
@@ -282,93 +330,83 @@ Once a PR is ready with the breaking change please include the following:
 2. The title of the PR that includes your breaking change starts with 'BREAKING CHANGE:'
 
 ## Submitting a New Resource
+If you would like to add a new DSC resource, please open an issue in the repository you think the new resource should be in.
+This will help to coordinate your work with other contributors.
 
-If you would like to add a DSC resource:
+Once the issue is open, you may begin working on your resource just as if you were fixing the issue you submitted.
+See the [Fixing an Issue](#fixing-an-issue) section above for further details.
 
-* Open an issue in the module repository where you'd like to add a DSC resource to coordinate your work with others.
-* Fork the *dev* branch of the module repository you'd like to improve:
-    - `git checkout dev`
-    - `git checkout -b my_awesome_new_resource`
-* In your own forked branch, add and develop your new resources. Make sure you:
-    - Write pester tests.
-    - Write documentation using GitHub Flavored Markdown 
-    - Write (or alter) an example configuration in the Examples subdirectory demonstrating how your resource should be used
-    - DO NOT change the *.psd1 ModuleVersion (we will be updating this before releasing to the Gallery)
-    - DO NOT change the *.schema.mof ClassVersion. (If this ever needs updating, we will be updating before releasing to the Gallery.)
+Be sure to include unit and integration tests for your new resource under the Tests folder as well as an example under the examples folder.
+Please also add a full description of your new resource and its parameters to the module's README.
 
 ## Submitting a New Resource Module
+If you would like a new DSC resource module added to the DSC Resource Kit, please check the [existing issues](https://github.com/PowerShell/DscResources/issues) in this repository first to make sure no one else is already working on a similar module.
+If someone is already working on a similar module, please leave a comment on the open issue or add a GitHub reaction to the top comment to **express your interest**. You can also offer help and use the issue to coordinate your efforts.
 
-If you would like to share your DSC resource module or create a brand new module, first check [existing issues](https://github.com/PowerShell/DscResources/issues): maybe **somebody is already working** on the similar module.
-If so, left a comment in the issue, **express your interest** or offer help. Use this issue to **coordinate your efforts**.
+If none of the existing module proposals or submissions are related to one you want, [open a new issue](https://github.com/PowerShell/DscResources/issues) with the following information:
 
-If none of the existing issues look related, [open a new issue](https://github.com/PowerShell/DscResources/issues) with the following information:
-
-* What system will your DSC resources be managing?
+* What system will your module be managing?
     - For example, [xActiveDirectory](https://github.com/powershell/xActiveDirectory) models and manages Active Directory
+* What resources you would like to be included in the new resource module?
 * Will your module include [MOF-based resources](https://technet.microsoft.com/en-us/library/dn956964.aspx) (compatible with PS/WMF 4.0 and 5.0+) or [class-based resources](https://technet.microsoft.com/en-us/library/dn948461.aspx) (only compatible with PS/WMF 5.0+)
+* Are or will you be working on this module or would you like someone else to pick it up?
 
-Next, develop your DSC resources in your own module repository. Make sure you:
+Next, develop your new module in your own repository.
+Make sure to:
 
-* Write a set of Unit and Integration test cases specific to your resources using Pester using the test templates from the [Tests.Template folder](Tests.Template).
-Place them in `Tests\Unit` and `Tests\Integration` directories. ([See details regarding adding tests](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md#adding-test-coverage-for-dsc-resources))
-* Use the template from the [DscResource.Template folder](DscResource.Template) as a boilerplate for [appveyor.yml] (https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/appveyor.yml) (continuous integration configuration file) and [README.md](https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/README.md).
-* When you run tests based on the templates the common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) will be automatically installed into the root folder of your module when your tests are run. 
+* Follow the standard DSC Resource Kit module structure.
+  Here is an example:
+	* Root folder (e.g. SampleResourceModuleDsc)
+		* DscResources
+		  * SampleResource
+		    * SampleResource.psm1
+		    * SampleResource.schema.mof
+		* Tests
+		  * Unit
+		    * SampleResource.Tests.ps1  
+		  * Integration
+		    * SampleResource.Integration.Tests.ps1
+	  * Examples
+	    * SampleResource.Example.ps1 
+	  * Module manifest (e.g. SampleResourceModuleDsc.psd1)
+	  * README.md
+	  * appveyor.yml
+* Write a set of unit and integration tests for your new resources using Pester.
+* Use the template from the [DscResource.Template folder](DscResource.Template) as a boilerplate for [appveyor.yml] (https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/appveyor.yml) (Continuous Integration configuration file) and [README.md](https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/README.md).
+* Run the common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) which will be automatically installed into the root folder of your module when your tests are run if your module is accepted in the DSC Resource Kit. 
 
 Once you are ready to submit your new module, follow the submission process [here](NewResourceModuleSubmissions.md).
 
-* Transfer full ownership of your module to the PowerShell organization.
-This means we will have full control and permissions to the module repository.
-In the future, you will have to fork and submit pull requests to commit changes as if it were any other submodule in [DscResources](https://github.com/PowerShell/DscResources).
-![Transfer-Ownership](Images/GitHub-Transfer-Ownership.png)
-
 ## Writing Documentation
-One of the easiest ways to contribute to a PowerShell project is by helping to write and edit documentation. 
+One of the easiest ways to contribute to a PowerShell project is to write and edit documentation. 
 All of our documentation hosted on GitHub is written using [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) in the style of [this example](DscResourcesExampleHelp.md).
 
-To [edit an existing file](https://help.github.com/articles/editing-files-in-another-user-s-repository/), simply navigate to it and click the "Edit" button. 
-GitHub will automatically create your own fork of our repository where you can make your changes. 
-Once you're finished, save your edits and submit a pull request to get your changes merged upstream. 
+To [edit an existing file](https://help.github.com/articles/editing-files-in-another-user-s-repository/), simply navigate to it in GitHub and click the "Edit" button. 
+GitHub will *automatically* create your own fork of the repository where you can make your changes. 
+Once you're finished, commit your edits and [submit a pull request](#submit-a-pull-request) to get your changes merged into the official repository. 
 
-If you want to contribute new documentation, first check for [issues tagged as "Documentation"](https://github.com/PowerShell/DscResources/labels/documentation) to make sure you're not duplicating efforts.
+If you want to contribute new documentation, first check for existing issues to make sure you're not duplicating efforts.
 If no one seems to be working on what you have planned:
 
-* Open a new issue tagged as "Documentation" to tell others what you're working on
-* Create a fork of our repository and start adding new Markdown-based documentation to it
-* When you're ready to contribute your documentation, submit a pull request to the *dev* branch
+1. Open a new issue to tell others about the new document you want to add
+2. Create a fork of our repository and add a new Markdown-based (.md) file to it
+3. Edit your new Markdown file
+4. When you're ready to contribute your documentation, [submit a pull request](#submit-a-pull-request) to the official repository.
 
 #### GitHub Flavored Markdown (GFM)
-
-All articles in the DSC Resource Kit use [GitHub Flavored Markdown (GFM)](https://help.github.com/articles/github-flavored-markdown/).
-
+All documentation in the DSC Resource Kit uses [GitHub Flavored Markdown (GFM)](https://help.github.com/articles/github-flavored-markdown/).
 If you are looking for a good editor, try the web interface GitHub provides for .md files or [Markdown Pad](http://markdownpad.com/). 
-
-Some of the more basic GFM syntax includes:
-
-* **Line breaks vs. paragraphs:** In Markdown there is no HTML `<br />` or `<p />` element. 
-Instead, a new paragraph is designated by an empty line between two blocks of text.
-* **Italics:** The HTML `<em>some text</em>` is written as `*some text*`
-* **Bold:** The HTML `<strong>some text</strong>` element is written as `**some text**`
-* **Headings:** HTML headings are designated using `#` characters at the start of the line. 
-The number of `#` characters corresponds to the hierarchical level of the heading (for example, `#` = `<h1>` and `###` = ```<h3>```).
-* **Numbered lists:** To make a numbered (ordered) list start the line with `1. `.  
-If you want multiple elements within a single list element, format your list as follows:
-```        
-1.  For the first element (like this one), insert a tab stop after the 1. 
-
-    To include a second element (like this one), insert a line break after the first and align indentations.
-```
-to get this output:
-
-1.  For the first element (like this one), insert a tab stop after the 1. 
-
-    To include a second element (like this one), insert a line break after the first and align indentations.
-
-* **Bulleted lists:** Bulleted (unordered) lists are almost identical to ordered lists except that the `1. ` is replaced with either `* `, `- `, or `+ `. 
-Multiple element lists work the same way as with ordered lists.
-* **Links:** The syntax for a hyperlink is `[visible link text](link url)`.
-Links can also have reference headers in the same document with the syntax `[visible link text](#my-section-header)`.
-The headers cannot have punctuation and all spaces must be replaced by hyphens in the link 'URL'.
+A great guide to Github Flavored Markdown is available [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ## Reviewing Pull Requests
 Though only maintainers can *merge* a pull request, anyone from the community may *review* a pull request.
 Maintainers will still take a quick look at code before merging it, but reviews by community members often help pull requests get merged much faster as there are very few maintainers and a lot of pull requests to review.
+
+All modules in the DSC Resource Kit should be linked to [Reviewable](reviewable.io), a code review tool.
+Reviewable adds a purple button to the top comment of every pull request.
+![GitHubReviewableButton](Images/GitHubReviewableButton.png)
+This button is **clickable**.
+It will take you to a code review of all the changes in that pull request.
+
+If the purple Reviewable button does not appear, you can also go [here](https://reviewable.io/reviews) and paste the URL of the pull request you would like to review into this box
+![ReviewablePullRequestPasteBox](Images/ReviewablePullRequestPasteBox.png)
