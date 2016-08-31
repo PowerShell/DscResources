@@ -54,13 +54,13 @@ If you cannot find an issue that matches the one you are about to file, click th
 ![GitHubNewIssueButton](Images/GitHubNewIssueButton.png)
 
 A new, blank issue should open up.
-![GitHubBlankIssue](Images/GitHubBlankIssue.png)
+![GitHubBlankIssue](Images/GitHubBlankIssue.PNG)
 
 ### Fill in Issue Title
 The issue title should be a brief summary of your issue in one sentence.
 If it pertains to only one specific resource please prefix the issue title with the resource name followed by a colon.
 For example:
-![GitHubSpecificResourceIssueTitle](Images/GitHubSpecificResourceIssueTitle.png)
+![GitHubSpecificResourceIssueTitle](Images/GitHubSpecificResourceIssueTitle.PNG)
 
 If you would like to submit an issue that would include a breaking change, please also refer to our [Breaking Changes](#breaking-changes) section below.
  
