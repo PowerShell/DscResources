@@ -1,17 +1,84 @@
 # Contributing to the Dsc Resource Kit
 
-Hi there! We're thrilled that you'd like to contribute to this project. Your help is essential to creating and maintaining the DSC Resources. 
+Welcome to the DSC Resource Kit! We're thrilled that you'd like to contribute! Our community is essential in creating and maintaining all the DSC Resources. 
 
-If you're just starting out with git or GitHub, start by reading our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
+There are a few different ways you can contribute:
 
- 
+* [Submit an issue](#submitting-an-issue)
+* [Fix an issue](#fixing-an-issue)
+* [Write documentation](#writing-documentation)
+* [Review pull requests](#reviewing-pull-requests) 
+
+If you're just starting out with GitHub, start by reading our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-## General Process
-Here's the general process of contributing to a module in the DSC Resource Kit:  
-1. Pick out an issue you'd like to work on.  
+## Submitting an Issue
+Submitting an issue to the DSC Resource Kit is easy!
+
+Here are the steps:
+
+1. Find the correct repository to submit your issue to.
+2. Make sure the issue is not open already.
+3. Open a new issue.
+4. Fill in the issue title.
+5. Fill in the issue description.
+6. Submit the issue.
+
+### Find the Correct Repository
+| Issue Topic | Where to Submit |
+|-------------|-----------------|
+| <ul><li> DSC Resource Kit overall </li><li> Issues that span multiple resource modules </li><li> DSC Resource Kit processes </li><li> New resource modules </li></ul> | DscResources (this repository!) |
+| <ul><li> Common tests </li><li> Meta-fixers </li></ul> | [DscResource.Tests](https://github.com/PowerShell/DscResource.Tests)
+| <ul><li> Specific resource </li><li> Resource proposal </li></ul> | The repository of the resource module that contains/should contain the resource. |
+| <ul><li> Specific resource module </li></ul> | The repository of that resource module |
+
+You can access a resource module repository with the following URL:
+```
+https://github.com/PowerShell/<name of resource module>
+```
+For example, to get to the xCertificate module respository, the URL is:  
+```
+https://github.com/PowerShell/xCertificate
+```
+
+All DSC resource modules are also listed as submodules of this repository under the [xDscResources](xDscResources) and [DscResources](DscResources) folders.
+
+### Open an Issue
+Once you are in the correct repository to submit your issue, go to the Issues tab.
+![GitHubIssuesTab](Images/GitHubIssuesTab.png)
+
+Ensure that the issue you are about to file is not already open.
+If you cannot find an issue that matches the one you are about to file, click the New Issue button on the right.
+![GitHubNewIssueButton](Images/GitHubNewIssueButton.png)
+
+A new, blank issue should open up.
+![GitHubBlankIssue](Images/GitHubBlankIssue.png)
+
+### Fill in Issue Title
+The issue title should be a brief summary of your issue in one sentence.
+If it pertains to only one specific resource please prefix the issue title with the resource name followed by a colon.
+For example:
+![GitHubSpecificResourceIssueTitle](Images/GitHubSpecificResourceIssueTitle.png)
+
+If you would like to submit an issue that would include a breaking change, please also refer to our [Breaking Changes](#breaking-changes) section below.
+ 
+### Fill in Issue Description
+The issue description should contain a **detailed** report of the issue you are submitting.
+If you are submitting a bug, please include any error messages or stack traces caused by the problem.
+
+Please reference any related issues or pull requests by a pound sign followed by the issue or pull request number (e.g. #11, #72). GitHub will automatically link the number to the corresponding issue or pull request. If GitHub automatically chooses the wrong issue/pull request (e.g. it chooses pull request #18 instead of issue #18) please provide a link to the correct issue/pull request.
+
+Please tag any GitHub users you would like to notice this issue. You can tag someone on GitHub with the @ symbol followed by their username.(e.g. @kwirkykat)
+
+### Submit an Issue
+Once you have filled out the issue title and description, click the submit button at the bottom of the issue.
+![GitHubIssueSubmitButton](Images/GitHubIssueSubmitButton.png)
+
+## Fixing an Issue
+Here's the general process of fixing an issue in the DSC Resource Kit:  
+1. Pick out the issue you'd like to work on.  
 2. Create a fork of the module that contains the issue.  
 3. Clone your fork to your machine.  
 4. Create a working branch where you can store your updates to the code.  
@@ -24,6 +91,10 @@ Here's the general process of contributing to a module in the DSC Resource Kit:
 11. Address any comments brought up by the reviewer. 
 
 ### Pick an Issue
+Issues that are currently up-for-grabs are tagged with the ```help wanted``` label.
+You can see all the issues tagged with ```help wanted``` across all the modules in the DSC Resourece Kit in the Help Wanted column on our [dashboard](https://waffle.io/powershell/dscresources/join).
+
+If you find an issue that you want to work on, but it does not have the ```help wanted``` label, make sure to read through the issue and ask if you can start working on it.
 
 ### Fork a Module
 In the DSC Resource Kit, a repository and a module are usually the same thing since each repository contains one resource module.
@@ -69,6 +140,7 @@ These templates are currently in the midst of a huge overall.
 Use them with caution as they will be changed soon.
 
 Tests should currently be structured like so:
+
 * Root folder of module  
 	* Tests  
 		* Unit  
@@ -87,17 +159,17 @@ Release notes for each module are included in the README.md file under the root 
 Currently unreleased changes are listed under the 'Unreleased' section under the 'Versions' header.
 If this section is missing, please add it.
 
-To update the release notes with your changes, simply add a bullet point (or more) with your changes in the **past** tense under the `Unreleased` section.  
+To update the release notes with your changes, simply add a bullet point (or more) with your changes in the **past** tense under the 'Unreleased' section.  
 For example:  
-    ```
+```
     ## Versions
     
     ### Unreleased
     - Added the FriendlyName parameter to Update-xDscResource
-    ```
+```
 If a change is related to a specific resource, please add create sub-bullets with your changes under a bullet with the resource name.  
 Like so:
-	```
+```
     ## Versions
     
     ### Unreleased
@@ -107,7 +179,7 @@ Like so:
 	    - Fixed error message when negative number is given for durationInMinutes
     - xSampleResource2
 	    - Fixed a typo in verbose message 
-    ```
+```
 
 ### Submit a Pull Request
 [Pull requests](https://help.github.com/articles/using-pull-requests/) allow you to easily submit the changes in your fork to the official repository.
@@ -159,8 +231,8 @@ You should run these tests before submitting a pull request.
 
 The [MetaFixers](https://github.com/PowerShell/DscResource.Tests/blob/master/MetaFixers.psm1) module contains fix-helper methods where possible such as a function to convert all tab indentations to 4 spaces and a function to fix file encodings.
 
-##### Run common tests locally
-For come modules, the common DSC Resources tests are automatically downloaded into the module folder when tests are invoked.
+##### Running Common Tests Locally
+For some modules, the common DSC Resources tests are automatically downloaded into the module folder when tests are invoked.
 
 If this is not happening for your module, you will need to clone [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) into the root folder of the module that you want to test.
 Then simply run `Invoke-Pester` from the root folder.
@@ -199,6 +271,7 @@ This allows the community to discuss the change before the work is done and scop
 Opening an issue also allows the resource owner or the DSC Resource Kit Owner ([@kwirkykat](https://github.com/kwirkykat)) to tag the issue with the ```breaking change``` label.
 
 Breaking changes may include:
+
 - Adding a new mandatory parameter
 - Changing an existing parameter
 - Removing an existing parameter
@@ -211,6 +284,7 @@ Once a PR is ready with the breaking change please include the following:
 ## Submitting a New Resource
 
 If you would like to add a DSC resource:
+
 * Open an issue in the module repository where you'd like to add a DSC resource to coordinate your work with others.
 * Fork the *dev* branch of the module repository you'd like to improve:
     - `git checkout dev`
@@ -221,8 +295,6 @@ If you would like to add a DSC resource:
     - Write (or alter) an example configuration in the Examples subdirectory demonstrating how your resource should be used
     - DO NOT change the *.psd1 ModuleVersion (we will be updating this before releasing to the Gallery)
     - DO NOT change the *.schema.mof ClassVersion. (If this ever needs updating, we will be updating before releasing to the Gallery.)
-
-
 
 ## Submitting a New Resource Module
 
@@ -249,9 +321,7 @@ This means we will have full control and permissions to the module repository.
 In the future, you will have to fork and submit pull requests to commit changes as if it were any other submodule in [DscResources](https://github.com/PowerShell/DscResources).
 ![Transfer-Ownership](Images/GitHub-Transfer-Ownership.png)
 
-
-
-## Contributing to Documentation
+## Writing Documentation
 One of the easiest ways to contribute to a PowerShell project is by helping to write and edit documentation. 
 All of our documentation hosted on GitHub is written using [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) in the style of [this example](DscResourcesExampleHelp.md).
 
@@ -261,10 +331,10 @@ Once you're finished, save your edits and submit a pull request to get your chan
 
 If you want to contribute new documentation, first check for [issues tagged as "Documentation"](https://github.com/PowerShell/DscResources/labels/documentation) to make sure you're not duplicating efforts.
 If no one seems to be working on what you have planned:
+
 * Open a new issue tagged as "Documentation" to tell others what you're working on
 * Create a fork of our repository and start adding new Markdown-based documentation to it
 * When you're ready to contribute your documentation, submit a pull request to the *dev* branch
-
 
 #### GitHub Flavored Markdown (GFM)
 
@@ -299,3 +369,6 @@ Multiple element lists work the same way as with ordered lists.
 Links can also have reference headers in the same document with the syntax `[visible link text](#my-section-header)`.
 The headers cannot have punctuation and all spaces must be replaced by hyphens in the link 'URL'.
 
+## Reviewing Pull Requests
+Though only maintainers can *merge* a pull request, anyone from the community may *review* a pull request.
+Maintainers will still take a quick look at code before merging it, but reviews by community members often help pull requests get merged much faster as there are very few maintainers and a lot of pull requests to review.
