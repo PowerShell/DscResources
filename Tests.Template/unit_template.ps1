@@ -10,7 +10,8 @@
     .NOTES
         There are multiple methods for writing unit tests. This template provides a few examples
         which you are welcome to follow but depending on your resource, you may want to
-        design it differently.
+        design it differently. Read through our TestsGuidelines.md file for an intro on how to
+        write unit tests for DSC resources: https://github.com/PowerShell/DscResources/blob/master/TestsGuidelines.md
 #>
 
 
