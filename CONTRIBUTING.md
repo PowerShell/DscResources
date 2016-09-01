@@ -216,7 +216,7 @@ The target should be your working branch in your fork.
 ![Github-PR-dev.png](Images/Github-PR-dev.png)
 
 Once you select the correct base and target, you can review the file and commits that will be included in the pull request by selecting the tabs below the Create Pull Requests Button:
-![GithubPullRequestFileReview.png](Images/GithubPullRequestFileReview.png)
+![GitHubPullRequestFileReview.png](Images/GitHubPullRequestFileReview.png)
 
 If GitHub tells you that your branches cannot automatically be merged, you probably have merge conflicts. These should be fixed before you submit your pull request.
 ![GitHubPullRequestPreCreateMergeConflict.png](Images/GitHubPullRequestPreCreateMergeConflict.png)
