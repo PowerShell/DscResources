@@ -31,10 +31,10 @@ Here are the steps:
 ### Find the Correct Repository
 | Issue Topic | Where to Submit |
 |-------------|-----------------|
-| <ul><li> DSC Resource Kit overall </li><li> Issues that span multiple resource modules </li><li> DSC Resource Kit processes </li><li> New resource modules </li></ul> | DscResources (this repository!) |
+| <ul><li> DSC Resource Kit overall </li><li> Issues that span multiple resource modules </li><li> DSC Resource Kit processes </li><li> Resource module proposals </li><li> Resource module submissions </li><li> Resource proposals that don't fit in an existing module </li></ul> | DscResources (this repository!) |
 | <ul><li> Common tests </li><li> Meta-fixers </li></ul> | [DscResource.Tests](https://github.com/PowerShell/DscResource.Tests)
-| <ul><li> Specific resource </li><li> Resource proposal </li></ul> | The repository of the resource module that contains/should contain the resource. |
-| <ul><li> Specific resource module </li></ul> | The repository of that resource module |
+| <ul><li> Bugs, feature requests, ehancements to a specific resource </li><li> Resource proposals </li></ul> | The repository of the resource module that contains/should contain the resource. |
+| <ul><li> Bugs, feature requests, ehancements that span multiple resources within one resource module </li></ul> | The repository of that resource module |
 
 You can access a resource module repository with the following URL:
 ```
@@ -45,7 +45,7 @@ For example, to get to the xCertificate module respository, the URL is:
 https://github.com/PowerShell/xCertificate
 ```
 
-All DSC resource modules are also listed as submodules of this repository under the [xDscResources](xDscResources) and [DscResources](DscResources) folders.
+All DSC resource modules are also listed as submodules of this repository under the [xDscResources](xDscResources) and [DscResources](dscresources) folders.
 
 ### Open an Issue
 Once you are in the correct repository to submit your issue, go to the Issues tab.
