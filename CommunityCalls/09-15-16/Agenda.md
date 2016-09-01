@@ -1,6 +1,6 @@
 # DSC Resource Kit Community Call - 09/15/2016
 **1-2PM on Thursday, September 15 (PDT)**  
-ICS file available [here](CommunityCall091516.ics)
+ICS file available [here](CommunityCall091516.zip)
 
 ## How to Join
 ### Skype for Business
