@@ -6,10 +6,10 @@ There are a few different ways you can contribute:
 
 * [Submit an issue](#submitting-an-issue)
 * [Fix an issue](#fixing-an-issue)
-* [Write documentation](#writing-documentation)
-* [Review pull requests](#reviewing-pull-requests) 
 * [Submit a new resource](#submitting-a-new-resource)
 * [Submit a new resource module (repository)](#submitting-a-new-resource-module)
+* [Write documentation](#writing-documentation)
+* [Review pull requests](#reviewing-pull-requests) 
 
 If you're just starting out with GitHub, start by reading our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
 
@@ -51,7 +51,7 @@ All DSC resource modules are also listed as submodules of this repository under 
 Once you are in the correct repository to submit your issue, go to the Issues tab.
 ![GitHubIssuesTab](Images/GitHubIssuesTab.png)
 
-Ensure that the issue you are about to file is not already open.
+**Ensure that the issue you are about to file is not already open.**
 If you cannot find an issue that matches the one you are about to file, click the New Issue button on the right.
 ![GitHubNewIssueButton](Images/GitHubNewIssueButton.png)
 
@@ -375,6 +375,9 @@ Make sure to:
 * Use the template from the [DscResource.Template folder](DscResource.Template) as a boilerplate for [appveyor.yml] (https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/appveyor.yml) (Continuous Integration configuration file) and [README.md](https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/README.md).
 * Run the common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) which will be automatically installed into the root folder of your module when your tests are run if your module is accepted in the DSC Resource Kit. 
 
+All new resource modules should follow the DSC Resource Kit [High Quality guidelines](HighQualityModuleGuidelines.md)
+High quality resource modules may then use the ___Dsc naming format (e.g. SharePointDsc).
+
 Once you are ready to submit your new module, follow the submission process [here](NewResourceModuleSubmissions.md).
 
 ## Writing Documentation
@@ -402,11 +405,51 @@ A great guide to Github Flavored Markdown is available [here](https://github.com
 Though only maintainers can *merge* a pull request, anyone from the community may *review* a pull request.
 Maintainers will still take a quick look at code before merging it, but reviews by community members often help pull requests get merged much faster as there are very few maintainers and a lot of pull requests to review.
 
+All pull requests across all modules in the DSC Resource Kit that are open for review can be seen in the Needs Review column on our [dashboard](https://waffle.io/powershell/dscresources/join).
+
+**Pull requests should not be reviewed while tests from AppVeyor are failing.**
+
 All modules in the DSC Resource Kit should be linked to [Reviewable](reviewable.io), a code review tool.
-Reviewable adds a purple button to the top comment of every pull request.
-![GitHubReviewableButton](Images/GitHubReviewableButton.png)
+Reviewable adds a purple button to the top comment of every pull request.  
+![GitHubReviewableButton](Images/GitHubReviewableButton.png)  
 This button is **clickable**.
 It will take you to a code review of all the changes in that pull request.
 
-If the purple Reviewable button does not appear, you can also go [here](https://reviewable.io/reviews) and paste the URL of the pull request you would like to review into this box
+If the purple Reviewable button does not appear, you can also go [here](https://reviewable.io/reviews) and paste the URL of the pull request you would like to review into this box:  
 ![ReviewablePullRequestPasteBox](Images/ReviewablePullRequestPasteBox.png)
+
+You can make a comment in Reviewable either in the top discussion section (for general/overall comments) or you can click on a line of code to make a comment at that line.
+If you want to delete a comment at a line of code, click the tiny trash icon at the bottom of the comment.
+
+Some things to pay attention to while reviewing:
+
+* Does the code logic make sense?
+* Does the code structure make sense?
+* Does this make the resource better?
+* Do all variables, parameters, and functions have **descriptive** names? (e.g. no $params, $args, $i, $a, etc.)
+* Does the code follow the DSC Resource Kit [Style Guidelines](StyleGuidelines.md) and [Best Practices](BestPractices.md)?
+* Has the author included test coverage for their changes?
+* Has the author updated the Unreleased section of the README with their changes?
+
+When the author replies or makes the changes you requested and you are **satisfied** with the changes/reply, you will need to resolve the discussion. You can do this in one of two ways:
+
+1. Click the Acknowledge button on the comment  
+![ReviewableAcknowledgeButton](Images/ReviewableAcknowledgeButton.png)
+2. Click the small circle in the bottom right of the comment and select 'Satisfied'.  
+![ReviewableDiscussionStatusCircle](Images/ReviewableDiscussionStatusCircle.png)
+![ReviewableDiscussionSatisfied](Images/ReviewableDiscussionSatisfied.png)
+
+To mark an entire file as reviewed, click the little eye button next to the file name at the top of the file so that it is green.  
+![ReviewableFileReviewButtonRed](Images/ReviewableFileReviewButtonRed.png)
+![ReviewableFileReviewButtonGreen](Images/ReviewableFileReviewButtonGreen.png)
+
+Please mark all files and discussions as resolved before you approve the entire pull request.
+To approve the pull request, you can click the LGTM (looks good to me) button in the main discussion at the top of the code review in Reviewable:
+![ReviewableLGTMButton](Images/ReviewableLGTMButton.png)  
+Or you can simply comment on the pull request on GitHub "Looks good to me" or a thumbs up.
+
+If a pull request contains a lot of changed files, Reviewable may collapse them and show you only one file at a time. If this happens, you can navigate to other files in the pull request by clicking the purple reviewable icon at the top of the page:
+![ReviewableFilePicker](Images/ReviewableFilePicker.png) 
+
+Nothing you do in Reviewable will be pushed to the public or the pull request until you hit the green Publish button at the top:  
+![ReviewablePublishButton](Images/ReviewablePublishButton.png)
