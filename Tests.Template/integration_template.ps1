@@ -15,7 +15,6 @@
 # TODO: Customize these parameters...
 $script:DSCModuleName      = '<ModuleName>' # Example xNetworking
 $script:DSCResourceName    = '<ResourceName>' # Example MSFT_xFirewall
-# /TODO
 
 #region HEADER
 # Integration Test Template Version: 1.1.1
@@ -36,12 +35,12 @@ $TestEnvironment = Initialize-TestEnvironment `
 
 # TODO: Other Init Code Goes Here...
 
-# Using try/finally to always cleanup even if something awful happens.
+# Using try/finally to always cleanup.
 try
 {
     #region Integration Tests
-    $ConfigFile = Join-Path -Path $PSScriptRoot -ChildPath "$($script:DSCResourceName).config.ps1"
-    . $ConfigFile
+    $configFile = Join-Path -Path $PSScriptRoot -ChildPath "$($script:DSCResourceName).config.ps1"
+    . $configFile
 
     Describe "$($script:DSCResourceName)_Integration" {
         #region DEFAULT TESTS
@@ -53,7 +52,7 @@ try
             } | Should not throw
         }
 
-        It 'should be able to call Get-DscConfiguration without throwing' {
+        It 'Should be able to call Get-DscConfiguration without throwing' {
             { Get-DscConfiguration -Verbose -ErrorAction Stop } | Should Not throw
         }
         #endregion
