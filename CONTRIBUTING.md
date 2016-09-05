@@ -13,6 +13,8 @@ There are a few different ways you can contribute:
 
 If you're just starting out with GitHub, start by reading our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
 
+If you have any questions or concerns, feel free to reach out to [@kwirkykat](https://github.com/kwirkykat) or [@mbreakey3](https://github.com/mbreakey3) for help.
+
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
@@ -33,8 +35,8 @@ Here are the steps:
 |-------------|-----------------|
 | <ul><li> DSC Resource Kit overall </li><li> Issues that span multiple resource modules </li><li> DSC Resource Kit processes </li><li> Resource module proposals </li><li> Resource module submissions </li><li> Resource proposals that don't fit in an existing module </li></ul> | DscResources (this repository!) |
 | <ul><li> Common tests </li><li> Meta-fixers </li></ul> | [DscResource.Tests](https://github.com/PowerShell/DscResource.Tests)
-| <ul><li> Bugs, feature requests, ehancements to a specific resource </li><li> Resource proposals </li></ul> | The repository of the resource module that contains/should contain the resource. |
-| <ul><li> Bugs, feature requests, ehancements that span multiple resources within one resource module </li></ul> | The repository of that resource module |
+| <ul><li> Bugs, feature requests, enhancements to a specific resource </li><li> Resource proposals </li></ul> | The repository of the resource module that contains/should contain the resource. |
+| <ul><li> Bugs, feature requests, enhancements that span multiple resources within one resource module </li></ul> | The repository of that resource module |
 
 You can access a resource module repository with the following URL:
 ```
@@ -52,6 +54,8 @@ Once you are in the correct repository to submit your issue, go to the Issues ta
 ![GitHubIssuesTab](Images/GitHubIssuesTab.png)
 
 **Ensure that the issue you are about to file is not already open.**
+If someone has already opened a similar issue, please leave a comment or add a GitHub reaction to the top comment to **express your interest**. You can also offer help and use the issue to coordinate your efforts in fixing the issue.
+
 If you cannot find an issue that matches the one you are about to file, click the New Issue button on the right.
 ![GitHubNewIssueButton](Images/GitHubNewIssueButton.png)
 
@@ -70,9 +74,17 @@ If you would like to submit an issue that would include a breaking change, pleas
 The issue description should contain a **detailed** report of the issue you are submitting.
 If you are submitting a bug, please include any error messages or stack traces caused by the problem.
 
-Please reference any related issues or pull requests by a pound sign followed by the issue or pull request number (e.g. #11, #72). GitHub will automatically link the number to the corresponding issue or pull request. If GitHub automatically chooses the wrong issue/pull request (e.g. it chooses pull request #18 instead of issue #18) please provide a link to the correct issue/pull request.
+Please reference any related issues or pull requests by a pound sign followed by the issue or pull request number (e.g. #11, #72). GitHub will automatically link the number to the corresponding issue or pull request. You can also link to pull requests and issues in other repositories by including the repository owner and name before the issue number.
+Like this:
+```
+<owner name>/<repository name>#<number of PR/issue>
+```
+So to link to issue #160 in the xPSDesiredStateConfiguration repository which is owned by PowerShell:
+```
+PowerShell/xPSDesiredStateConfiguration#160
+```
 
-Please tag any GitHub users you would like to notice this issue. You can tag someone on GitHub with the @ symbol followed by their username.(e.g. @kwirkykat)
+Please also tag any GitHub users you would like to notice this issue. You can tag someone on GitHub with the @ symbol followed by their username.(e.g. @kwirkykat)
 
 ### Submit an Issue
 Once you have filled out the issue title and description, click the submit button at the bottom of the issue.
@@ -142,10 +154,10 @@ The tests in the following modules provide excellent examples:
 * [xDhcpServer](https://github.com/PowerShell/xDhcpServer/tree/master/Tests)  
 * [SharePointDsc](https://github.com/PowerShell/SharePointDsc/tree/master/Tests)  
 
-~~We highly encourage you to use [tests templates](https://github.com/PowerShell/DscResources/tree/master/Tests.Template) when creating tests for DSC resources.
-Please refer to the [testing guidelines](https://github.com/PowerShell/DscResources/blob/master/TestsGuidelines.md) for information on how to use the templates.~~  
+We highly encourage you to use our [test templates](https://github.com/PowerShell/DscResources/tree/master/Tests.Template) when creating tests for DSC resources.
+Please refer to our [testing guidelines](https://github.com/PowerShell/DscResources/blob/master/TestsGuidelines.md) for information on how to use these templates.  
 Our test templates and guidelines are currently under construction.
-Use them with caution as they will be changed soon.
+Use them with caution as they may be changed soon.
 
 Tests should currently be structured like so:
 
@@ -153,7 +165,7 @@ Tests should currently be structured like so:
 	* Tests  
 		* Unit  
 			* MyResource.Tests.ps1  
-		* Integrations  
+		* Integration  
 			* MyResource.Integration.Tests.ps1  
 
 Not all resources currently have tests.
@@ -179,7 +191,7 @@ For example:
 ### 1.4.0.0
 ...
 ```
-If a change is related to a specific resource, please add create sub-bullets with your changes under a bullet with the resource name.  
+If a change is related to a specific resource, please add sub-bullets with your changes under a bullet with the resource name.  
 Like so:
 ```
 ...
@@ -200,7 +212,7 @@ Like so:
 If you are making a breaking change, please make sure to read the [Breaking Changes section](#breaking-changes) below.
 
 ### Submit a Pull Request
-A [pull request](https://help.github.com/articles/using-pull-requests/)(PR) allows you to submit the changes you made in your fork to the official repository.
+A [pull request](https://help.github.com/articles/using-pull-requests/) (PR) allows you to submit the changes you made in your fork to the official repository.
 
 To open a pull request, go to the Pull Requests tab of either your fork or the official repository.
 ![GitHubPullRequestsTabInFork.png](Images/GitHubPullRequestsTabInFork.png)
@@ -230,9 +242,13 @@ Once you are ready to submit your pull request, click the Create Pull Request bu
 The title of your PR should *describe* the changes it includes in one line. 
 Simply putting the issue number that the PR fixes is not acceptable.
 If you PR deals with *one* specific resource, please prefix the title with the resource name followed by a colon.
-If your PR does fix an issue please do still include "(Fixes #issue number)" in the title.
-For example, if a PR fixes issues number 11 and 16 which adds the Ensure parameter to the xSample resource:
+If your PR fixes an issue please do still include "(Fixes #issue number)" in the title.
+For example, if a PR fixes issues number 11 and 16 which adds the Ensure parameter to the xSample resource, the title should be something like:  
 "xSample: Added Ensure parameter (Fixes #11, #16)".
+
+If your pull request includes a breaking change, please refer to the [Breaking Changes](#breaking-changes) section below.
+
+If open a pull request with the wrong title, you can easily edit it by clicking the Edit button to the right of the title in the open pull request.
 
 #### Pull Request Description
 The description of your PR should include a detailed report of all the changes you made.
@@ -255,14 +271,15 @@ Sometimes the little bot makes mistakes.
 ### Tests in AppVeyor
 The DSC Resource Kit uses [AppVeyor](http://www.appveyor.com/) as a continuous integration (CI) system.
 
-After submitting your pull request, AppVeyor will run a suite of tests and automatically update the status of the pull request and providing at-a-glance feedback about whether your changes are passing tests or not.
+After submitting your pull request, AppVeyor will automatically run a suite of tests on your submitted changes.
+Afterwards, AppVeyor will update the status of the pull request, providing at-a-glance feedback about whether your changes are passing tests or not.  
 ![AppVeyor-Github](Images/AppVeyor-Github.png)
 
 All the green checkboxes and red crosses are **clickable**. 
 They will bring you to the corresponding test page with details on which tests are running and why your tests may be failing. 
 
 A maintainer **will not** merge your pull request if these tests are failing, even if they have nothing to do with your changes.
-If test failures are occurring that do not relate to the changes you made, you will have to submit another PR with fixes or that issue or wait until someone else does.
+If test failures are occurring that do not relate to the changes you made, you will have to submit another PR with fixes for those failures or wait until someone else does.
 
 Any commit to the working branch that is the target of the pull request will trigger the tests to run again in AppVeyor.
 If you tag a maintainer, they can also re-run your tests in AppVeyor. 
@@ -306,7 +323,7 @@ If you have merge conflicts, please use git rebasing to fix them instead of git 
 An introduction to git rebasing is available in the [getting started with GitHub](GettingStartedWithGitHub.md) instructions.
 
 ### Get your Code Reviewed
-Anyone other than you can *review* your code, but only maintainers may *merge* your code.
+Anyone other than you can *review* your code, but only maintainers can *merge* your code.
 If you have a specific contributor/maintainer you want to review your code, be sure to tag them in your pull request.
 
 We don't currently have dedicated maintainers for most modules, so it may take a while for a general maintainer to get around to your pull request.
@@ -326,6 +343,7 @@ Breaking changes may include:
 - Fundamentally changing an existing functionality of a resource
 
 Once a PR is ready with the breaking change please include the following:
+
 1. At least one of the bullet points in your addition to the updated release notes starts with 'BREAKING CHANGE:'    
 2. The title of the PR that includes your breaking change starts with 'BREAKING CHANGE:'
 
@@ -343,94 +361,100 @@ Please also add a full description of your new resource and its parameters to th
 If you would like a new DSC resource module added to the DSC Resource Kit, please check the [existing issues](https://github.com/PowerShell/DscResources/issues) in this repository first to make sure no one else is already working on a similar module.
 If someone is already working on a similar module, please leave a comment on the open issue or add a GitHub reaction to the top comment to **express your interest**. You can also offer help and use the issue to coordinate your efforts.
 
-If none of the existing module proposals or submissions are related to one you want, [open a new issue](https://github.com/PowerShell/DscResources/issues) with the following information:
+If none of the existing module proposals or submissions are related to one you want, open a new issue in [this repository](https://github.com/PowerShell/DscResources/issues) with the following information:
 
 * What system will your module be managing?
     - For example, [xActiveDirectory](https://github.com/powershell/xActiveDirectory) models and manages Active Directory
 * What resources you would like to be included in the new resource module?
 * Will your module include [MOF-based resources](https://technet.microsoft.com/en-us/library/dn956964.aspx) (compatible with PS/WMF 4.0 and 5.0+) or [class-based resources](https://technet.microsoft.com/en-us/library/dn948461.aspx) (only compatible with PS/WMF 5.0+)
-* Are or will you be working on this module or would you like someone else to pick it up?
+* Are you or will you be working on this module or would you like someone else to pick it up?
 
 Next, develop your new module in your own repository.
 Make sure to:
 
 * Follow the standard DSC Resource Kit module structure.
   Here is an example:
-	* Root folder (e.g. SampleResourceModuleDsc)
-		* DscResources
-		  * SampleResource
-		    * SampleResource.psm1
-		    * SampleResource.schema.mof
-		* Tests
-		  * Unit
-		    * SampleResource.Tests.ps1  
-		  * Integration
-		    * SampleResource.Integration.Tests.ps1
-	  * Examples
-	    * SampleResource.Example.ps1 
-	  * Module manifest (e.g. SampleResourceModuleDsc.psd1)
-	  * README.md
-	  * appveyor.yml
+  * Root folder (e.g. SampleResourceModuleDsc)
+    * DscResources
+      * SampleResource
+        * SampleResource.psm1
+        * SampleResource.schema.mof
+    * Tests
+      * Unit
+        * SampleResource.Tests.ps1  
+      * Integration
+        * SampleResource.Integration.Tests.ps1
+    * Examples
+      * SampleResource.Example.ps1 
+    * Module manifest (e.g. SampleResourceModuleDsc.psd1)
+    * README.md
+    * appveyor.yml
 * Write a set of unit and integration tests for your new resources using Pester.
 * Use the template from the [DscResource.Template folder](DscResource.Template) as a boilerplate for [appveyor.yml] (https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/appveyor.yml) (Continuous Integration configuration file) and [README.md](https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/README.md).
 * Run the common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) which will be automatically installed into the root folder of your module when your tests are run if your module is accepted in the DSC Resource Kit. 
 
-All new resource modules should follow the DSC Resource Kit [High Quality guidelines](HighQualityModuleGuidelines.md)
+All new resource modules should follow the DSC Resource Kit [High Quality guidelines](HighQualityModuleGuidelines.md).
 High quality resource modules may then use the ___Dsc naming format (e.g. SharePointDsc).
 
 Once you are ready to submit your new module, follow the submission process [here](NewResourceModuleSubmissions.md).
 
 ## Writing Documentation
 One of the easiest ways to contribute to a PowerShell project is to write and edit documentation. 
-All of our documentation hosted on GitHub is written using [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) in the style of [this example](DscResourcesExampleHelp.md).
-
-To [edit an existing file](https://help.github.com/articles/editing-files-in-another-user-s-repository/), simply navigate to it in GitHub and click the "Edit" button. 
-GitHub will *automatically* create your own fork of the repository where you can make your changes. 
-Once you're finished, commit your edits and [submit a pull request](#submit-a-pull-request) to get your changes merged into the official repository. 
+All documentation in the DSC Resource Kit uses [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/) (GFM).
+See the [section below](#github-flavored-markdown) for more details.
 
 If you want to contribute new documentation, first check for existing issues to make sure you're not duplicating efforts.
 If no one seems to be working on what you have planned:
 
-1. Open a new issue to tell others about the new document you want to add
-2. Create a fork of our repository and add a new Markdown-based (.md) file to it
-3. Edit your new Markdown file
+1. Open a new issue to tell others about the documentation change/addition you'd like to make.
+2. Create a fork of the repository you would like the documentation to be added to.
+3. Edit or add the Markdown file (.md) you would like changed/added.
+  To edit an existing file in the GitHub editor, simply navigate to it in GitHub and click the Edit button. 
 4. When you're ready to contribute your documentation, [submit a pull request](#submit-a-pull-request) to the official repository.
 
-#### GitHub Flavored Markdown (GFM)
-All documentation in the DSC Resource Kit uses [GitHub Flavored Markdown (GFM)](https://help.github.com/articles/github-flavored-markdown/).
+#### GitHub Flavored Markdown
 If you are looking for a good editor, try the web interface GitHub provides for .md files or [Markdown Pad](http://markdownpad.com/). 
 A great guide to Github Flavored Markdown is available [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ## Reviewing Pull Requests
-Though only maintainers can *merge* a pull request, anyone from the community may *review* a pull request.
+Though only maintainers can *merge* a pull request, anyone from the community can *review* a pull request.
 Maintainers will still take a quick look at code before merging it, but reviews by community members often help pull requests get merged much faster as there are very few maintainers and a lot of pull requests to review.
 
 All pull requests across all modules in the DSC Resource Kit that are open for review can be seen in the Needs Review column on our [dashboard](https://waffle.io/powershell/dscresources/join).
 
-**Pull requests should not be reviewed while tests from AppVeyor are failing.**
+**Pull requests should not be reviewed while tests from AppVeyor are failing.**  
+If you are confused why tests in AppVeyor are failing, tag a maintainer or ask the community for help.
 
-All modules in the DSC Resource Kit should be linked to [Reviewable](reviewable.io), a code review tool.
+All modules in the DSC Resource Kit should be linked to [Reviewable](https://reviewable.io), a code review tool.
 Reviewable adds a purple button to the top comment of every pull request.  
 ![GitHubReviewableButton](Images/GitHubReviewableButton.png)  
 This button is **clickable**.
 It will take you to a code review of all the changes in that pull request.
 
-If the purple Reviewable button does not appear, you can also go [here](https://reviewable.io/reviews) and paste the URL of the pull request you would like to review into this box:  
+If the purple Reviewable button does not appear, you can also go [here](https://reviewable.io/reviews) and paste the URL of the pull request you would like to review into this box towards the bottom of the page:  
 ![ReviewablePullRequestPasteBox](Images/ReviewablePullRequestPasteBox.png)
 
+If a pull request contains a lot of changed files, Reviewable may collapse them and show you only one file at a time. If this happens, you can navigate to other files in the pull request by clicking the purple reviewable icon at the top of the page:
+![ReviewableFilePicker](Images/ReviewableFilePicker.png) 
+
+### Making Review Comments
 You can make a comment in Reviewable either in the top discussion section (for general/overall comments) or you can click on a line of code to make a comment at that line.
-If you want to delete a comment at a line of code, click the tiny trash icon at the bottom of the comment.
+Each comment you make will be saved as a draft so that you can continue making comments until you are ready to publish all of them at once. Publishing is dicussed in the [Publish Review Changes](#publish-review-changes) section below.
+If you want to delete a comment draft at a line of code, click the tiny trash icon at the bottom of the comment.
 
 Some things to pay attention to while reviewing:
 
 * Does the code logic make sense?
 * Does the code structure make sense?
 * Does this make the resource better?
+* Is the code easy to read?
 * Do all variables, parameters, and functions have **descriptive** names? (e.g. no $params, $args, $i, $a, etc.)
+* Does every function have a help comment?
 * Does the code follow the DSC Resource Kit [Style Guidelines](StyleGuidelines.md) and [Best Practices](BestPractices.md)?
 * Has the author included test coverage for their changes?
 * Has the author updated the Unreleased section of the README with their changes?
 
+### Resolving Review Discussions
 When the author replies or makes the changes you requested and you are **satisfied** with the changes/reply, you will need to resolve the discussion. You can do this in one of two ways:
 
 1. Click the Acknowledge button on the comment  
@@ -439,17 +463,26 @@ When the author replies or makes the changes you requested and you are **satisfi
 ![ReviewableDiscussionStatusCircle](Images/ReviewableDiscussionStatusCircle.png)
 ![ReviewableDiscussionSatisfied](Images/ReviewableDiscussionSatisfied.png)
 
-To mark an entire file as reviewed, click the little eye button next to the file name at the top of the file so that it is green.  
+### Marking Files as Reviewed
+To mark an entire file as reviewed, click the little eye button next to the file name at the top of the file so that it turns green.  
 ![ReviewableFileReviewButtonRed](Images/ReviewableFileReviewButtonRed.png)
 ![ReviewableFileReviewButtonGreen](Images/ReviewableFileReviewButtonGreen.png)
 
+### Approving a Pull Request
 Please mark all files and discussions as resolved before you approve the entire pull request.
+
 To approve the pull request, you can click the LGTM (looks good to me) button in the main discussion at the top of the code review in Reviewable:
 ![ReviewableLGTMButton](Images/ReviewableLGTMButton.png)  
 Or you can simply comment on the pull request on GitHub "Looks good to me" or a thumbs up.
 
-If a pull request contains a lot of changed files, Reviewable may collapse them and show you only one file at a time. If this happens, you can navigate to other files in the pull request by clicking the purple reviewable icon at the top of the page:
-![ReviewableFilePicker](Images/ReviewableFilePicker.png) 
+### Publishing Review Changes
+To push your comments and files marked as reviewed to the pull request on GitHub, you will need to publish your changes.
+This can be done two different ways:
 
-Nothing you do in Reviewable will be pushed to the public or the pull request until you hit the green Publish button at the top:  
-![ReviewablePublishButton](Images/ReviewablePublishButton.png)
+1. (RECOMMENDED) Click the large green Publish button at the top of the page:  
+  ![ReviewablePublishButton](Images/ReviewablePublishButton.png)   
+  This will publish all your changes at once and submit them as one comment to the pull request on GitHub.
+2. (NOT RECOMMENDED) Click the small publish button on a comment.
+  This will publish only that one comment as its own separate comment on Github.
+  Please do not publish this way as it will often send a separate email for each comment to whoever is watching the pull request on GitHub.
+  This method also will **not** publish the files you have marked as reviewed with the little eye button.
