@@ -44,7 +44,7 @@ try
 
     Describe "$($script:DSCResourceName)_Integration" {
         #region DEFAULT TESTS
-        It 'Should compile without throwing' {
+        It 'Should compile and apply the MOF without throwing' {
             {
                 & "$($script:DSCResourceName)_Config" -OutputPath $TestEnvironment.WorkingFolder
                 Start-DscConfiguration -Path $TestEnvironment.WorkingFolder `
