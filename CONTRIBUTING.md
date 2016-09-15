@@ -1,4 +1,4 @@
-# Contributing to the Dsc Resource Kit
+# Contributing to the DSC Resource Kit
 
 Welcome to the DSC Resource Kit! We're thrilled that you'd like to contribute! Our community is essential to creating and maintaining all the DSC Resources. 
 
@@ -106,7 +106,7 @@ Here's the general process of fixing an issue in the DSC Resource Kit:
 
 ### Pick an Issue
 Issues that are currently up-for-grabs are tagged with the ```help wanted``` label.
-You can see all the issues tagged with ```help wanted``` across all the modules in the DSC Resourece Kit in the Help Wanted column on our [dashboard](https://waffle.io/powershell/dscresources/join).
+You can see all the issues tagged with ```help wanted``` across all the modules in the DSC Resource Kit in the Help Wanted column on our [dashboard](https://waffle.io/powershell/dscresources/join).
 
 If you find an issue that you want to work on, but it does not have the ```help wanted``` label, make sure to read through the issue and ask if you can start working on it.
 
@@ -132,7 +132,7 @@ You may set it up however best suits your workflow, but we recommend that you se
 Creating a working branch separate from the default dev branch will allow you to create other working branches off of dev later while your original working branch is still open for code reviews.
 Limiting your current working branch to a single issue will also both streamline the code review and reduce the possibility of merge conflicts.
 
-The git guide to branching is available [here](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
+The Git guide to branching is available [here](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
 
 ### Make Code Changes
 When writing code for any of the modules in the DSC Resource Kit, please follow the DSC Resource Kit [Style Guidelines](StyleGuidelines.md) and [Best Practices](BestPractices.md).
@@ -170,7 +170,7 @@ Tests should currently be structured like so:
 
 Not all resources currently have tests.
 This does not mean that you do not have to write tests for your changes.
-If you find that the test file for a resource is missing or one the folders in the structure outlined above is missing, please create it.
+If you find that the test file for a resource is missing or one of the folders in the structure outlined above is missing, please create it.
 You don't have to write the full set of tests for the resource if you are creating the file.
 You only need to test the changes that you made to the resource.
 
@@ -223,7 +223,7 @@ Click the New Pull Request button on the right:
 The base is the repository and branch the pull request will be merging **into**.
 The target is the repository and branch the pull request will be merging **from**.
 For the DSC Resource Kit, always create a pull request with the base as the **dev** branch of the official repository.  
-(Except for *this* repository - DSCResources - which does not have a dev branch because it does not get released to the PowerShellGallery. For this repository you may create a pull request to the master branch.) 
+(Except for *this* repository - DscResources - which does not have a dev branch because it does not get released to the PowerShellGallery. For this repository you may create a pull request to the master branch.) 
 The target should be your working branch in your fork.
 ![Github-PR-dev.png](Images/Github-PR-dev.png)
 
@@ -241,14 +241,14 @@ Once you are ready to submit your pull request, click the Create Pull Request bu
 #### Pull Request Title
 The title of your PR should *describe* the changes it includes in one line. 
 Simply putting the issue number that the PR fixes is not acceptable.
-If you PR deals with *one* specific resource, please prefix the title with the resource name followed by a colon.
+If your PR deals with *one* specific resource, please prefix the title with the resource name followed by a colon.
 If your PR fixes an issue please do still include "(Fixes #issue number)" in the title.
 For example, if a PR fixes issues number 11 and 16 which adds the Ensure parameter to the xSample resource, the title should be something like:  
 "xSample: Added Ensure parameter (Fixes #11, #16)".
 
 If your pull request includes a breaking change, please refer to the [Breaking Changes](#breaking-changes) section below.
 
-If open a pull request with the wrong title, you can easily edit it by clicking the Edit button to the right of the title in the open pull request.
+If you open a pull request with the wrong title, you can easily edit it by clicking the Edit button to the right of the title in the open pull request.
 
 #### Pull Request Description
 The description of your PR should include a detailed report of all the changes you made.
@@ -264,7 +264,7 @@ If this is your first contribution to the DSC Resource Kit, you may be asked to 
 Once you sign the CLA, the Microsoft CLA bot will automatically update your PR:
 ![GitHubCLASigned.png](Images/GitHubCLASigned.png)
 
-Once you have signed our CLA once, you shouldn't have to do it again. 
+Once you have signed our CLA, you shouldn't have to do it again. 
 If you believe you have signed our CLA before, but the Microsoft CLA bot still marks your PR as cla-required, please sign the CLA again.
 Sometimes the little bot makes mistakes.
 
@@ -319,8 +319,8 @@ If there is no .gitignore file for your module, instructions on how to add one a
 The [MetaFixers](https://github.com/PowerShell/DscResource.Tests/blob/master/MetaFixers.psm1) module also in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) contains a few fix-helper methods such as a function to convert all tab indentations to 4 spaces and a function to fix file encodings.
 
 ### Fix Merge Conflicts
-If you have merge conflicts, please use git rebasing to fix them instead of git merging.
-An introduction to git rebasing is available in the [getting started with GitHub](GettingStartedWithGitHub.md) instructions.
+If you have merge conflicts, please use Git rebasing to fix them instead of Git merging.
+An introduction to Git rebasing is available in the [getting started with GitHub](GettingStartedWithGitHub.md) instructions.
 
 ### Get your Code Reviewed
 Anyone other than you can *review* your code, but only maintainers can *merge* your code.
@@ -439,7 +439,7 @@ If a pull request contains a lot of changed files, Reviewable may collapse them 
 
 ### Making Review Comments
 You can make a comment in Reviewable either in the top discussion section (for general/overall comments) or you can click on a line of code to make a comment at that line.
-Each comment you make will be saved as a draft so that you can continue making comments until you are ready to publish all of them at once. Publishing is dicussed in the [Publish Review Changes](#publish-review-changes) section below.
+Each comment you make will be saved as a draft so that you can continue making comments until you are ready to publish all of them at once. Publishing is discussed in the [Publish Review Changes](#publish-review-changes) section below.
 If you want to delete a comment draft at a line of code, click the tiny trash icon at the bottom of the comment.
 
 Some things to pay attention to while reviewing:
