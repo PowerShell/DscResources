@@ -20,9 +20,9 @@ Topics or questions from the community are welcome at any point during the call.
 
 - Updates to labels and new [waffle.io dashboard](https://waffle.io/powershell/dscresources)
 - Updates to documentation
-  - [Contributing](https://github.com/PowerShell/DscResources/CONTRIBUTING.md)
-  - [Getting Started with GitHub](https://github.com/PowerShell/DscResources/GettingStartedWithGitHub.md)
-  - [Getting Started with Pester](https://github.com/PowerShell/DscResources/GettingStartedWithPester.md)
+  - [Contributing](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md)
+  - [Getting Started with GitHub](https://github.com/PowerShell/DscResources/blob/master/GettingStartedWithGitHub.md)
+  - [Getting Started with Pester](https://github.com/PowerShell/DscResources/blob/master/GettingStartedWithPester.md)
 - Modules currently on track to be released on 09/21/2016 (**This will not be a definitive list and may be subject to change**)
 - 2 new resource modules
   - [OfficeOnlineServerDsc](https://github.com/PowerShell/OfficeOnlineServerDsc) by Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill))
