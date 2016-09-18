@@ -47,7 +47,6 @@ function Invoke-TestCleanup {
 # Begin Testing
 try
 {
-
     Invoke-TestSetup
 
     InModuleScope '<ResourceName>' {
@@ -61,18 +60,19 @@ try
         # https://github.com/PowerShell/DscResources/blob/master/TestsGuidelines.md
         
         Describe '<Test-name>' {
-            
             BeforeEach {
                 # per-test-initialization
             }
+
             AfterEach {
                 # per-test-cleanup
             }
+
             Context 'Context-description' {
-            
                 BeforeEach {
                     # per-test-initialization
                 }
+
                 AfterEach {
                     # per-test-cleanup
                 }
@@ -80,7 +80,7 @@ try
                 It 'Should...test-description' {
                     # test-code
                 }
-                . . .
+
                 It 'Should...test-description' {
                     # test-code
                 }
@@ -106,7 +106,5 @@ try
 }
 finally
 {
- 
     Invoke-TestCleanup
-    
 }
