@@ -14,7 +14,6 @@
         write unit tests for DSC resources: https://github.com/PowerShell/DscResources/blob/master/TestsGuidelines.md
 #>
 
-
 #region HEADER
 
 # Unit Test Template Version: 1.2.0
@@ -35,11 +34,19 @@ $TestEnvironment = Initialize-TestEnvironment `
 
 #endregion HEADER
 
+function Invoke-TestSetup {
+    # TODO: Optional init code goes here...
+}
+
+function Invoke-TestCleanup {
+    Restore-TestEnvironment -TestEnvironment $TestEnvironment
+    
+    # TODO: Other Optional Cleanup Code Goes Here...
+}
 
 # Begin Testing
 try
 {
-
     Invoke-TestSetup
 
     InModuleScope '<ResourceName>' {
@@ -53,18 +60,19 @@ try
         # https://github.com/PowerShell/DscResources/blob/master/TestsGuidelines.md
         
         Describe '<Test-name>' {
-            
             BeforeEach {
                 # per-test-initialization
             }
+
             AfterEach {
                 # per-test-cleanup
             }
+
             Context 'Context-description' {
-            
                 BeforeEach {
                     # per-test-initialization
                 }
+
                 AfterEach {
                     # per-test-cleanup
                 }
@@ -72,7 +80,7 @@ try
                 It 'Should...test-description' {
                     # test-code
                 }
-                . . .
+
                 It 'Should...test-description' {
                     # test-code
                 }
@@ -98,22 +106,5 @@ try
 }
 finally
 {
- 
     Invoke-TestCleanup
-    
 }
-
-function Invoke-TestSetup {
-
-    # TODO: Optional init code goes here...
-    
-}
-
-function Invoke-TestCleanup {
-
-    Restore-TestEnvironment -TestEnvironment $TestEnvironment
-    
-    # TODO: Other Optional Cleanup Code Goes Here...
-    
-}
-
