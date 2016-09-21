@@ -3,10 +3,10 @@
 In order to provide clean and consistent code, please follow the style guidelines listed below when contributing to any [DSC Resource Kit repositories](https://github.com/PowerShell/DscResources/tree/master/xDscResources).
 
 ## Table of Contents
+
 - [Markdown Files](#markdown-files)  
 - [General](#general)  
-    - [Correct File Encoding](#correct-file-encoding)  
-    - [Line Character Limit](#line-character-limit)  
+    - [Correct File Encoding](#correct-file-encoding)
     - [Descriptive Names](#descriptive-names)  
     - [Correct Format for Long Function Calls](#correct-format-for-long-function-calls)  
     - [Correct Format for Arrays](#correct-format-for-arrays)  
@@ -51,20 +51,6 @@ GitHub will still render the sentences as a single paragraph, but the readabilit
 ### Correct File Encoding
 Make sure all files are encoded using UTF-8, except mof files which should be encoded using ASCII.  
 You can use ```ConvertTo-UTF8``` and ```ConvertTo-ASCII``` to convert a file to UTF-8 or ASCII.
-
-### Line Character Limit
-Each line should have less than **100** characters.
-
-**Bad:**
-```powershell```
-$reallyLongString = '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890'
-```
-
-**Good:**
-```powershell```
-$reallyLongString = '123456789012345678901234567890123456789012345678901234567890' + `
-    '123456789012345678901234567890123456789012345678901234567890'
-```
 
 ### Descriptive Names 
 Use descriptive, clear, and full names for all variables, parameters, and functions.
@@ -132,7 +118,7 @@ function Set-ServerName
 ```
 
 ### Correct Format for Long Function Calls
-When calling a function with many parameters, if the line exceeds the line character limit, use parameter splatting.
+When calling a function with many long parameters, use parameter splatting.
 More help on splatting can be found using the command:
 ```powershell
 Get-Help -Name 'About_Splatting'
