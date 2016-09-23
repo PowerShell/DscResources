@@ -2,7 +2,7 @@
 
 ## Releases
 ### Next Release
-- *11/02/16**  
+- **11/02/16**  
 All changes should be merged by midnight on 11/01/16 (PST).  
 We will not hold the release for any pending pull requests.  
 All changes for the release must be merged into the ```dev``` branch before the release (except SharePointDsc which has a release branch).  
