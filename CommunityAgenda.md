@@ -2,18 +2,19 @@
 
 ## Releases
 ### Next Release
-- **09/21/16**  
-All changes should be merged by midnight on 09/20/16 (PDT).  
+- *11/02/16**  
+All changes should be merged by midnight on 11/01/16 (PST).  
 We will not hold the release for any pending pull requests.  
 All changes for the release must be merged into the ```dev``` branch before the release (except SharePointDsc which has a release branch).  
 Resource modules with a ```dev``` branch that is not passing tests will not be released.  
-Resource modules with open BLOCKER issues will not be released.  
+Resource modules with open issues labeled BLOCKING RELEASE will not be released.  
 Individual resource module hotfixes for urgent issues may be released on a case-by-case basis.  
 
 ### Latest Release
-- [08/10/16](https://blogs.msdn.microsoft.com/powershell/2016/08/10/dsc-resource-kit-august-release/)
+- [09/21/16](https://blogs.msdn.microsoft.com/powershell/2016/09/21/dsc-resource-kit-september-release/)
 
 ### Past Releases
+- [08/10/16](https://blogs.msdn.microsoft.com/powershell/2016/08/10/dsc-resource-kit-august-release/)
 - [06/29/16](https://blogs.msdn.microsoft.com/powershell/2016/06/29/dsc-resource-kit-june-release/)
 - [05/18/16](https://blogs.msdn.microsoft.com/powershell/2016/05/18/dsc-resource-kit-anniversary-release/)
 - [04/04/16](https://blogs.msdn.microsoft.com/powershell/2016/04/04/dsc-resource-kit-update/)
@@ -27,12 +28,13 @@ Individual resource module hotfixes for urgent issues may be released on a case-
 
 ## Community Calls
 ### Next Call
-- [09/15/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/09-15-16)
+TBD
 
 ### Latest Call
-- [08/03/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/08-03-16)
+- [09/15/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/09-15-16)
 
 ### Past Calls
+- [08/03/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/08-03-16)
 - [06/30/16 1-3PM PDT](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/06-30-16)
 
 
