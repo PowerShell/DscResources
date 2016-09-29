@@ -93,18 +93,16 @@ One useful pattern used when creating unit tests is to create variables that con
 These variables are often used many times over a single unit test file and so assigning each to a variable is essential to reduce the size of the unit test as well as improve readability and maintainability.
 For example:
 ```powershell
-$MockNetAdapter = [PSCustomObject] @{
-    return [PSCustomObject] @{
-        Name                    = 'Ethernet'
-        PhysicalMediaType = '802.3'
-        Status            = 'Up'
-    }
+$MockNetAdapter = @{
+    Name              = 'Ethernet'
+    PhysicalMediaType = '802.3'
+    Status            = 'Up'
 }
 
 # Create a mock
 Mock `
     -CommandName Get-NetAdapter `
-    -MockWith { $MockNetAdapter }
+    -MockWith { return $MockNetAdapter }
 ```
 
 However, when ```InModuleScope``` is being used the variables that are defined won't be accessible from within the mocked cmdlets.
@@ -112,12 +110,10 @@ The solution to this is create a script block variable that contains the mocked 
 
 ```powershell
 $GetNetAdapter_PhysicalNetAdapterMock = {
-    $MockNetAdapter = [PSCustomObject] @{
-        return [PSCustomObject] @{
-            Name              = 'Ethernet'
-            PhysicalMediaType = '802.3'
-            Status            = 'Up'
-         }
+    return [PSCustomObject] @{
+        Name              = 'Ethernet'
+        PhysicalMediaType = '802.3'
+        Status            = 'Up'
     }
 }
 
