@@ -15,7 +15,9 @@ Conference ID: 55064689
 [Help](http://go.microsoft.com/fwlink/?LinkId=389737)
 
 ## Agenda
-Topics or questions from the community are welcome at any point during the call.
+Topics or questions from the community are welcome at any point during the call!
 
 - PSDscResources
-- More TBD
+- New module review status
+- Priorities for high quality modules
+- Modules currently on track to be released on 11/02/2016 (**This will not be a definitive list and may be subject to change**)
