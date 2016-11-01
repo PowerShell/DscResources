@@ -769,9 +769,13 @@ function Write-Nothing
 
 ## Parameters
 ### Correct Format for Parameter Block
-An empty parameter block should be displayed on its own line like this: ```param ()```
-Otherwise, the opening and closing parentheses should each be on their own line.
-All text inside the parameter block should be indented once.
+
+- An empty parameter block should be displayed on its own line like this: `param ()`.
+- An non-empty parameter block should have the opening and closing parentheses on their own line.
+- All text inside the parameter block should be indented once.
+- Every parameter must include regardless if it actually requires decoration: `[Parameter()]`.
+- A parameter that is mandatory should contain this decoration: `[Parameter(Mandatory = $true)]`.
+- A parameter that is not mandatory should _not_ contain a `Mandatory` decoration in the `[Parameter()]`.
 
 **Bad**:
 ```powershell
@@ -798,6 +802,38 @@ function Write-Text
 }
 ```
 
+**Bad**:
+
+```PowerShell
+function Write-Text
+{
+    param
+    (
+        [Parameter(Mandatory)]
+        [ValidateNotNullOrEmpty()]
+        [String]
+        $Text
+
+        [Parameter(Mandatory = $false)]
+        [ValidateNotNullOrEmpty()]
+        [String]
+        $PrefixText
+
+        [Boolean]
+        $AsWarning = $false
+    )
+
+    if ($AsWarning)
+    {
+        Write-Warning -Message "$PrefixText - $Text"
+    }
+    else
+    {
+        Write-Verbose -Message "$PrefixText - $Text"
+    }
+}
+```
+
 **Good**:
 ```powershell
 function Write-Nothing
@@ -821,6 +857,39 @@ function Write-Text
     )
     
     Write-Verbose -Message $Text
+}
+```
+
+**Good**:
+
+```PowerShell
+function Write-Text
+{
+    param
+    (
+        [Parameter(Mandatory = true)]
+        [ValidateNotNullOrEmpty()]
+        [String]
+        $Text
+
+        [Parameter()]
+        [ValidateNotNullOrEmpty()]
+        [String]
+        $PrefixText
+
+        [Parameter()]
+        [Boolean]
+        $AsWarning = $false
+    )
+
+    if ($AsWarning)
+    {
+        Write-Warning -Message "$PrefixText - $Text"
+    }
+    else
+    {
+        Write-Verbose -Message "$PrefixText - $Text"
+    }
 }
 ```
 
