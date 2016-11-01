@@ -867,7 +867,7 @@ function Write-Text
 {
     param
     (
-        [Parameter(Mandatory = true)]
+        [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
         [String]
         $Text
