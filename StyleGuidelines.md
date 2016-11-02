@@ -773,7 +773,7 @@ function Write-Nothing
 - An empty parameter block should be displayed on its own line like this: `param ()`.
 - A non-empty parameter block should have the opening and closing parentheses on their own line.
 - All text inside the parameter block should be indented once.
-- Every parameter should include the `[Parameter()]` decoration regardless of whether it is actually used or not.
+- Every parameter should include the `[Parameter()]` attribute, regardless of whether the attribute requires decoration or not.
 - A parameter that is mandatory should contain this decoration: `[Parameter(Mandatory = $true)]`.
 - A parameter that is not mandatory should _not_ contain a `Mandatory` decoration in the `[Parameter()]`.
 
