@@ -174,3 +174,6 @@
 	path = dscresources/OfficeOnlineServerDsc
 
 	url = https://github.com/PowerShell/OfficeOnlineServerDsc
+[submodule "PSDscResources"]
+	path = PSDscResources
+	url = https://github.com/PowerShell/PSDscResources
