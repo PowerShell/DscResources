@@ -19,20 +19,20 @@ They have [write access](https://help.github.com/articles/permission-levels-for-
 
 If you are maintainer, please follow these rules:
 
+1. **DO** ensure that each contributor has signed a valid Contributor License Agreement (CLA).
 1. **DO** reply to new issues and pull requests (while reviewing PRs, leave your comment even if everything looks good - simple "Looks good to me" or "LGTM" will suffice, so that we know someone has already taken a look at it).
 1. **DO** make sure contributors are following the [contributor guidelines](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md).
 1. **DO** ask people to resend a pull request, if it targets [the wrong branch](CONTRIBUTING.md#lifecycle-of-a-pull-request).
-1. **DO** encourage people to write Pester tests for all new/changed functionality.
+1. **DO** require people to write Pester tests for all new/changed functionality.
 1. **DO** wait for the [CI system](CONTRIBUTING.md#appveyor) build to pass for pull requests.
 1. **DO** encourage contributors to refer to issues in PR title/description (e.g. ```Closes #11```). Edit title if necessary.
 1. **DO** encourage contributors to create meaningful titles for all PRs. Edit title if necessary.
 1. **DO** verify that all contributors are following the [style guidelines](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md).
-1. **DO** ensure that each contributor has signed a valid Contributor License Agreement (CLA).
 1. **DO** verify compliance with any third party code license terms (e.g., requiring attribution, etc.) if the contribution contains third party code.
 
+1. **DON'T** merge pull requests without the label `cla-signed` or `cla-not-required` from the Microsoft CLA bot.
 1. **DON'T** merge pull requests to **master** branch.
 1. **DON'T** merge pull requests with a failed CI build.
-1. **DON'T** merge pull requests without the label `cla-signed` or `cla-not-required` from the Microsoft CLA bot.
 1. **DON'T** merge pull requests that do not [include all meaningful changes](CONTRIBUTING.md#lifecycle-of-a-pull-request) under the **Unreleased** section in the repository's `README.md`.
 1. **DON'T** merge your own pull requests before they are reviewed by someone else.
   - If there is **no one** else to review your pull request, please wait **24** hours to merge it in case anyone comes along and has a comment.
