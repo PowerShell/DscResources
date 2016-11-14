@@ -42,6 +42,7 @@ In order to provide clean and consistent code, please follow the style guideline
 - [Best Practices](#best-practices)
     - [Named Parameters Instead of Positional Parameters](#named-parameters-instead-of-positional-parameters)
     - [No Cmdlet Aliases](#no-cmdlet-aliases)
+    - [No backslash in paths](#no-backslash-in-paths)
 
 ## Markdown Files
 If a paragraph includes more than one sentence, end each sentence with a newline.
@@ -1156,4 +1157,22 @@ ls -File $root -Recurse | ? { @('.gitignore', '.mof') -contains $_.Extension }
 **Good** 
 ```Powershell
 Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -contains $_.Extension } 
+```
+
+### No backslash in paths
+
+To support resources to be used cross-platform no backslashes can be used in paths. Instead `Join-Path` and `Split-Path` should be used to build a path.
+
+#### Bad
+
+```PowerShell
+$currentPath = Split-Path -Parent $MyInvocation.MyCommand.Path
+Import-Module -Name "$currentPath\..\..\CommonResourceHelper.psm1"
+```
+
+#### Good
+
+```PowerShell
+$currentPath = Split-Path -Path $MyInvocation.MyCommand.Path -Parent
+Import-Module -Name (Join-Path -Path (Split-Path -Path (Split-Path -Path $PSScriptRoot -Parent) -Parent) -ChildPath 'CommonResourceHelper.psm1')
 ```
