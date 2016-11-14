@@ -1,19 +1,87 @@
 # DSC Resource Kit Maintainers
 
-Maintainers (a.k.a. coordinators) are trusted people with knowledge in a resouce module domain.
+Maintainers are trusted contributors with knowledge in a resouce module domain who have [write access](https://help.github.com/articles/permission-levels-for-an-organization-repository/) to one or more DSC Resource Kit repositories.
 
-They have [write access](https://help.github.com/articles/permission-levels-for-an-organization-repository/) to one or more DSC Resource Kit repositories which gives them the power to:
+Maintainers have the power to:
 
 1. `push`.
 2. Merge pull requests.
 3. Assign labels, milestones and people to [issues](https://guides.github.com/features/issues/).
 
 ## Table of Contents
+- [Current Maintainers](#current-maintainers)
 - [Rules](#rules)
 - [Issue Workflow](#issue-workflow)
 - [Pull Request Workflow](#pull-request-workflow)
   - [Abandoned Pull Requests](#abandoned-pull-requests)
 - [Breaking Changes](#breaking-changes)
+
+## Current Maintainers
+
+If you should be on this list but are not, please tag [@kwirkykat](https://github.com/kwirkykat) in an issue or send [@katiedsc](https://twitter.com/katiedsc) a private message on Twitter.
+
+All repositories without dedicated maintainers are maintained by the current DSC Resource Kit owners, Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
+
+| Repository | Maintainer(s) |
+| ---------- | ------------- |
+| AuditPolicyDsc | Adam Haynes ([@athaynes](https://github.com/athaynes)) |
+| DscResources | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
+| DscResource.Tests | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) |
+| OfficeOnlineServerDsc | Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) |
+| PSDscResources | Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) <br/> Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
+| SharePointDsc | Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) |
+| SystemLocaleDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| xActiveDirectory | --- |
+| xAdcsDeployment | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| xAzure | --- |
+| xAzurePack | --- |
+| xBitlocker | --- |
+| xCertificate | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| xChrome | --- |
+| xComputerManagement | --- |
+| xCredSSP | --- |
+| xDatabase | --- |
+| xDFS | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| xDhcpServer | --- |
+| xDismFeature | --- |
+| xDnsServer | --- |
+| xDscDiagnostics | --- |
+| xDSCResourceDesigner | --- |
+| xExchange | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) |
+| xFailOverCluster | --- |
+| xFirefox | --- |
+| xHyper-V | --- |
+| xInternetExplorerHomePage | --- |
+| xJea | --- |
+| xMySql | --- |
+| xNetworking | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| xPendingReboot | --- |
+| xPhp | --- |
+| xPowerShellExecutionPolicy | --- |
+| xPSDesiredStateConfiguration | Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) <br/> Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
+| xRemoteDesktopAdmin | --- |
+| xRemoteDesktopSessionHost | --- |
+| xRobocopy | --- |
+| xSafeHarbor | --- |
+| xSCDPM | --- |
+| xSCOM | --- |
+| xSCSMA | --- |
+| xSCSPF | --- |
+| xSCSR | --- |
+| xSCVMM | --- |
+| xSmbShare | --- |
+| xSqlPs | --- |
+| xSQLServer | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
+| xStorage | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| xSystemSecurity | --- |
+| xTimeZone | --- |
+| xWebAdministration | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) |
+| xWebDeploy | --- |
+| xWindowsEventForwarding | --- |
+| xWindowsRestore | --- |
+| xWindowsUpdate | --- |
+| xWinEventLog | --- |
+| xWordPress | --- |
 
 ## Rules
 
@@ -41,10 +109,11 @@ If you are maintainer, please follow these rules:
 
 1. Someone creates an issue.
 1. A maintainer assigns one of the following labels: ```bug```, ```enhancement```, ```discussion```, ```question```
-  1. In some cases, other special labels may be used (e.g. ```new module``` for issues requesting new DSC resource modules in the DscResources repository)
+  1. In some cases, other special labels may be used (e.g. ```module proposal``` for issues requesting new DSC resource modules in the DscResources repository)
   1. If the issue is a duplicate of another issue, the maintainer adds the ```duplicate``` label, references the issue this one is a duplicate of, and closes the issue.
-  1. If for some reason an issue should not be fixed, the maintainer adds the ```wontfix``` label, comments with an explaination of why the issue will not be fixed, and closes the issue.
-1. A maintainer assigns the ```help wanted``` label to let contributors know this issue needs someone to work on it
+  1. If the issue is external to your module, the maintainer adds the ```external``` label, comments with an explaination of why the issue will not be fixed, and closes the issue.
+  1. If for some other reason an issue should not be fixed, the maintainer adds the ```notfixed``` label, comments with an explaination of why the issue will not be fixed, and closes the issue.
+1. A maintainer assigns the ```help wanted``` label to let contributors know this issue needs someone else to look at it
 1. Once a contributor volunteers to work on the issue, the maintainer removes the ```help wanted``` label, adds the ```in progress``` label, and assigns the issue to the volunteer.
 1. Once issue is fixed, the maintainer removes the ```in progress``` label and closes the issue.
 
@@ -87,5 +156,3 @@ Upon release, the version of a module with a breaking change will be updated as 
 * Modules that still have the x... naming are incremented by a full version number if there is a breaking change (2.2.0.0 --> 3.0.0.0). All of these modules are still considered to be in the 'preview' or 'experimental' phase.
 * Modules that have the ...Dsc naming but are still in the 'preview' phase (prior to 1.0.0.0) are incremented only by a sub-version regardless of breaking changes until they are ready to come out of preview (0.3.0.0 --> 0.4.0.0).
 * Modules that have the ...Dsc naming and are out of the 'preview' phase (1.0.0.0 and after) are incremented by a full version number (2.2.0.0 --> 3.0.0.0).
-  
-
