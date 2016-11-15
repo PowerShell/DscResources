@@ -42,7 +42,7 @@ In order to provide clean and consistent code, please follow the style guideline
 - [Best Practices](#best-practices)
   - [Named Parameters Instead of Positional Parameters](#named-parameters-instead-of-positional-parameters)
   - [No Cmdlet Aliases](#no-cmdlet-aliases)
-  - [No backslash in paths](#no-backslash-in-paths)
+  - [No Backslash in Paths](#no-backslash-in-paths)
 
 ## Markdown Files
 
@@ -1276,9 +1276,9 @@ ls -File $root -Recurse | ? { @('.gitignore', '.mof') -contains $_.Extension }
 Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -contains $_.Extension }
 ```
 
-### No backslash in paths
+### No Backslash in Paths
 
-To support resources to be used cross-platform no backslashes can be used in paths. Instead `Join-Path` and `Split-Path` should be used to build a path.
+To support the possibility of cross-platform use in the future, backslashes should not be used within a path. Instead `Join-Path` and `Split-Path` should be used to build a path.
 
 **Bad:**
 
@@ -1291,5 +1291,7 @@ Import-Module -Name "$currentPath\..\..\CommonResourceHelper.psm1"
 
 ```PowerShell
 $currentPath = Split-Path -Path $MyInvocation.MyCommand.Path -Parent
-Import-Module -Name (Join-Path -Path (Split-Path -Path (Split-Path -Path $currentPath -Parent) -Parent) -ChildPath 'CommonResourceHelper.psm1')
+$modulePath = (Join-Path -Path (Split-Path -Path (Split-Path -Path $currentPath -Parent) -Parent) `
+                         -ChildPath 'CommonResourceHelper.psm1')
+Import-Module -Name $modulePath
 ```
