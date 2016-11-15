@@ -88,7 +88,7 @@ All repositories without dedicated maintainers are maintained by the current DSC
 If you are maintainer, please follow these rules:
 
 1. **DO** ensure that each contributor has signed a valid Contributor License Agreement (CLA).
-1. **DO** reply to new issues and pull requests (while reviewing PRs, leave your comment even if everything looks good - simple "Looks good to me" or "LGTM" will suffice, so that we know someone has already taken a look at it).
+1. **DO** reply to new issues and pull requests (after you finish reviewing and everything looks good to you, leave a comment like "Looks good to me" or "LGTM" so we know that someone has looked at it and approved it).
 1. **DO** make sure contributors are following the [contributor guidelines](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md).
 1. **DO** ask people to resend a pull request, if it targets [the wrong branch](CONTRIBUTING.md#lifecycle-of-a-pull-request).
 1. **DO** require people to write Pester tests for all new/changed functionality.
