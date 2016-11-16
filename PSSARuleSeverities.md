@@ -29,7 +29,6 @@ They are not allowed to be suppressed.
 | [PSDSCUseIdenticalParametersForDSC](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/RuleDocumentation/UseIdenticalParametersDSC.md) | Error | Required for the resource to work. |
 | PSMisleadingBacktick | Warning | Extra backticks are not neccessary and indicate that the code is not clean. |
 | [PSMissingModuleManifestField](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/RuleDocumentation/MissingModuleManifestField.md) | Warning | All manifests should stay updated with the correct manifest fields. |
-| [PSShouldProcess](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/RuleDocumentation/UseShouldProcessCorrectly.md) | Warning | If you are using ShouldProcess, it should be used correctly. |
 | [PSPossibleIncorrectComparisonWithNull](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/RuleDocumentation/PossibleIncorrectComparisonWithNull.md) | Warning | $null should *always* be on the left side of comparisons in PowerShell in case the item you are comparing $null against is an array, may be an array in the future, or turns into an array due to an error. |
 | [PSProvideCommentHelp](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/RuleDocumentation/ProvideCommentHelp.md) | Info | All exported functions should be documented with comment help. |
 | [PSReservedCmdletChar](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/RuleDocumentation/AvoidReservedCharInCmdlet.md) | Warning | This indicates that the code won't run. |
@@ -47,6 +46,7 @@ DSC Resources *should* pass these rules, but there are cases where these rules a
 | [PSAvoidUsingConvertToSecureStringWithPlainText](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/RuleDocumentation/AvoidUsingConvertToSecureStringWithPlainText.md) | Error | <ul><li> Some resources may have outside dependencies that require conversion with plaintext. </li></ul> |
 | [PSAvoidUsingPlainTextForPassword](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/RuleDocumentation/AvoidUsingPlainTextForPassword.md) | Warning | <ul><li> Some resources may have outside dependencies that require insecure plaintext passwords. </li></ul> |
 | PSDSCUseVerboseMessageInDSCResource | Info | <ul><li> A helper function is called which in turn calls Write-Verbose. </li></ul> |
+| [PSShouldProcess](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/RuleDocumentation/UseShouldProcessCorrectly.md) | Warning | <ul><li> A helper function is called which in turn calls ShouldProcess. </li></ul> |
 | [PSUseDeclaredVarsMoreThanAssigments](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/RuleDocumentation/UseDeclaredVarsMoreThanAssignments.md) | Warning | <ul><li> The variable is used on the same line as its assignment. </li><li> The variable is an approved global or environment variable. </li></ul> |
 | [PSUsePSCredentialType](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/RuleDocumentation/UsePSCredentialType.md) | Warning | <ul><li> Some resources may have outside dependencies that require string credentials. </li></ul> |
 
