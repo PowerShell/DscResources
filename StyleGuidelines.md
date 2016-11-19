@@ -64,19 +64,19 @@ No abbreviations should be used.
 
 **Bad:**
 
-```PowerShell
+```powershell
 $r = Get-RdsHost
 ```
 
 **Bad:**
 
-```PowerShell
+```powershell
 $frtytw = 42
 ```
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-Thing
 {
     ...
@@ -85,7 +85,7 @@ function Get-Thing
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Set-ServerName
 {
     param
@@ -98,19 +98,19 @@ function Set-ServerName
 
 **Good:**
 
-```PowerShell
+```powershell
 $remoteDesktopSessionHost = Get-RemoteDesktopSessionHost
 ```
 
 **Good:**
 
-```PowerShell
+```powershell
 $fileCharacterLimit = 42
 ```
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-ArchiveFileHandle
 {
     ...
@@ -119,7 +119,7 @@ function Get-ArchiveFileHandle
 
 **Good:**
 
-```PowerShell
+```powershell
 function Set-ServerName
 {
     param
@@ -136,7 +136,7 @@ function Set-ServerName
 When calling a function with many long parameters, use parameter splatting.
 More help on splatting can be found using the command:
 
-```PowerShell
+```powershell
 Get-Help -Name 'About_Splatting'
 ```
 
@@ -144,13 +144,13 @@ Make sure hashtable parameters are still properly formatted with multiple lines 
 
 **Bad:**
 
-```PowerShell
+```powershell
 $superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtableParameter @{ MySuperLongKey1 = 'MySuperLongValue1'; MySuperLongKey2 = 'MySuperLongValue2' } -MySuperLongStringParameter '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890' -Verbose
 ```
 
 **Good:**
 
-```PowerShell
+```powershell
 $getMySuperLongVariablePleaseParams = @{
     MySuperLongHashtableParameter = @{
         mySuperLongKey1 = 'MySuperLongValue1'
@@ -172,7 +172,7 @@ Hashtables should not be declared inside an array.
 
 **Bad:**
 
-```PowerShell
+```powershell
 $array = @( 'one', `
 'two', `
 'three'
@@ -181,7 +181,7 @@ $array = @( 'one', `
 
 **Good:**
 
-```PowerShell
+```powershell
 $hashtable = @{
     Key = "Value"
 }
@@ -196,13 +196,13 @@ Each property should be on its own line indented once.
 
 **Bad:**
 
-```PowerShell
+```powershell
 $hashtable = @{Key1 = 'Value1';Key2 = 2;Key3 = '3'}
 ```
 
 **Bad:**
 
-```PowerShell
+```powershell
 $hashtable = @{ Key1 = 'Value1'
 Key2 = 2
 Key3 = '3' }
@@ -210,7 +210,7 @@ Key3 = '3' }
 
 **Good:**
 
-```PowerShell
+```powershell
 $hashtable = @{
     Key1 = 'Value1'
     Key2 = 2
@@ -220,7 +220,7 @@ $hashtable = @{
 
 **Good:**
 
-```PowerShell
+```powershell
 $hashtable = @{
     Key1 = 'Value1'
     Key2 = 2
@@ -248,7 +248,7 @@ Formatting help-comments for functions has a few more specific rules that can be
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-MyVariable
 {#this is a bad comment
     [CmdletBinding()]
@@ -263,7 +263,7 @@ function Get-MyVariable
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-MyVariable
 {
     [CmdletBinding()]
@@ -281,7 +281,7 @@ function Get-MyVariable
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-MyVariable
 {
     # This is a good comment
@@ -299,7 +299,7 @@ function Get-MyVariable
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-MyVariable
 {
     [CmdletBinding()]
@@ -342,7 +342,7 @@ Code should not contain more than two consecutive newlines unless they are conta
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-MyValue
 {
     Write-Verbose -Message 'Getting MyValue'
@@ -354,7 +354,7 @@ function Get-MyValue
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-MyValue
 {
     Write-Verbose -Message 'Getting MyValue'
@@ -371,7 +371,7 @@ function Write-Log
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-MyValue
 {
     Write-Verbose -Message 'Getting MyValue'
@@ -381,7 +381,7 @@ function Get-MyValue
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-MyValue
 {
     Write-Verbose -Message 'Getting MyValue'
@@ -400,7 +400,7 @@ Each curly brace should be preceded by a newline unless assigning to a variable.
 
 **Bad:**
 
-```PowerShell
+```powershell
 if ($booleanValue) {
     Write-Verbose -Message "Boolean is $booleanValue"
 }
@@ -408,7 +408,7 @@ if ($booleanValue) {
 
 **Good:**
 
-```PowerShell
+```powershell
 if ($booleanValue)
 {
     Write-Verbose -Message "Boolean is $booleanValue"
@@ -419,7 +419,7 @@ When assigning to a variable, opening curly braces should be on the same line as
 
 **Bad:**
 
-```PowerShell
+```powershell
 $scriptBlockVariable =
 {
     Write-Verbose -Message 'Executing script block'
@@ -428,7 +428,7 @@ $scriptBlockVariable =
 
 **Bad:**
 
-```PowerShell
+```powershell
 $hashtableVariable =
 @{
     Key1 = 'Value1'
@@ -438,7 +438,7 @@ $hashtableVariable =
 
 **Good:**
 
-```PowerShell
+```powershell
 $scriptBlockVariable = {
     Write-Verbose -Message 'Executing script block'
 }
@@ -446,7 +446,7 @@ $scriptBlockVariable = {
 
 **Good:**
 
-```PowerShell
+```powershell
 $hashtableVariable = @{
     Key1 = 'Value1'
     Key2 = 'Value2'
@@ -459,7 +459,7 @@ Each opening curly brace should be followed by only one newline.
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-MyValue
 {
 
@@ -471,7 +471,7 @@ function Get-MyValue
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-MyValue
 { Write-Verbose -Message 'Getting MyValue'
 
@@ -481,7 +481,7 @@ function Get-MyValue
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-MyValue
 {
     Write-Verbose -Message 'Getting MyValue'
@@ -496,7 +496,7 @@ If the closing brace is followed by another closing brace or continues a conditi
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-MyValue
 {
     Write-Verbose -Message 'Getting MyValue'
@@ -506,7 +506,7 @@ function Get-MyValue
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-MyValue
 { Write-Verbose -Message 'Getting MyValue'
 
@@ -526,7 +526,7 @@ Get-MyValue
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-MyValue
 {
     Write-Verbose -Message 'Getting MyValue'
@@ -550,7 +550,7 @@ If you must declare a variable type, type declarations should be separated from 
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     [CmdletBinding()]
@@ -562,7 +562,7 @@ function Get-TargetResource
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     [CmdletBinding()]
@@ -578,7 +578,7 @@ There should be one blank space on either side of all operators.
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     [CmdletBinding()]
@@ -590,7 +590,7 @@ function Get-TargetResource
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     [CmdletBinding()]
@@ -605,7 +605,7 @@ function Get-TargetResource
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     [CmdletBinding()]
@@ -617,7 +617,7 @@ function Get-TargetResource
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     [CmdletBinding()]
@@ -636,7 +636,7 @@ If a keyword is followed by a parenthesis, there should be single space between 
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     [CmdletBinding()]
@@ -656,7 +656,7 @@ function Get-TargetResource
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     [CmdletBinding()]
@@ -682,7 +682,7 @@ Function names must use PascalCase.
 
 **Bad:**
 
-```PowerShell
+```powershell
 function get-targetresource
 {
     # ...
@@ -691,7 +691,7 @@ function get-targetresource
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     # ...
@@ -704,7 +704,7 @@ All function names must follow the standard PowerShell Verb-Noun format.
 
 **Bad:**
 
-```PowerShell
+```powershell
 function TargetResourceGetter
 {
     # ...
@@ -713,7 +713,7 @@ function TargetResourceGetter
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     # ...
@@ -726,7 +726,7 @@ All function names must use [approved verbs](https://msdn.microsoft.com/en-us/li
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Normalize-String
 {
     # ...
@@ -735,7 +735,7 @@ function Normalize-String
 
 **Good:**
 
-```PowerShell
+```powershell
 function ConvertTo-NormalizedString
 {
     # ...
@@ -749,7 +749,7 @@ Comment-help should include at least the SYNOPSIS section and a PARAMETER sectio
 
 **Bad:**
 
-```PowerShell
+```powershell
 # Creates an event
 function New-Event
 {
@@ -771,7 +771,7 @@ function New-Event
 
 **Good:**
 
-```PowerShell
+```powershell
 <#
     .SYNOPSIS
         Creates an event
@@ -811,7 +811,7 @@ Functions with no parameters should still display an empty parameter block.
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Write-Text([Parameter(Mandatory = $true)][ValidateNotNullOrEmpty()][String]$Text)
 {
     Write-Verbose -Message $Text
@@ -820,7 +820,7 @@ function Write-Text([Parameter(Mandatory = $true)][ValidateNotNullOrEmpty()][Str
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Write-Nothing
 {
     Write-Verbose -Message 'Nothing'
@@ -829,7 +829,7 @@ function Write-Nothing
 
 **Good:**
 
-```PowerShell
+```powershell
 function Write-Text
 {
     param
@@ -846,7 +846,7 @@ function Write-Text
 
 **Good:**
 
-```PowerShell
+```powershell
 function Write-Nothing
 {
     param ()
@@ -868,7 +868,7 @@ function Write-Nothing
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Write-Nothing
 {
     param
@@ -882,7 +882,7 @@ function Write-Nothing
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Write-Text
 {
     param([Parameter(Mandatory = $true)]
@@ -895,7 +895,7 @@ function Write-Text
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Write-Text
 {
     param
@@ -927,7 +927,7 @@ function Write-Text
 
 **Good:**
 
-```PowerShell
+```powershell
 function Write-Nothing
 {
     param ()
@@ -938,7 +938,7 @@ function Write-Nothing
 
 **Good:**
 
-```PowerShell
+```powershell
 function Write-Text
 {
     param
@@ -955,7 +955,7 @@ function Write-Text
 
 **Good:**
 
-```PowerShell
+```powershell
 function Write-Text
 {
     param
@@ -992,7 +992,7 @@ All parameters must use PascalCase.
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     [CmdletBinding()]
@@ -1005,7 +1005,7 @@ function Get-TargetResource
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     [CmdletBinding()]
@@ -1018,7 +1018,7 @@ function Get-TargetResource
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     [CmdletBinding()]
@@ -1036,7 +1036,7 @@ Parameters must be separated by a single, blank line.
 
 **Bad:**
 
-```PowerShell
+```powershell
 function New-Event
 {
     param
@@ -1054,7 +1054,7 @@ function New-Event
 
 **Good:**
 
-```PowerShell
+```powershell
 function New-Event
 {
     param
@@ -1079,7 +1079,7 @@ If an attribute needs to follow the type, it should also have its own line betwe
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     [CmdletBinding()]
@@ -1092,7 +1092,7 @@ function Get-TargetResource
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     [CmdletBinding()]
@@ -1107,7 +1107,7 @@ function Get-TargetResource
 
 **Good:**
 
-```PowerShell
+```powershell
 function Get-TargetResource
 {
     [CmdletBinding()]
@@ -1123,7 +1123,7 @@ function Get-TargetResource
 
 **Good:**
 
-```PowerShell
+```powershell
 function New-Event
 {
     param
@@ -1148,7 +1148,7 @@ All attributes should go above the parameter type, except those that *must* be b
 
 **Bad:**
 
-```PowerShell
+```powershell
 function New-Event
 {
     param
@@ -1164,7 +1164,7 @@ function New-Event
 
 **Good:**
 
-```PowerShell
+```powershell
 function New-Event
 {
     param
@@ -1190,7 +1190,7 @@ Variable names should use camelCase.
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Write-Log
 {
     $VerboseMessage = 'New log message'
@@ -1200,7 +1200,7 @@ function Write-Log
 
 **Bad:**
 
-```PowerShell
+```powershell
 function Write-Log
 {
     $verbosemessage = 'New log message'
@@ -1210,7 +1210,7 @@ function Write-Log
 
 **Good:**
 
-```PowerShell
+```powershell
 function Write-Log
 {
     $verboseMessage = 'New log message'
@@ -1226,7 +1226,7 @@ Script and global variable names following the scope should use camelCase.
 
 **Bad:**
 
-```PowerShell
+```powershell
 $fileCount = 0
 $GLOBAL:MYRESOURCENAME = 'MyResource'
 
@@ -1239,7 +1239,7 @@ function New-File
 
 **Good:**
 
-```PowerShell
+```powershell
 $script:fileCount = 0
 $global:myResourceName = 'MyResource'
 
@@ -1258,13 +1258,13 @@ Call cmdlets using named parameters instead of positional parameters.
 
 **Bad:**
 
-```PowerShell
+```powershell
 Get-ChildItem C:\Documents *.md
 ```
 
 **Good:**
 
-```PowerShell
+```powershell
 Get-ChildItem -Path C:\Documents -Filter *.md
 ```
 
@@ -1275,13 +1275,13 @@ You can get the full command an alias is using by calling ```Get-Alias```.
 
 **Bad:**
 
-```PowerShell
+```powershell
 ls -File $root -Recurse | ? { @('.gitignore', '.mof') -contains $_.Extension }
 ```
 
 **Good:**
 
-```Powershell
+```powershell
 Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -contains $_.Extension }
 ```
 
@@ -1291,14 +1291,14 @@ To support the possibility of cross-platform use in the future, backslashes shou
 
 **Bad:**
 
-```PowerShell
+```powershell
 $currentPath = Split-Path -Parent $MyInvocation.MyCommand.Path
 Import-Module -Name "$currentPath\..\..\CommonResourceHelper.psm1"
 ```
 
 **Good:**
 
-```PowerShell
+```powershell
 $currentPath = Split-Path -Path $MyInvocation.MyCommand.Path -Parent
 $modulePath = (Join-Path -Path (Split-Path -Path (Split-Path -Path $currentPath -Parent) -Parent) `
                          -ChildPath 'CommonResourceHelper.psm1')
