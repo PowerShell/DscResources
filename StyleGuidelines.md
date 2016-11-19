@@ -124,6 +124,7 @@ function Set-ServerName
 {
     param
     (
+        [Parameter()]
         $myServerToUse
     )
     ...
@@ -759,6 +760,7 @@ function New-Event
         [String]
         $Message,
 
+        [Parameter()]
         [ValidateSet('operational', 'debug', 'analytic')]
         [String]
         $Channel = 'operational'
@@ -792,6 +794,7 @@ function New-Event
         [String]
         $Message,
 
+        [Parameter()]
         [ValidateSet('operational', 'debug', 'analytic')]
         [String]
         $Channel = 'operational'
@@ -1021,6 +1024,7 @@ function Get-TargetResource
     [CmdletBinding()]
     param
     (
+        [Parameter()]
         $SourcePath
     )
 }
@@ -1060,6 +1064,7 @@ function New-Event
         [String]
         $Message,
 
+        [Parameter()]
         [ValidateSet('operational', 'debug', 'analytic')]
         [String]
         $Channel = 'operational'
@@ -1093,6 +1098,7 @@ function Get-TargetResource
     [CmdletBinding()]
     param
     (
+        [Parameter()]
         [String]
         $SourcePath = 'c:\'
     )
@@ -1107,6 +1113,7 @@ function Get-TargetResource
     [CmdletBinding()]
     param
     (
+        [Parameter()]
         [PSCredential]
         [Credential()]
         $MyCredential
@@ -1126,6 +1133,7 @@ function New-Event
         [String]
         $Message,
 
+        [Parameter()]
         [ValidateSet('operational', 'debug', 'analytic')]
         [String]
         $Channel = 'operational'
@@ -1166,6 +1174,7 @@ function New-Event
         [String]
         $Message,
 
+        [Parameter()]
         [ValidateSet('operational', 'debug', 'analytic')]
         [String]
         $Channel = 'operational'
