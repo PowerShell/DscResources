@@ -506,6 +506,196 @@ function Get-MyBoolean
 
 ```
 
+### Get-TargetResource should not contain unused non-mandatory parameters
+
+**Bad:**
+
+```powershell
+<#
+    .SYNOPSIS
+        Returns the current state of the feature.
+
+    .PARAMETER Name
+        The feature for which to return the state for.
+
+    .PARAMETER ServerName
+        The server name on which the feature is installed.
+
+    .PARAMETER Ensure
+        The desired state of the feature.
+#>
+function Get-TargetResource
+{
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [System.String]
+        $Name,
+
+        [Parameter(Mandatory = $true)]
+        [System.String]
+        $ServerName,
+
+        [Parameter()]
+        [System.String]
+        $Ensure
+    )
+
+    Write-Verbose -Message ('{0} for {1}' -f $Name, $ServerName)
+
+    if( $Name )
+    {
+        $feature = 'Enabled'
+    }
+
+    return @{
+        Name = $Name
+        Servername = $ServerName
+        Feeature = $feature
+    }
+}
+```
+
+**Good:**
+
+```powershell
+<#
+    .SYNOPSIS
+        Returns the current state of the feature.
+
+    .PARAMETER Name
+        The feature for which to return the state for.
+
+    .PARAMETER ServerName
+        The server name on which the feature is installed.
+#>
+function Get-TargetResource
+{
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [System.String]
+        $Name,
+
+        [Parameter(Mandatory = $true)]
+        [System.String]
+        $ServerName
+    )
+
+    Write-Verbose -Message ('{0} for {1}' -f $Name, $ServerName)
+
+    if( $Name )
+    {
+        $feature = 'Yes'
+    }
+
+    return @{
+        Name = $Name
+        Servername = $ServerName
+        Feeature = $feature
+    }
+}
+```
+
+### Get-TargetResource with unused mandatory parameters should include "Not used in Get-TargetResource" in the comment-based help parameter description
+
+**Bad:**
+
+```powershell
+<#
+    .SYNOPSIS
+        Returns the current state of the feature.
+
+    .PARAMETER Name
+        The feature for which to return the state for.
+
+    .PARAMETER ServerName
+        The server name on which the feature is installed.
+
+    .PARAMETER Ensure
+        The desired state of the feature.
+#>
+function Get-TargetResource
+{
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [System.String]
+        $Name,
+
+        [Parameter(Mandatory = $true)]
+        [System.String]
+        $ServerName,
+
+        [Parameter(Mandatory = $true)]
+        [System.String]
+        $Ensure
+    )
+
+    Write-Verbose -Message ('{0} for {1}' -f $Name, $ServerName)
+
+    if( $Name )
+    {
+        $feature = 'Yes'
+    }
+
+    return @{
+        Name = $Name
+        Servername = $ServerName
+        Feeature = $feature
+    }
+}
+```
+
+**Good:**
+
+```powershell
+<#
+    .SYNOPSIS
+        Returns the current state of the feature.
+
+    .PARAMETER Name
+        The feature for which to return the state for.
+
+    .PARAMETER ServerName
+        The server name on which the feature is installed.
+
+    .PARAMETER Ensure
+        The desired state of the feature.
+        Not used in Get-TargetResource
+#>
+function Get-TargetResource
+{
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [System.String]
+        $Name,
+
+        [Parameter(Mandatory = $true)]
+        [System.String]
+        $ServerName,
+
+        [Parameter(Mandatory = $true)]
+        [System.String]
+        $Ensure
+    )
+
+    Write-Verbose -Message ('{0} for {1}' -f $Name, $ServerName)
+
+    if( $Name )
+    {
+        $feature = 'Yes'
+    }
+
+    return @{
+        Name = $Name
+        Servername = $ServerName
+        Feeature = $feature
+    }
+}
+```
+
 ### Use Identical Parameters for Set-TargetResource and Test-TargetResource
 
 **Bad:**
