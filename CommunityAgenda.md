@@ -29,7 +29,7 @@ Individual resource module hotfixes for urgent issues may be released on a case-
 
 ## Community Calls
 ### Next Call
-- [12/07/16 1-2PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/12-07-16)
+- [12/07/16 9-9:30AM and 4-4:30PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/12-07-16)
 
 ### Latest Call
 - [10/26/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/10-26-16)
