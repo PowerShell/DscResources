@@ -46,8 +46,8 @@ try
         #region DEFAULT TESTS
         It 'Should compile and apply the MOF without throwing' {
             {
-                & "$($script:DSCResourceName)_Config" -OutputPath $TestEnvironment.WorkingFolder
-                Start-DscConfiguration -Path $TestEnvironment.WorkingFolder `
+                & "$($script:DSCResourceName)_Config" -OutputPath $TestDrive
+                Start-DscConfiguration -Path $TestDrive `
                     -ComputerName localhost -Wait -Verbose -Force
             } | Should not throw
         }
