@@ -44,7 +44,10 @@ Participants using the Join by Phone option must dial the full number for call a
 Topics or questions from the community are welcome at any point during the call!
 
 - New resource module: AuditPolicyDsc
-- New maintainers!
+- New maintainers
+  - Johan Ljunggren (xSqlServer)
+  - Daniel Scott-Raynsford (xAdcsDeployment, xCertificate, xNetworking, xStorage)
 - Updates to the common tests
 - Modules currently on track to be released on 12/14/2016 (**This will not be a definitive list and may be subject to change**)
-- More TBD
+- Status of PSDscResources
+- New module submission status
