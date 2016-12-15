@@ -177,3 +177,6 @@
 [submodule "dscresources/PSDscResources"]
 	path = dscresources/PSDscResources
 	url = https://github.com/PowerShell/PSDscResources
+[submodule "DscResources/AuditPolicyDsc"]
+	path = DscResources/AuditPolicyDsc
+	url = https://github.com/PowerShell/AuditPolicyDsc
