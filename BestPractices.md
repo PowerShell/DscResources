@@ -38,7 +38,7 @@
   - [Avoid Returning Anything From Set-TargetResource](#avoid-returning-anything-from-set-targetresource)
   - [Define Get-TargetResource, Set-TargetResource, and Test-TargetResource for Every DSC Resource](#define-get-targetresource,-set-targetresource,-and-test-targetresource-for-every-dsc-resource)
   - [Get-TargetResource should not contain unused non-mandatory parameters](#get-targetresource-should-not-contain-unused-non-mandatory-parameters)
-  - [Get-TargetResource with unused mandatory parameters should include "Not used in Get-TargetResource" in the comment-based help parameter description](#get-targetresource-with-unused-mandatory-parameters-should-include-"not-used-in-get-targetresource"-in-the-comment-based-help-parameter-description)
+  - [Any unused parameters that must be included in a function definition should include 'Not used in <function_name>' in the help comment for that parameter in the comment-based help](#any-unused-parameters-that-must-be-included-in-a-function-definition-should-include-'not-used-in-<function_name>'-in-the-help-comment-for-that-parameter-in-the-comment-based-help)
   - [Use Identical Parameters for Set-TargetResource and Test-TargetResource](#use-identical-parameters-for-set-targetresource-and-test-targetresource)
   - [Use Write-Verbose At Least Once in Get-TargetResource, Set-TargetResource, and Test-TargetResource](#use-write-verbose-at-least-once-in-get-targetresource,-set-targetresource,-and-test-targetresource)
   - [Use *-TargetResource for Exporting DSC Resource Functions](#use-*-targetresource-for-exporting-dsc-resource-functions)
@@ -623,11 +623,13 @@ function Get-MyBoolean
 
 ### Get-TargetResource should not contain unused non-mandatory parameters
 
-The inclusion of a non-mandatory parameter that is never used could signal that there is a design flaw in the implementation of the Get-TargetResource function.
-The non-mandatory parameters that are used to call Get-TargetResource should help to retrieve the actual values of the properties for the resource.
-For example, if there is a parameter `Ensure` that is non-mandatory, that parameter describes the state the resource should have, but it might not be used to retrive the actual values.
-Another example would be if a parameter `FilePathName` is set to be non-mandatory, but `FilePathName` is actually a property that Get-TargetResource should return the actual value of.
-In that case it does not make sense to assign a value to `FilePathName` when calling Get-TargetResource because that value will never be used.
+The inclusion of a non-mandatory parameter that is never used could signal that there is a design flaw in the implementation of the `Get-TargetResource` function.
+The non-mandatory parameters that are used to call `Get-TargetResource` should help to retrieve the actual values of the properties for the resource.
+For example, if there is a parameter `Ensure` that is non-mandatory, that parameter describes the state the resource should have, but it might not be used to retrive
+the actual values.
+Another example would be if a parameter `FilePathName` is set to be non-mandatory, but `FilePathName` is actually a property that `Get-TargetResource` should return
+the actual value of.
+In that case it does not make sense to assign a value to `FilePathName` when calling `Get-TargetResource` because that value will never be used.
 
 **Bad:**
 
@@ -718,15 +720,20 @@ function Get-TargetResource
 }
 ```
 
-### Get-TargetResource with unused mandatory parameters should include "Not used in Get-TargetResource" in the comment-based help parameter description
-
-The inclusion of a mandatory parameter that is never used could signal that there is a design flaw in the implementation of the Get-TargetResource function.
-The mandatory parameters that are used to call Get-TargetResource should help to retrieve the actual values of the properties for the resource.
+### Any unused parameters that must be included in a function definition should include 'Not used in <function_name>' in the help comment for that parameter in the comment-based help
+The inclusion of a mandatory parameter in the `Get-TargetResource` function that is never used could signal that there is a design flaw in the implementation
+of the function.
+The mandatory parameters that are used to call `Get-TargetResource` should help to retrieve the actual values of the properties for the resource.
 For example, if there is a parameter `Ensure` that is mandatory, that parameter will might not be used to retrive the actual values.
-Another example would be if a parameter `FilePathName` is set to be mandatory, but `FilePathName` is actually a property that Get-TargetResource should return the actual value of.
-In that case it does not make sense to assign a value to `FilePathName` when calling Get-TargetResource because that value will never be used.
+Another example would be if a parameter `FilePathName` is set to be mandatory, but `FilePathName` is actually a property that `Get-TargetResource` should
+return the actual value of. In that case it does not make sense to assign a value to `FilePathName` when calling `Get-TargetResource` because that value will
+never be used.
 
-If there is a need design-wise to include a mandatory parameter that is never used, then the comment-based help for that parameter should contain the description 'Not used in Get-TargetResource'.
+The inclusion of a mandatory or a non-mandatory parameter in the `Test-TargetResource` function that is not used will be more common since it is required that both
+the `Set-targetResource` and the `Test-TargetResource` must have the same parameters. And there will be times when all of the paramters in the `Test-TargetResource`
+function will not be used for testing the state of the resource.
+
+If there is a need design-wise to include a mandatory parameter that will not be used, then the comment-based help for that parameter should contain the description 'Not used in Get-TargetResource'.
 
 **Bad:**
 
