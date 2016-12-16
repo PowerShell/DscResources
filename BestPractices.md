@@ -623,6 +623,12 @@ function Get-MyBoolean
 
 ### Get-TargetResource should not contain unused non-mandatory parameters
 
+The inclusion of a non-mandatory parameter that is never used could signal that there is a design flaw in the implementation of the Get-TargetResource function.
+The non-mandatory parameters that are used to call Get-TargetResource should help to retrieve the actual values of the properties for the resource.
+For example, if there is a parameter `Ensure` that is non-mandatory, that parameter describes the state the resource should have, but it might not be used to retrive the actual values.
+Another example would be if a parameter `FilePathName` is set to be non-mandatory, but `FilePathName` is actually a property that Get-TargetResource should return the actual value of.
+In that case it does not make sense to assign a value to `FilePathName` when calling Get-TargetResource because that value will never be used.
+
 **Bad:**
 
 ```powershell
@@ -713,6 +719,14 @@ function Get-TargetResource
 ```
 
 ### Get-TargetResource with unused mandatory parameters should include "Not used in Get-TargetResource" in the comment-based help parameter description
+
+The inclusion of a mandatory parameter that is never used could signal that there is a design flaw in the implementation of the Get-TargetResource function.
+The mandatory parameters that are used to call Get-TargetResource should help to retrieve the actual values of the properties for the resource.
+For example, if there is a parameter `Ensure` that is mandatory, that parameter will might not be used to retrive the actual values.
+Another example would be if a parameter `FilePathName` is set to be mandatory, but `FilePathName` is actually a property that Get-TargetResource should return the actual value of.
+In that case it does not make sense to assign a value to `FilePathName` when calling Get-TargetResource because that value will never be used.
+
+If there is a need design-wise to include a mandatory parameter that is never used, then the comment-based help for that parameter should contain the description 'Not used in Get-TargetResource'.
 
 **Bad:**
 
