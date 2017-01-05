@@ -720,20 +720,21 @@ function Get-TargetResource
 }
 ```
 
-### Any unused parameters that must be included in a function definition should include 'Not used in `function_name`' in the help comment for that parameter in the comment-based help
-The inclusion of a mandatory parameter in the `Get-TargetResource` function that is never used could signal that there is a design flaw in the implementation
+### Any unused parameters that must be included in a function definition should include 'Not used in <function_name>' in the help comment for that parameter in the comment-based help
+
+The inclusion of a mandatory parameter in the 'Get-TargetResource' function that is never used could signal that there is a design flaw in the implementation
 of the function.
-The mandatory parameters that are used to call `Get-TargetResource` should help to retrieve the actual values of the properties for the resource.
-For example, if there is a parameter `Ensure` that is mandatory, that parameter will might not be used to retrive the actual values.
-Another example would be if a parameter `FilePathName` is set to be mandatory, but `FilePathName` is actually a property that `Get-TargetResource` should
-return the actual value of. In that case it does not make sense to assign a value to `FilePathName` when calling `Get-TargetResource` because that value will
+The mandatory parameters that are used to call 'Get-TargetResource' should help to retrieve the actual values of the properties for the resource.
+For example, if there is a parameter 'Ensure' that is mandatory, that parameter will not be used to retrive the actual values.
+Another example would be if a parameter 'FilePathName' is set to be mandatory, but 'FilePathName' is actually a property that 'Get-TargetResource' should
+return the actual value of. In that case it does not make sense to assign a value to 'FilePathName' when calling 'Get-TargetResource' because that value will
 never be used.
 
-The inclusion of a mandatory or a non-mandatory parameter in the `Test-TargetResource` function that is not used will be more common since it is required that both
-the `Set-targetResource` and the `Test-TargetResource` must have the same parameters. And there will be times when all of the paramters in the `Test-TargetResource`
-function will not be used for testing the state of the resource.
+The inclusion of a mandatory or a non-mandatory parameter in the Test-TargetResource function that is not used is more common since it is required that both
+the 'Set-TargetResource' and the 'Test-TargetResource' have the same parameters. Thus, there will be times when not all of the parameters in the 'Test-TargetResource'
+function will be used in the function.
 
-If there is a need design-wise to include a mandatory parameter that will not be used, then the comment-based help for that parameter should contain the description 'Not used in Get-TargetResource'.
+If there is a need design-wise to include a mandatory parameter that will not be used, then the comment-based help for that parameter should contain the description 'Not used in <function_name>'.
 
 **Bad:**
 
