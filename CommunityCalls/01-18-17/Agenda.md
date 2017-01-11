@@ -1,12 +1,12 @@
 # DSC Resource Kit Community Call - 01/18/2017
 
 **9-9:30 AM on Wednesday, January 18 (PST)**  
-[ICS file](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/01-18-17/CommunityCall011817(9AM).zip)
+[ICS file](https://github.com/PowerShell/DscResources/raw/master/CommunityCalls/01-18-17/CommunityCall011817(9AM).zip)
 
 AND
 
 **4-4:30 PM on Wednesday, January 18 (PST)**  
-[ICS file](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/01-18-17/CommunityCall011817(4PM).zip)
+[ICS file](https://github.com/PowerShell/DscResources/raw/master/CommunityCalls/01-18-17/CommunityCall011817(4PM).zip)
 
 Both calls are the same (other than any community questions).
 We are providing both to accomodate different time zones.
