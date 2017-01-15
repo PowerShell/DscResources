@@ -78,7 +78,6 @@ function Write-DscResourceWikiSite {
             $descriptionContent = Get-Content -Path $descriptionPath -Raw
             $output += [Environment]::NewLine + $descriptionContent + [Environment]::NewLine
 
-
             $exampleSearchPath = "\Examples\Resources\$($result.FriendlyName)\*.ps1"
             $examplesPath = (Join-Path -Path $ModulePath -ChildPath $exampleSearchPath)
             $exampleFiles = Get-ChildItem -Path $examplesPath
@@ -101,7 +100,7 @@ function Write-DscResourceWikiSite {
                     $exampleContent = $exampleContent -replace "#>"
                     $exampleContent = $exampleContent.Replace(".EXAMPLE", `
                                                             "***Example $exampleCount***`n")
-                    $exampleContent += [Environment]::NewLine + '````'
+                    $exampleContent += '````'
 
                     $output += $exampleContent 
                     $output += [Environment]::NewLine
