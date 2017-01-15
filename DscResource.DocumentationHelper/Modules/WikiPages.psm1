@@ -94,12 +94,14 @@ function Write-DscResourceWikiSite {
                     $helpEnd = $exampleContent.IndexOf("#>") + 2
                     $help = $exampleContent.Substring($helpStart, $helpEnd - $helpStart)
                     $helpOriginal = $help
+                    $help += [Environment]::NewLine + '````powershell'
                     $help = $help.Replace("    ", "")
                     $exampleContent = $exampleContent -replace $helpOriginal, $help
                     $exampleContent = $exampleContent -replace "<#"
                     $exampleContent = $exampleContent -replace "#>"
                     $exampleContent = $exampleContent.Replace(".EXAMPLE", `
                                                             "***Example $exampleCount***`n")
+                    $exampleContent += [Environment]::NewLine + '````'
 
                     $output += $exampleContent 
                     $output += [Environment]::NewLine
