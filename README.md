@@ -2,118 +2,81 @@
 
 [![Join the chat at https://gitter.im/PowerShell/DscResources](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/PowerShell/DscResources?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Windows PowerShell Desired State Configuration (DSC) provides a configuration platform built into Windows that is based on open standards. 
-DSC is flexible enough to function reliably and consistently in each stage of the deployment lifecycle (development, test, pre-production, production), as well as during scale-out, which is required in the cloud world. 
+This is the central repository for the DSC Resource Kit, a collection of DSC resources maintained and released by Microsoft.
 
-To learn more about Windows PowerShell Desired State Configuration, check out the blog posts on the [PowerShell Blog](http://blogs.msdn.com/b/powershell/) ([this](http://blogs.msdn.com/b/powershell/archive/2013/11/01/configuration-in-a-devops-world-windows-powershell-desired-state-configuration.aspx) is a good starting point).
-There are also great community resources, such as [PowerShell.org](http://powershell.org/wp/tag/dsc/), or [PowerShell Magazine](http://www.powershellmagazine.com/tag/dsc/).
+A dashboard of all open issues and pull requests across DSC Resource Kit is available [here](http://waffle.io/powershell/dscresources).
 
-If you would like to use DSC on Linux, there is a step by step guide available on the [Building Clouds Blog](http://blogs.technet.com/b/privatecloud/archive/2014/05/19/powershell-dsc-for-linux-step-by-step.aspx) and the source is available in the [Microsoft OpenTech repo](https://github.com/MSFTOSSMgmt/WPSDSCLinux).
+Please note, all resources with the 'x' prefix in their names (e.g. xResource) are still experimental – this means that those resources are provided AS IS and are not supported through any Microsoft support program or service. If you find a problem with a resource, please [file an issue](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md#submitting-an-issue) here on GitHub.
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-## Repository structure
-This is the central repository for PowerShell Desired State Configuration (DSC) resources.
-DSC resources are packaged in PowerShell modules, along with tests, documentation, and examples, each in their own GitHub repositories. 
-These repositories are included as [submodules](http://git-scm.com/docs/git-submodule) of the [DscResources](https://github.com/powershell/DscResources) repository you're currently browsing. 
+## New to PowerShell DSC
 
-You can clone this repository to download the source for all DSC resource modules 
+Desired State Configuration (DSC) is a declarative management platform in PowerShell to configure, deploy, and manage systems.
+If you are new to DSC, configurations, or resources, you can learn more about them [here](https://msdn.microsoft.com/en-us/powershell/dsc/overview).
+
+## Resource Module Source Code
+
+The DSC Resource Kit currently contains more than 55 different resource modules.
+
+You can find the source code of a resource module by visiting its GitHub page at:  
+https://github.com/PowerShell/< module name >   
+For example, for the xCertificate module, go to:  
+https://github.com/PowerShell/xCertificate. 
+
+All DSC resource modules are also listed as submodules of this repository (DscResources) in the [xDscResources folder](https://github.com/PowerShell/DscResources/tree/master/xDscResources) (unsupported) or [DscResources folder](https://github.com/PowerShell/DscResources/tree/master/DscResources) (supported). 
+
+To download the released source code for **all** DSC resource modules, clone this repository with this git command:
 
 ```
-git clone --recursive https://github.com/PowerShell/DscResources.git
+git clone https://github.com/PowerShell/DscResources.git --recursive
 ```
 
-Or just download the respository's structure and documentation
+Alternatively, to download just the documentation provided in this repository, clone this repository with this git command:
 ```
 git clone https://github.com/PowerShell/DscResources.git
 ```
 
-## Production releases
+## Released DSC Resource Modules
 
-To see a list of all released DSC Resource Kit modules, go to the [PowerShell Gallery](https://www.powershellgallery.com/) and display [all modules tagged as DSCResourceKit](https://www.powershellgallery.com/packages?q=Tags%3A%22DSCResourceKit%22). You can also type a module’s name in the search box on the upper right side of the PowerShell Gallery to find a specific module.
+To see a list of **all** released DSC Resource Kit modules, go to the [PowerShell Gallery](http://www.powershellgallery.com/) and display [all modules tagged as DSCResourceKit](http://www.powershellgallery.com/packages?q=Tags%3A%22DSCResourceKit%22).
 
-Another way is to go directly to a specific module by typing it’s URL:
+To find a **specific** module, enter the module's name in the search box in the upper right corner of the PowerShell Gallery or go directly to its URL:  
+http://www.powershellgallery.com/packages/< module name >  
+For example:   
+http://www.powershellgallery.com/packages/xWebAdministration 
 
-http://www.powershellgallery.com/packages/MODULE_NAME
-
-e.g.:
-
-[http://www.powershellgallery.com/packages/xWebAdministration](http://www.powershellgallery.com/packages/xWebAdministration)
-
-Of course, you can always use PowerShellGet (available in [WMF 5.0](http://go.microsoft.com/fwlink/?LinkID=398175)) as well:
-
+We recommend that you use PowerShellGet to install DSC resource modules:
+```powershell
+Install-Module -Name < module name >   
 ```
-Find-DscResource
-```
-
-## Development builds
-
-Nuget feeds with development builds (created every time we merge PR/push commit) are available for all our modules under:
-
-https://ci.appveyor.com/nuget/MODULE_NAME
-
-e.g.:
-
-[https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration](https://ci.appveyor.com/nuget/xpsdesiredstateconfiguration)
-
-
-To use it, first register new PSRepository using PowerShellGet:
-
-```
-Register-PSRepository -Name <Repository_Name> -SourceLocation https://ci.appveyor.com/nuget/<Module_Name>
-```
-e.g.
-```
-Register-PSRepository -Name xExchangeDev -SourceLocation https://ci.appveyor.com/nuget/xexchange
-```
-
-Use Find-Module to list available versions of the module:
-
-```
-Find-Module -Repository <Repository_Name>
-```
-e.g.
-```
-Find-Module -Repository xExchangeDev
-```
-
-To install latest development version, use the following command:
-```
-Install-Module -Name <Module_Name> -Repository <Repository_Name>
-```
-e.g.
-```
-Install-Module -Name xExchange -Repository xExchangeDev
+For example:
+```powershell
+Install-Module -Name xWebAdministration
 ```
  
-You can also install specific version of the module by adding –RequiredVersion parameter:
-```
-Install-Module -Name <Module_Name> -Repository <Repository_Name> -RequiredVersion <Version_Number>
-```
-e.g.
-```
-Install-Module -Name xExchange -Repository xExchangeDev -RequiredVersion 1.2.0.48
+To update all previously installed modules at once, open an elevated PowerShell prompt and use this command: 
+```powershell
+Update-Module 
 ```
 
-## Reporting bugs or suggesting features
+After installing modules, you can discover all DSC resources available to your local system with this command: 
+```powershell
+Get-DscResource 
+```
 
-If you've found a bug in a particular DSC module, or you have a suggestion for how to improve it, submit an issue in the module's repository. 
+## Contributing to the Resource Modules
 
-[Learn more](http://www.joelonsoftware.com/articles/fog0000000029.html) about writing useful bug reports.
+You are more than welcome to contribute to the development of the DSC Resource Kit. There are several different ways you can help. You can create new DSC resources or modules, add test automation, improve documentation, fix existing issues, or open new ones.
+See our [contributing guide](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md) for more info on how to become a DSC Resource Kit contributor.
 
-## Contributing
+## Resource Module Maintainers
 
-See our [contribution guidelines](CONTRIBUTING.md).
+To see a list of the maintainers for each resource modules as well as the instructions for maintaining a module, see our [guidelines for DSC resource maintainers](Maintainers.md).
 
-## Maintaining
+## Questions, Comments, Concerns?
 
-See our [guidelines for DSC resource maintainers](Maintainers.md).
+If you're looking into using PowerShell DSC, have questions or issues with a current resource, or would like a new resource, let us know on Twitter ([@PowerShell_Team](https://twitter.com/PowerShell_Team)) or by creating an issue on [GitHub](https://github.com/powershell/dscresources/issues).
 
-## Dashboard
-
-You can see dashboard of all open issues and pull requests across DSC Resource [here](http://waffle.io/powershell/dscresources).
-
-## Throughput
-
-[![Throughput Graph](https://graphs.waffle.io/powershell/dscresources/throughput.svg)](https://waffle.io/powershell/dscresources/metrics/throughput)
+The PowerShell team also hosts DSC Resource Kit community calls to give updates, collect feedback, and answer questions. Find the date of the next call in our [community agenda](CommunityAgenda.md).
