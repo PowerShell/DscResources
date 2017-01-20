@@ -36,12 +36,12 @@
   - [Return a Hashtable from Get-TargetResource](#return-a-hashtable-from-get-targetresource)
   - [Return a Boolean from Test-TargetResource](#return-a-boolean-from-test-targetresource)
   - [Avoid Returning Anything From Set-TargetResource](#avoid-returning-anything-from-set-targetresource)
-  - [Define Get-TargetResource, Set-TargetResource, and Test-TargetResource for Every DSC Resource](#define-get-targetresource,-set-targetresource,-and-test-targetresource-for-every-dsc-resource)
+  - [Define Get-TargetResource, Set-TargetResource, and Test-TargetResource for Every DSC Resource](#define-get-targetresource-set-targetresource-and-test-targetresource-for-every-dsc-resource)
   - [Get-TargetResource should not contain unused non-mandatory parameters](#get-targetresource-should-not-contain-unused-non-mandatory-parameters)
-  - [Any unused parameters that must be included in a function definition should include 'Not used in `function_name`' in the help comment for that parameter in the comment-based help](#any-unused-parameters-that-must-be-included-in-a-function-definition-should-include-not-used-in-function_name-in-the-help-comment-for-that-parameter-in-the-comment-based-help)
+  - [Any unused parameters that must be included in a function definition should include 'Not used in \<function_name\>' in the help comment for that parameter in the comment-based help](#any-unused-parameters-that-must-be-included-in-a-function-definition-should-include-not-used-in-function_name-in-the-help-comment-for-that-parameter-in-the-comment-based-help)
   - [Use Identical Parameters for Set-TargetResource and Test-TargetResource](#use-identical-parameters-for-set-targetresource-and-test-targetresource)
-  - [Use Write-Verbose At Least Once in Get-TargetResource, Set-TargetResource, and Test-TargetResource](#use-write-verbose-at-least-once-in-get-targetresource,-set-targetresource,-and-test-targetresource)
-  - [Use *-TargetResource for Exporting DSC Resource Functions](#use-*-targetresource-for-exporting-dsc-resource-functions)
+  - [Use Write-Verbose At Least Once in Get-TargetResource, Set-TargetResource, and Test-TargetResource](#use-write-verbose-at-least-once-in-get-targetresource-set-targetresource-and-test-targetresource)
+  - [Use *-TargetResource for Exporting DSC Resource Functions](#use--targetresource-for-exporting-dsc-resource-functions)
 - [Manifests](#manifests)
   - [Avoid Using Deprecated Manifest Fields](#avoid-using-deprecated-manifest-fields)
   - [Ensure Manifest Contains Correct Fields](#ensure-manifest-contains-correct-fields)
@@ -720,7 +720,7 @@ function Get-TargetResource
 }
 ```
 
-### Any unused parameters that must be included in a function definition should include 'Not used in <function_name>' in the help comment for that parameter in the comment-based help
+### Any unused parameters that must be included in a function definition should include 'Not used in \<function_name\>' in the help comment for that parameter in the comment-based help
 
 The inclusion of a mandatory parameter in the 'Get-TargetResource' function that is never used could signal that there is a design flaw in the implementation
 of the function.
