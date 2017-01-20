@@ -357,6 +357,17 @@ See the [Fixing an Issue](#fixing-an-issue) section above for further details.
 Be sure to include unit and integration tests for your new resource under the Tests folder as well as an example under the examples folder.
 Please also add a full description of your new resource and its parameters to the module's README.
 
+### Resource Naming
+
+All mof-based resource (with Get/Set/Test-TargetResource and a schema.mof file) files should have MSFT_ appended before the resource name (e.g. MSFT_xResource.psm1). This is per a convention that the name (or abbreviated name) of the company that provides the resource be included in the name of mof-based resource files. The friendly name of the resource, defined in the mof file, should not have the MSFT_ prefix.
+
+Composite resource (with a configuration and a .psd1 file) files must have the exact same name as the resource or they will not be able to be imported. Hence, composite resource files should not have the MSFT_ prefix (e.g. xResource.psm1).
+
+If you are adding a new resource to an experimental/preview module (module name starts with 'x'), the resource name must also start with 'x' (e.g. MSFT_xResource.psm1 or xResource.psm1).
+If you are adding a new resource to a high quality module (module name does not start with 'x' and ends with 'Dsc'), the resource name should not start with 'x' (e.g. MSFT_Resource.psm1 or Resource.psm1).
+
+For clarity, any test or example files for the resource should be named to match the files for the same resource. For example, if the main resource file is named 'MSFT_xResource.psm1', then the unit test file should be named 'MSFT_xResource.Tests.ps1'.
+
 ## Submitting a New Resource Module
 If you would like a new DSC resource module added to the DSC Resource Kit, please check the [existing issues](https://github.com/PowerShell/DscResources/issues) in this repository first to make sure no one else is already working on a similar module.
 If someone is already working on a similar module, please leave a comment on the open issue or add a GitHub reaction to the top comment to **express your interest**. You can also offer help and use the issue to coordinate your efforts.
