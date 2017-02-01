@@ -110,7 +110,7 @@ The solution to this is create a script block variable that contains the mocked 
 
 ```powershell
 $GetNetAdapter_PhysicalNetAdapterMock = {
-    return [PSCustomObject] @{
+    return @{
         Name              = 'Ethernet'
         PhysicalMediaType = '802.3'
         Status            = 'Up'
