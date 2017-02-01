@@ -34,8 +34,8 @@ will be in a later release
 
 This example creates a site collection with the provided details
 
-
-    Configuration Example 
+````powershell
+    Configuration Example
     {
         param(
             [Parameter(Mandatory = $true)]
@@ -56,5 +56,5 @@ This example creates a site collection with the provided details
             }
         }
     }
-
+````
 
