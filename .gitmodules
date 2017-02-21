@@ -180,3 +180,6 @@
 [submodule "DscResources/AuditPolicyDsc"]
 	path = DscResources/AuditPolicyDsc
 	url = https://github.com/PowerShell/AuditPolicyDsc
+[submodule "DscResources/SecurityPolicyDsc"]
+	path = DscResources/SecurityPolicyDsc
+	url = https://github.com/PowerShell/SecurityPolicyDsc
