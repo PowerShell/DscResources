@@ -26,4 +26,5 @@ Katie (@kwirkykat) will be on vacation March 1, so Mariah (@mbreakey3) will be l
 - New resource module SecurityPolicyDsc from Jason Walker
 - Modules currently on track to be released on 03/08/2017 (**This will not be a definitive list and may be subject to change**)
 - Design of the xPackage/Package resource
+- Configuration Sharing
 - More TBD
