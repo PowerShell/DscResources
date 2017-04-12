@@ -13,8 +13,8 @@ If this does not work for you and you are interested in joining at another time,
 - [PSDscResources](#psdscresources)
 - [Code Coverage Report](#code-coverage-report)
 - [Configuration Sharing](#configuration-sharing)
-- [Integration Testing] (#integration-testing)
-- [Class Based Resources] (#class-based-resources)
+- [Integration Testing](#integration-testing)
+- [Class Based Resources](#class-based-resources)
 
 ### SecurityPolicyDsc
 
