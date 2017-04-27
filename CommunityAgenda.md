@@ -15,7 +15,7 @@ Individual resource module hotfixes for urgent issues may be released on a case-
 
 ### Latest Release
 
-- [04/19/16](https://blogs.msdn.microsoft.com/powershell/2017/04/19/dsc-resource-kit-release-april-2017/)
+- [04/19/17](https://blogs.msdn.microsoft.com/powershell/2017/04/19/dsc-resource-kit-release-april-2017/)
 
 ### Past Releases
 
