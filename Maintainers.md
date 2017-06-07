@@ -32,51 +32,51 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | SecurityPolicyDsc | Jason Walker ([@jcwalker](https://github.com/jcwalker)) |
 | SharePointDsc | Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) |
 | SystemLocaleDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| xActiveDirectory | --- |
+| xActiveDirectory | Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Raimund Andree ([@raandree](https://github.com/raandree)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
 | xAdcsDeployment | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xAzure | --- |
 | xAzurePack | --- |
 | xBitlocker | --- |
 | xCertificate | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xChrome | --- |
-| xComputerManagement | --- |
-| xCredSSP | --- |
+| xComputerManagement | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
+| xCredSSP | Ben Gelens ([@bgelens](https://github.com/bgelens)) |
 | xDatabase | --- |
 | xDFS | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| xDhcpServer | --- |
+| xDhcpServer | Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
 | xDismFeature | --- |
-| xDnsServer | --- |
+| xDnsServer | Raimund Andree ([@raandree](https://github.com/raandree)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
 | xDscDiagnostics | --- |
 | xDSCResourceDesigner | --- |
 | xExchange | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) |
-| xFailOverCluster | --- |
+| xFailOverCluster | Johan Ljunggren ([@johlju](https://github.com/johlju)) <br/> Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
 | xFirefox | --- |
-| xHyper-V | --- |
+| xHyper-V |  Ben Gelens ([@bgelens](https://github.com/bgelens)) |
 | xInternetExplorerHomePage | --- |
 | xJea | --- |
 | xMySql | --- |
-| xNetworking | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| xNetworking | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) <br/> Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Raimund Andree ([@raandree](https://github.com/raandree)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
 | xPendingReboot | --- |
 | xPhp | --- |
 | xPowerShellExecutionPolicy | --- |
 | xPSDesiredStateConfiguration | Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) <br/> Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
 | xRemoteDesktopAdmin | --- |
-| xRemoteDesktopSessionHost | --- |
+| xRemoteDesktopSessionHost |  Ben Gelens ([@bgelens](https://github.com/bgelens)) |
 | xRobocopy | --- |
 | xSafeHarbor | --- |
 | xSCDPM | --- |
 | xSCOM | --- |
-| xSCSMA | --- |
+| xSCSMA |  Ben Gelens ([@bgelens](https://github.com/bgelens)) |
 | xSCSPF | --- |
 | xSCSR | --- |
 | xSCVMM | --- |
 | xSmbShare | --- |
 | xSqlPs | --- |
 | xSQLServer | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
-| xStorage | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| xStorage | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) <br/> Ben Gelens ([@bgelens](https://github.com/bgelens)) |
 | xSystemSecurity | --- |
 | xTimeZone | --- |
-| xWebAdministration | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) |
+| xWebAdministration | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway))  |
 | xWebDeploy | --- |
 | xWindowsEventForwarding | --- |
 | xWindowsRestore | --- |
