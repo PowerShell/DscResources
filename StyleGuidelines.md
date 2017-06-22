@@ -53,7 +53,7 @@ GitHub will still render the sentences as a single paragraph, but the readabilit
 
 ### Correct File Encoding
 
-Make sure all files are encoded using UTF-8, except mof files which should be encoded using ASCII.
+Make sure all files are encoded using UTF-8 (not UTF-8 with BOM), except mof files which should be encoded using ASCII.
 You can use ```ConvertTo-UTF8``` and ```ConvertTo-ASCII``` to convert a file to UTF-8 or ASCII.
 
 ### Descriptive Names
