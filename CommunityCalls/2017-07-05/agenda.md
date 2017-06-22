@@ -15,7 +15,7 @@ Trouble Joining? [Try Skype Web App](https://meet.lync.com/microsoft/zachal/C8MC
 Toll-free number: +1 (866) 641-7188 
 Toll number: +1 (773) 917-4061 
 Conference ID: 596307  (Dial-in Number)  
-[Find a local number](https://dialin.lync.com/8551f4c1-bea3-441a-8738-69aa517a91c5?id=68893190)  
+[Find a local number](https://dialin.lync.com/48b4c613-cc67-4825-8175-29628d9715e5)  
 Conference ID: 596307  (same as access code above)
 [Help](http://go.microsoft.com/fwlink/?LinkId=389737)  
 
