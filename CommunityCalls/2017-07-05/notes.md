@@ -1,6 +1,7 @@
 # Meeting Notes
 
 Video recording is available here: https://youtu.be/q4j0HWUFUu0
+
 10 modules on track to be released July 12, 2017:
 - xCertificate
 - xFailOverCluster
