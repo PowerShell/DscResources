@@ -1,14 +1,17 @@
+# Meeting Notes
+
+Video recording is available here: https://youtu.be/q4j0HWUFUu0
 10 modules on track to be released July 12, 2017:
-xCertificate
-xFailOverCluster
-xHyper-V
-xNetworking
-xSQLServer
-xStorage
-xWebAdministration
-PsDscResources
-SecurityPolicyDsc
-SharePointDsc 
+- xCertificate
+- xFailOverCluster
+- xHyper-V
+- xNetworking
+- xSQLServer
+- xStorage
+- xWebAdministration
+- PsDscResources
+- SecurityPolicyDsc
+- SharePointDsc 
 
 https://github.com/PowerShell/Dscconfigurations is definitely open to PRs and issues! 
 
