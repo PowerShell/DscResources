@@ -1,14 +1,14 @@
 
-# DSC Resource Kit & Configurations Community Call - 07/05/2017
+# DSC Resource Kit & Configurations Community Call - 08/16/2017
 
-**12PM (PST) on Wednesday, July 5th**  
-[ICS file](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-07-05/2017-07-05CommunityCall.zip)
+**12PM (PST) on Wednesday, August 18**  
+[ICS file](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-08-16/2017-08-16CommunityCall.zip)
 
 ## How to Join
 
 #### Skype for Business
 
-[Join Skype Meeting](https://meet.lync.com/microsoft/zachal/C8MCGVQB)  
+[Join Skype Meeting](https://meet.lync.com/microsoft/zachal/B6SY8BHQ)  
 Trouble Joining? [Try Skype Web App](https://meet.lync.com/microsoft/zachal/C8MCGVQB?sl=1)
 
 #### Phone
