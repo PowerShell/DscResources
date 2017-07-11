@@ -1,6 +1,6 @@
 # DSC Resource Kit Maintainers
 
-Maintainers are trusted contributors with knowledge in a resouce module domain who have [write access](https://help.github.com/articles/permission-levels-for-an-organization-repository/) to one or more DSC Resource Kit repositories.
+Maintainers are trusted contributors with knowledge in a resource module domain who have [write access](https://help.github.com/articles/permission-levels-for-an-organization-repository/) to one or more DSC Resource Kit repositories.
 
 Maintainers have the power to:
 
@@ -11,6 +11,7 @@ Maintainers have the power to:
 ## Table of Contents
 - [Current Maintainers](#current-maintainers)
 - [Rules](#rules)
+- [Repeating Tasks](#reapeting-tasks)
 - [Issue Workflow](#issue-workflow)
 - [Pull Request Workflow](#pull-request-workflow)
   - [Abandoned Pull Requests](#abandoned-pull-requests)
@@ -106,14 +107,39 @@ If you are maintainer, please follow these rules:
 1. **DON'T** merge your own pull requests before they are reviewed by someone else.
   - If there is **no one** else to review your pull request, please wait **24** hours to merge it in case anyone comes along and has a comment.
 
+## Repeating Tasks
+
+If you are a maintainer these are the repeating tasks that need to be done
+regularly.
+
+### Change copyright information
+
+Each year, before that years first DSC Resource Kit release, the
+copyright information should be updated with the current year in the modules
+module manifest (the .psd1 file).
+
+This is how the copyright information looks like for 2017.
+
+```powershell
+# Copyright statement for this module
+Copyright = '(c) 2017 Microsoft Corporation. All rights reserved.'
+```
+
+Beginning of year 2018 (and so on) the copyright information should be updated to the current year.
+
+```powershell
+# Copyright statement for this module
+Copyright = '(c) 2018 Microsoft Corporation. All rights reserved.'
+```
+
 ## Issue Workflow
 
 1. Someone creates an issue.
 1. A maintainer assigns one of the following labels: ```bug```, ```enhancement```, ```discussion```, ```question```
   1. In some cases, other special labels may be used (e.g. ```module proposal``` for issues requesting new DSC resource modules in the DscResources repository)
   1. If the issue is a duplicate of another issue, the maintainer adds the ```duplicate``` label, references the issue this one is a duplicate of, and closes the issue.
-  1. If the issue is external to your module, the maintainer adds the ```external``` label, comments with an explaination of why the issue will not be fixed, and closes the issue.
-  1. If for some other reason an issue should not be fixed, the maintainer adds the ```notfixed``` label, comments with an explaination of why the issue will not be fixed, and closes the issue.
+  1. If the issue is external to your module, the maintainer adds the ```external``` label, comments with an explanation of why the issue will not be fixed, and closes the issue.
+  1. If for some other reason an issue should not be fixed, the maintainer adds the ```not fixed``` label, comments with an explanation of why the issue will not be fixed, and closes the issue.
 1. A maintainer assigns the ```help wanted``` label to let contributors know this issue needs someone else to look at it
 1. Once a contributor volunteers to work on the issue, the maintainer removes the ```help wanted``` label, adds the ```in progress``` label, and assigns the issue to the volunteer.
 1. Once issue is fixed, the maintainer removes the ```in progress``` label and closes the issue.
@@ -137,20 +163,20 @@ In these cases:
   - If the contributor responds, it's no longer an abandoned pull request, proceed as normal.
 2. If the contributor does not respond **within a week**:
   - If the reviewer's comments are very minor, merge the change, fix the code immediately, and create a new PR with the fixes addressing the minor comments.
-  - If the changes required to merge the pull request are significant but needed, create a new branch with the changes and open an issue to merge the code into the dev branch. Mention the original pull request ID in the description of the new issue and close the abandoned pull request. 
+  - If the changes required to merge the pull request are significant but needed, create a new branch with the changes and open an issue to merge the code into the dev branch. Mention the original pull request ID in the description of the new issue and close the abandoned pull request.
   - If the changes in an abandoned pull request are no longer needed (e.g. due to refactoring of the codebase or a design change), simply close the pull request.
 
 ## Breaking Changes
-Breaking changes may be accepted if they make a resource better.  
+Breaking changes may be accepted if they make a resource better.
 Breaking changes usually include:
 - Adding a new mandatory parameter
 - Changing an existing parameter
 - Removing an existing parameter
 - Fundamentally changing an existing functionality of a resource
 
-If you need to accept a breaking change in your module please please ensure:   
-1. Any issues or PRs associated with the breaking change include the ```breaking change``` label.  
-2. At least one of the bullet points in the updated release notes starts with 'BREAKING CHANGE:'.  
+If you need to accept a breaking change in your module please please ensure:
+1. Any issues or PRs associated with the breaking change include the ```breaking change``` label.
+2. At least one of the bullet points in the updated release notes starts with 'BREAKING CHANGE:'.
 3. The title of the PR that includes the breaking change starts with 'BREAKING CHANGE:'.
 
 Upon release, the version of a module with a breaking change will be updated as such:
