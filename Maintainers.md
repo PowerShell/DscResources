@@ -40,7 +40,7 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | xBitlocker | --- |
 | xCertificate | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xChrome | --- |
-| xComputerManagement | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
+| xComputerManagement | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) <br> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xCredSSP | Ben Gelens ([@bgelens](https://github.com/bgelens)) |
 | xDatabase | --- |
 | xDFS | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
