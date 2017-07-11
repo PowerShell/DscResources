@@ -9,6 +9,7 @@ Maintainers have the power to:
 3. Assign labels, milestones and people to [issues](https://guides.github.com/features/issues/).
 
 ## Table of Contents
+
 - [Current Maintainers](#current-maintainers)
 - [Rules](#rules)
 - [Repeating Tasks](#reapeting-tasks)
@@ -20,8 +21,8 @@ Maintainers have the power to:
 ## Current Maintainers
 
 Being a mantainer is a time-consuming task!
-If you find you no longer have the time for this role, please let us know. 
-That helps us keep contributors up-to-date on what to expect for certain repositories. 
+If you find you no longer have the time for this role, please let us know.
+That helps us keep contributors up-to-date on what to expect for certain repositories.
 
 If you should be on this list but are not, please tag [@kwirkykat](https://github.com/kwirkykat) in an issue or send [@katiedsc](https://twitter.com/katiedsc) a private message on Twitter.
 
