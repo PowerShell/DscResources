@@ -4,21 +4,20 @@
 
 ### Next Release
 
-- **07/12/17**
+- **08/23/17**
 
-All changes should be merged by midnight on 07/11/17 (PST).  
-We will not hold the release for any pending pull requests.  
-All changes for the release must be merged into the ```dev``` branch before the release (except SharePointDsc which has a release branch).  
-Resource modules with a ```dev``` branch that is not passing tests will not be released.  
-Resource modules with open issues labeled BLOCKING RELEASE will not be released.  
-Individual resource module hotfixes for urgent issues may be released on a case-by-case basis.  
+All changes for the release should be merged into the `dev` branch before the release date. 
+Resource modules that are not passing their tests in the release pull request from the `dev` branch to the `master` branch cannot be released.  
+Resource modules with open issues labeled `blocking release` cannot be released.  
+Individual resource module hotfixes for urgent issues may be released before the offical release date on a case-by-case basis.  
 
 ### Latest Release
 
-- [05/31/17](https://blogs.msdn.microsoft.com/powershell/2017/05/31/dsc-resource-kit-release-may-2017/)
+- [07/12/17](https://blogs.msdn.microsoft.com/powershell/2017/07/12/dsc-resource-kit-release-july-2017/)
 
 ### Past Releases
 
+- [05/31/17](https://blogs.msdn.microsoft.com/powershell/2017/05/31/dsc-resource-kit-release-may-2017/)
 - [04/19/17](https://blogs.msdn.microsoft.com/powershell/2017/04/19/dsc-resource-kit-release-april-2017/)
 - [03/08/17](https://blogs.msdn.microsoft.com/powershell/2017/03/08/dsc-resource-kit-release-march-2017/)
 - [01/25/17](https://blogs.msdn.microsoft.com/powershell/2017/01/25/dsc-resource-kit-release-january-2017/)
@@ -41,14 +40,15 @@ Individual resource module hotfixes for urgent issues may be released on a case-
 
 ### Next Call
 
-- [2017/07/05 12-1PM Pacific](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-07-05)
+- [08/16/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-08-16)
 
 ### Latest Call
 
-- [05/24/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-05-24)
+- [07/05/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-07-05)
 
 ### Past Calls
 
+- [05/24/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-05-24)
 - [04/12/17 9-9:30AM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/04-12-17)
 - [03/01/17 9-9:30AM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/03-01-17)
 - [01/18/17 9-9:30AM and 4-4:30PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/01-18-17)

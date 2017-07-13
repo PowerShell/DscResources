@@ -40,7 +40,7 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | xBitlocker | --- |
 | xCertificate | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xChrome | --- |
-| xComputerManagement | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) <br> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| xComputerManagement | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xCredSSP | Ben Gelens ([@bgelens](https://github.com/bgelens)) |
 | xDatabase | --- |
 | xDFS | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
@@ -52,7 +52,7 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | xExchange | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) |
 | xFailOverCluster | Johan Ljunggren ([@johlju](https://github.com/johlju)) <br/> Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
 | xFirefox | --- |
-| xHyper-V |  Ben Gelens ([@bgelens](https://github.com/bgelens)) |
+| xHyper-V |  Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) |
 | xInternetExplorerHomePage | --- |
 | xJea | --- |
 | xMySql | --- |
