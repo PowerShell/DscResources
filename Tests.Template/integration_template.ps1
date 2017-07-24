@@ -3,9 +3,9 @@
    Template for creating DSC Resource Integration Tests
 .DESCRIPTION
    To Use:
-     1. Copy to \Tests\Integration\ folder and rename <ResourceName>.Integration.tests.ps1 (e.g. MSFT_xNeworking.Integration.tests.ps1)
+     1. Copy to \Tests\Integration\ folder and rename <ResourceName>.Integration.tests.ps1 (e.g. MSFT_xNetworking.Integration.tests.ps1)
      2. Customize TODO sections.
-     3. Create test DSC Configuration file <ResourceName>.config.ps1 (e.g. MSFT_xNeworking.config.ps1) from integration_config_template.ps1 file.
+     3. Create test DSC Configuration file <ResourceName>.config.ps1 (e.g. MSFT_xNetworking.config.ps1) from integration_config_template.ps1 file.
 
 .NOTES
    Code in HEADER, FOOTER and DEFAULT TEST regions are standard and may be moved into
@@ -47,13 +47,14 @@ try
         It 'Should compile and apply the MOF without throwing' {
             {
                 & "$($script:DSCResourceName)_Config" -OutputPath $TestDrive
+
                 Start-DscConfiguration -Path $TestDrive `
                     -ComputerName localhost -Wait -Verbose -Force
-            } | Should not throw
+            } | Should Not Throw
         }
 
         It 'Should be able to call Get-DscConfiguration without throwing' {
-            { Get-DscConfiguration -Verbose -ErrorAction Stop } | Should Not throw
+            { Get-DscConfiguration -Verbose -ErrorAction Stop } | Should Not Throw
         }
         #endregion
 
