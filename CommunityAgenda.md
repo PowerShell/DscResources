@@ -9,7 +9,7 @@
 All changes for the release should be merged into the `dev` branch before the release date. 
 Resource modules that are not passing their tests in the release pull request from the `dev` branch to the `master` branch cannot be released.  
 Resource modules with open issues labeled `blocking release` cannot be released.  
-Individual resource module hotfixes for urgent issues may be released before the offical release date on a case-by-case basis.  
+Individual resource module hotfixes for urgent issues may be released before the official release date on a case-by-case basis.  
 
 ### Latest Release
 

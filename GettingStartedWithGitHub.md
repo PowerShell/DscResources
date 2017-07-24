@@ -97,7 +97,7 @@ git clone https://github.com/PowerShell/xActiveDirectory
 * Git will create a new directory with corresponding name (i.e. `xActiveDirectory`).
 
 ## Securely storing Git credentials
-We recommend installing [Git Credential Manager for Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows) or [Git Credential Manager for Mac and Linux](https://github.com/Microsoft/Git-Credential-Manager-for-Mac-and-Linux) in order to securely store git credentials and not have to provide them everytime you perform a Git operation.
+We recommend installing [Git Credential Manager for Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows) or [Git Credential Manager for Mac and Linux](https://github.com/Microsoft/Git-Credential-Manager-for-Mac-and-Linux) in order to securely store git credentials and not have to provide them every time you perform a Git operation.
 
 ## Forking a repository on GitHub
 
@@ -313,7 +313,7 @@ Make sure this `.gitignore` file is placed in the root of your cloned repository
 If the original contributor is unable to continue the work on a pull request, or if the pull request is abandoned for a long time, then there is a possibility for you to continue the work.
 You can do so by getting the changes from the original contributors branch to a new working branch in your fork. Once you have create a new working branch with the original contributors changes,
 then you can create a new pull request into the original repository.   
-It's important that when you create a new pull request from someone elses work, that you mention the the original pull request, and also aknowledge the original author and mention the work it is based on.
+It's important that when you create a new pull request from someone else's work, that you mention the original pull request, and also acknowledge the original author and mention the work it is based on.
 For example mention the original author in the descriptive field when you create the new pull request.
 
 So, to continue working on a pull request, this is done by rebasing the changes in the original pull request branch onto your new working branch. This is pretty much the same as when you have to resolve merge conflicts.  
