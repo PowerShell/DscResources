@@ -1285,6 +1285,38 @@ ls -File $root -Recurse | ? { @('.gitignore', '.mof') -contains $_.Extension }
 Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -contains $_.Extension }
 ```
 
+### Capitalised cmdlets, Function Names and Pester Assertions
+
+PowerShell cmdlets, Functions and Pester assertions should all start with capital letters.  This makes code easier to read, especially when there are multiple nouns in the command name.  
+
+**Bad:**
+
+```powershell
+it 'Should return something' {
+    get-targetresource @testParameters | should be 'something'
+}
+```
+
+**Bad:**
+
+```powershell
+new-function -name $params
+```
+
+**Good:**
+
+```powershell
+It 'Should return something' {
+    Get-TargetResource @testParameters | Should Be 'something'
+}
+```
+
+**Good:**
+
+```powershell
+New-Function -Name $params
+```
+
 ### No Backslash in Paths
 
 To support the possibility of cross-platform use in the future, backslashes should not be used within a path. Instead `Join-Path` and `Split-Path` should be used to build a path.
