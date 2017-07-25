@@ -42,6 +42,7 @@ In order to provide clean and consistent code, please follow the style guideline
 - [Best Practices](#best-practices)
   - [Named Parameters Instead of Positional Parameters](#named-parameters-instead-of-positional-parameters)
   - [No Cmdlet Aliases](#no-cmdlet-aliases)
+  - [Capitalized cmdlets, Function Names and Pester Assertions](#Capitalized-cmdlets-Function-Names-and-Pester-Assertions)
   - [No Backslash in Paths](#no-backslash-in-paths)
 
 ## Markdown Files
@@ -1285,7 +1286,7 @@ ls -File $root -Recurse | ? { @('.gitignore', '.mof') -contains $_.Extension }
 Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -contains $_.Extension }
 ```
 
-### Capitalised cmdlets, Function Names and Pester Assertions
+### Capitalized cmdlets, Function Names and Pester Assertions
 
 PowerShell cmdlets, Functions and Pester assertions should all start with capital letters.  This makes code easier to read, especially when there are multiple nouns in the command name.  
 
