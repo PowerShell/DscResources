@@ -42,7 +42,7 @@ In order to provide clean and consistent code, please follow the style guideline
 - [Best Practices](#best-practices)
   - [Named Parameters Instead of Positional Parameters](#named-parameters-instead-of-positional-parameters)
   - [No Cmdlet Aliases](#no-cmdlet-aliases)
-  - [Capitalized cmdlets, Function Names and Pester Assertions](#Capitalized-cmdlets,-Function-Names-and-Pester-Assertions)
+  - [Capitalized cmdlets, Function Names and Pester Assertions](#capitalized-cmdlets-function-names-and-pester-assertions)
   - [No Backslash in Paths](#no-backslash-in-paths)
 
 ## Markdown Files
