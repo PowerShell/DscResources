@@ -1301,7 +1301,7 @@ it 'Should return something' {
 **Bad:**
 
 ```powershell
-new-function -name $params
+new-function -name $newfunctionparameter
 ```
 
 **Good:**
@@ -1315,7 +1315,7 @@ It 'Should return something' {
 **Good:**
 
 ```powershell
-New-Function -Name $params
+New-Function -Name $newFunctionParameter
 ```
 
 ### No Backslash in Paths
