@@ -33,15 +33,15 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | SecurityPolicyDsc | Jason Walker ([@jcwalker](https://github.com/jcwalker)) |
 | SharePointDsc | Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) |
 | SystemLocaleDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| xActiveDirectory | Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Raimund Andree ([@raandree](https://github.com/raandree)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
+| xActiveDirectory | Raimund Andree ([@raandree](https://github.com/raandree)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
 | xAdcsDeployment | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xAzure | --- |
 | xAzurePack | --- |
 | xBitlocker | --- |
 | xCertificate | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xChrome | --- |
-| xComputerManagement | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| xCredSSP | Ben Gelens ([@bgelens](https://github.com/bgelens)) |
+| xComputerManagement | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| xCredSSP | --- |
 | xDatabase | --- |
 | xDFS | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xDhcpServer | Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
@@ -50,13 +50,13 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | xDscDiagnostics | --- |
 | xDSCResourceDesigner | --- |
 | xExchange | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) |
-| xFailOverCluster | Johan Ljunggren ([@johlju](https://github.com/johlju)) <br/> Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
+| xFailOverCluster | Johan Ljunggren ([@johlju](https://github.com/johlju)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
 | xFirefox | --- |
 | xHyper-V |  Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) |
 | xInternetExplorerHomePage | --- |
 | xJea | --- |
 | xMySql | --- |
-| xNetworking | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) <br/> Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Raimund Andree ([@raandree](https://github.com/raandree)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
+| xNetworking | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) <br/> Raimund Andree ([@raandree](https://github.com/raandree)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
 | xPendingReboot | --- |
 | xPhp | --- |
 | xPowerShellExecutionPolicy | --- |
@@ -67,14 +67,14 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | xSafeHarbor | --- |
 | xSCDPM | --- |
 | xSCOM | --- |
-| xSCSMA |  Ben Gelens ([@bgelens](https://github.com/bgelens)) |
+| xSCSMA | --- |
 | xSCSPF | --- |
 | xSCSR | --- |
 | xSCVMM | --- |
 | xSmbShare | --- |
 | xSqlPs | --- |
 | xSQLServer | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
-| xStorage | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) <br/> Ben Gelens ([@bgelens](https://github.com/bgelens)) |
+| xStorage | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xSystemSecurity | --- |
 | xTimeZone | --- |
 | xWebAdministration | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway))  |
