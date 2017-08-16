@@ -26,7 +26,7 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | Repository | Maintainer(s) |
 | ---------- | ------------- |
 | AuditPolicyDsc | Adam Haynes ([@athaynes](https://github.com/athaynes)) |
-| DscResources | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
+| DscResources | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Zachary Alexander ([@zjalexander](https://github.com/zjalexander)) |
 | DscResource.Tests | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) |
 | OfficeOnlineServerDsc | Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) |
 | PSDscResources | Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) <br/> Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
