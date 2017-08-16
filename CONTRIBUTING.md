@@ -42,7 +42,7 @@ You can access a resource module repository with the following URL:
 ```
 https://github.com/PowerShell/<name of resource module>
 ```
-For example, to get to the xCertificate module respository, the URL is:  
+For example, to get to the xCertificate module repository, the URL is:  
 ```
 https://github.com/PowerShell/xCertificate
 ```
@@ -112,7 +112,7 @@ If you find an issue that you want to work on, but it does not have the ```help 
 
 ### Fork a Respository
 A 'fork' on GitHub is your own personal copy of a repository.
-GitHub's guide to forking a respository is available [here](https://help.github.com/articles/fork-a-repo/).
+GitHub's guide to forking a repository is available [here](https://help.github.com/articles/fork-a-repo/).
 You will need a fork to contribute to any of the repositories in the DSC Resource Kit since only the maintainers have the ability to push to the official repositories.
 
 Once you have created your fork, you can easily access it via the URL:
@@ -139,7 +139,7 @@ When writing code for any of the modules in the DSC Resource Kit, please follow 
 These guidelines are specific to the DSC Resource Kit and may not always reflect the same PowerShell style as other projects.
 Code reviewers will expect you to follow these guidelines and may ask you to change your code for consistency.
 
-If you need help commiting and pushing your code to your fork, please refer to our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
+If you need help committing and pushing your code to your fork, please refer to our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
 
 Pay attention to any new code merged into the dev branch of the official repository. If this occurs, you will need to pick-up these changes in your fork using the rebase instructions in our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
 
@@ -162,11 +162,11 @@ Use them with caution as they may be changed soon.
 Tests should currently be structured like so:
 
 * Root folder of module  
-	* Tests  
-		* Unit  
-			* MyResource.Tests.ps1  
-		* Integration  
-			* MyResource.Integration.Tests.ps1  
+    * Tests  
+        * Unit  
+            * MyResource.Tests.ps1  
+        * Integration  
+            * MyResource.Integration.Tests.ps1  
 
 Not all resources currently have tests.
 This does not mean that you do not have to write tests for your changes.

@@ -50,7 +50,7 @@
 
 ### Avoid Using Hardcoded Computer Name
 
-Using hardcoded computer names exposes sentitive information on your machine.
+Using hardcoded computer names exposes sensitive information on your machine.
 Use a parameter or environment variable instead if a computer name is necessary.
 This comes from [this](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/RuleDocumentation/AvoidUsingComputerNameHardcoded.md) PS Script Analyzer rule.
 
@@ -116,7 +116,7 @@ if ($null -eq $myArray)
 ### Avoid Global Variables
 
 Avoid using global variables whenever possible.
-These variables can be editted by any other script that ran before your script or is running at the same time as your script.
+These variables can be edited by any other script that ran before your script or is running at the same time as your script.
 Use them only with extreme caution, and try to use parameters or script/local variables instead.
 
 This rule has a few exceptions:
@@ -625,7 +625,7 @@ function Get-MyBoolean
 
 The inclusion of a non-mandatory parameter that is never used could signal that there is a design flaw in the implementation of the `Get-TargetResource` function.
 The non-mandatory parameters that are used to call `Get-TargetResource` should help to retrieve the actual values of the properties for the resource.
-For example, if there is a parameter `Ensure` that is non-mandatory, that parameter describes the state the resource should have, but it might not be used to retrive
+For example, if there is a parameter `Ensure` that is non-mandatory, that parameter describes the state the resource should have, but it might not be used to retrieve
 the actual values.
 Another example would be if a parameter `FilePathName` is set to be non-mandatory, but `FilePathName` is actually a property that `Get-TargetResource` should return
 the actual value of.
@@ -725,7 +725,7 @@ function Get-TargetResource
 The inclusion of a mandatory parameter in the 'Get-TargetResource' function that is never used could signal that there is a design flaw in the implementation
 of the function.
 The mandatory parameters that are used to call 'Get-TargetResource' should help to retrieve the actual values of the properties for the resource.
-For example, if there is a parameter 'Ensure' that is mandatory, that parameter will not be used to retrive the actual values.
+For example, if there is a parameter 'Ensure' that is mandatory, that parameter will not be used to retrieve the actual values.
 Another example would be if a parameter 'FilePathName' is set to be mandatory, but 'FilePathName' is actually a property that 'Get-TargetResource' should
 return the actual value of. In that case it does not make sense to assign a value to 'FilePathName' when calling 'Get-TargetResource' because that value will
 never be used.
