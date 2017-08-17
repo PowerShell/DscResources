@@ -200,7 +200,7 @@ $validPropertyObjects = Get-Objects | Where-Object { $_.Property -ieq 'Valid' }
 foreach ($validPropertyObject in $validPropertyObjects)
 {
     $propertySetResult = Set-ObjectValue $validPropertyObject -Value 'Invalid'
-    Writ-Output $propertySetResult
+    Write-Output $propertySetResult
 }
 ```
 
