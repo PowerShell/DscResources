@@ -679,7 +679,7 @@ function Get-TargetResource
 
 ### Function Names Use Pascal Case
 
-Function names must use PascalCase.
+Function names must use PascalCase.  This means that each concatenating word is capitalized.  
 
 **Bad:**
 
@@ -989,7 +989,7 @@ function Write-Text
 
 ### Parameter Names Use Pascal Case
 
-All parameters must use PascalCase.
+All parameters must use PascalCase.  This means that each concatenating word is capitalized.  
 
 **Bad:**
 
@@ -1286,9 +1286,9 @@ ls -File $root -Recurse | ? { @('.gitignore', '.mof') -contains $_.Extension }
 Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -contains $_.Extension }
 ```
 
-### Capitalized cmdlets, Function Names and Pester Assertions
+### Capitalized Pester Assertions
 
-PowerShell cmdlets, Functions and Pester assertions should all start with capital letters.  This makes code easier to read, especially when there are multiple nouns in the command name.  
+Pester assertions should all start with capital letters.  This makes code easier to read.
 
 **Bad:**
 
@@ -1298,24 +1298,12 @@ it 'Should return something' {
 }
 ```
 
-**Bad:**
-
-```powershell
-new-function -name $newfunctionparameter
-```
-
 **Good:**
 
 ```powershell
 It 'Should return something' {
     Get-TargetResource @testParameters | Should Be 'something'
 }
-```
-
-**Good:**
-
-```powershell
-New-Function -Name $newFunctionParameter
 ```
 
 ### No Backslash in Paths
