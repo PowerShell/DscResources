@@ -6,8 +6,6 @@ There are a few different ways you can contribute:
 
 * [Submit an issue](#submitting-an-issue)
 * [Fix an issue](#fixing-an-issue)
-* [Submit a new resource](#submitting-a-new-resource)
-* [Submit a new resource module (repository)](#submitting-a-new-resource-module)
 * [Write documentation](#writing-documentation)
 * [Review pull requests](#reviewing-pull-requests) 
 
@@ -33,7 +31,7 @@ Here are the steps:
 ### Find the Correct Repository
 | Issue Topic | Where to Submit |
 |-------------|-----------------|
-| <ul><li> DSC Resource Kit overall </li><li> Issues that span multiple resource modules </li><li> DSC Resource Kit processes </li><li> Resource module proposals </li><li> Resource module submissions </li><li> Resource proposals that don't fit in an existing module </li></ul> | DscResources (this repository!) |
+| <ul><li> DSC Resource Kit overall </li><li> Issues that span multiple resource modules </li><li> DSC Resource Kit processes </li></ul> | DscResources (this repository!) |
 | <ul><li> Common tests </li><li> Meta-fixers </li></ul> | [DscResource.Tests](https://github.com/PowerShell/DscResource.Tests)
 | <ul><li> Bugs, feature requests, enhancements to a specific resource </li><li> Resource proposals </li></ul> | The repository of the resource module that contains/should contain the resource. |
 | <ul><li> Bugs, feature requests, enhancements that span multiple resources within one resource module </li></ul> | The repository of that resource module |
@@ -364,23 +362,15 @@ All mof-based resource (with Get/Set/Test-TargetResource and a schema.mof file) 
 Composite resource (with a configuration and a .psd1 file) files must have the exact same name as the resource or they will not be able to be imported. Hence, composite resource files should not have the MSFT_ prefix (e.g. xResource.psm1).
 
 If you are adding a new resource to an experimental/preview module (module name starts with 'x'), the resource name must also start with 'x' (e.g. MSFT_xResource.psm1 or xResource.psm1).
-If you are adding a new resource to a high quality module (module name does not start with 'x' and ends with 'Dsc'), the resource name should not start with 'x' (e.g. MSFT_Resource.psm1 or Resource.psm1).
+If the module name does not start with 'x', the resource name should not start with 'x' (e.g. MSFT_Resource.psm1 or Resource.psm1).
 
-For clarity, any test or example files for the resource should be named to match the files for the same resource. For example, if the main resource file is named 'MSFT_xResource.psm1', then the unit test file should be named 'MSFT_xResource.Tests.ps1'.
+AAny test or example files for the resource should be named to match the files for the same resource. For example, if the main resource file is named 'MSFT_xResource.psm1', then the unit test file should be named 'MSFT_xResource.Tests.ps1'. Consistent naming helps the review process. 
 
 ## Submitting a New Resource Module
-If you would like a new DSC resource module added to the DSC Resource Kit, please check the [existing issues](https://github.com/PowerShell/DscResources/issues) in this repository first to make sure no one else is already working on a similar module.
-If someone is already working on a similar module, please leave a comment on the open issue or add a GitHub reaction to the top comment to **express your interest**. You can also offer help and use the issue to coordinate your efforts.
+This repository is **not** accepting new modules at this time. We reccomend authoring the resource in your own repository and [submitting it to the gallery](https://docs.microsoft.com/en-us/powershell/gallery/psgallery/creating-and-publishing-an-item) under your own name. However, feel free to bring up any modules you have authored during the [DSC Resoucrce Kit Community Call](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls). 
 
-If none of the existing module proposals or submissions are related to one you want, open a new issue in [this repository](https://github.com/PowerShell/DscResources/issues) with the following information:
+## Developing a new resource 
 
-* What system will your module be managing?
-    - For example, [xActiveDirectory](https://github.com/powershell/xActiveDirectory) models and manages Active Directory
-* What resources you would like to be included in the new resource module?
-* Will your module include [MOF-based resources](https://technet.microsoft.com/en-us/library/dn956964.aspx) (compatible with PS/WMF 4.0 and 5.0+) or [class-based resources](https://technet.microsoft.com/en-us/library/dn948461.aspx) (only compatible with PS/WMF 5.0+)
-* Are you or will you be working on this module or would you like someone else to pick it up?
-
-Next, develop your new module in your own repository.
 Make sure to:
 
 * Follow the standard DSC Resource Kit module structure.
@@ -406,8 +396,6 @@ Make sure to:
 
 All new resource modules should follow the DSC Resource Kit [High Quality guidelines](HighQualityModuleGuidelines.md).
 High quality resource modules may then use the ___Dsc naming format (e.g. SharePointDsc).
-
-Once you are ready to submit your new module, follow the submission process [here](NewResourceModuleSubmissions.md).
 
 ## Writing Documentation
 One of the easiest ways to contribute to a PowerShell project is to write and edit documentation. 
