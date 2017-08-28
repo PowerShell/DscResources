@@ -367,7 +367,7 @@ If the module name does not start with 'x', the resource name should not start w
 AAny test or example files for the resource should be named to match the files for the same resource. For example, if the main resource file is named 'MSFT_xResource.psm1', then the unit test file should be named 'MSFT_xResource.Tests.ps1'. Consistent naming helps the review process. 
 
 ## Submitting a New Resource Module
-This repository is **not** accepting new modules at this time. We reccomend authoring the resource in your own repository and [submitting it to the gallery](https://docs.microsoft.com/en-us/powershell/gallery/psgallery/creating-and-publishing-an-item) under your own name. However, feel free to bring up any modules you have authored during the [DSC Resoucrce Kit Community Call](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls). 
+This repository is **not** accepting new modules at this time. We recommend authoring the resource in your own repository and [submitting it to the gallery](https://docs.microsoft.com/en-us/powershell/gallery/psgallery/creating-and-publishing-an-item) under your own name. However, feel free to bring up any modules you have authored during the [DSC Resoucrce Kit Community Call](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls). 
 
 ## Developing a new resource 
 
