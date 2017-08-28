@@ -42,7 +42,7 @@ You can access a resource module repository with the following URL:
 ```
 https://github.com/PowerShell/<name of resource module>
 ```
-For example, to get to the xCertificate module respository, the URL is:  
+For example, to get to the xCertificate module repository, the URL is:  
 ```
 https://github.com/PowerShell/xCertificate
 ```
@@ -112,7 +112,7 @@ If you find an issue that you want to work on, but it does not have the ```help 
 
 ### Fork a Respository
 A 'fork' on GitHub is your own personal copy of a repository.
-GitHub's guide to forking a respository is available [here](https://help.github.com/articles/fork-a-repo/).
+GitHub's guide to forking a repository is available [here](https://help.github.com/articles/fork-a-repo/).
 You will need a fork to contribute to any of the repositories in the DSC Resource Kit since only the maintainers have the ability to push to the official repositories.
 
 Once you have created your fork, you can easily access it via the URL:
@@ -139,7 +139,7 @@ When writing code for any of the modules in the DSC Resource Kit, please follow 
 These guidelines are specific to the DSC Resource Kit and may not always reflect the same PowerShell style as other projects.
 Code reviewers will expect you to follow these guidelines and may ask you to change your code for consistency.
 
-If you need help commiting and pushing your code to your fork, please refer to our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
+If you need help committing and pushing your code to your fork, please refer to our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
 
 Pay attention to any new code merged into the dev branch of the official repository. If this occurs, you will need to pick-up these changes in your fork using the rebase instructions in our [guide to getting started with GitHub](GettingStartedWithGitHub.md).
 
@@ -162,11 +162,11 @@ Use them with caution as they may be changed soon.
 Tests should currently be structured like so:
 
 * Root folder of module  
-	* Tests  
-		* Unit  
-			* MyResource.Tests.ps1  
-		* Integration  
-			* MyResource.Integration.Tests.ps1  
+    * Tests  
+        * Unit  
+            * MyResource.Tests.ps1  
+        * Integration  
+            * MyResource.Integration.Tests.ps1  
 
 Not all resources currently have tests.
 This does not mean that you do not have to write tests for your changes.
@@ -356,6 +356,17 @@ See the [Fixing an Issue](#fixing-an-issue) section above for further details.
 
 Be sure to include unit and integration tests for your new resource under the Tests folder as well as an example under the examples folder.
 Please also add a full description of your new resource and its parameters to the module's README.
+
+### Resource Naming
+
+All mof-based resource (with Get/Set/Test-TargetResource and a schema.mof file) files should have MSFT_ appended before the resource name (e.g. MSFT_xResource.psm1). This is per a convention that the name (or abbreviated name) of the company that provides the resource be included in the name of mof-based resource files. The friendly name of the resource, defined in the mof file, should not have the MSFT_ prefix.
+
+Composite resource (with a configuration and a .psd1 file) files must have the exact same name as the resource or they will not be able to be imported. Hence, composite resource files should not have the MSFT_ prefix (e.g. xResource.psm1).
+
+If you are adding a new resource to an experimental/preview module (module name starts with 'x'), the resource name must also start with 'x' (e.g. MSFT_xResource.psm1 or xResource.psm1).
+If you are adding a new resource to a high quality module (module name does not start with 'x' and ends with 'Dsc'), the resource name should not start with 'x' (e.g. MSFT_Resource.psm1 or Resource.psm1).
+
+For clarity, any test or example files for the resource should be named to match the files for the same resource. For example, if the main resource file is named 'MSFT_xResource.psm1', then the unit test file should be named 'MSFT_xResource.Tests.ps1'.
 
 ## Submitting a New Resource Module
 If you would like a new DSC resource module added to the DSC Resource Kit, please check the [existing issues](https://github.com/PowerShell/DscResources/issues) in this repository first to make sure no one else is already working on a similar module.

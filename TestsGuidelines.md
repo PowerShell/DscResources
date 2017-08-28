@@ -12,7 +12,7 @@ General Rules
  * The Tests\Unit folder must contain a Test Script for each DSC Resource in the DSC Module with the filename ```MSFT_<ResourceName>.tests.ps1```.
  * The Tests\Integration folder should, whenever possible, contain a Test Script for each DSC Resource in the DSC Module with the filename ```MSFT_<ResourceName>.integration.tests.ps1```.
  * Each Test Script should contain [Pester](https://github.com/pester/Pester) based tests.
- * Integration tests should be created when possible, but for some DSC resources this may not be possible. For example, when integration tests would cause the testing computer configuration to be damaged. 
+ * Integration tests should be created when possible, but for some DSC resources this may not be possible. For example, when integration tests would cause the testing computer configuration to be damaged.
  * Unit and Integration tests should be created using the Template files that are located in the [Tests.Template](Tests.Template) folder in this repository.
  * The Unit and Integration test templates require that ```Git.exe``` be installed and can be found in the ```%PATH%``` on the testing computer.
  * The Unit and Integration test templates will automatically download or update the [DSCResource.Tests repository](https://github.com/PowerShell/DscResource.Tests) using Git.exe to the DSC Module folder.
@@ -87,18 +87,55 @@ $LocalizedData = InModuleScope $Global:DSCResourceName {
 Export-ModuleMember -Function *-TargetResource -Variables LocalizedData
 ```
 
+Creating Mock Output Variables without InModuleScope
+----------------------------------------------------
+One useful pattern used when creating unit tests is to create variables that contain objects that will be returned when mocked cmdlets are called.
+These variables are often used many times over a single unit test file and so assigning each to a variable is essential to reduce the size of the unit test as well as improve readability and maintainability.
+For example:
+```powershell
+$MockNetAdapter = @{
+    Name              = 'Ethernet'
+    PhysicalMediaType = '802.3'
+    Status            = 'Up'
+}
+
+# Create a mock
+Mock `
+    -CommandName Get-NetAdapter `
+    -MockWith { return $MockNetAdapter }
+```
+
+However, when ```InModuleScope``` is being used the variables that are defined won't be accessible from within the mocked cmdlets.
+The solution to this is create a script block variable that contains the mocked object and then assign that to the Mock.
+
+```powershell
+$GetNetAdapter_PhysicalNetAdapterMock = {
+    return @{
+        Name              = 'Ethernet'
+        PhysicalMediaType = '802.3'
+        Status            = 'Up'
+    }
+}
+
+# Create a mock
+Mock `
+    -CommandName Get-NetAdapter `
+    -ModuleName $script:ModuleName `
+    -MockWith $GetNetAdapter_PhysicalNetAdapterMock
+```
+
 Example Unit Test Patterns
--------------
+--------------------------
 
 Pattern 1:
 The goal of this pattern should be to describe the potential states a system could be in for each function.
 
 ```powershell
 
-        Describe 'Get-TargetResource' {       
+        Describe 'Get-TargetResource' {
             # TODO: Complete Get-TargetResource Tests...
         }
-    
+
         Describe 'Set-TargetResource' {
             # TODO: Complete Set-TargetResource Tests...
         }
@@ -109,9 +146,9 @@ The goal of this pattern should be to describe the potential states a system cou
 ```
 Pattern 2:
 The goal of this pattern should be to describe the potential states a system could be in so that the get/set/test cmdlets can be tested in those states. Any mocks that relate to that specific state can be included in the relevant Describe block. For a more detailed description of this approach please review #143
- 
-Add as many of these example 'states' as required to simulate the scenarions that the DSC resource is designed to work with, below a simple 'is in desired state' and 'is not in desired state' are used, but there may be more complex combinations of factors, depending on how complex your resource is.
-        
+
+Add as many of these example 'states' as required to simulate the scenarios that the DSC resource is designed to work with, below a simple 'is in desired state' and 'is not in desired state' are used, but there may be more complex combinations of factors, depending on how complex your resource is.
+
 ```powershell
 
         Describe 'The system is not in the desired state' {
@@ -129,14 +166,14 @@ Add as many of these example 'states' as required to simulate the scenarions tha
             }
 
             It 'Should return false' {
-                Test-TargetResource @testParameters | Should be $false
+                Test-TargetResource @testParameters | Should Be $false
             }
 
             It 'Should call Demo-CmdletName' {
                 Set-TargetResource @testParameters
 
                 #TODO: Assert that the appropriate cmdlets were called
-                Assert-MockCalled Demo-CmdletName 
+                Assert-MockCalled Demo-CmdletName
             }
         }
 
@@ -155,7 +192,7 @@ Add as many of these example 'states' as required to simulate the scenarions tha
             }
 
             It 'Should return true' {
-                Test-TargetResource @testParameters | Should be $true
+                Test-TargetResource @testParameters | Should Be $true
             }
         }
 ```

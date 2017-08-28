@@ -3,9 +3,9 @@
    Template for creating DSC Resource Integration Tests
 .DESCRIPTION
    To Use:
-     1. Copy to \Tests\Integration\ folder and rename <ResourceName>.Integration.tests.ps1 (e.g. MSFT_xNeworking.Integration.tests.ps1)
+     1. Copy to \Tests\Integration\ folder and rename <ResourceName>.Integration.tests.ps1 (e.g. MSFT_xNetworking.Integration.tests.ps1)
      2. Customize TODO sections.
-     3. Create test DSC Configurtion file <ResourceName>.config.ps1 (e.g. MSFT_xNeworking.config.ps1) from integration_config_template.ps1 file.
+     3. Create test DSC Configuration file <ResourceName>.config.ps1 (e.g. MSFT_xNetworking.config.ps1) from integration_config_template.ps1 file.
 
 .NOTES
    Code in HEADER, FOOTER and DEFAULT TEST regions are standard and may be moved into
@@ -17,15 +17,15 @@ $script:DSCModuleName      = '<ModuleName>' # Example xNetworking
 $script:DSCResourceName    = '<ResourceName>' # Example MSFT_xFirewall
 
 #region HEADER
-# Integration Test Template Version: 1.1.1
+# Integration Test Template Version: 1.1.2
 [String] $script:moduleRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if ( (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))) -or `
      (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1'))) )
 {
-    & git @('clone','https://github.com/PowerShell/DscResource.Tests.git',(Join-Path -Path $script:moduleRoot -ChildPath '\DSCResource.Tests\'))
+    & git @('clone','https://github.com/PowerShell/DscResource.Tests.git',(Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))
 }
 
-Import-Module (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1') -Force
+Import-Module -Name (Join-Path -Path $script:moduleRoot -ChildPath (Join-Path -Path 'DSCResource.Tests' -ChildPath 'TestHelper.psm1')) -Force
 $TestEnvironment = Initialize-TestEnvironment `
     -DSCModuleName $script:DSCModuleName `
     -DSCResourceName $script:DSCResourceName `
@@ -46,14 +46,17 @@ try
         #region DEFAULT TESTS
         It 'Should compile and apply the MOF without throwing' {
             {
-                & "$($script:DSCResourceName)_Config" -OutputPath $TestEnvironment.WorkingFolder
-                Start-DscConfiguration -Path $TestEnvironment.WorkingFolder `
+                & "$($script:DSCResourceName)_Config" -OutputPath $TestDrive
+
+                Start-DscConfiguration -Path $TestDrive `
                     -ComputerName localhost -Wait -Verbose -Force
-            } | Should not throw
+            } | Should Not Throw
         }
 
         It 'Should be able to call Get-DscConfiguration without throwing' {
-            { Get-DscConfiguration -Verbose -ErrorAction Stop } | Should Not throw
+            {
+				Get-DscConfiguration -Verbose -ErrorAction Stop 
+			} | Should Not Throw
         }
         #endregion
 

@@ -1,6 +1,6 @@
 # DSC Resource Kit Community Call - 10/26/2016
 **1-2PM on Wednesday, October 26 (PST)**  
-ICS file available [here](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/10-26-16/CommunityCall102616.zip?raw=true)
+ICS file available [here](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2016-10-26/CommunityCall102616.zip?raw=true)
 
 ## How to Join
 ### Skype for Business

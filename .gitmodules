@@ -161,19 +161,25 @@
 	path = xDscResources/xDFS
 	url = https://github.com/PowerShell/xDFS
 [submodule "DscResources/SharePointDsc"]
-	path = dscresources/SharePointDsc
+	path = DscResources/SharePointDsc
 	url = https://github.com/PowerShell/SharePointDsc
 [submodule "DscResources/SystemLocaleDsc"]
 
-	path = dscresources/SystemLocaleDsc
+	path = DscResources/SystemLocaleDsc
 
 	url = https://github.com/PowerShell/SystemLocaleDsc
 
 [submodule "DscResources/OfficeOnlineServerDsc"]
 
-	path = dscresources/OfficeOnlineServerDsc
+	path = DscResources/OfficeOnlineServerDsc
 
 	url = https://github.com/PowerShell/OfficeOnlineServerDsc
-[submodule "dscresources/PSDscResources"]
-	path = dscresources/PSDscResources
+[submodule "DscResources/PSDscResources"]
+	path = DscResources/PSDscResources
 	url = https://github.com/PowerShell/PSDscResources
+[submodule "DscResources/AuditPolicyDsc"]
+	path = DscResources/AuditPolicyDsc
+	url = https://github.com/PowerShell/AuditPolicyDsc
+[submodule "DscResources/SecurityPolicyDsc"]
+	path = DscResources/SecurityPolicyDsc
+	url = https://github.com/PowerShell/SecurityPolicyDsc

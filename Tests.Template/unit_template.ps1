@@ -16,21 +16,21 @@
 
 #region HEADER
 
-# Unit Test Template Version: 1.2.0
+# Unit Test Template Version: 1.2.1
 $script:moduleRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if ( (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))) -or `
      (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1'))) )
 {
-    & git @('clone','https://github.com/PowerShell/DscResource.Tests.git',(Join-Path -Path $script:moduleRoot -ChildPath '\DSCResource.Tests\'))
+    & git @('clone','https://github.com/PowerShell/DscResource.Tests.git',(Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))
 }
 
-Import-Module (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1') -Force
+Import-Module -Name (Join-Path -Path $script:moduleRoot -ChildPath (Join-Path -Path 'DSCResource.Tests' -ChildPath 'TestHelper.psm1')) -Force
 
 # TODO: Insert the correct <ModuleName> and <ResourceName> for your resource
 $TestEnvironment = Initialize-TestEnvironment `
     -DSCModuleName '<ModuleName>' `
     -DSCResourceName '<ResourceName>' `
-    -TestType Unit 
+    -TestType Unit
 
 #endregion HEADER
 
@@ -40,7 +40,7 @@ function Invoke-TestSetup {
 
 function Invoke-TestCleanup {
     Restore-TestEnvironment -TestEnvironment $TestEnvironment
-    
+
     # TODO: Other Optional Cleanup Code Goes Here...
 }
 
@@ -51,14 +51,14 @@ try
 
     InModuleScope '<ResourceName>' {
         # TODO: Optionally create any variables here for use by your tests
-    
+
         # TODO: Complete the Describe blocks below and add more as needed.
         # The most common method for unit testing is to test by function. For more information
-        # check out this introduction to writing unit tests in Pester: 
+        # check out this introduction to writing unit tests in Pester:
         # https://www.simple-talk.com/sysadmin/powershell/practical-powershell-unit-testing-getting-started/#eleventh
         # You may also follow one of the patterns provided in the TestsGuidelines.md file:
         # https://github.com/PowerShell/DscResources/blob/master/TestsGuidelines.md
-        
+
         Describe '<Test-name>' {
             BeforeEach {
                 # per-test-initialization
@@ -100,7 +100,7 @@ try
                 }
             }
         }
-        
+
         # TODO: add more Describe blocks as needed
     }
 }
