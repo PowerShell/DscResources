@@ -17,7 +17,7 @@ $script:DSCModuleName      = '<ModuleName>' # Example xNetworking
 $script:DSCResourceName    = '<ResourceName>' # Example MSFT_xFirewall
 
 #region HEADER
-# Integration Test Template Version: 1.1.2
+# Integration Test Template Version: 1.1.3
 [String] $script:moduleRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if ( (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))) -or `
      (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1'))) )
