@@ -26,4 +26,11 @@ Participants using the Join by Phone option must dial the full number for call a
 
 Topics or questions from the community are welcome at any point during the call!
 
-- Modules currently on track to be released:
+6 modules on track for release on Wednesday October 4, 2017:
+
+- SharePointDsc
+- SecurityPolicyDsc
+- xAdcsDeployment
+- xComputerManagement
+- xNetworking*
+- xSQLServer
