@@ -21,7 +21,7 @@ Maintainers have the power to:
 
 Being a mantainer is a time-consuming task!
 If you find you no longer have the time for this role, please let us know. 
-That helps us keep contributors up-to-date on  what to expect for certain repos. 
+That helps us keep contributors up-to-date on what to expect for certain repositories. 
 
 If you should be on this list but are not, please tag [@kwirkykat](https://github.com/kwirkykat) in an issue or send [@katiedsc](https://twitter.com/katiedsc) a private message on Twitter.
 
@@ -93,7 +93,7 @@ All repositories without dedicated maintainers are maintained by the current DSC
 
 If you are maintainer, please follow these rules:
 
-1. **DO** take care of pull reqeusts in a timely manner
+1. **DO** take care of pull requests in a timely manner.
 1. **DO** ensure that each contributor has signed a valid Contributor License Agreement (CLA).
 1. **DO** reply to new issues and pull requests (after you finish reviewing and everything looks good to you, leave a comment like "Looks good to me" or "LGTM" so we know that someone has looked at it and approved it).
 1. **DO** make sure contributors are following the [contributor guidelines](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md).
