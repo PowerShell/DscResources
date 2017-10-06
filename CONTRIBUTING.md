@@ -364,7 +364,7 @@ Composite resource (with a configuration and a .psd1 file) files must have the e
 If you are adding a new resource to an experimental/preview module (module name starts with 'x'), the resource name must also start with 'x' (e.g. MSFT_xResource.psm1 or xResource.psm1).
 If the module name does not start with 'x', the resource name should not start with 'x' (e.g. MSFT_Resource.psm1 or Resource.psm1).
 
-AAny test or example files for the resource should be named to match the files for the same resource. For example, if the main resource file is named 'MSFT_xResource.psm1', then the unit test file should be named 'MSFT_xResource.Tests.ps1'. Consistent naming helps the review process. 
+Any test or example files for the resource should be named to match the files for the same resource. For example, if the main resource file is named 'MSFT_xResource.psm1', then the unit test file should be named 'MSFT_xResource.Tests.ps1'. Consistent naming helps the review process. 
 
 ## Submitting a New Resource Module
 This repository is **not** accepting new modules at this time. We recommend authoring the resource in your own repository and [submitting it to the gallery](https://docs.microsoft.com/en-us/powershell/gallery/psgallery/creating-and-publishing-an-item) under your own name. However, feel free to bring up any modules you have authored during the [DSC Resoucrce Kit Community Call](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls). 
@@ -394,8 +394,7 @@ Make sure to:
 * Use the template from the [DscResource.Template folder](DscResource.Template) as a boilerplate for [appveyor.yml] (https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/appveyor.yml) (Continuous Integration configuration file) and [README.md](https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/README.md).
 * Run the common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) which will be automatically installed into the root folder of your module when your tests are run if your module is accepted in the DSC Resource Kit. 
 
-All new resource modules should follow the DSC Resource Kit [High Quality guidelines](HighQualityModuleGuidelines.md).
-High quality resource modules may then use the ___Dsc naming format (e.g. SharePointDsc).
+All new resources in existing resource modules should should follow the [High Quality resource module guidelines](HighQualityModuleGuidelines.md).
 
 ## Writing Documentation
 One of the easiest ways to contribute to a PowerShell project is to write and edit documentation. 
