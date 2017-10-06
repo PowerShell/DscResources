@@ -2,7 +2,7 @@
 # DSC Resource Kit & Configurations Community Call - 11/08/2017
 
 **12PM (PST) on Wednesday, November 8th**  
-[ICS file]()
+[ICS file](https://github.com/PowerShell/DscResources/CommunityCalls/DSC%20Resource%20Kit%20Community%20Call%20ICS.zip)
 
 ## How to Join
 
