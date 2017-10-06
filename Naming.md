@@ -1,20 +1,25 @@
-This document clarifies the naming convention for DSC Resource Modules
-
+This document clarifies the naming convention for DSC Resource Modules.
+From least to most trustworthy, these prefixes are:
 
 1. [Unsupported (xResource)](#unsupported)
-2. [Community Supported (HQRM)](#community-supported)
-3. [Microsoft Supported](#microsoft-supported)
-4. [(Deprecated) Community created (cResource)](#deprecated-community-created)
+1. [Community Supported (HQRM)](#community-supported)
+1. [Microsoft Supported](#microsoft-supported)
+1. [(Deprecated) Community created (cResource)](#deprecated-community-created)
 
 ## Unsupported
-The "x" prefix means a resource is "experimental". It comes with no support guarantee whatsoever.
+The "x" prefix means a resource is "experimental". 
+It comes with no support guarantee whatsoever.
+Resource module authors should remove the "x" when they are ready to have a 1.0 version that is fit for public consumption.
 
 ## Community Supported
-A "HQRM" module follows the [high quality resource guidelines](https://github.com/PowerShell/DscResources/blob/master/HighQualityModuleGuidelines.md).
-This means the module has proper test coverage and follows Microsoft best practices for development of a DSC resource.
 These modules have no prefix, but they are suffixed with "DSC".
 These modules are **not** officially supported by Microsoft.
 However, there is sufficient interest in this module such that you might get some help if you post a GitHub issue.
+The community reviews modules submitted to the community call in order to determine if they meet the quality bar.
+A "HQRM" module follows the [high quality DSC resource guidelines](https://github.com/PowerShell/DscResources/blob/master/HighQualityModuleGuidelines.md).
+This means the module has proper test coverage and follows Microsoft best practices for development of a DSC resource.
+Modules which have been reviewed by the community and meet the bar will be listed on this repository. 
+
 
 ## Microsoft Supported
 The modules in [/PowerShell/DscResources/DscResources](https://github.com/PowerShell/DscResources/tree/master/DscResources) are supported by Microsoft.
