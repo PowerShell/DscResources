@@ -13,16 +13,16 @@
 #>
 
 # TODO: Customize these parameters...
-$script:DSCModuleName      = '<ModuleName>' # Example xNetworking
-$script:DSCResourceName    = '<ResourceName>' # Example MSFT_xFirewall
+$script:DSCModuleName = '<ModuleName>' # Example xNetworking
+$script:DSCResourceName = '<ResourceName>' # Example MSFT_xFirewall
 
 #region HEADER
 # Integration Test Template Version: 1.1.3
 [String] $script:moduleRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if ( (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))) -or `
-     (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1'))) )
+    (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1'))) )
 {
-    & git @('clone','https://github.com/PowerShell/DscResource.Tests.git',(Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))
+    & git @('clone', 'https://github.com/PowerShell/DscResource.Tests.git', (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))
 }
 
 Import-Module -Name (Join-Path -Path $script:moduleRoot -ChildPath (Join-Path -Path 'DSCResource.Tests' -ChildPath 'TestHelper.psm1')) -Force
@@ -49,12 +49,12 @@ try
                 & "$($script:DSCResourceName)_Config" -OutputPath $TestDrive
 
                 $startDscConfigurationParameters = @{
-                    Path = $TestDrive
+                    Path         = $TestDrive
                     ComputerName = 'localhost'
-                    Wait = $true
-                    Verbose = $true
-                    Force = $true
-                    ErrorAction = 'Stop'
+                    Wait         = $true
+                    Verbose      = $true
+                    Force        = $true
+                    ErrorAction  = 'Stop'
                 }
 
                 Start-DscConfiguration @startDscConfigurationParameters
@@ -63,8 +63,8 @@ try
 
         It 'Should be able to call Get-DscConfiguration without throwing' {
             {
-				Get-DscConfiguration -Verbose -ErrorAction Stop
-			} | Should Not Throw
+                Get-DscConfiguration -Verbose -ErrorAction Stop
+            } | Should Not Throw
         }
         #endregion
 
