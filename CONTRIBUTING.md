@@ -361,10 +361,12 @@ All mof-based resource (with Get/Set/Test-TargetResource and a schema.mof file) 
 
 Composite resource (with a configuration and a .psd1 file) files must have the exact same name as the resource or they will not be able to be imported. Hence, composite resource files should not have the MSFT_ prefix (e.g. xResource.psm1).
 
-If you are adding a new resource to an experimental/preview module (module name starts with 'x'), the resource name must also start with 'x' (e.g. MSFT_xResource.psm1 or xResource.psm1).
+If you are adding a new resource to an unsupported module (module name starts with 'x'), the resource name must also start with 'x' (e.g. MSFT_xResource.psm1 or xResource.psm1).
 If the module name does not start with 'x', the resource name should not start with 'x' (e.g. MSFT_Resource.psm1 or Resource.psm1).
 
 Any test or example files for the resource should be named to match the files for the same resource. For example, if the main resource file is named 'MSFT_xResource.psm1', then the unit test file should be named 'MSFT_xResource.Tests.ps1'. Consistent naming helps the review process. 
+
+For more details, please see [Naming](Naming.md)
 
 ## Submitting a New Resource Module
 This repository is **not** accepting new modules at this time. We recommend authoring the resource in your own repository and [submitting it to the gallery](https://docs.microsoft.com/en-us/powershell/gallery/psgallery/creating-and-publishing-an-item) under your own name. However, feel free to bring up any modules you have authored during the [DSC Resoucrce Kit Community Call](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls). 
