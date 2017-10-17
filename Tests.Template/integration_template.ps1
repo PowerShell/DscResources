@@ -50,13 +50,13 @@ try
 
                 Start-DscConfiguration -Path $TestDrive `
                     -ComputerName localhost -Wait -Verbose -Force
-            } | Should Not Throw
+            } | Should -Not -Throw
         }
 
         It 'Should be able to call Get-DscConfiguration without throwing' {
             {
 				Get-DscConfiguration -Verbose -ErrorAction Stop 
-			} | Should Not Throw
+			} | Should -Not -Throw
         }
         #endregion
 

@@ -21,6 +21,9 @@ When the templates are used to create or update tests in a DSC Resource the vers
 * First release including version number.
 
 ## unit_template.ps1
+### Unreleased ###
+* Update Pester syntax to v4
+
 ### Version 1.2.1
 * Removed backslashes from git clone command to improve compatibility with unusual file paths
 
