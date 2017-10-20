@@ -14,7 +14,7 @@ From least to most trustworthy, these prefixes are:
 The community of Open Source contributors holds each other,
 and Microsoft, accountable to quality through a process that includes:
 - Code review prior to listing as submodule in [DSC Resource](http://github.com/powershell/dscresources) repo
-    - Includes an expectation of [project structure](contributing.md##developing-a-new-resource), including [documentation](contributing.md##writing-documentation), [tests](contributing.md###write-tests) and [CI](contributing.md###tests-in-appveyor) process to revalidate at every push to source
+    - Includes an expectation of [project structure](Contributing.md##developing-a-new-resource), including [documentation](Contributing.md##writing-documentation), [tests](Contributing.md###write-tests) and [CI](Contributing.md###tests-in-appveyor) process to revalidate at every push to source
 - Contributor community monthly Skype call
 - Established baseline of "High Quality" to set goals for contributors seeking best practice guidance
 
@@ -28,7 +28,7 @@ see [high quality DSC resource guidelines](HighQualityModuleGuidelines.md)
 
 The "x" prefix designates a branch of a project that is under active development.
 Frequent releases are to be expected
-and major releases that include [breaking changes](contributing.md##breaking-changes)
+and major releases that include [breaking changes](Contributing.md##breaking-changes)
 can be expected to occur.
 A project might always have an Active branch,
 and make Active branch releases to the [PowerShell Gallery](http://www.powershellgallery.com)
@@ -88,4 +88,4 @@ The recommended versioning strategy for DSC projects is [semantic versioning](ht
 ## Support
 
 The concepts of Naming and supportability are unrelated.
-For details see the [supportability](supportability.md) informational page.
+For details see the [supportability](Supportability.md) informational page.

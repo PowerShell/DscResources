@@ -15,8 +15,8 @@ PowerShell scripts and DSC Resources can both be examples of custom scripts.
 
 ## What should I expect if I call Microsoft for support on a DSC Resource
 
-When a new support case is opened, and the focus is on DSC
-the person assisting the customer will attempt to resolve the issue,
+When a new support case is opened and the focus is on DSC,
+the person assisting the customer will attempt to resolve the issue
 and if needed will include the PowerShell team.
 The PowerShell team will determine if there is an issue with PowerShell, LCM,
 or if help is needed with custom scripting.
