@@ -52,7 +52,7 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | xExchange | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) |
 | xFailOverCluster | Johan Ljunggren ([@johlju](https://github.com/johlju)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway)) |
 | xFirefox | --- |
-| xHyper-V |  Ben Gelens ([@bgelens](https://github.com/bgelens)) <br/> Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) |
+| xHyper-V | Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) |
 | xInternetExplorerHomePage | --- |
 | xJea | --- |
 | xMySql | --- |
@@ -62,7 +62,7 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | xPowerShellExecutionPolicy | --- |
 | xPSDesiredStateConfiguration | Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) <br/> Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
 | xRemoteDesktopAdmin | --- |
-| xRemoteDesktopSessionHost |  Ben Gelens ([@bgelens](https://github.com/bgelens)) |
+| xRemoteDesktopSessionHost | --- |
 | xRobocopy | --- |
 | xSafeHarbor | --- |
 | xSCDPM | --- |
@@ -76,7 +76,7 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | xSQLServer | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
 | xStorage | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xSystemSecurity | --- |
-| xTimeZone | --- |
+| xTimeZone | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xWebAdministration | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Richard Siddaway ([@RichardSiddaway](https://github.com/RichardSiddaway))  |
 | xWebDeploy | --- |
 | xWindowsEventForwarding | --- |
