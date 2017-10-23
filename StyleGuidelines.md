@@ -42,6 +42,7 @@ In order to provide clean and consistent code, please follow the style guideline
 - [Best Practices](#best-practices)
   - [Named Parameters Instead of Positional Parameters](#named-parameters-instead-of-positional-parameters)
   - [No Cmdlet Aliases](#no-cmdlet-aliases)
+  - [Capitalized Pester Assertions](#capitalized-pester-assertions)
   - [No Backslash in Paths](#no-backslash-in-paths)
 
 ## Markdown Files
@@ -678,7 +679,7 @@ function Get-TargetResource
 
 ### Function Names Use Pascal Case
 
-Function names must use PascalCase.
+Function names must use PascalCase.  This means that each concatenated word is capitalized.  
 
 **Bad:**
 
@@ -988,7 +989,7 @@ function Write-Text
 
 ### Parameter Names Use Pascal Case
 
-All parameters must use PascalCase.
+All parameters must use PascalCase.  This means that each concatenated word is capitalized.  
 
 **Bad:**
 
@@ -1283,6 +1284,26 @@ ls -File $root -Recurse | ? { @('.gitignore', '.mof') -contains $_.Extension }
 
 ```powershell
 Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -contains $_.Extension }
+```
+
+### Capitalized Pester Assertions
+
+Pester assertions should all start with capital letters.  This makes code easier to read.
+
+**Bad:**
+
+```powershell
+it 'Should return something' {
+    get-targetresource @testParameters | should be 'something'
+}
+```
+
+**Good:**
+
+```powershell
+It 'Should return something' {
+    Get-TargetResource @testParameters | Should Be 'something'
+}
 ```
 
 ### No Backslash in Paths
