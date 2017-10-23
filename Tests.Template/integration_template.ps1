@@ -17,7 +17,7 @@ $script:DSCModuleName = '<ModuleName>' # Example xNetworking
 $script:DSCResourceName = '<ResourceName>' # Example MSFT_xFirewall
 
 #region HEADER
-# Integration Test Template Version: 1.1.3
+# Integration Test Template Version: 1.2.0
 [String] $script:moduleRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if ( (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))) -or `
     (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1'))) )
@@ -58,13 +58,13 @@ try
                 }
 
                 Start-DscConfiguration @startDscConfigurationParameters
-            } | Should Not Throw
+            } | Should -Not -Throw
         }
 
         It 'Should be able to call Get-DscConfiguration without throwing' {
             {
                 Get-DscConfiguration -Verbose -ErrorAction Stop
-            } | Should Not Throw
+            } | Should -Not -Throw
         }
         #endregion
 
