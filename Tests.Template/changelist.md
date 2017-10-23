@@ -8,8 +8,12 @@ When the templates are used to create or update tests in a DSC Resource the vers
 * First release including version number.
 
 ## integration_template.ps1
+### Version 1.1.3
+* Now `-ErrorAction Stop` is used for the cmdlet Start-DscConfiguration so
+  that all errors throw an error making the tests fail.
+
 ### Version 1.1.2
-* Removed backslashes from git clone command to improve compatibility with unusual file paths
+* Removed backslashes from git clone command to improve compatibility with unusual file paths.
 
 ### Version 1.1.1
 * Convert Invoke-Expression to '&' to improve readability.
@@ -22,7 +26,7 @@ When the templates are used to create or update tests in a DSC Resource the vers
 
 ## unit_template.ps1
 ### Version 1.2.1
-* Removed backslashes from git clone command to improve compatibility with unusual file paths
+* Removed backslashes from git clone command to improve compatibility with unusual file paths.
 
 ### Version 1.1.0
 * Getting rid of git-dependency.
