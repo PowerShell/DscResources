@@ -2,7 +2,7 @@
 
 This document clarifies the naming convention for DSC Resource Modules.
 
-- [Module Naming] (##module-naming)
+- [Module Naming](##module-naming)
 - ["Dsc" Suffix](##dsc-suffix)
 - [High Quality Resource Module tag (HQRM)](##high-quality-resource-module)
 
