@@ -1,19 +1,21 @@
 # DSC Resource Naming
 
 This document clarifies the naming convention for DSC Resource Modules.
-From least to most trustworthy, these prefixes are:
 
-1. [Active ("x" prefix)](##active)
-1. [Stable ("DSC" suffix)](##stable)
-1. [High Quality Resource Module (HQRM tag)](##high-quality-resource-module)
+- [Module Naming] (##module-naming)
+- ["Dsc" Suffix](##dsc-suffix)
+- [High Quality Resource Module tag (HQRM)](##high-quality-resource-module)
 
-*Note:* [(Deprecated) Community created (cResource)](##deprecated-community-created)
+*Previously documented conventions:*
+
+- [(Deprecated) Expiremental (xResource)](##deprecated-expiremental)
+- [(Deprecated) Community created (cResource)](##deprecated-community-created)
 
 ## Quality Governance
 
 The community of Open Source contributors holds each other,
 and Microsoft, accountable to quality through a process that includes:
-- Code review prior to listing as submodule in [DSC Resource](http://github.com/powershell/dscresources) repo
+- Code review prior to listing in [DSC Resource](http://github.com/powershell/dscresources) repo
     - Includes an expectation of [project structure](Contributing.md##developing-a-new-resource), including [documentation](Contributing.md##writing-documentation), [tests](Contributing.md###write-tests) and [CI](Contributing.md###tests-in-appveyor) process to revalidate at every push to source
 - Contributor community monthly Skype call
 - Established baseline of "High Quality" to set goals for contributors seeking best practice guidance
@@ -24,60 +26,71 @@ the DSC Resources available by providing feedback,
 calling out Issues, or assist in documenting new quality baselines,
 see [high quality DSC resource guidelines](HighQualityModuleGuidelines.md)
 
-## Active
+## Module Naming
 
-The "x" prefix designates a branch of a project that is under active development.
-Frequent releases are to be expected
-and major releases that include [breaking changes](Contributing.md##breaking-changes)
-can be expected to occur.
-A project might always have an Active branch,
-and make Active branch releases to the [PowerShell Gallery](http://www.powershellgallery.com)
-using the "x" prefix while also having branches in other categories (such as Stable).
-New projects might only have an Active release, so they will choose to have the "Master" branch
-as the Active branch until the maintainer decides otherwise.
+When possible, a DSC resource can be combined with PowerShell functions
+in a single module.
+The module is scoped to a scenario and exports commands for general use
+as well as DSC resources to declaratively manage the same components.
 
-The [HQRM](HighQualityModuleGuidelines.md) tag can be applied to Active branch
-releases if all guidelines are met.
-In other words, a developer of a DSC Resource can meet all the requirements for HQRM
-in the Active branch and continue with frequent releases, as long as the releases
-always meet the community guidelines.
+If no module exists within the scope of the scenario,
+there is no need to append a special identifier in the name.
+The module should include the metadata tag "DSC Resource"
+to clearly identify it in the [gallery](http://powershellgallery.com).
 
-## Stable
+## Dsc Suffix
 
-These modules have no prefix, but they are suffixed with "DSC".
-The "DSC" suffix indicates a branch of a project that is the Stable release
-(likely named the "Master" branch).
-A contributor that releases a resource to the [PowerShell Gallery](http://www.powershellgallery.com)
-with the "DSC" suffix is indicating to the public
-that the code is ready to be consumed in a production environment.
-Less frequent releases are to be expected especially across major version releases.
+When creating a module for DSC resources that will be paired with an existing PowerShell module,
+the best approach is to combine the original module name with the suffix "Dsc".
+This clearly identifies intent to align with the existing module.
 
-The same project will likely have releases to the Gallery from both Active and Stable branches,
-and both could include the [HQRM](HighQualityModuleGuidelines.md) tag if all guidelines are met.
-
-*Note:* it is best practice to download (save) and review any code from a public gallery or project
-site before use in a production environment.
+Even with the "Dsc" suffix,
+the module should include the metadata tag "DSC Resource"
+to clearly identify it in the [gallery](http://powershellgallery.com).
 
 ## High Quality Resource Module
 
 The community reviews modules [submitted to the community call](CommunityAgenda.md)
-in order to determine if they meet the quality bar.
+in order to determine if they meet an agreed-upon level of quality.
 These modules follow the [high quality DSC resource guidelines](HighQualityModuleGuidelines.md).
 This means the module strictly meets the community governed requirements
 for development of a DSC resource.
-Modules that have been reviewed by the community
-and meet the bar will be listed on this folder of the DSC Resources repository
-and should be tagged in their module manifest with "HQRM"
-so they are easily discovered in the Gallery.
+
+HQRM should be viewed as adherence to best practices and can be included as a tag
+throughout the entire life of development as long as the guidelines are followed.
+It is not an "end state", and is unrelated to [supportability](Supportability.md).
+
+Modules that meet HQRM requirements should be tagged in their module manifest with "HQRM"
+in addition to the metdata tag "DSC Resource"
+so both properties can be easily discovered in the [gallery](http://powershellgallery.com).
+
+## (Deprecated) Experimental
+
+When DSC was originally introduced,
+it was communicated that new modules should be prefixed with an "x"
+to help identify that the work might not be suitable for use in a production environment.
+
+The community has now matured and guidelines exist to hold project maintainers accountable
+through the use of CI process where tests are required and the results are publicly available.
+Anyone that would like to evaluate the quality of a module can view the project documentation,
+code, tests, and test results, to understand if the work is suitable for their environment.
+
+The "x" prefix is no longer required.
+Resources that include the prefix are free to deprecate the convention going forward.
+
+The existing work will remain available in the [gallery](http://powershellgallery.com)
+so there is no risk to existing Configurations.
+For Configurations that use modules that include an "x",
+see the project sites for communication from the maintainers about when a name change
+could occur.
 
 ## (Deprecated) Community Created
 
-At the launch of DSC,
-we requested that people contributing their own DSC resources prefix it with "c".
+Similar to the "x" prefix,
+at the launch of DSC there was communication that people contributing
+their own DSC resources prefix it with "c".
 This was because the resource modules were distributed via TechNet.
 Since we have moved to GitHub, this requirement is no longer valid.
-You might still see a few cResources in the wild
-but they hopefully will be updated to use an "x" in future releases.
 
 ## Versioning
 
