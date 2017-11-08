@@ -26,5 +26,17 @@ Participants using the Join by Phone option must dial the full number for call a
 
 Topics or questions from the community are welcome at any point during the call!
 
-Modules on track for release on Wednesday, November 15
+9 modules on track to be released Wednesday, November 15:
+
+SecurityPolicyDsc
+SharePointDsc (maybe)
+
+xComputerManagement
+xExchange
+xNetworking
+xPSDesiredStateConfiguration
+xSQLServer
+xStorage
+xWebAdministration
+
 Progress on "community supported" initiative
