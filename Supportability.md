@@ -5,7 +5,8 @@ published by the community.
 
 This is a community guidance document and not intended to be a legal/support document.
 For information on support programs available from Microsoft Corporation,
-see [the following website](https://support.microsoft.com/en-us/allproducts).
+see [the following website](https://support.microsoft.com/en-us/allproducts)
+and the category specific to the product or service where you use PowerShell.
 Support beyond what is described in this page
 might be available with those additional services.
 
@@ -26,9 +27,10 @@ If help is needed with custom scripting it will be provided on a basis of best e
 and does not include specialized knowledge regarding the technology
 managed by or implementation of community DSC Resources.
 
-The support case might lead to escalation with other teams at Microsoft,
+The support case might lead to guiding the customer
+to open a new issue in that community project (GitHub repo),
 a recommendation to engage a 3rd party company/organization that published the DSC Resource,
-or guiding the customer to open a new issue in that community project (such as in a GitHub repo.)
+or escalation with other teams at Microsoft.
 
 ## Who provides support for the technologies managed by DSC
 
@@ -40,7 +42,7 @@ or if a 3rd party software company/organization provides support for a DSC Resou
 
 A template for documenting this will be available for community maintainers.
 If support is not documented for a project,
-then it defaults to community supported.
+then it defaults to unsupported.
 
 ## How does this apply to the naming of a resources
 
