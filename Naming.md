@@ -22,16 +22,16 @@ and Microsoft, accountable to quality through a process that includes:
 
 The PowerShell team is a stakeholder in the community.
 Anyone contributing to or even consuming these projects can participate in improving
-the DSC Resources available by providing feedback,
-calling out Issues, or assist in documenting new quality baselines,
-see [high quality DSC resource guidelines](HighQualityModuleGuidelines.md)
+the DSC Resources available by providing feedback, filing Issues,
+authoring new tests, or even assisting with documentation.
 
 ## Module Naming
 
 When possible, a DSC resource can be combined with PowerShell functions
 in a single module.
-The module is scoped to a scenario and exports commands for general use
-as well as DSC resources to declaratively manage the same components.
+The module scope should be a "scenario" such as a single product or solution,
+and both export commands for general use
+and DSC resources to declaratively manage the same components.
 
 If no module exists within the scope of the scenario,
 there is no need to append a special identifier in the name.
@@ -53,16 +53,14 @@ to clearly identify it in the [gallery](http://powershellgallery.com).
 The community reviews modules [submitted to the community call](CommunityAgenda.md)
 in order to determine if they meet an agreed-upon level of quality.
 These modules follow the [high quality DSC resource guidelines](HighQualityModuleGuidelines.md).
-This means the module strictly meets the community governed requirements
-for development of a DSC resource.
 
 HQRM should be viewed as adherence to best practices and can be included as a tag
 throughout the entire life of development as long as the guidelines are followed.
 It is not an "end state", and is unrelated to [supportability](Supportability.md).
 
-Modules that meet HQRM requirements should be tagged in their module manifest with "HQRM"
-in addition to the metdata tag "DSC Resource"
-so both properties can be easily discovered in the [gallery](http://powershellgallery.com).
+Modules that meet HQRM requirements will be identified
+in the [DSCResources repo](http://github.com/powershell/dscresources)
+when the community has agreed that the project is adhering to requirements.
 
 ## (Deprecated) Experimental
 
