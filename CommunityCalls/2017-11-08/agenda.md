@@ -28,15 +28,14 @@ Topics or questions from the community are welcome at any point during the call!
 
 9 modules on track to be released Wednesday, November 15:
 
-SecurityPolicyDsc
-SharePointDsc (maybe)
-
-xComputerManagement
-xExchange
-xNetworking
-xPSDesiredStateConfiguration
-xSQLServer
-xStorage
-xWebAdministration
+- SecurityPolicyDsc
+- SharePointDsc (maybe)
+- xComputerManagement
+- xExchange
+- xNetworking
+- xPSDesiredStateConfiguration
+- xSQLServer
+- xStorage
+- xWebAdministration
 
 Progress on "community supported" initiative
