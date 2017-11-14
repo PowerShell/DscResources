@@ -23,7 +23,7 @@ and Microsoft, accountable to quality through a process that includes:
 The PowerShell team is a stakeholder in the community.
 Anyone contributing to or even consuming these projects can participate in improving
 the DSC Resources available by providing feedback, filing Issues,
-authoring new tests, or even assisting with documentation.
+authoring new tests, or assisting with documentation.
 
 ## Module Naming
 
