@@ -10,7 +10,7 @@ and the category specific to the product or service where you use PowerShell.
 Support beyond what is described in this page
 might be available with those additional services.
 
-## Are DSC Resources supported by Microsoft
+## Are DSC resources supported by Microsoft
 
 Microsoft supports PowerShell and the PowerShell Desired State Configuration
 engine, Local Configuration Manager (LCM).
@@ -26,14 +26,16 @@ If help is needed beyond those areas the case might lead to guiding the customer
 to open a new issue in that community project (GitHub repo),
 a recommendation to engage a 3rd party company/organization that published the DSC Resource,
 or escalation with other teams at Microsoft.
+With community supported artifacts,
+the case would be closed once a new issue has been submitted to the project.
 
 ## Who provides support for the technologies managed by DSC
 
-The maintainers for DSC Resources should clearly identify in the project README
+The maintainers for DSC resources should clearly identify in the project README
 if additional support is available.
 An example would be if a Microsoft product or service engineering team
-has agreed to extend their support to include DSC Resources,
-or if a 3rd party software company/organization provides support for DSC Resources.
+has agreed to extend their support to include DSC resources,
+or if a 3rd party software company/organization provides support for DSC resources.
 
 A template for documenting this will be available for community maintainers.
 If support is not documented for a project,
@@ -41,7 +43,7 @@ then it defaults to unsupported.
 
 ## How does this apply to the naming of a resources
 
-The naming of DSC Resources includes an identifier of quality
+The naming of DSC resources includes an identifier of quality
 as explained in the [Naming](Naming.md) informational page,
 that is governed by the community of active DSC Resource contributors.
 

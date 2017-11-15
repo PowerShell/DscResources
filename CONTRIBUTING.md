@@ -371,7 +371,7 @@ For more details, please see [Naming](Naming.md)
 ## Submitting a New Resource Module
 This repository is **not** accepting new modules at this time. We recommend authoring the resource in your own repository and [submitting it to the gallery](https://docs.microsoft.com/en-us/powershell/gallery/psgallery/creating-and-publishing-an-item) under your own name. However, feel free to bring up any modules you have authored during the [DSC Resoucrce Kit Community Call](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls). 
 
-## Developing a new resource 
+## Developing a new resource
 
 Make sure to:
 
