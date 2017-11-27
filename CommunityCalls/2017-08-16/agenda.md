@@ -26,4 +26,14 @@ Participants using the Join by Phone option must dial the full number for call a
 
 Topics or questions from the community are welcome at any point during the call!
 
-- Modules currently on track to be released on (**This will not be a definitive list and may be subject to change**)
+- Modules currently on track to be released on Wednesday, Aug 23 (**This will not be a definitive list and may be subject to change**)
+  - SecurityPolicyDsc
+  - xCertificate
+  - xComputerManagement
+  - xDhcpServer
+  - xDnsServer
+  - xExchange
+  - xFailOverCluster
+  - xNetworking
+  - xSQLServer
+

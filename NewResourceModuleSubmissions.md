@@ -13,7 +13,7 @@ When you are ready for your module to be reviewed, follow these steps:
 This will allow the reviewers to make comments and see the changes you make based on those comments.
 1. Submit an issue in the [main DSC Resource Kit repository](https://github.com/PowerShell/DscResources) with a link to your repository.
 1. Once **at least three** members of the [Dsc Resource Kit Design Review Team](#dsc-resource-kit-design-review-team) have reviewed and approved the new resource module, close the pull request, making sure all changes from the review are in your working branch.
-1. Transfer ownership of the new resource module to the PowerShell organization by first transferring ownership of the respository to **@kwirkykat**. The GitHub instructions for transferring a repository can be found [here](https://help.github.com/articles/transferring-a-repository-owned-by-your-personal-account/).
+1. Transfer ownership of the new resource module to the PowerShell organization by first transferring ownership of the repository to **@kwirkykat**. The GitHub instructions for transferring a repository can be found [here](https://help.github.com/articles/transferring-a-repository-owned-by-your-personal-account/).
 
 ## DSC Resource Kit Design Review Team
 - Katie Keim (@kwirkykat)

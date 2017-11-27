@@ -1,15 +1,15 @@
 # DSC Resource Kit Community Call - 12/07/2016
 
 **9-9:30AM on Wednesday, December 7 (PST)**  
-[ICS file](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/12-07-16/CommunityCall120716(9AM).zip)
+[ICS file](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2016-07-12/CommunityCall120716(9AM).zip)
 
 AND
 
 **4-4:30PM on Wednesday, December 7 (PST)**  
-[ICS file](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/12-07-16/CommunityCall120716(4PM).zip)
+[ICS file](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2016-07-12/CommunityCall120716(4PM).zip)
 
 Both calls are the same (other than any community questions).
-We are trying out providing both the accomodate time zones.
+We are trying out providing both the accommodate time zones.
 
 ## How to Join
 

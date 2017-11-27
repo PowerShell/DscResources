@@ -166,7 +166,7 @@ Add as many of these example 'states' as required to simulate the scenarios that
             }
 
             It 'Should return false' {
-                Test-TargetResource @testParameters | Should be $false
+                Test-TargetResource @testParameters | Should Be $false
             }
 
             It 'Should call Demo-CmdletName' {
@@ -192,7 +192,7 @@ Add as many of these example 'states' as required to simulate the scenarios that
             }
 
             It 'Should return true' {
-                Test-TargetResource @testParameters | Should be $true
+                Test-TargetResource @testParameters | Should Be $true
             }
         }
 ```

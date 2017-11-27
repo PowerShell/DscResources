@@ -42,6 +42,7 @@ In order to provide clean and consistent code, please follow the style guideline
 - [Best Practices](#best-practices)
   - [Named Parameters Instead of Positional Parameters](#named-parameters-instead-of-positional-parameters)
   - [No Cmdlet Aliases](#no-cmdlet-aliases)
+  - [Capitalized Pester Assertions](#capitalized-pester-assertions)
   - [No Backslash in Paths](#no-backslash-in-paths)
 
 ## Markdown Files
@@ -166,7 +167,7 @@ $superLongVariableName = Get-MySuperLongVariablePlease @getMySuperLongVariablePl
 ### Correct Format for Arrays
 
 Arrays should be written in the following format.
-Arrays should be writen on one line unless they exceed the line character limit.
+Arrays should be written on one line unless they exceed the line character limit.
 There should be a single space between each element in the array.
 Hashtables should not be declared inside an array.
 
@@ -234,7 +235,7 @@ $hashtable = @{
 ### Correct Format for Comments
 
 There should not be any commented-out code in checked-in files.
-The first letter of the comment should be captialized.
+The first letter of the comment should be capitalized.
 
 Single line comments should be on their own line and start with a single pound-sign followed by a single space.
 The comment should be indented the same amount as the following line of code.
@@ -678,7 +679,7 @@ function Get-TargetResource
 
 ### Function Names Use Pascal Case
 
-Function names must use PascalCase.
+Function names must use PascalCase.  This means that each concatenated word is capitalized.  
 
 **Bad:**
 
@@ -805,7 +806,7 @@ function New-Event
 
 ### Parameter Block at Top of Function
 
-There must be a parameter block decalred for every function.
+There must be a parameter block declared for every function.
 The parameter block must be at the top of the function and not declared next to the function name.
 Functions with no parameters should still display an empty parameter block.
 
@@ -988,7 +989,7 @@ function Write-Text
 
 ### Parameter Names Use Pascal Case
 
-All parameters must use PascalCase.
+All parameters must use PascalCase.  This means that each concatenated word is capitalized.  
 
 **Bad:**
 
@@ -1283,6 +1284,26 @@ ls -File $root -Recurse | ? { @('.gitignore', '.mof') -contains $_.Extension }
 
 ```powershell
 Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -contains $_.Extension }
+```
+
+### Capitalized Pester Assertions
+
+Pester assertions should all start with capital letters.  This makes code easier to read.
+
+**Bad:**
+
+```powershell
+it 'Should return something' {
+    get-targetresource @testParameters | should be 'something'
+}
+```
+
+**Good:**
+
+```powershell
+It 'Should return something' {
+    Get-TargetResource @testParameters | Should Be 'something'
+}
 ```
 
 ### No Backslash in Paths
