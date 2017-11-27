@@ -1294,7 +1294,7 @@ Pester assertions should all start with capital letters.  This makes code easier
 
 ```powershell
 it 'Should return something' {
-    get-targetresource @testParameters | should be 'something'
+    get-targetresource @testParameters | should -be 'something'
 }
 ```
 
@@ -1302,7 +1302,7 @@ it 'Should return something' {
 
 ```powershell
 It 'Should return something' {
-    Get-TargetResource @testParameters | Should Be 'something'
+    Get-TargetResource @testParameters | Should -Be 'something'
 }
 ```
 
