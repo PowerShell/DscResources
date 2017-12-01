@@ -56,7 +56,7 @@ This clearly identifies intent to align with the existing module.
 
 Even with the "Dsc" suffix,
 the module should include the metadata tag "DSCResource"
-to clearly identify it in the [gallery](http://powershellgallery.com).
+to clearly identify it in the [PowerShell Gallery](http://powershellgallery.com).
 
 ## High Quality Resource Module
 
