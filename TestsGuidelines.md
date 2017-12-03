@@ -87,7 +87,7 @@ $LocalizedData = InModuleScope $Global:DSCResourceName {
 }
 ```
 
-1. Add any variables that are required to be accessed outside the module by unit tests to the ```Export-ModuleMember``` cmdlet in the DSC Resource:
+2. Add any variables that are required to be accessed outside the module by unit tests to the ```Export-ModuleMember``` cmdlet in the DSC Resource:
 
 ```powershell
 Export-ModuleMember -Function *-TargetResource -Variables LocalizedData
