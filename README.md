@@ -6,10 +6,12 @@ This is the central repository for the DSC Resource Kit, a collection of DSC res
 
 A dashboard of all open issues and pull requests across DSC Resource Kit is available [here](http://waffle.io/powershell/dscresources).
 
-Please note, all resources with the 'x' prefix in their names (e.g. xResource) are still experimental – this means that those resources are provided AS IS and are not supported through any Microsoft support program or service. If you find a problem with a resource, please [file an issue](https://github.com/PowerShell/DscResources/blob/master/CONTRIBUTING.md#submitting-an-issue) here on GitHub.
-
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+## Support
+
+Please review the DSC Resource Kit support guidelines [here](https://github.com/PowerShell/DscResources/tree/master/Supportability.md).
 
 ## New to PowerShell DSC
 
