@@ -4,7 +4,7 @@
 
 ### Next Release
 
-- **12/20/17**
+- 02/07/18
 
 All changes for the release should be merged into the `dev` branch before the release date. 
 Resource modules that are not passing their tests in the release pull request from the `dev` branch to the `master` branch cannot be released.  
@@ -13,10 +13,11 @@ Individual resource module hotfixes for urgent issues may be released before the
 
 ### Latest Release
 
-- [11/15/17](https://blogs.msdn.microsoft.com/powershell/2017/11/15/dsc-resource-kit-release-november-2017/)
+- [12/20/17](https://blogs.msdn.microsoft.com/powershell/2017/11/15/dsc-resource-kit-release-december-2017/)
 
 ### Past Releases
 
+- [11/15/17](https://blogs.msdn.microsoft.com/powershell/2017/11/15/dsc-resource-kit-release-november-2017/)
 - [10/05/17](https://blogs.msdn.microsoft.com/powershell/2017/10/05/dsc-resource-kit-release-october-2017/)
 - [08/23/17](https://blogs.msdn.microsoft.com/powershell/2017/08/23/dsc-resource-kit-release-august-2017/)
 - [07/12/17](https://blogs.msdn.microsoft.com/powershell/2017/07/12/dsc-resource-kit-release-july-2017/)
@@ -43,14 +44,15 @@ Individual resource module hotfixes for urgent issues may be released before the
 
 ### Next Call
 
-- [12/20/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-12-20)
+- [01/31/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-01-31)
 
 ### Latest Call
 
-- [11/08/17 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2017-11-08)
+- [12/20/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-12-20)
 
 ### Past Calls
 
+- [11/08/17 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2017-11-08)
 - [09/27/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-09-27)
 - [08/16/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-08-16)
 - [07/05/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-07-05)
