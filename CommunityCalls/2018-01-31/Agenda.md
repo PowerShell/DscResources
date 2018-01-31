@@ -27,3 +27,13 @@ Participants using the Join by Phone option must dial the full number for call a
 Topics or questions from the community are welcome at any point during the call!
 
 Modules on track to be released Wednesday, February 7
+- StorageDsc
+- SqlServerDsc
+
+- xActiveDirectory
+- xComputerManagement
+- xDatabase
+- xExchange
+- xFailOverCluster
+- xHyper-V
+- xNetworking
