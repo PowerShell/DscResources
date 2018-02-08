@@ -183,3 +183,9 @@
 [submodule "DscResources/SecurityPolicyDsc"]
 	path = DscResources/SecurityPolicyDsc
 	url = https://github.com/PowerShell/SecurityPolicyDsc
+[submodule "DscResources/SqlServerDsc"]
+	path = DscResources/SqlServerDsc
+	url = https://github.com/PowerShell/SqlServerDsc
+[submodule "DscResources/StorageDsc"]
+	path = DscResources/StorageDsc
+	url = https://github.com/PowerShell/StorageDsc
