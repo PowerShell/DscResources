@@ -109,9 +109,6 @@
 [submodule "xDscResources/xSqlPs"]
 	path = xDscResources/xSqlPs
 	url = https://github.com/PowerShell/xSqlPs
-[submodule "xDscResources/xSQLServer"]
-	path = xDscResources/xSQLServer
-	url = https://github.com/PowerShell/xSQLServer
 [submodule "xDscResources/xSystemSecurity"]
 	path = xDscResources/xSystemSecurity
 	url = https://github.com/PowerShell/xSystemSecurity
@@ -145,9 +142,6 @@
 [submodule "xDscResources/xWindowsEventForwarding"]
 	path = xDscResources/xWindowsEventForwarding
 	url = https://github.com/powershell/xWindowsEventForwarding
-[submodule "xDscResources/xStorage"]
-	path = xDscResources/xStorage
-	url = https://github.com/powershell/xStorage
 [submodule "xDscResources/xdefender"]
 	path = xDscResources/xdefender
 	url = https://github.com/powershell/xdefender
