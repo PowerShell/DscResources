@@ -183,3 +183,6 @@
 [submodule "DscResources/StorageDsc"]
 	path = DscResources/StorageDsc
 	url = https://github.com/PowerShell/StorageDsc
+[submodule "DscResources/UpdateServicesDsc"]
+	path = DscResources/UpdateServicesDsc
+	url = https://github.com/mgreenegit/UpdateServicesDsc
