@@ -36,6 +36,7 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | PSDscResources | Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) <br/> Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
 | SecurityPolicyDsc | Jason Walker ([@jcwalker](https://github.com/jcwalker)) |
 | SharePointDsc | Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) |
+| SqlServerDsc | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
 | SystemLocaleDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xActiveDirectory | --- |
 | xAdcsDeployment | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
@@ -77,7 +78,6 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | xSCVMM | --- |
 | xSmbShare | --- |
 | xSqlPs | --- |
-| xSQLServer | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
 | xStorage | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xSystemSecurity | --- |
 | xTimeZone | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
