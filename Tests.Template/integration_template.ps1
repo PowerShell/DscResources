@@ -17,7 +17,7 @@ $script:DSCModuleName = '<ModuleName>' # Example xNetworking
 $script:DSCResourceName = '<ResourceName>' # Example MSFT_xFirewall
 
 #region HEADER
-# Integration Test Template Version: 1.2.0
+# Integration Test Template Version: 1.2.1
 [String] $script:moduleRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if ( (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))) -or `
     (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1'))) )
@@ -31,6 +31,7 @@ $TestEnvironment = Initialize-TestEnvironment `
     -DSCResourceName $script:DSCResourceName `
     -TestType Integration
 
+$integrationErrorMessagePrefix = 'INTEGRATION ERROR MESSAGE:'
 #endregion
 
 # TODO: Other Init Code Goes Here...
@@ -57,7 +58,15 @@ try
                     ErrorAction  = 'Stop'
                 }
 
-                Start-DscConfiguration @startDscConfigurationParameters
+                try
+                {
+                    Start-DscConfiguration @startDscConfigurationParameters
+                }
+                catch
+                {
+                    Write-Verbose -Message ('{0} {1}' -f $integrationErrorMessagePrefix, $_) -Verbose
+                    throw $_
+                }
             } | Should -Not -Throw
         }
 
