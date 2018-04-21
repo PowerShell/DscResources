@@ -31,7 +31,11 @@ $TestEnvironment = Initialize-TestEnvironment `
     -DSCResourceName $script:DSCResourceName `
     -TestType Integration
 
-$integrationErrorMessagePrefix = 'INTEGRATION ERROR MESSAGE:'
+<#
+    If the integration test throws an error, this is the prefix that will be added
+    to the message before writing out the verbose message to the console.
+#>
+$script:integrationErrorMessagePrefix = 'INTEGRATION ERROR MESSAGE:'
 #endregion
 
 # TODO: Other Init Code Goes Here...
@@ -64,7 +68,7 @@ try
                 }
                 catch
                 {
-                    Write-Verbose -Message ('{0} {1}' -f $integrationErrorMessagePrefix, $_) -Verbose
+                    Write-Verbose -Message ('{0} {1}' -f $script:integrationErrorMessagePrefix, $_) -Verbose
                     throw $_
                 }
             } | Should -Not -Throw
