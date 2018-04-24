@@ -183,3 +183,16 @@
 [submodule "DscResources/StorageDsc"]
 	path = DscResources/StorageDsc
 	url = https://github.com/PowerShell/StorageDsc
+[submodule "DscResources/FileContentDsc"]
+	path = DscResources/FileContentDsc
+	url = https://github.com/PlagueHO/FileContentDsc
+[submodule "DscResources/FSRMDsc"]
+	path = DscResources/FSRMDsc
+	url = https://github.com/PlagueHO/FSRMDsc
+[submodule "DscResources/iSCSIDsc"]
+	path = DscResources/iSCSIDsc
+	url = https://github.com/PlagueHO/iSCSIDsc
+[submodule "DscResources/WSManDsc"]
+	path = DscResources/WSManDsc
+	url = https://github.com/PlagueHO/WSManDsc
+

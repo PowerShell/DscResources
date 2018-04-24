@@ -30,6 +30,7 @@ All repositories without dedicated maintainers are maintained by the current DSC
 
 | Repository | Maintainer(s) |
 | ---------- | ------------- |
+| ActiveDirectoryCSDeployment | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | AuditPolicyDsc | Adam Haynes ([@athaynes](https://github.com/athaynes)) |
 | DscResources | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Zachary Alexander ([@zjalexander](https://github.com/zjalexander)) |
 | DscResource.Tests | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) |
@@ -38,9 +39,9 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | SecurityPolicyDsc | Jason Walker ([@jcwalker](https://github.com/jcwalker)) |
 | SharePointDsc | Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) |
 | SqlServerDsc | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
+| StorageDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | SystemLocaleDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xActiveDirectory | --- |
-| xAdcsDeployment | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xAzure | --- |
 | xAzurePack | --- |
 | xBitlocker | --- |
@@ -79,7 +80,6 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | xSCVMM | --- |
 | xSmbShare | --- |
 | xSqlPs | --- |
-| xStorage | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xSystemSecurity | --- |
 | xTimeZone | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xWebAdministration | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) |
