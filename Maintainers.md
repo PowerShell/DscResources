@@ -92,7 +92,7 @@ All repositories without dedicated maintainers are maintained by the current DSC
 
 ## Non-Microsoft DSC Resource Module Maintainers
 
-Some modules listed in the DSC Resource kit are not created or maintained by
+Some modules listed in the DSC Resource Kit are not created or maintained by
 Microsoft. These modules are maintained by non-Microsoft community members.
 Issues or questions relating to these modules should be raised within the
 community member's repository.
