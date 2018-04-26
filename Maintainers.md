@@ -32,6 +32,9 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | ---------- | ------------- |
 | ActiveDirectoryCSDeployment | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | AuditPolicyDsc | Adam Haynes ([@athaynes](https://github.com/athaynes)) |
+| CertificateDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| ComputerManagementDsc | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| DFSDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | DscResources | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Zachary Alexander ([@zjalexander](https://github.com/zjalexander)) |
 | DscResource.Tests | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) |
 | OfficeOnlineServerDsc | Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) <br/> Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
@@ -45,12 +48,9 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | xAzure | --- |
 | xAzurePack | --- |
 | xBitlocker | --- |
-| xCertificate | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xChrome | --- |
-| xComputerManagement | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xCredSSP | --- |
 | xDatabase | --- |
-| xDFS | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xDhcpServer | --- |
 | xDismFeature | --- |
 | xDnsServer | --- |
