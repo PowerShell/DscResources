@@ -90,6 +90,23 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | xWinEventLog | --- |
 | xWordPress | --- |
 
+## Non-Microsoft DSC Resource Module Maintainers
+
+Some modules listed in the DSC Resource kit are not created or maintained by
+Microsoft. These modules are maintained by non-Microsoft community members.
+Issues or questions relating to these modules should be raised within the
+community member's repository.
+
+The following table lists the community member maintained DSC Resource Kit
+modules.
+
+| Repository | Maintainer(s) |
+| ---------- | ------------- |
+| [FileContetnDsc](https://github.com/PlagueHO/FileContetnDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [FSRMDsc](https://github.com/PlagueHO/FSRMDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [iSCSIDsc](https://github.com/PlagueHO/iSCSIDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [WSManDsc](https://github.com/PlagueHO/WSManDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+
 ## Rules
 
 If you are maintainer, please follow these rules:
