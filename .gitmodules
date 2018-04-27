@@ -1,8 +1,8 @@
 [submodule "xDscResources/xActiveDirectory"]
 	path = xDscResources/xActiveDirectory
 	url = https://github.com/PowerShell/xActiveDirectory
-[submodule "xDscResources/ActiveDirectoryCSDeployment"]
-	path = xDscResources/ActiveDirectoryCSDeployment
+[submodule "DscResources/ActiveDirectoryCSDeployment"]
+	path = DscResources/ActiveDirectoryCSDeployment
 	url = https://github.com/PowerShell/ActiveDirectoryCSDeployment
 [submodule "xDscResources/xAzure"]
 	path = xDscResources/xAzure
@@ -16,8 +16,8 @@
 [submodule "xDscResources/xChrome"]
 	path = xDscResources/xChrome
 	url = https://github.com/PowerShell/xChrome
-[submodule "xDscResources/ComputerManagementDsc"]
-	path = xDscResources/ComputerManagementDsc
+[submodule "DscResources/ComputerManagementDsc"]
+	path = DscResources/ComputerManagementDsc
 	url = https://github.com/PowerShell/ComputerManagementDsc
 [submodule "xDscResources/xCredSSP"]
 	path = xDscResources/xCredSSP
@@ -133,8 +133,8 @@
 [submodule "xDscResources/xWordPress"]
 	path = xDscResources/xWordPress
 	url = https://github.com/PowerShell/xWordPress
-[submodule "xDscResources/CertificateDsc"]
-	path = xDscResources/CertificateDsc
+[submodule "DscResources/CertificateDsc"]
+	path = DscResources/CertificateDsc
 	url = https://github.com/powershell/CertificateDsc
 [submodule "xDscResources/xRobocopy"]
 	path = xDscResources/xRobocopy
@@ -148,11 +148,8 @@
 [submodule "xDscResources/xDefender"]
 	path = xDscResources/xDefender
 	url = https://github.com/powershell/xDefender
-[submodule "xDscResources/xSharePoint"]
-	path = xDscResources/xSharePoint
-	url = https://github.com/powershell/xSharePoint
-[submodule "xDscResources/DFSDsc"]
-	path = xDscResources/DFSDsc
+[submodule "DscResources/DFSDsc"]
+	path = DscResources/DFSDsc
 	url = https://github.com/PowerShell/DFSDsc
 [submodule "DscResources/SharePointDsc"]
 	path = DscResources/SharePointDsc
