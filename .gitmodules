@@ -186,3 +186,6 @@
 [submodule "DscResources/DFSDsc"]
 	path = DscResources/DFSDsc
 	url = https://github.com/PowerShell/DFSDsc
+[submodule "DscResources/CertificateDsc"]
+	path = DscResources/CertificateDsc
+	url = https://github.com/PowerShell/CertificateDsc
