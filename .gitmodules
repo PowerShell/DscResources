@@ -187,4 +187,15 @@
 [submodule "DscResources/WSManDsc"]
 	path = DscResources/WSManDsc
 	url = https://github.com/PlagueHO/WSManDsc
-
+[submodule "DscResources/DFSDsc"]
+	path = DscResources/DFSDsc
+	url = https://github.com/PowerShell/DFSDsc
+[submodule "DscResources/CertificateDsc"]
+	path = DscResources/CertificateDsc
+	url = https://github.com/PowerShell/CertificateDsc
+[submodule "DscResources/ComputerManagementDsc"]
+	path = DscResources/ComputerManagementDsc
+	url = https://github.com/PowerShell/ComputerManagementDsc
+[submodule "DscResources/ActiveDirectoryCSDsc"]
+	path = DscResources/ActiveDirectoryCSDsc
+	url = https://github.com/PowerShell/ActiveDirectoryCSDsc
