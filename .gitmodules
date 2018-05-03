@@ -183,3 +183,6 @@
 [submodule "DscResources/StorageDsc"]
 	path = DscResources/StorageDsc
 	url = https://github.com/PowerShell/StorageDsc
+[submodule "DscResources/DFSDsc"]
+	path = DscResources/DFSDsc
+	url = https://github.com/PowerShell/DFSDsc
