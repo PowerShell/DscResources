@@ -192,3 +192,6 @@
 [submodule "DscResources/ComputerManagementDsc"]
 	path = DscResources/ComputerManagementDsc
 	url = https://github.com/PowerShell/ComputerManagementDsc
+[submodule "DscResources/ActiveDirectoryCSDsc"]
+	path = DscResources/ActiveDirectoryCSDsc
+	url = https://github.com/PowerShell/ActiveDirectoryCSDsc
