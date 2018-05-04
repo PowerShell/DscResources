@@ -9,6 +9,7 @@ Maintainers have the power to:
 3. Assign labels, milestones and people to [issues](https://guides.github.com/features/issues/).
 
 ## Table of Contents
+
 - [Current Maintainers](#current-maintainers)
 - [Rules](#rules)
 - [Repeating Tasks](#reapeting-tasks)
@@ -20,35 +21,51 @@ Maintainers have the power to:
 ## Current Maintainers
 
 Being a mantainer is a time-consuming task!
-If you find you no longer have the time for this role, please let us know. 
-That helps us keep contributors up-to-date on what to expect for certain repositories. 
+If you find you no longer have the time for this role, please let us know.
+That helps us keep contributors up-to-date on what to expect for certain
+repositories.
 
-If you should be on this list but are not, please tag [@kwirkykat](https://github.com/kwirkykat) in an issue or send [@katiedsc](https://twitter.com/katiedsc) a private message on Twitter.
+If you should be on this list but are not, please tag [@kwirkykat](https://github.com/kwirkykat)
+in an issue or send [@katiedsc](https://twitter.com/katiedsc) a private
+message on Twitter.
 
-All repositories without dedicated maintainers are maintained by the current DSC Resource Kit owners, Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
+Resource modules listed in the DSC Resource Kit, except
+xPSDesiredStateConfiguration, are not created or maintained by Microsoft.
+These modules are maintained by community members.
+Issues or questions relating to these resource modules should be raised
+within the resource module's repository.
+
+All repositories without dedicated maintainers are maintained by the
+current DSC Resource Kit owners, Katie Keim ([@kwirkykat](https://github.com/kwirkykat))
+and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 
 | Repository | Maintainer(s) |
 | ---------- | ------------- |
+| ActiveDirectoryCSDeployment | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | AuditPolicyDsc | Adam Haynes ([@athaynes](https://github.com/athaynes)) |
+| CertificateDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| ComputerManagementDsc | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| DFSDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | DscResources | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Zachary Alexander ([@zjalexander](https://github.com/zjalexander)) |
 | DscResource.Tests | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) |
+| [FileContentDsc](https://github.com/PlagueHO/FileContentDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [FSRMDsc](https://github.com/PlagueHO/FSRMDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [iSCSIDsc](https://github.com/PlagueHO/iSCSIDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | OfficeOnlineServerDsc | Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) <br/> Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
 | PSDscResources | Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) <br/> Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
 | SecurityPolicyDsc | Jason Walker ([@jcwalker](https://github.com/jcwalker)) |
 | SharePointDsc | Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) |
 | SqlServerDsc | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
+| StorageDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | SystemLocaleDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [WSManDsc](https://github.com/PlagueHO/WSManDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xActiveDirectory | --- |
-| xAdcsDeployment | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xAzure | --- |
 | xAzurePack | --- |
 | xBitlocker | --- |
-| xCertificate | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xChrome | --- |
-| xComputerManagement | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xCredSSP | --- |
 | xDatabase | --- |
-| xDFS | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xDhcpServer | --- |
 | xDismFeature | --- |
 | xDnsServer | --- |
@@ -78,7 +95,6 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | xSCVMM | --- |
 | xSmbShare | --- |
 | xSqlPs | --- |
-| xStorage | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xSystemSecurity | --- |
 | xTimeZone | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xWebAdministration | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) |
