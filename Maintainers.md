@@ -20,7 +20,7 @@ Maintainers have the power to:
 
 ## Current Maintainers
 
-Being a mantainer is a time-consuming task!
+Being a maintainer is a time-consuming task!
 If you find you no longer have the time for this role, please let us know.
 That helps us keep contributors up-to-date on what to expect for certain
 repositories.
@@ -30,7 +30,7 @@ in an issue or send [@katiedsc](https://twitter.com/katiedsc) a private
 message on Twitter.
 
 Resource modules listed in the DSC Resource Kit, except
-xPSDesiredStateConfiguration, are not created or maintained by Microsoft.
+PSDscResources, are not created or maintained by Microsoft.
 These modules are maintained by community members.
 Issues or questions relating to these resource modules should be raised
 within the resource module's repository.
