@@ -35,7 +35,7 @@ All repositories without dedicated maintainers are maintained by the current DSC
 | OfficeOnlineServerDsc | Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
 | PSDscResources | Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) <br/> Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
 | SecurityPolicyDsc | Jason Walker ([@jcwalker](https://github.com/jcwalker)) |
-| SharePointDsc | Yorick Kuijs([@YorickKuijs](https://github.com/YKuijs))<br/> Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
+| SharePointDsc | Yorick Kuijs([@ykuijs](https://github.com/YKuijs))<br/> Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
 | SqlServerDsc | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
 | SystemLocaleDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xActiveDirectory | --- |
