@@ -96,7 +96,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | xSmbShare | --- |
 | xSqlPs | --- |
 | xSystemSecurity | --- |
-| xTimeZone | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| xTimeZone | DEPRECATED - Migrated to [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) |
 | xWebAdministration | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) |
 | xWebDeploy | --- |
 | xWindowsEventForwarding | --- |
