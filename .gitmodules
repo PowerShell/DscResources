@@ -196,3 +196,6 @@
 [submodule "DscResources/ActiveDirectoryCSDsc"]
 	path = DscResources/ActiveDirectoryCSDsc
 	url = https://github.com/PowerShell/ActiveDirectoryCSDsc
+[submodule "xDscResources/xDisk"]
+	path = xDscResources/xDisk
+	url = https://github.com/PowerShell/xDisk
