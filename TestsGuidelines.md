@@ -204,8 +204,8 @@ Add as many of these example 'states' as required to simulate the scenarios that
         }
 ```
 
-To see examples of the Unit/Integration tests in practice, see the xNetworking MSFT_xFirewall resource:
+To see examples of the Unit/Integration tests in practice, see the NetworkingDsc MSFT_DhcpClient resource:
 
-- [Unit Tests](https://github.com/PowerShell/xNetworking/blob/dev/Tests/Unit/MSFT_xFirewall.Tests.ps1)
-- [Integration Tests](https://github.com/PowerShell/xNetworking/blob/dev/Tests/Integration/MSFT_xFirewall.Integration.Tests.ps1)
-- [Resource DSC Configuration](https://github.com/PowerShell/xNetworking/blob/dev/Tests/Integration/MSFT_xFirewall.config.ps1)
+- [Unit Tests](https://github.com/PowerShell/NetworkingDsc/blob/dev/Tests/Unit/MSFT_DhcpClient.Tests.ps1)
+- [Integration Tests](https://github.com/PowerShell/NetworkingDsc/blob/dev/Tests/Integration/MSFT_DhcpClient.Integration.Tests.ps1)
+  - [Integration Tests resource DSC Configuration](https://github.com/PowerShell/NetworkingDsc/blob/dev/Tests/Integration/MSFT_DhcpClient.config.ps1)

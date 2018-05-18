@@ -3,9 +3,9 @@
    Template for creating DSC Resource Integration Tests
 .DESCRIPTION
    To Use:
-     1. Copy to \Tests\Integration\ folder and rename <ResourceName>.Integration.tests.ps1 (e.g. MSFT_xNetworking.Integration.tests.ps1)
+     1. Copy to \Tests\Integration\ folder and rename <ResourceName>.Integration.tests.ps1 (e.g. MSFT_Firewall.Integration.tests.ps1)
      2. Customize TODO sections.
-     3. Create test DSC Configuration file <ResourceName>.config.ps1 (e.g. MSFT_xNetworking.config.ps1) from integration_config_template.ps1 file.
+     3. Create test DSC Configuration file <ResourceName>.config.ps1 (e.g. MSFT_Firewall.config.ps1) from integration_config_template.ps1 file.
 
 .NOTES
    Code in HEADER, FOOTER and DEFAULT TEST regions are standard and may be moved into
@@ -13,11 +13,11 @@
 #>
 
 # TODO: Customize these parameters...
-$script:DSCModuleName = '<ModuleName>' # Example xNetworking
-$script:DSCResourceName = '<ResourceName>' # Example MSFT_xFirewall
+$script:DSCModuleName = '<ModuleName>' # Example NetworkingDsc
+$script:DSCResourceName = '<ResourceName>' # Example MSFT_Firewall
 
 #region HEADER
-# Integration Test Template Version: 1.2.0
+# Integration Test Template Version: 1.2.1
 [String] $script:moduleRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if ( (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))) -or `
     (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1'))) )
