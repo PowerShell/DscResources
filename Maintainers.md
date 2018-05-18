@@ -41,7 +41,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 
 | Repository | Maintainer(s) |
 | ---------- | ------------- |
-| ActiveDirectoryCSDeployment | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| ActiveDirectoryCSDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | AuditPolicyDsc | Adam Haynes ([@athaynes](https://github.com/athaynes)) |
 | CertificateDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | ComputerManagementDsc | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
