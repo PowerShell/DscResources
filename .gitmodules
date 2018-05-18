@@ -58,9 +58,6 @@
 [submodule "xDscResources/xMySql"]
 	path = xDscResources/xMySql
 	url = https://github.com/PowerShell/xMySql
-[submodule "xDscResources/xNetworking"]
-	path = xDscResources/xNetworking
-	url = https://github.com/PowerShell/xNetworking
 [submodule "xDscResources/xPendingReboot"]
 	path = xDscResources/xPendingReboot
 	url = https://github.com/PowerShell/xPendingReboot
@@ -199,3 +196,6 @@
 [submodule "xDscResources/xDisk"]
 	path = xDscResources/xDisk
 	url = https://github.com/PowerShell/xDisk
+[submodule "DscResources/NetworkingDsc"]
+	path = DscResources/NetworkingDsc
+	url = https://github.com/PowerShell/NetworkingDsc
