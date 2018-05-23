@@ -53,7 +53,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | OfficeOnlineServerDsc | Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
 | PSDscResources | Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) <br/> Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
 | SecurityPolicyDsc | Jason Walker ([@jcwalker](https://github.com/jcwalker)) |
-| SharePointDsc | Yorick Kuijs([@ykuijs](https://github.com/YKuijs))<br/> Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
+| SharePointDsc | Yorick Kuijs ([@ykuijs](https://github.com/YKuijs))<br/> Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
 | SqlServerDsc | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
 | StorageDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | SystemLocaleDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
