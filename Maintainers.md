@@ -80,7 +80,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | xNetworking | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xPendingReboot | --- |
 | xPhp | --- |
-| xPowerShellExecutionPolicy | --- |
+| xPowerShellExecutionPolicy | DEPRECATED - Migrated to [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) |
 | xPSDesiredStateConfiguration | --- |
 | xRemoteDesktopAdmin | --- |
 | xRemoteDesktopSessionHost | Leo D'Arcy ([@ld0614](https://github.com/ld0614)) |
