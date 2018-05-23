@@ -24,7 +24,6 @@ Being a maintainer is a time-consuming task!
 If you find you no longer have the time for this role, please let us know.
 That helps us keep contributors up-to-date on what to expect for certain
 repositories.
-
 If you should be on this list but are not, please tag [@kwirkykat](https://github.com/kwirkykat)
 in an issue or send [@katiedsc](https://twitter.com/katiedsc) a private
 message on Twitter.
@@ -51,10 +50,10 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [FileContentDsc](https://github.com/PlagueHO/FileContentDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [FSRMDsc](https://github.com/PlagueHO/FSRMDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [iSCSIDsc](https://github.com/PlagueHO/iSCSIDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| OfficeOnlineServerDsc | Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) <br/> Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
+| OfficeOnlineServerDsc | Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
 | PSDscResources | Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) <br/> Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
 | SecurityPolicyDsc | Jason Walker ([@jcwalker](https://github.com/jcwalker)) |
-| SharePointDsc | Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) |
+| SharePointDsc | Yorick Kuijs([@ykuijs](https://github.com/YKuijs))<br/> Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
 | SqlServerDsc | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
 | StorageDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | SystemLocaleDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
