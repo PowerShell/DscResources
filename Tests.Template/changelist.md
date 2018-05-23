@@ -9,6 +9,11 @@ When the templates are used to create or update tests in a DSC Resource the vers
 
 ## integration_template.ps1
 
+
+### Version 1.2.1
+
+* Add error handling logic for Start-DscConfiguration  (Fixes #354)
+
 ### Version 1.2.0
 * Update Pester syntax to v4
 * Now `-ErrorAction Stop` is used for the cmdlet Start-DscConfiguration so
