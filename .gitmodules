@@ -13,9 +13,6 @@
 [submodule "xDscResources/xChrome"]
 	path = xDscResources/xChrome
 	url = https://github.com/PowerShell/xChrome
-[submodule "DscResources/ComputerManagementDsc"]
-	path = DscResources/ComputerManagementDsc
-	url = https://github.com/PowerShell/ComputerManagementDsc
 [submodule "xDscResources/xCredSSP"]
 	path = xDscResources/xCredSSP
 	url = https://github.com/PowerShell/xCredSSP
@@ -127,9 +124,6 @@
 [submodule "xDscResources/xWordPress"]
 	path = xDscResources/xWordPress
 	url = https://github.com/PowerShell/xWordPress
-[submodule "DscResources/CertificateDsc"]
-	path = DscResources/CertificateDsc
-	url = https://github.com/powershell/CertificateDsc
 [submodule "xDscResources/xRobocopy"]
 	path = xDscResources/xRobocopy
 	url = https://github.com/powershell/xRobocopy
@@ -142,9 +136,6 @@
 [submodule "xDscResources/xDefender"]
 	path = xDscResources/xDefender
 	url = https://github.com/powershell/xDefender
-[submodule "DscResources/DFSDsc"]
-	path = DscResources/DFSDsc
-	url = https://github.com/PowerShell/DFSDsc
 [submodule "DscResources/SharePointDsc"]
 	path = DscResources/SharePointDsc
 	url = https://github.com/PowerShell/SharePointDsc
