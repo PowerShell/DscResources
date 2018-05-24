@@ -50,6 +50,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [FileContentDsc](https://github.com/PlagueHO/FileContentDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [FSRMDsc](https://github.com/PlagueHO/FSRMDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [iSCSIDsc](https://github.com/PlagueHO/iSCSIDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| NetworkingDsc | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | OfficeOnlineServerDsc | Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
 | PSDscResources | Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) <br/> Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
 | SecurityPolicyDsc | Jason Walker ([@jcwalker](https://github.com/jcwalker)) |
@@ -66,6 +67,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | xCredSSP | --- |
 | xDatabase | --- |
 | xDhcpServer | --- |
+| xDisk | DEPRECATED - Replaced by [StorageDsc](https://github.com/PowerShell/StorageDsc) |
 | xDismFeature | --- |
 | xDnsServer | --- |
 | xDscDiagnostics | --- |
@@ -77,7 +79,6 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | xInternetExplorerHomePage | --- |
 | xJea | --- |
 | xMySql | --- |
-| xNetworking | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | xPendingReboot | --- |
 | xPhp | --- |
 | xPowerShellExecutionPolicy | --- |
