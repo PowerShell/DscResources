@@ -1,15 +1,20 @@
 <#
-.Synopsis
-   Template for creating DSC Resource Integration Tests
-.DESCRIPTION
-   To Use:
-     1. Copy to \Tests\Integration\ folder and rename <ResourceName>.Integration.tests.ps1 (e.g. MSFT_Firewall.Integration.tests.ps1)
-     2. Customize TODO sections.
-     3. Create test DSC Configuration file <ResourceName>.config.ps1 (e.g. MSFT_Firewall.config.ps1) from integration_config_template.ps1 file.
+    .SYNOPSIS
+       Template for creating DSC Resource Integration Tests
 
-.NOTES
-   Code in HEADER, FOOTER and DEFAULT TEST regions are standard and may be moved into
-   DSCResource.Tools in Future and therefore should not be altered if possible.
+    .DESCRIPTION
+        To Use:
+            1. Copy to \Tests\Integration\ folder and rename <ResourceName>.Integration.tests.ps1
+               (e.g. MSFT_Firewall.Integration.tests.ps1).
+            2. Customize TODO sections.
+            3. Remove TODO comments.
+            4. Create test DSC Configuration file <ResourceName>.config.ps1
+               (e.g. MSFT_Firewall.config.ps1) from integration_template.config.ps1 file.
+            5. Remove this comment-based help.
+
+    .NOTES
+        Code in HEADER and FOOTER regions are standard and should not be altered
+        if possible.
 #>
 
 # TODO: Customize these parameters...
@@ -47,7 +52,6 @@ try
         $configurationName = "$($script:dcsResourceName)_<ShortDescriptiveName>_Config"
 
         Context ('When using configuration {0}' -f $configurationName) {
-            #region DEFAULT TESTS
             It 'Should compile and apply the MOF without throwing' {
                 {
                     <#
@@ -58,8 +62,9 @@ try
                         OutputPath           = $TestDrive
                         <#
                             TODO: The variable $ConfigurationData was dot-sourced
-                            above. (Optional) The configuration data hash table
-                            can be moved into this file as appropriate.
+                            above. (Optional) The configuration data hash table can
+                            be moved into this file as appropriate, see the
+                            integration_template.config.ps1 for more information.
                         #>
                         ConfigurationData    = $ConfigurationData
                     }
@@ -99,7 +104,6 @@ try
             It 'Should return $true when Test-DscConfiguration is run' {
                 Test-DscConfiguration | Should -Be $true
             }
-            #endregion
         }
 
         <#
