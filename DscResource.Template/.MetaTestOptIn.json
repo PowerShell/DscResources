@@ -1,0 +1,10 @@
+[
+    "Common Tests - Validate Markdown Files",
+    "Common Tests - Validate Example Files",
+    "Common Tests - Validate Module Files",
+    "Common Tests - Validate Script Files",
+    "Common Tests - Required Script Analyzer Rules",
+    "Common Tests - Flagged Script Analyzer Rules",
+    "Common Tests - New Error-Level Script Analyzer Rules",
+    "Common Tests - Custom Script Analyzer Rules"
+]
