@@ -45,7 +45,7 @@ $ConfigurationData = @{
 <#
     .SYNOPSIS
         TODO: Add a short but descriptive text what this configuration does.
-        (e.g. Enables the port for Remote Desktop Connection.)
+        (e.g. Enables the TCP port for Remote Desktop Connection on the profile Public.)
 #>
 # TODO: Modify ResourceName (e.g. MSFT_Firewall_EnableRemoteDesktopConnection_Config).
 Configuration MSFT_<ResourceName>_<ShortDescriptiveName>_Config {
