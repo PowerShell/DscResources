@@ -259,12 +259,16 @@ Once you are satisfied with the title, description and file changes included, su
 If this is your first contribution to the DSC Resource Kit, you may be asked to sign a [Contribution Licensing Agreement](https://cla.microsoft.com/) (CLA) before your changes can be reviewed:
 ![GitHubCLARequired.png](Images/GitHubCLARequired.png)
 
-Once you sign the CLA, the Microsoft CLA bot will automatically update your PR:
+Once you sign the CLA, the Microsoft CLA bot will automatically update the comment in your PR:
 ![GitHubCLASigned.png](Images/GitHubCLASigned.png)
 
+The CLA status check should also pass in your PR.
+![GitHubCLASigned.png](Images/GitHubCLAStatusCheck.png)
+
 Once you have signed our CLA, you shouldn't have to do it again.
-If you believe you have signed our CLA before, but the Microsoft CLA bot still marks your PR as cla-required, please sign the CLA again.
-Sometimes the little bot makes mistakes.
+If you believe you have signed our CLA before, but the Microsoft CLA bot still
+marks your PR as "CLA not signed yet", or the CLA status check does not pass,
+please sign the CLA again. Sometimes the little bot makes mistakes.
 
 ### Tests in AppVeyor
 The DSC Resource Kit uses [AppVeyor](http://www.appveyor.com/) as a continuous integration (CI) system.
