@@ -4,7 +4,7 @@
 
 This is the central repository for the DSC Resource Kit, a collection of DSC resources maintained and released by Microsoft.
 
-A dashboard of all open issues and pull requests across DSC Resource Kit is available [here](http://waffle.io/powershell/dscresources).
+A dashboard of all open issues and pull requests across DSC Resource Kit is available at the [DSC Resource Kit Waffle board](http://waffle.io/powershell/dscresources).
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
@@ -16,18 +16,20 @@ Please review the DSC Resource Kit support guidelines [here](https://github.com/
 ## New to PowerShell DSC
 
 Desired State Configuration (DSC) is a declarative management platform in PowerShell to configure, deploy, and manage systems.
-If you are new to DSC, configurations, or resources, you can learn more about them [here](https://msdn.microsoft.com/en-us/powershell/dsc/overview).
+If you are new to DSC, configurations, or resources, you can learn more about them [here](https://docs.microsoft.com/en-us/powershell/dsc/overview).
 
 ## Resource Module Source Code
 
 The DSC Resource Kit currently contains more than 55 different resource modules.
 
-You can find the source code of a resource module by visiting its GitHub page at:  
-https://github.com/PowerShell/< module name >   
-For example, for the xCertificate module, go to:  
-https://github.com/PowerShell/xCertificate. 
+You can find the source code of a resource module by visiting its GitHub page at:
+https://github.com/PowerShell/< module name >
+For example, for the CertificateDsc module, go to:
+https://github.com/PowerShell/CertificateDsc.
 
-All DSC resource modules are also listed as submodules of this repository (DscResources) in the [xDscResources folder](https://github.com/PowerShell/DscResources/tree/master/xDscResources) (unsupported) or [DscResources folder](https://github.com/PowerShell/DscResources/tree/master/DscResources) (supported). 
+All DSC resource modules are also listed as submodules of this repository (DscResources) in the [xDscResources folder](https://github.com/PowerShell/DscResources/tree/master/xDscResources) or [DscResources folder](https://github.com/PowerShell/DscResources/tree/master/DscResources).
+Read about the difference in naming under
+[High Quality Resource Module](https://github.com/PowerShell/DscResources/blob/master/Naming.md#high-quality-resource-module).
 
 To download the released source code for **all** DSC resource modules, clone this repository with this git command:
 
@@ -44,28 +46,28 @@ git clone https://github.com/PowerShell/DscResources.git
 
 To see a list of **all** released DSC Resource Kit modules, go to the [PowerShell Gallery](http://www.powershellgallery.com/) and display [all modules tagged as DSCResourceKit](http://www.powershellgallery.com/packages?q=Tags%3A%22DSCResourceKit%22).
 
-To find a **specific** module, enter the module's name in the search box in the upper right corner of the PowerShell Gallery or go directly to its URL:  
-http://www.powershellgallery.com/packages/< module name >  
-For example:   
-http://www.powershellgallery.com/packages/xWebAdministration 
+To find a **specific** module, enter the module's name in the search box in the upper right corner of the PowerShell Gallery or go directly to its URL:
+http://www.powershellgallery.com/packages/< module name >
+For example:
+http://www.powershellgallery.com/packages/xWebAdministration
 
 We recommend that you use PowerShellGet to install DSC resource modules:
 ```powershell
-Install-Module -Name < module name >   
+Install-Module -Name < module name >
 ```
 For example:
 ```powershell
 Install-Module -Name xWebAdministration
 ```
- 
-To update all previously installed modules at once, open an elevated PowerShell prompt and use this command: 
+
+To update all previously installed modules at once, open an elevated PowerShell prompt and use this command:
 ```powershell
-Update-Module 
+Update-Module
 ```
 
-After installing modules, you can discover all DSC resources available to your local system with this command: 
+After installing modules, you can discover all DSC resources available to your local system with this command:
 ```powershell
-Get-DscResource 
+Get-DscResource
 ```
 
 ## Contributing to the Resource Modules
