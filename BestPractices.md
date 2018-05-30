@@ -45,6 +45,7 @@
 - [Manifests](#manifests)
   - [Avoid Using Deprecated Manifest Fields](#avoid-using-deprecated-manifest-fields)
   - [Ensure Manifest Contains Correct Fields](#ensure-manifest-contains-correct-fields)
+  - [Do not use NestedModules to export shared functions](#Do-not-use-NestedModules-to-export-shared-functions)
 
 ## General
 
@@ -904,3 +905,17 @@ function Get-TargetResource
 ```powershell
 
 ```
+
+### Do not use NestedModules to export shared functions
+
+Since we don't use the `RootModule` key in the module manifest, we should not
+use `NestedModules` key to add modules that export functions that are shared
+between resource modules.
+
+Normally a single module listed in `RootModule` key can restrict what is
+exported using `Export-ModuleMember`. Since we don't use the `RootModule` key
+we can't restrict what is exported, so every nested module will export all the
+commands (or all the commands restricted by `Export-ModuleMember` in that
+individual nested module). If two resource modules would use this method that
+would result in one of them unable to install since they have conflicting
+exported commands.
