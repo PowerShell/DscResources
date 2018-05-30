@@ -6,7 +6,17 @@ The version number in the *Tests.Template* header must also be updated to match.
 When the templates are used to create or update tests in a DSC Resource the
 version number of the template file used must be included.
 
-## integration_config_template.ps1
+## integration_template.config.ps1
+
+### Version 1.1.0
+
+* Renamed filename of the integration test config template to use the right
+  naming convention.
+* Change so that 'Configuration' is written with upper 'C'. The name of the
+  configuration has 'Config' as suffix, that also has upper 'C' now.
+* Added a configuration data hash table to be used with the version 1.3.0 of the
+  integration test template.
+* Updated comments.
 
 ### Version 1.0.1
 
@@ -17,8 +27,21 @@ version number of the template file used must be included.
 
 * First release including version number
 
-
 ## integration_template.ps1
+
+### Version 1.3.0
+
+* Clean up script variables according to style guideline.
+* Added a $script:dscResourceFriendlyName variable.
+* Wrapped It-blocks into a Context-block to differentiate each test
+  configuration.
+* Updated TODO comments.
+* Added the use of a ConfigurationData block for variables.
+* Made it easier to pass additional parameters to a configuration.
+* Improved test that evaluates properties returned from
+  Get-DscConfiguration ([issue #328](https://github.com/PowerShell/DscResources/issues/328)).
+* Added a test that verifies that the correct value is returned from
+  Test-DscConfiguration.
 
 ### Version 1.2.1
 
