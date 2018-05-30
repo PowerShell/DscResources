@@ -45,7 +45,7 @@
 - [Manifests](#manifests)
   - [Avoid Using Deprecated Manifest Fields](#avoid-using-deprecated-manifest-fields)
   - [Ensure Manifest Contains Correct Fields](#ensure-manifest-contains-correct-fields)
-  - [Do not use NestedModules to export shared functions](#Do-not-use-NestedModules-to-export-shared-functions)
+  - [Do not use NestedModules to export shared commands](#Do-not-use-NestedModules-to-export-shared-commands)
 
 ## General
 
@@ -906,10 +906,10 @@ function Get-TargetResource
 
 ```
 
-### Do not use NestedModules to export shared functions
+### Do not use NestedModules to export shared commands
 
 Since we don't use the `RootModule` key in the module manifest, we should not
-use `NestedModules` key to add modules that export functions that are shared
+use `NestedModules` key to add modules that export commands that are shared
 between resource modules.
 
 Normally a single module listed in `RootModule` key can restrict what is
