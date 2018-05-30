@@ -12,7 +12,7 @@ In order to provide clean and consistent code, please follow the style guideline
   - [Correct Format for Arrays](#correct-format-for-arrays)
   - [Correct Format for Hashtables or Objects](#correct-format-for-hashtables-or-objects)
   - [Correct Format for Comments](#correct-format-for-comments)
-  - []
+  - [Correct use of single- and double quotes](#correct-use-of-single--and-double-quotes)
 - [Whitespace](#whitespace)
   - [Indentation](#indentation)
   - [No Trailing Whitespace After Backticks](#no-trailing-whitespace-after-backticks)
