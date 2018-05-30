@@ -43,7 +43,6 @@ In order to provide clean and consistent code, please follow the style guideline
   - [Named Parameters Instead of Positional Parameters](#named-parameters-instead-of-positional-parameters)
   - [No Cmdlet Aliases](#no-cmdlet-aliases)
   - [Capitalized Pester Assertions](#capitalized-pester-assertions)
-  - [No Backslash in Paths](#no-backslash-in-paths)
 
 ## Markdown Files
 
@@ -679,7 +678,7 @@ function Get-TargetResource
 
 ### Function Names Use Pascal Case
 
-Function names must use PascalCase.  This means that each concatenated word is capitalized.  
+Function names must use PascalCase.  This means that each concatenated word is capitalized.
 
 **Bad:**
 
@@ -989,7 +988,7 @@ function Write-Text
 
 ### Parameter Names Use Pascal Case
 
-All parameters must use PascalCase.  This means that each concatenated word is capitalized.  
+All parameters must use PascalCase.  This means that each concatenated word is capitalized.
 
 **Bad:**
 
@@ -1304,24 +1303,4 @@ it 'Should return something' {
 It 'Should return something' {
     Get-TargetResource @testParameters | Should -Be 'something'
 }
-```
-
-### No Backslash in Paths
-
-To support the possibility of cross-platform use in the future, backslashes should not be used within a path. Instead `Join-Path` and `Split-Path` should be used to build a path.
-
-**Bad:**
-
-```powershell
-$currentPath = Split-Path -Parent $MyInvocation.MyCommand.Path
-Import-Module -Name "$currentPath\..\..\CommonResourceHelper.psm1"
-```
-
-**Good:**
-
-```powershell
-$currentPath = Split-Path -Path $MyInvocation.MyCommand.Path -Parent
-$modulePath = (Join-Path -Path (Split-Path -Path (Split-Path -Path $currentPath -Parent) -Parent) `
-                         -ChildPath 'CommonResourceHelper.psm1')
-Import-Module -Name $modulePath
 ```
