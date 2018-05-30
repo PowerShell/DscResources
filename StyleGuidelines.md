@@ -6,12 +6,13 @@ In order to provide clean and consistent code, please follow the style guideline
 
 - [Markdown Files](#markdown-files)
 - [General](#general)
-- [Correct File Encoding](#correct-file-encoding)
+  - [Correct File Encoding](#correct-file-encoding)
   - [Descriptive Names](#descriptive-names)
   - [Correct Format for Long Function Calls](#correct-format-for-long-function-calls)
   - [Correct Format for Arrays](#correct-format-for-arrays)
   - [Correct Format for Hashtables or Objects](#correct-format-for-hashtables-or-objects)
   - [Correct Format for Comments](#correct-format-for-comments)
+  - []
 - [Whitespace](#whitespace)
   - [Indentation](#indentation)
   - [No Trailing Whitespace After Backticks](#no-trailing-whitespace-after-backticks)
@@ -230,6 +231,52 @@ $hashtable = @{
         Key3Key2 = 42
     }
 }
+```
+
+### Correct use of single- and double quotes
+
+Single quotes should always be used where applicable.
+
+**Bad:**
+
+```powershell
+$string = "String that do not evaluate variable"
+```
+
+**Bad:**
+
+```powershell
+$string = "String that evaluate variable {0}" -f $SomeObject.SomeProperty
+```
+
+**Good:**
+
+```powershell
+$string = 'String that do not evaluate variable'
+```
+
+**Good:**
+
+```powershell
+$string = 'String that evaluate variable {0}' -f $SomeObject.SomeProperty
+```
+
+**Good:**
+
+```powershell
+$string = "String that evaluate variable $($SomeObject.SomeProperty)"
+```
+
+**Good:**
+
+```powershell
+$string = 'String that evaluate variable ''{0}''' -f $SomeObject.SomeProperty
+```
+
+**Good:**
+
+```powershell
+$string = "String that evaluate variable '{0}'" -f $SomeObject.SomeProperty
 ```
 
 ### Correct Format for Comments
@@ -679,7 +726,7 @@ function Get-TargetResource
 
 ### Function Names Use Pascal Case
 
-Function names must use PascalCase.  This means that each concatenated word is capitalized.  
+Function names must use PascalCase.  This means that each concatenated word is capitalized.
 
 **Bad:**
 
@@ -989,7 +1036,7 @@ function Write-Text
 
 ### Parameter Names Use Pascal Case
 
-All parameters must use PascalCase.  This means that each concatenated word is capitalized.  
+All parameters must use PascalCase.  This means that each concatenated word is capitalized.
 
 **Bad:**
 
