@@ -45,7 +45,7 @@
 - [Manifests](#manifests)
   - [Avoid Using Deprecated Manifest Fields](#avoid-using-deprecated-manifest-fields)
   - [Ensure Manifest Contains Correct Fields](#ensure-manifest-contains-correct-fields)
-  - [Do not use NestedModules to export shared commands](#Do-not-use-NestedModules-to-export-shared-commands)
+  - [Do not use NestedModules to export shared commands](#do-not-use-nestedmodules-to-export-shared-commands)
 
 ## General
 
