@@ -7,8 +7,8 @@
         1. Copy to \Tests\Unit\ folder and rename <ResourceName>.tests.ps1 (e.g. MSFT_xFirewall.tests.ps1)
         2. Customize TODO sections.
         3. Delete all template comments (TODOs, etc.)
-        4. Remove this comment-based help.
-        5. Remove any unused BeforeAll-, AfterAll-, BeforeEach- and AfterEach-blocks.
+        4. Remove any unused BeforeAll-, AfterAll-, BeforeEach- and AfterEach-blocks.
+        5. Remove this comment-based help.
 
     .NOTES
         There are multiple methods for writing unit tests. This template provides a few examples
