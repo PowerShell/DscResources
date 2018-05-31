@@ -141,15 +141,15 @@ module manifest (the .psd1 file) and in the LICENSE file.
 
 #### Module manifest
 
-This is how the copyright information looks like for 2017.
+This is how the copyright information looks for the year 2017.
 
 ```powershell
 # Copyright statement for this module
 Copyright = '(c) 2017 Microsoft Corporation. All rights reserved.'
 ```
 
-Beginning of year 2018 (and so on) the copyright information should be updated
-to the current year.
+At the beginning of the year 2018 (and so on) the copyright information should
+be updated to the current year.
 
 ```powershell
 # Copyright statement for this module
@@ -158,14 +158,14 @@ Copyright = '(c) 2018 Microsoft Corporation. All rights reserved.'
 
 #### License
 
-This is how the copyright information looks like for 2017.
+This is how the copyright information looks for the year 2017.
 
 ```powershell
 Copyright (c) 2017 Microsoft Corporation
 ```
 
-Beginning of year 2018 (and so on) the copyright information should be updated
-to the current year.
+At the beginning of the year 2018 (and so on) the copyright information should
+be updated to the current year.
 
 ```powershell
 Copyright (c) 2018 Microsoft Corporation
