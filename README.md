@@ -4,7 +4,7 @@
 
 This is the central repository for the DSC Resource Kit, a collection of DSC resources maintained and released by Microsoft.
 
-A dashboard of all open issues and pull requests across DSC Resource Kit is available at the [DSC Resource Kit Waffle board](http://waffle.io/powershell/dscresources).
+A dashboard of all open issues and pull requests across DSC Resource Kit is available on the [DSC Resource Kit Waffle board](http://waffle.io/powershell/dscresources).
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
@@ -28,7 +28,7 @@ For example, for the CertificateDsc module, go to:
 https://github.com/PowerShell/CertificateDsc.
 
 All DSC resource modules are also listed as submodules of this repository (DscResources) in the [xDscResources folder](https://github.com/PowerShell/DscResources/tree/master/xDscResources) or [DscResources folder](https://github.com/PowerShell/DscResources/tree/master/DscResources).
-Read about the difference in naming under
+Read about the differences in naming under the
 [High Quality Resource Module](https://github.com/PowerShell/DscResources/blob/master/Naming.md#high-quality-resource-module).
 
 To download the released source code for **all** DSC resource modules, clone this repository with this git command:
