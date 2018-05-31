@@ -102,6 +102,13 @@ try
                     # per test cleanup
                 }
 
+                <#
+                    TODO: (Optional) If It-block description tend to be long,
+                    consider adding nested Context-blocks ('When...'), e.g 'When
+                    the configuration is absent', 'When the configuration should
+                    be present' or 'When the current description is returned
+                    as an empty string'.
+                #>
                 It 'Should ....test-description' {
                     # test-code
                 }
