@@ -29,7 +29,8 @@ https://github.com/PowerShell/CertificateDsc.
 
 All DSC resource modules are also listed as submodules of this repository (DscResources) in the [xDscResources folder](https://github.com/PowerShell/DscResources/tree/master/xDscResources) or [DscResources folder](https://github.com/PowerShell/DscResources/tree/master/DscResources).
 Read about the differences in naming under the
-[High Quality Resource Module](https://github.com/PowerShell/DscResources/blob/master/Naming.md#high-quality-resource-module).
+[High Quality Resource Module](https://github.com/PowerShell/DscResources/blob/master/Naming.md#high-quality-resource-module)
+section.
 
 To download the released source code for **all** DSC resource modules, clone this repository with this git command:
 
