@@ -26,7 +26,7 @@ $script:DSCResourceName = '<ResourceName>'
 $script:moduleRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if ( (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))) -or `
      (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1'))) )
-{s
+{
     & git @('clone','https://github.com/PowerShell/DscResource.Tests.git',(Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))
 }
 
@@ -103,7 +103,7 @@ try
                 }
 
                 <#
-                    TODO: (Optional) If It-block description tend to be long,
+                    TODO: (Optional) If It-block description tends to be long,
                     consider adding nested Context-blocks ('When...'), e.g 'When
                     the configuration is absent', 'When the configuration should
                     be present' or 'When the current description is returned
