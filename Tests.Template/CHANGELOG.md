@@ -73,6 +73,13 @@ version number of the template file used must be included.
 
 ## unit_template.ps1
 
+### Version 1.2.2
+
+* Added more Describe-blocks and updated the descriptions.
+* Added more Context-blocks and updated the descriptions.
+* Added a comment saying to remove any unused BeforeAll-, AfterAll-,
+  BeforeEach- and AfterEach-blocks.
+
 ### Version 1.2.1
 
 * Removed backslashes from git clone command to improve compatibility

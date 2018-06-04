@@ -1,11 +1,14 @@
 <#
     .SYNOPSIS
         Template for creating DSC Resource Unit Tests
+
     .DESCRIPTION
         To Use:
         1. Copy to \Tests\Unit\ folder and rename <ResourceName>.tests.ps1 (e.g. MSFT_xFirewall.tests.ps1)
         2. Customize TODO sections.
         3. Delete all template comments (TODOs, etc.)
+        4. Remove any unused BeforeAll-, AfterAll-, BeforeEach- and AfterEach-blocks.
+        5. Remove this comment-based help.
 
     .NOTES
         There are multiple methods for writing unit tests. This template provides a few examples
@@ -15,8 +18,11 @@
 #>
 
 #region HEADER
+# TODO: Update to correct module name and resource name.
+$script:DSCModuleName = '<ModuleName>'
+$script:DSCResourceName = '<ResourceName>'
 
-# Unit Test Template Version: 1.2.1
+# Unit Test Template Version: 1.2.2
 $script:moduleRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if ( (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))) -or `
      (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1'))) )
@@ -28,17 +34,20 @@ Import-Module -Name (Join-Path -Path $script:moduleRoot -ChildPath (Join-Path -P
 
 # TODO: Insert the correct <ModuleName> and <ResourceName> for your resource
 $TestEnvironment = Initialize-TestEnvironment `
-    -DSCModuleName '<ModuleName>' `
-    -DSCResourceName '<ResourceName>' `
+    -DSCModuleName $script:DSCModuleName `
+    -DSCResourceName $script:DSCResourceName `
+    -ResourceType 'Mof' `
     -TestType Unit
 
 #endregion HEADER
 
-function Invoke-TestSetup {
-    # TODO: Optional init code goes here...
+function Invoke-TestSetup
+{
+     # TODO: Optional init code goes here...
 }
 
-function Invoke-TestCleanup {
+function Invoke-TestCleanup
+{
     Restore-TestEnvironment -TestEnvironment $TestEnvironment
 
     # TODO: Other Optional Cleanup Code Goes Here...
@@ -49,7 +58,7 @@ try
 {
     Invoke-TestSetup
 
-    InModuleScope '<ResourceName>' {
+    InModuleScope $script:DSCResourceName {
         # TODO: Optionally create any variables here for use by your tests
 
         # TODO: Complete the Describe blocks below and add more as needed.
@@ -59,7 +68,15 @@ try
         # You may also follow one of the patterns provided in the TestsGuidelines.md file:
         # https://github.com/PowerShell/DscResources/blob/master/TestsGuidelines.md
 
-        Describe '<Test-name>' {
+        Describe 'MSFT_<ResourceName>\Get-TargetResource' -Tag 'Get' {
+            BeforeAll {
+                # Per describe-block initialization
+            }
+
+            AfterAll {
+                # Per describe-block cleanup
+            }
+
             BeforeEach {
                 # per-test-initialization
             }
@@ -68,36 +85,81 @@ try
                 # per-test-cleanup
             }
 
-            Context 'Context-description' {
+            Context 'When the system is in the desired state' {
+                BeforeAll {
+                    # Per context-block initialization
+                }
+
+                AfterAll {
+                    # Per context-block cleanup
+                }
+
                 BeforeEach {
-                    # per-test-initialization
+                    # per test initialization
                 }
 
                 AfterEach {
-                    # per-test-cleanup
+                    # per test cleanup
                 }
 
-                It 'Should...test-description' {
+                <#
+                    TODO: (Optional) If It-block description tends to be long,
+                    consider adding nested Context-blocks ('When...'), e.g 'When
+                    the configuration is absent', 'When the configuration should
+                    be present' or 'When the current description is returned
+                    as an empty string'.
+                #>
+                It 'Should ....test-description' {
                     # test-code
                 }
 
-                It 'Should...test-description' {
+                It 'Should ....test-description' {
                     # test-code
                 }
             }
 
-            Context 'Context-description' {
+            Context 'When the system is not in the desired state' {
                 It 'Should ....test-description' {
                     # test-code
                 }
             }
         }
 
-        Describe '<Test-name>' {
-            Context '<Context-description>' {
+        Describe 'MSFT_<ResourceName>\Set-TargetResource' -Tag 'Set' {
+            Context 'When the system is in the desired state' {
                 It 'Should ...test-description' {
                     # test-code
                 }
+            }
+
+            Context 'When the system is not in the desired state' {
+                It 'Should ....test-description' {
+                    # test-code
+                }
+            }
+        }
+
+        Describe 'MSFT_<ResourceName>\Test-TargetResource' -Tag 'Test' {
+            Context 'When the system is in the desired state' {
+                It 'Should ...test-description' {
+                    # test-code
+                }
+            }
+
+            Context 'When the system is not in the desired state' {
+                It 'Should ....test-description' {
+                    # test-code
+                }
+            }
+        }
+
+        Describe 'MSFT_<ResourceName>\Get-HelperFunction' -Tag 'Helper' {
+            It 'Should ...test-description' {
+                # test-code
+            }
+
+            It 'Should ....test-description' {
+                # test-code
             }
         }
 
