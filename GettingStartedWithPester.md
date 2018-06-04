@@ -603,7 +603,7 @@ you.
 
 1. It verifies that you have added the new functionality without breaking any
    existing functionality in the process.
-2. All of the mocks were written first, so theoretically, no changes should occur in unit testing
+1. All of the mocks were written first, so theoretically, no changes should occur in unit testing
 
 This is usually a very big change in mindset and probably not where you are going to start, but
 we wanted you to be aware of it and consider it when implementing automated testing in your
