@@ -10,6 +10,7 @@ pulls:
   exemptLabels:
     - needs review
     - on hold
+    - waiting for CLA pass
 
   markComment: >
     Labeling this pull request (PR) as abandoned since it has gone 14 days or more
