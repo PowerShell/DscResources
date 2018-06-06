@@ -4,6 +4,7 @@ limitPerRun: 30
 
 pulls:
   daysUntilStale: 14
+  daysUntilClose: false
   exemptProjects: true
   exemptMilestones: true
   staleLabel: abandoned
