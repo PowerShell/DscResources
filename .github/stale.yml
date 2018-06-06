@@ -40,5 +40,5 @@ issues:
     then the issue will not auto-close.
 
   closeComment: >
-    This issue has been automatically closed because it is has not had activity from
-    the community in the last 40 days.
+    This issue has been automatically closed because it is has not had activity
+    from the community in the last 40 days.
