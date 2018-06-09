@@ -1,8 +1,9 @@
 # Configuration for probot-stale - https://github.com/probot/stale
 
+limitPerRun: 30
+
 # NOTE! keyword 'pulls:' was temporarily removed as per issue comment
 # https://github.com/PowerShell/DscResources/issues/401#issuecomment-395050731
-# limitPerRun: 30
 
 # pulls:
 #   daysUntilStale: 14
