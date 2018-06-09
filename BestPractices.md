@@ -933,15 +933,16 @@ conflicting exported commands.
 
 In each resource folder there should be at least one localization folder for
 english language 'en-US'. Add other localization folders as appropriate, the
-correct folder name can be found when running `Get-UICulture` on the node that
-has a UI culture to build strings for. There is also the list of
+correct folder name can be found by running `Get-UICulture` on the node that
+has a UI culture installed that the strings are being built for.
+There is also the list of
 [Available Language Packs for Windows](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/available-language-packs-for-windows#language-packs).
 
 In each localization folder there should be a PowerShell data (.psd1) file named
 'MSFT_\<ResourceName\>.strings.psd1' (e.g. 'MSFT_Folder.strings.psd1').
 Each localized string file should contain the following with the correct
-localization key and accompanying localization string value (example builds on
-that the resource friendly name is 'Folder').
+localization key and accompanying localization string value (the example uses
+the friendly resource name of 'Folder').
 
 ```powershell
 # Localized resources for Folder
@@ -954,7 +955,8 @@ ConvertFrom-StringData @'
 '@
 ```
 
-The folder structure should look like the below when using the previous example.
+When using the previous example, the folder structure would look like the
+following:
 
 ```plaintext
 DSCResources\MSFT_Folder\en-US\MSFT_Folder.strings.psd1
@@ -969,12 +971,13 @@ localized strings should be imported using [`Get-LocalizedData`](#get-localizedd
 
 To easier debug localized verbose logs, and to find the correct localized string
 key in the code, it is recommended to use a hard coded ID on each localized key's
-string value. That ID must be the same across the localized language folders,
+string value. That ID must be the same across the localized language files,
 and it is not recommended to reuse ID's once they become obsolete (because of
 for example code change).
 
 > Using this method we could also test that each localized string is
-> represented in each localization folder for that resource.
+> represented in each language specific localization file for that
+> resource.
 
 **Format:** `(ID:yyyyZZZZ)`
 
@@ -1039,7 +1042,7 @@ and the unit tests
 to the new resource module.
 
 > **Note:** The CommonResourceHelper module will be moved to DscResource.Template
->in the future.
+> in the future.
 
 ##### Get-LocalizedData
 
