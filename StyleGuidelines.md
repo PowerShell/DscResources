@@ -235,7 +235,9 @@ $hashtable = @{
 
 ### Correct use of single- and double quotes
 
-Single quotes should always be used where applicable.
+Single quotes should always be used to delimit string literals wherever possible.
+Double quoted string literals may only be used when it contains ($) expressions
+that need to be evaluated.
 
 **Bad:**
 
