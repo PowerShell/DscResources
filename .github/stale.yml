@@ -2,24 +2,21 @@
 
 limitPerRun: 30
 
-# NOTE! keyword 'pulls:' was temporarily removed as per issue comment
-# https://github.com/PowerShell/DscResources/issues/401#issuecomment-395050731
+pulls:
+  daysUntilStale: 14
+  daysUntilClose: false
+  exemptProjects: true
+  exemptMilestones: true
+  staleLabel: abandoned
+  exemptLabels:
+    - needs review
+    - on hold
+    - waiting for CLA pass
 
-# pulls:
-#   daysUntilStale: 14
-#   daysUntilClose: false
-#   exemptProjects: true
-#   exemptMilestones: true
-#   staleLabel: abandoned
-#   exemptLabels:
-#     - needs review
-#     - on hold
-#     - waiting for CLA pass
-
-#   markComment: >
-#     Labeling this pull request (PR) as abandoned since it has gone 14 days or more
-#     since the last update. An abandoned PR can be continued by another contributor.
-#     The abandoned label will be removed if work on this PR is taken up again.
+  markComment: >
+    Labeling this pull request (PR) as abandoned since it has gone 14 days or more
+    since the last update. An abandoned PR can be continued by another contributor.
+    The abandoned label will be removed if work on this PR is taken up again.
 
 issues:
   daysUntilStale: 30
