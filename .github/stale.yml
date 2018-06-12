@@ -34,7 +34,7 @@ issues:
     - module proposal
 
   markComment: >
-    This issue has been automatically marked as needs more information because
+    This issue has been automatically marked as stale because
     it has not had activity from the community in the last 30 days. It will be
     closed if no further activity occurs within 10 days. If the issue is labelled
     with any of the work labels (e.g bug, enhancement, documentation, or tests)
