@@ -263,7 +263,7 @@ Once you sign the CLA, the Microsoft CLA bot will automatically update the comme
 ![GitHubCLASigned.png](Images/GitHubCLASigned.png)
 
 The CLA status check should also pass in your PR.
-![GitHubCLASigned.png](Images/GitHubCLAStatusCheck.png)
+![GitHubCLAStatusCheck.png](Images/GitHubCLAStatusCheck.png)
 
 Once you have signed our CLA, you shouldn't have to do it again.
 If you believe you have signed our CLA before, but the Microsoft CLA bot still
