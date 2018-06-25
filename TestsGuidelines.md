@@ -32,7 +32,7 @@
 
 1. Copy the ```\Tests.Template\integration_template.ps1``` to ```\Tests\Integration\``` folder and rename ```MSFT_x<ResourceName>.Integration.tests.ps1```
 1. Open ```MSFT_x<ResourceName>.Integration.tests.ps1``` and customize TODO sections.
-1. Copy the ```\Tests.Template\integration_comfig_template.ps1``` to ```\Tests\Integration\``` folder and rename ```MSFT_x<ResourceName>.config.ps1```
+1. Copy the ```\Tests.Template\integration_template.config.ps1``` to ```\Tests\Integration\``` folder and rename ```MSFT_x<ResourceName>.config.ps1```
 1. Open ```MSFT_x<ResourceName>.config.ps1``` and customize TODO sections.
 
 **Important: Please ensure that the test files created retain the version number of the template used to create them.**
@@ -76,6 +76,9 @@ _Note: The core DSC Resource functions ```Get-TargetResource```, ```Set-TargetRe
 It is common for modules to declare variables that are needed inside the module, but may also be required for unit testing.
 One common example of this is the ```LocalizedData``` variable that contains localized messages used by the resource.
 Variables declared at the module scope (private variables) can not be accessed by unit tests that are not inside an ```InModuleScope``` Pester block.
+
+> **Note:** See [Localiztion](#localization) section for more information of using
+> localized messages in tests.
 
 There are two solutions to this:
 
@@ -209,3 +212,72 @@ To see examples of the Unit/Integration tests in practice, see the NetworkingDsc
 - [Unit Tests](https://github.com/PowerShell/NetworkingDsc/blob/dev/Tests/Unit/MSFT_DhcpClient.Tests.ps1)
 - [Integration Tests](https://github.com/PowerShell/NetworkingDsc/blob/dev/Tests/Integration/MSFT_DhcpClient.Integration.Tests.ps1)
   - [Integration Tests resource DSC Configuration](https://github.com/PowerShell/NetworkingDsc/blob/dev/Tests/Integration/MSFT_DhcpClient.config.ps1)
+
+## Localization
+
+When resources use localization (which all normally should) there is the
+possibility to use the localized messages in the tests. This is normally used
+to verify so that the correct error messages are thrown. But could be used
+for verbose message, warning messages, and of course any other types.
+
+When using the
+[`Get-localizedData`](https://github.com/PowerShell/DscResources/blob/master/BestPractices.md#get-localizeddata)
+helper function to load the localized strings into `$script:localizedData` in
+the resource module script file, the string can easily be used like this in
+tests.
+
+> **Note:** For this to work the It-block must be inside a `InModuleScope`-block.
+
+```powershell
+It 'Should throw the correct error message' {
+    {
+        Set-TargetResource @setTargetResourceParameters
+    } | Should -Throw $script:localizedData.DatabaseMailDisabled
+}
+```
+
+### Helper functions for testing localization
+
+There are two helper functions to simplify testing localized error messages.
+The helper functions can be used to build a correct localized error record to
+be used in the tests. They are used together with the
+[Helper functions for localization](https://github.com/PowerShell/DscResources/blob/master/BestPractices.md#helper-functions-for-localization).
+
+These test helper functions can currently only be found in other resource
+modules, for example in the resource module NetworkingDsc, in the
+[CommonTestHelper](https://github.com/PowerShell/NetworkingDsc/blob/dev/Tests/TestHelpers/CommonTestHelper.psm1)
+module. To use it, copy the PowerShell module CommonTestHelper.psm1 to the new
+resource module.
+
+#### Get-InvalidArgumentRecord
+
+This helper function returns an invalid argument exception error object.
+Below is an example of how it could look like in the tests to test that the
+correct localized error record is returned.
+
+```powershell
+$errorRecord = Get-InvalidArgumentRecord `
+    -Message ($LocalizedData.InterfaceNotAvailableError -f $interfaceAlias) `
+    -ArgumentName 'Interface'
+
+It 'Should throw an InterfaceNotAvailable error' {
+    { Assert-ResourceProperty @testRoute } | Should -Throw $errorRecord
+}
+```
+
+#### Get-InvalidOperationRecord
+
+This helper function returns an invalid operation exception error object.
+Below is an example of how it could look like in the tests to test that the
+correct localized error record is returned.
+
+```powershell
+$errorRecord = Get-InvalidOperationRecord `
+    -Message ($LocalizedData.NetAdapterNotFoundError)
+
+It 'Should throw the correct exception' {
+    {
+        $script:result = Find-NetworkAdapter -Name 'NoMatch'
+    } | Should -Throw $errorRecord
+}
+```
