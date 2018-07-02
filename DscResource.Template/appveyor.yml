@@ -13,6 +13,14 @@
 #---------------------------------#
 
 version: 1.0.{build}.0 # TODO: Modify version so it fits your versioning.
+environment:
+  gallery_api:
+    secure: 9ekJzfsPCDBkyLrfmov83XbbhZ6E2N3z+B/Io8NbDetbHc6hWS19zsDmy7t0Vvxv
+
+init:
+  # Needed for publishing of examples, build worker defaults to core.autocrlf=input.
+  - git config --global core.autocrlf true
+
 install:
     - git clone https://github.com/PowerShell/DscResource.Tests
     - ps: Write-Verbose -Message "PowerShell version $($PSVersionTable.PSVersion)" -Verbose
@@ -36,11 +44,16 @@ test_script:
         # to Codecov (see https://codecov.io/).
         Invoke-AppveyorTestScriptTask -CodeCoverage -CodeCovIo -ExcludeTag @()
 
+# scripts to run before deployment
+after_test:
+    - ps: |
+        Import-Module -Name "$env:APPVEYOR_BUILD_FOLDER\DscResource.Tests\AppVeyor.psm1"
+        Invoke-AppveyorAfterTestTask
+
 #---------------------------------#
 #      deployment configuration   #
 #---------------------------------#
 
-# scripts to run before deployment
 deploy_script:
-    - ps: |
-        Invoke-AppveyorAfterTestTask
+  - ps: |
+        Invoke-AppVeyorDeployTask
