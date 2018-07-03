@@ -15,6 +15,8 @@
 version: 1.0.{build}.0 # TODO: Modify version so it fits your versioning.
 environment:
   gallery_api:
+    # TODO: Chnage to correct APU key.
+    # This API key only works for resource modules under DSC Resource Kit.
     secure: 9ekJzfsPCDBkyLrfmov83XbbhZ6E2N3z+B/Io8NbDetbHc6hWS19zsDmy7t0Vvxv
 
 init:
