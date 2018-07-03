@@ -2,6 +2,6 @@
 class MSFT_ResourceName : OMI_BaseResource
 {
     [Key, Description("Descriptive text for this property")] String MandatoryParameter;
-    [Key, Description("Descriptive text for this property")] String NonMandatoryParameter;
+    [Write, Description("Descriptive text for this property")] String NonMandatoryParameter;
     [Write, Description("Specifies if the ... should be present or absent. Default value is 'Present'."), ValueMap{"Present","Absent"}, Values{"Present","Absent"}] String Ensure;
 };

@@ -11,8 +11,8 @@ Configuration Example
     {
         ResourceName ShortNameForResource
         {
-            Ensure               = 'Present'
-            MandatoryParameter   = 'MyValue'
+            Ensure                = 'Present'
+            MandatoryParameter    = 'MyValue'
             NonMandatoryParameter = 'OtherValue'
         }
-}
+    }

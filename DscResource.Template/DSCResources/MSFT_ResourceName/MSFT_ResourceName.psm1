@@ -19,8 +19,8 @@ function Get-TargetResource
     # TODO: Code that returns the current state.
 
     return @{
-        Ensure = $ensure
-        MandatoryParameter = $value1
+        Ensure                = $ensure
+        MandatoryParameter    = $value1
         NonMandatoryParameter = $value2
     }
 }
@@ -85,6 +85,8 @@ function Test-TargetResource
         $NonMandatoryParameter
     )
 
+    $testTargetResourceResult = $false
+
     $getTargetResourceParameters = @{
         MandatoryParameter = $MandatoryParameter
     }
@@ -92,4 +94,6 @@ function Test-TargetResource
     $getTargetResourceResult = Get-TargetResource @getTargetResourceParameters
 
     # Code that tests the desired state.
+
+    return $testTargetResourceResult
 }
