@@ -121,10 +121,10 @@ If you are maintainer, please follow these rules:
 1. **DO** verify that all contributors are following the [style guidelines](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md).
 1. **DO** verify compliance with any third party code license terms (e.g., requiring attribution, etc.) if the contribution contains third party code.
 
-1. **DON'T** merge pull requests without the label `cla-signed` or `cla-not-required` from the Microsoft CLA bot.
+1. **DON'T** merge pull requests where the CLA status check is pending or the CLA status check is missing (updated by Microsoft CLA bot).
 1. **DON'T** merge pull requests to **master** branch.
 1. **DON'T** merge pull requests with a failed CI build.
-1. **DON'T** merge pull requests that do not [include all meaningful changes](CONTRIBUTING.md#lifecycle-of-a-pull-request) under the **Unreleased** section in the repository's `README.md`.
+1. **DON'T** merge pull requests that do not [include all meaningful changes](CONTRIBUTING.md#lifecycle-of-a-pull-request) under the **Unreleased** section in the repository's `README.md` or `CHANGELOG.md`.
 1. **DON'T** merge your own pull requests before they are reviewed by someone else.
   - If there is **no one** else to review your pull request, please wait **24** hours to merge it in case anyone comes along and has a comment.
 
