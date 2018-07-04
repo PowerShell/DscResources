@@ -15,8 +15,8 @@
 version: 1.0.{build}.0 # TODO: Modify version so it fits your versioning.
 environment:
   gallery_api:
-    # TODO: Change to correct API key.
-    # This API key will only work for resource modules under DSC Resource Kit.
+    # TODO: Change to correct API key if using PowerShell Gallery deploy task.
+    # This API key will only work for resource modules under the DSC Resource Kit.
     secure: 9ekJzfsPCDBkyLrfmov83XbbhZ6E2N3z+B/Io8NbDetbHc6hWS19zsDmy7t0Vvxv
 
 init:
