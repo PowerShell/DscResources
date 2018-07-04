@@ -5,7 +5,8 @@
 # This template assumes you have connected your repository to AppVeyor
 # (https://ci.appveyor.com).
 #
-# Before using it in your repository, modify places marked with 'TODO:'.
+# Before using it in your repository, modify places marked with 'TODO:', and
+# then remove this comment block.
 ################################################################################
 
 #---------------------------------#
