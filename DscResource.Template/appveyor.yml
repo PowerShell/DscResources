@@ -15,8 +15,12 @@
 version: 1.0.{build}.0 # TODO: Modify version so it fits your versioning.
 environment:
   gallery_api:
-    # TODO: Change to correct API key if using PowerShell Gallery deploy task.
-    # This API key will only work for resource modules under the DSC Resource Kit.
+    # TODO: Change to the correct API key if using PowerShell Gallery deploy task.
+    # If you wish to use this to publish your own module you'd need to set your
+    # own API key (encrypted by https://ci.appveyor.com/tools/encrypt).
+    #
+    # This API key can only be decrypted by the PowerShell Team's AppVeyor account,
+    # and can only be used for resource modules under the DSC Resource Kit.
     secure: 9ekJzfsPCDBkyLrfmov83XbbhZ6E2N3z+B/Io8NbDetbHc6hWS19zsDmy7t0Vvxv
 
 init:
