@@ -8,6 +8,15 @@ version number of the template file used must be included.
 
 ## integration_template.config.ps1
 
+### Version 1.2.0
+
+* Allows reading the configuration data from a JSON file,
+  e.g. integration_template.config.json for real testing scenarios outside of
+  the CI ([issue #89](https://github.com/PowerShell/DscResources/issues/89)).
+* Removed `PSDscAllowPlainTextPassword` from the configuration and replaced it
+  with `CertificateFile = $env:DscPublicCertificatePath` so the configuration
+  can decrypt credentials if needed.
+
 ### Version 1.1.0
 
 * Renamed filename of the integration test config template to use the right
