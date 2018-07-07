@@ -315,7 +315,7 @@ Make sure this `.gitignore` file is placed in the root of your cloned repository
 Anyone in the community is allowed to continue the work on pull requests (PR's) if either of these are true.
 
 - If the original contributor is unable to continue the work on a pull request _and_ the original author signed the CLA.
-- If the pull request have been labeled with the *abandoned* label.
+- If the pull request have been labeled with the *abandoned* label (which also implies that the CLA was signed - otherwise the abandoned label should not have been set).
 
 It is polite to tell the original author of the PR that you will be continuing the
 work, by commenting on the original PR.
