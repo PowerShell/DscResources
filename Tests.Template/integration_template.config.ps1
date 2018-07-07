@@ -76,8 +76,7 @@ Configuration MSFT_<ResourceName>_<ShortDescriptiveName>_Config
             # TODO: Add resource parameters here.
             PsDscRunAsCredential = New-Object `
                 -TypeName System.Management.Automation.PSCredential `
-                -ArgumentList @($Node.Username, $Node.Password)
-
+                -ArgumentList @($Node.Username, (ConvertTo-SecureString -String $Node.Password -AsPlainText -Force))
         }
     }
 }
