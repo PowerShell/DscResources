@@ -15,7 +15,7 @@
 - [Resolve merge conflicts](#resolve-merge-conflicts)
 - [Delete a branch](#delete-a-branch)
 - [Using .gitignore to exclude files and/or folders](#using-gitignore-to-exclude-files-andor-folders)
-- [How to continue working on a pull request when an author (contributor) is unable to complete it](#how-to-continue-working-on-a-pull-request-when-an-author-contributor-is-unable-to-complete-it)
+- [How to continue working on a pull request (PR) when an author (contributor) is unable to complete it](#how-to-continue-working-on-a-pull-request-pr-when-an-author-contributor-is-unable-to-complete-it)
 
 ## Register on GitHub
 
