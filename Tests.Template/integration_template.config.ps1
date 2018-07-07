@@ -68,7 +68,7 @@ Configuration MSFT_<ResourceName>_<ShortDescriptiveName>_Config
     # TODO: Modify ModuleName (e.g. NetworkingDsc)
     Import-DscResource -ModuleName '<ModuleName>'
 
-    node $Node.NodeName
+    node $AllNodes.NodeName
     {
         # TODO: Modify ResourceFriendlyName (e.g. Firewall).
         <ResourceFriendlyName> Integration_Test
