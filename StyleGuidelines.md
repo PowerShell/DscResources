@@ -11,8 +11,9 @@ In order to provide clean and consistent code, please follow the style guideline
   - [Correct Format for Long Function Calls](#correct-format-for-long-function-calls)
   - [Correct Format for Arrays](#correct-format-for-arrays)
   - [Correct Format for Hashtables or Objects](#correct-format-for-hashtables-or-objects)
-  - [Correct Format for Comments](#correct-format-for-comments)
   - [Correct use of single- and double quotes](#correct-use-of-single--and-double-quotes)
+  - [Correct Format for Comments](#correct-format-for-comments)
+  - [Correct Format for Keywords](#correct-format-for-keywords)
 - [Whitespace](#whitespace)
   - [Indentation](#indentation)
   - [No Trailing Whitespace After Backticks](#no-trailing-whitespace-after-backticks)
@@ -362,6 +363,77 @@ function Get-MyVariable
     {
         Write-Verbose -Message $example
     }
+}
+```
+
+### Correct Format for Keywords
+
+PowerShell reserved Keywords should be in all lower case and should
+be immediately followed by a space if there is non-whitespace characters
+following (for example, an open brace).
+
+Some reserved Keywords may also be followed by an open curly brace, for
+example the `catch` keyword. These keywords that are followed by a
+curly brace should also follow the [One Newline Before Braces](#one-newline-before-braces)
+guideline.
+
+The following is the current list of PowerShell reserved keywords in
+PowerShell 5.1:
+
+```powershell
+begin, break, catch, class, continue, data, define do, dynamicparam, else,
+elseif, end, enum, exit, filter, finally, for, foreach, from, function
+hidden, if, in, inlinescript, param, process, return, static, switch,
+throw, trap, try, until, using, var, while
+```
+
+This list may change in newer versions of PowerShell.
+
+The latest list of PowerShell reserved keywords can also be found
+on [this page](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_language_keywords?view=powershell-5.1).
+
+**Bad:**
+
+```powershell
+# Missing space after keyword and before open bracket
+foreach($item in $list)
+```
+
+**Bad:**
+
+```powershell
+# Capital letters in keyword
+BEGIN
+```
+
+**Bad:**
+
+```powershell
+# Violates 'One Newline Before Braces' guideline
+begin {
+    # Do some work
+}
+```
+
+**Bad:**
+
+```powershell
+# Capital letters in 'in' and 'foreach' keyword
+ForEach ($item In $list)
+```
+
+**Good:**
+
+```powershell
+foreach ($item in $list)
+```
+
+**Good:**
+
+```powershell
+begin
+{
+    # Do some work
 }
 ```
 
