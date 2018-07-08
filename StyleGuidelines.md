@@ -372,10 +372,13 @@ PowerShell reserved Keywords should be in all lower case and should
 be immediately followed by a space if there is non-whitespace characters
 following (for example, an open brace).
 
-Some reserved Keywords may also be followed by an open curly brace.
-These should also follow the [One Newline Before Braces](#one-newline-before-braces) rule.
+Some reserved Keywords may also be followed by an open curly brace, for
+example the `catch` keyword. These keywords that are followed by a
+curly brace should also follow the [One Newline Before Braces](#one-newline-before-braces)
+guideline.
 
-The following is list of PowerShell reserved keywords in PowerShell 5.1:
+The following is the current list of PowerShell reserved keywords in
+PowerShell 5.1:
 
 ```powershell
 begin, break, catch, class, continue, data, define do, dynamicparam, else,
@@ -384,7 +387,10 @@ hidden, if, in, inlinescript, param, process, return, static, switch,
 throw, trap, try, until, using, var, while
 ```
 
-The list of PowerShell reserved keywords can also be found on [this page](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_language_keywords?view=powershell-5.1).
+This list may change in newer versions of PowerShell.
+
+The latest list of PowerShell reserved keywords can also be found
+on [this page](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_language_keywords?view=powershell-5.1).
 
 **Bad:**
 
@@ -403,7 +409,7 @@ BEGIN
 **Bad:**
 
 ```powershell
-# Violates 'One Newline Before Braces' rule
+# Violates 'One Newline Before Braces' guideline
 begin {
     # Do some work
 }
@@ -412,8 +418,8 @@ begin {
 **Bad:**
 
 ```powershell
-# Capital letters in keyword
-foreach ($item In $list)
+# Capital letters in 'in' and 'foreach' keyword
+ForEach ($item In $list)
 ```
 
 **Good:**
