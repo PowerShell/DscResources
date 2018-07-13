@@ -217,13 +217,13 @@ To see examples of the Unit/Integration tests in practice, see the NetworkingDsc
 
 When resources use localization (which all normally should) there is the
 possibility to use the localized messages in the tests. This is normally used
-to verify so that the correct error messages are thrown. But could be used
-for verbose message, warning messages, and of course any other types.
+to verify the correct error messages are thrown. But could be used
+for verbose messages, warning messages, and of course any other types.
 
 When using the
 [`Get-localizedData`](https://github.com/PowerShell/DscResources/blob/master/BestPractices.md#get-localizeddata)
 helper function to load the localized strings into `$script:localizedData` in
-the resource module script file, the string can easily be used like this in
+the resource module script file, the strings can easily be used like this in
 tests.
 
 > **Note:** For this to work the It-block must be inside a `InModuleScope`-block.
