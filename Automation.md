@@ -1,7 +1,14 @@
 # Automation in DSC Resource Kit
 
-Some areas of the DSC Resource Kit have been automated, and other need further
-automation.
+Some areas of the DSC Resource Kit have been automated, and future automation will
+cover other areas.
+
+## Table of Contents
+
+- [Labels](#labels)
+- [Events](#events)
+- [GitHub Apps](#github-apps)
+  - [Stale](#stale)
 
 ## Labels
 
@@ -47,3 +54,9 @@ updated by author | The pull request was last updated by the author. | #e3f1dA L
 waiting for author response | The pull request is waiting for the author to respond to comments in the pull request. | #ffff99 Yellow | PR | Should *never* be use together with 'Waiting for code fix'.
 waiting for CLA pass | The contributor has not yet signed the CLA so that pull request check is not successful. | #ee0701 Red | PR |  
 waiting for code fix | A review left open comments, and the pull request is waiting for changes to be pushed by the author. | #ffff99 Yellow | PR | A review of the pull request left open comments, and the pull request is waiting for new commits to be push to the pull request by the author. This label takes precedence over 'Waiting for author response'. This label should *never* be use together with 'Waiting for author response'.
+
+## Events
+
+## GitHub Apps
+
+### Stale
