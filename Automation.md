@@ -12,9 +12,18 @@ present automations, and potential future automations.
   - [Pull requests](#pull-requests)
 - [GitHub Apps](#github-apps)
   - [Stale](#stale)
+    - [Stale issues](#stale-issues)
+    - [Stale pull requests (PR)](#stale-pull-requests-pr)
+    - [On schedule flowchart](#on-schedule-flowchart)
+    - [On activity flowchart](#on-activity-flowchart)
+    - [Configuration](#configuration)
 - [GitHub Integration](#github-integration)
   - [Waffle](#waffle)
+    - [On issue close and PR close/merge flowchart](#on-issue-close-and-pr-closemerge-flowchart)
 - [Appendix](#appendix)
+  - [Flowchart code for Stale scheduler](#flowchart-code-for-stale-scheduler)
+  - [Flowchart code for Stale activity](#flowchart-code-for-stale-activity)
+  - [Flowchart code for Waffle on issue close or PR close/merge](#flowchart-code-for-waffle-on-issue-close-or-pr-closemerge)
 
 ## Labels
 
@@ -260,7 +269,7 @@ the pull request (PR) is merged (or closed) the 'needs review' label will be
 removed from the pull request (PR) (and the issue will be moved to the
 "Closed"-column in the Waffle board).
 
-#### On issue close and PR close/merge Flowchart
+#### On issue close and PR close/merge flowchart
 
 ![On merge or close flowchart](/images/WaffleOnMergeClose.svg)
 
