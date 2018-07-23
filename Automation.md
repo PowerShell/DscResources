@@ -174,11 +174,11 @@ removed.
 
 #### On schedule flowchart
 
-![On schedule flowchart](/images/StaleSchedulerFlowchart.svg)
+![On schedule flowchart](/Images/StaleSchedulerFlowchart.svg)
 
 #### on activity flowchart
 
-![On activity flowchart](/images/StaleActivityFlowchart.svg)
+![On activity flowchart](/Images/StaleActivityFlowchart.svg)
 
 #### Configuration
 
@@ -271,7 +271,7 @@ removed from the pull request (PR) (and the issue will be moved to the
 
 #### On issue close and PR close/merge flowchart
 
-![On merge or close flowchart](/images/WaffleOnMergeClose.svg)
+![On merge or close flowchart](/Images/WaffleOnMergeClose.svg)
 
 ## Appendix
 
