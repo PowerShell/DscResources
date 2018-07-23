@@ -14,6 +14,7 @@ present automations, and potential future automations.
   - [Stale](#stale)
 - [GitHub Integration](#github-integration)
   - [Waffle](#waffle)
+- [Appendix](#appendix)
 
 ## Labels
 
@@ -121,6 +122,316 @@ Done | Event | Add label | Remove label | Assigned | Comment
 
 ### Stale
 
+Stale has been added to all repositories in DSC Resource Kit. Stale will not be
+enabled (activated) until each repo opt-in by adding the a configuration to the
+file `.github/stale.yml` in the default branch (normally 'dev').
+
+#### Stale issues
+
+When there haven't been activity on an issue for 30 days, the label 'Stale' will
+be added and a comment will be written to the issue, to remind the community to
+resolve the issue if it is still valid.
+Any other label, like a "waiting..."-label, 'needs more information', 'question'
+or 'discussion' label will be kept when the issue is labeled 'stale'.
+
+If there are no further activity withing 10 days Stale will close the issue.
+When an issue is closed, Stale label will be kept, but any label that are a Waffle
+board column will be removed (see [Waffle automation](#waffle)).
+
+If a comment is made, or a label is changed, that counts as activity and the
+'Stale' label is removed.
+
+An issue will not be commented on or be closed if the issue is assigned one of
+the (work) labels under *exemptLabels* (the last two of the labels are only needed
+for the DscResources repo). Neither will it close issues that are part of a
+milestone or project. This is just a precaution, because those issues should have
+a (work) label assigned too.
+
+#### Stale pull requests (PR)
+
+PR's that are not labeled with 'needs review', 'on hold' or 'waiting for CLA pass'
+will be labeled as abandoned after 14 days of inactivity.
+
+>**Note:** Pull requests that are labeled as 'waiting for CLA pass' should be
+>closed after 14 days, but this app cannot handle that.
+
+Any other label, like a "waiting..."-label will be kept when the issue is labeled
+'abandoned'. If activity is made on the abandoned PR the 'abandoned' label is
+removed.
+
+>**Note:** There are currently a bug that prevents the abandoned labeled to be
+>remove from the PR.
+>This bug is reported here https://github.com/probot/stale/issues/134.
+
+#### On schedule flowchart
+
+![On schedule flowchart](/images/StaleSchedulerFlowchart.svg)
+
+#### on activity flowchart
+
+![On activity flowchart](/images/StaleActivityFlowchart.svg)
+
+#### Configuration
+
+The below configuration will handle issues and pull request differently. Each
+repository can set change the configuration individually.
+
+Example of file `.github/stale.yml` which is in use for all repositories as of
+writing.
+
+```yml
+# Configuration for probot-stale - https://github.com/probot/stale
+
+limitPerRun: 30
+
+pulls:
+  daysUntilStale: 14
+  daysUntilClose: false
+  exemptProjects: true
+  exemptMilestones: true
+  staleLabel: abandoned
+  exemptLabels:
+    - needs review
+    - on hold
+    - waiting for CLA pass
+
+  markComment: >
+    Labeling this pull request (PR) as abandoned since it has gone 14 days or more
+    since the last update. An abandoned PR can be continued by another contributor.
+    The abandoned label will be removed if work on this PR is taken up again.
+
+issues:
+  daysUntilStale: 30
+  daysUntilClose: 40
+  exemptProjects: true
+  exemptMilestones: true
+  staleLabel: stale
+  exemptLabels:
+    - bug
+    - enhancement
+    - tests
+    - documentation
+    - resource proposal
+    - on hold
+    - new module submission
+    - module proposal
+
+  markComment: >
+    This issue has been automatically marked as stale because
+    it has not had activity from the community in the last 30 days. It will be
+    closed if no further activity occurs within 10 days. If the issue is labelled
+    with any of the work labels (e.g bug, enhancement, documentation, or tests)
+    then the issue will not auto-close.
+
+  closeComment: >
+    This issue has been automatically closed because it is has not had activity
+    from the community in the last 40 days.
+```
+
 ## GitHub Integration
 
 ### Waffle
+
+DSC Rersource Kit have a [Waffle board](https://waffle.io/powershell/dscresources)
+which is awesome to keep track of everything that is going on in the repositories
+of the DSC Resource Kit.
+
+In the Waffle board it's possible to drag issue/PR to different columns and that
+way automatically label them. It is basically the same as anyone labeling the
+issue or PR directly, and the issue or PR will move to the new Waffle board column
+automatically, so not an automation per say. Although, it is one difference if
+the Waffle board or user changes a label. There is a property `isBot` that is
+set to `true` in the returned payload (for webhooks) if there was a bot that did
+the change. That can affect how other bot threats the label change if it is done
+by the Waffle board or done manually by the user.
+
+There is some automation that is done by thanks to the Waffle board.
+When an issue is closed and the issue is in any (one or more) of the Waffle board
+columns (except for the *Backlog* or *Done* column), the assigned label to that
+column is removed. Same happens when a PR is merged or closed.
+
+For example if an issue is in the *Help Wanted* column on the Waffle board,
+then the issue will have the label *help wanted* assigned. If the issue is closed,
+the *help wanted* label will be removed (and the issue will be moved to the
+"Closed"-column in the Waffle board).
+Another example is if a pull request (PR) has 'needs review' label assigned, the
+pull request (PR) will be in the "Needs review"-column of the Waffle board. When
+the pull request (PR) is merged (or closed) the 'needs review' label will be
+removed from the pull request (PR) (and the issue will be moved to the
+"Closed"-column in the Waffle board).
+
+#### On issue close and PR close/merge Flowchart
+
+![On merge or close flowchart](/images/WaffleOnMergeClose.svg)
+
+## Appendix
+
+### Flowchart code for Stale scheduler
+
+```code2flow
+// Runs approx. every hour.
+// Checks each issue and
+// pull request.
+// Max 30 items per run.
+On Schedule;
+switch(Type)
+{
+  case Issue:
+  {
+    if(Is labeled with 'stale'?)
+    {
+      if(Inactive for 10 days?)
+      {
+        Close issue;
+      }
+    }
+    else
+    {
+      if(Inactive for 30 days?)
+      {
+        if(Is part of project?)
+        {
+        }
+        elseif(Is part of milestone?)
+        {
+        }
+        // **Labels:**
+        // needs review
+        // on hold
+        // waiting for CLA pass
+        elseif(Has exempt label?)
+        {
+        }
+        else
+        {
+          // Any existing labels will be kept.
+          Label 'Stale';
+          Write stale
+          issue comment;
+        }
+      }
+    }
+    break;
+  }
+
+  case Pull Request:
+  {
+    if(Inactive for 14 days?)
+    {
+      if(Is part of project?)
+      {
+      }
+      elseif(Is part of milestone?)
+      {
+      }
+      // **Labels:**
+      // bug
+      // enhancement
+      // tests
+      // documentation
+      // resource proposal
+      // on hold
+      // -
+      // **Special labels:**
+      // new module submission
+      // module proposal
+      elseif(Has exempt label?)
+      {
+      }
+      else
+      {
+        // Any existing labels will be kept.
+        Label 'abandoned';
+        Write stale pull
+        request comment;
+      }
+    }
+    break;
+  }
+};
+Finished;
+```
+
+### Flowchart code for Stale activity
+
+```code2flow
+On pull request
+or issue activity
+(except close);
+switch(Type)
+{
+  case Issue:
+  {
+    if(Is labeled
+    with 'stale'?)
+    {
+        Remove label
+        'stale';
+    }
+    break;
+  }
+
+  case Pull Request:
+  {
+    if(Is labeled with
+      'abandoned'?)
+    {
+        Remove label
+        'abandoned';
+    }
+    break;
+  }
+};
+Finished;
+```
+
+### Flowchart code for Waffle on issue close or PR close/merge
+
+```code2flow
+On pull request
+close/merge,
+or issue close;
+// If not assigned it will be
+// in the Backlog column
+// -
+// **Waffle columns**
+// -
+// **Issue columns:**
+//
+// blocking release
+// high priority
+// help wanted
+// questions
+// needs investigating
+// discussion
+// needs more information
+// new module submission
+// module proposal
+
+// -
+// **PR columns:**
+// waiting for CLA
+// abandoned
+// needs review
+// ready to merge
+// in progress
+// waiting for code fix
+// waiting for author response
+// -
+// **Issue and PR columns:**
+// on hold
+
+if(Is assigned to
+a column?)
+{
+    // Normally the column
+    // name is the same as
+    // the label name.
+    Remove all labels
+    assigned to the
+    issue that have
+    a column on the
+    Waffle board;
+}
+Finished;
+```
