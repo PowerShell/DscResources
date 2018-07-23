@@ -1,26 +1,34 @@
 # Automation in DSC Resource Kit
 
-Some areas of the DSC Resource Kit have been automated, and future automation will
-cover other areas.
+Some areas and workflows of the DSC Resource Kit have been automated, and future
+automation will cover other areas. This document have both information around
+present automations, and potential future automations.
 
 ## Table of Contents
 
 - [Labels](#labels)
 - [Events](#events)
+  - [Issues](#issues)
+  - [Pull requests](#pull-requests)
 - [GitHub Apps](#github-apps)
   - [Stale](#stale)
+- [GitHub Integration](#github-integration)
+  - [Waffle](#waffle)
 
 ## Labels
 
 Labels are used in the issue and pull request workflow to show the current state.
-When a issue or pull request add or remove a label an action could occur,
-for example adding an automated comment.
+When a issue or pull request add or remove a label an event (action) could occur,
+where the event could for example add an automated comment or change assignee.
+See [Events](#events) for more information around different events.
 
 These are the labels currently used by the resource modules in the DSC Resource
 Kit. Some of these labels are meant to be used with future automation.
 
->The script [DscResourceKit-Labels](https://gist.github.com/johlju/f83f99787029a6b5d65cfd6844cf9449) that is provided
->by the community can be used to update the labels in your own repository.
+>The script
+>[DscResourceKit-Labels](https://gist.github.com/johlju/f83f99787029a6b5d65cfd6844cf9449)
+>that is provided by the community can be used to update the labels in your own
+>repository.
 
 Label | Description | Color Hex | Area of usage (PR, Issue) | Comment
 -- | -- | -- | -- | --
@@ -57,6 +65,62 @@ waiting for code fix | A review left open comments, and the pull request is wait
 
 ## Events
 
+These are events that have been found to be part of the current workflow for
+issues and pull requests. The events are connected and built around labels.
+These events would preferably be automated as far as we can. In the beginning
+these events need to be done manually.
+Automating these events are meant to reduce the repetitive work when maintaining
+the resources. Maybe not all of these will be a reality.
+
+### Issues
+
+Events found around the issue workflows.
+This list should be updated when more repetitive work is found.
+
+Done | Event | Add label | Remove label | Assigned | Comment
+-- | -- | -- | -- | -- | --
+— | Contributor creates issue | -- | -- | Manually assignment, or assigned automatically to all maintainers individually. | *GitHub support confirmed that it is not possible to assign an issue or PR to a team. Neither is it possible for a team to consist of both collaborators and organizational users.*
+— | Contributor creates issue for a new resource module submission | **Manual** New module submission | | Entire community, so no assignment on these. | Automated comment linking to the documentation on how, and the requirements, to make a new module submission linking your own resource module to DSC Resource Kit. The issue should remain open for community feedback.
+— | Contributor creates issue for 'resource module proposal' | -- | -- | -- | These issues can be closed with a, preferably automated, comment linking to documentation on how to publish your own resource module and how to link your own module to DSC Resource Kit.
+— | Maintainer comments on issue | **Manual** Question, Bug, Enhancement, Documentation, Tests, Resource proposal, Needs investigation, Needs more information as the maintainer sees fit. 'Good first issue' should be set on those issues that can be taken up by a beginner who wants to learn the process of contribute on GitHub. 'High priority' should only be used in rare circumstances and is up to the maintainer. | **Manual** Needs investigation, Needs more information as the maintainer sees fit | **Manual** Re-assigned by maintainer if needed |
+— | Issue is assigned a 'work' label (Bug, Enhancement, Documentation, Tests) | Help wanted | -- | Entire community, so no assignment on these. | An automated comment telling that this issue is up for grabs by anyone in the community.
+— | Contributor comments that issue is being worked on | **Manual** In progress | -- | *Manually* Assign to contributor. *Currently not possible to assign to other than issue creator and organizational user.* |
+— | Issue is mentioned in open PR | **Manual** In progress | -- | *Manually* Assign to creator of PR. *Currently not possible to assign to other than issue creator and organizational user.* |
+— | Issue creator writes comment | -- | -- | -- |  
+— | Contributor, other than issue creator writes comment | -- | -- | -- |  
+— | Issue creator closes issue | Closed by author | Needs investigation, Needs more information | -- |  
+— | Maintainer closes issue | **Manual** Abandoned, By design, Duplicate, External, Not fixed. | Needs investigation, Needs more information | -- | Maintainer also needs to comment why they are closing the PR.
+✔️ | Issue is closed by PR | -- | Needs investigation, Needs more information, Help Wanted, In progress | -- | Any tag connected to a Waffle board column will be removed on issue close. This is part of the Waffle integration.
+✔️ | Issue has no activity for 30 days | -- | -- | -- | Only when issue is _not assigned_ any of these work-labels 'bug', 'enhancement', 'tests', 'documentation', 'on hold', 'new module submission', 'module proposal', then push automatic comment requesting a response or the issue will be closed. This is being done by the GitHub App Stale.
+️️️✔️ | Issue has no activity for 40 days | -- | -- | -- | Only when issue is _not assigned_ any of these work-labels 'bug', 'enhancement', 'tests', 'documentation', 'on hold', 'new module submission', 'module proposal', then issue will be automatically closed. This is being done by the GitHub App Stale.
+
+### Pull requests
+
+Events found around the pull request workflows.
+This list should be updated when more repetitive work is found.
+
+Done | Event | Add label | Remove label | Assigned | Comment
+-- | -- | -- | -- | -- | --
+— | PR creation | Needs review | -- | Manually assignment, or assigned automatically to all maintainers individually. *Doesn't seem possible to assign an issue or PR collectively to a team. Neither does it look like a team can consist of both collaborators and organizational users.* | Add an automated comment to the PR with a link to our documentation on how the review process works and what will happen next.
+— | CLA bot test fails on PR | Waiting for CLA pass | Needs review, Waiting for author response, Waiting for code fix | -- |  
+— | CLA bot check passes ***and*** Tests check passes on PR | Needs review | Waiting for CLA pass, Waiting for code fix, Waiting for author response | -- |
+— | Tests fail on PR | Waiting for code fix | Needs review, Waiting for author response | -- |  
+— | Contributor other than PR creator makes a comment through Reviewable | Waiting for code fix | Needs review, Updated by author | -- | Automatic comment (when author is first-time-contributor) how contributor responds on review comments, for the reviewer to acknowledge comments.
+— | Contributor other than PR creator makes a comment in the PR | Waiting for author response | Needs review | **Manual** Re-assigned by maintainer if needed | Should not add label if label 'Waiting for code fix' is already assigned.
+— | PR creator adds new code to PR | Updated by author, Needs review | Waiting for author response, Waiting for code fix | -- |  
+— | Contributor other than PR creator approves PR (via GitHub review or LGTM comment) | Ready for merge | Updated by author, Waiting for author response, Needs review | -- | *Reviewable now support GitHub review approvals, but not for self-reviews (restriction by GitHub) where LGTM comment is the only option.*
+— | PR creator comments on PR | Updated by author, Needs review | Waiting for author response | -- |  
+— | PR creator closes PR (no merge) | Closed by author | Anything else | -- |
+— | Maintainer closes PR (no merge) | **Manual** Label showing why the PR was closed OR no label and just a comment if PR is getting re-opened immediately | Anything else | -- |
+— | Maintainer merges PR | -- | All labels | -- |  
+️️️️✔️ | PR creator is unresponsive for 14 days (and CLA passed) | abandoned | -- | -- | At this point another contributor may continue the work.
+— | PR creator is unresponsive for 14 days (and CLA has not passed) | -- | -- | -- | Automatically close. *If the CLA was not signed, we should make sure that label 'waiting for CLA pass' is kept when closing - 'waiting for CLA pass' cannot be a Waffle board column in that case.*
+— | When PR has merge conflict | Waiting for code fix | Needs review, Waiting for author response | -- | Automatically write a comment saying that a merge conflict has occurred and a rebase is need, plus a link to instructions on how to make a rebase.
+
 ## GitHub Apps
 
 ### Stale
+
+## GitHub Integration
+
+### Waffle
