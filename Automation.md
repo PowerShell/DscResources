@@ -1,7 +1,7 @@
 # Automation in DSC Resource Kit
 
-Some areas and workflows of the DSC Resource Kit have been automated, and future
-automation will cover other areas. This document have both information around
+Some areas and workflows of the DSC Resource Kit are automated, and future
+automation will cover other areas. This document has both information around
 present automations, and potential future automations.
 
 ## Table of Contents
@@ -27,8 +27,9 @@ present automations, and potential future automations.
 
 ## Labels
 
-Labels are used in the issue and pull request workflow to show the current state.
-When a issue or pull request add or remove a label an event (action) could occur,
+Labels are being used in the issue and pull request workflows to show the current
+state.
+When an issue or pull request add or remove a label an event (action) could occur,
 where the event could for example add an automated comment or change assignee.
 See [Events](#events) for more information around different events.
 
@@ -42,9 +43,9 @@ Kit. Some of these labels are meant to be used with future automation.
 
 Label | Description | Color Hex | Area of usage (PR, Issue) | Comment
 -- | -- | -- | -- | --
-abandoned | The pull request has been abandoned. | #ffffff White | PR | Used to indicate that the original author of a PR no longer appears to be working on the PR, and the work could be continued by another contributor (as per [Abandoned Pull Requests](https://github.com/PowerShell/DscResources/blob/a923a5f1cda20bd69046095da22c3ba062644922/Maintainers.md#abandoned-pull-requests) and [How to continue working on a pull request when an author (contributor) is unable to complete it](https://github.com/PowerShell/DscResources/blob/master/GettingStartedWithGitHub.md#how-to-continue-working-on-a-pull-request-when-an-author-contributor-is-unable-to-complete-it)). Maintainer needs to comment why the PR was labeled as abandoned. If the original author continues to work on the issue this label should be removed.
+abandoned | The pull request has been abandoned. | #ffffff White | PR | Used to indicate that the original author of a PR no longer appears to be working on the PR, and the work could be continued by another contributor (as per [Abandoned Pull Requests](https://github.com/PowerShell/DscResources/blob/a923a5f1cda20bd69046095da22c3ba062644922/Maintainers.md#abandoned-pull-requests) and [How to continue working on a pull request when an author (contributor) is unable to complete it](https://github.com/PowerShell/DscResources/blob/master/GettingStartedWithGitHub.md#how-to-continue-working-on-a-pull-request-when-an-author-contributor-is-unable-to-complete-it)). Maintainer needs to comment why the PR is labelled as abandoned. If the original author continues to work on the issue this label should be removed.
 blocking release | The issue or pull request is blocking the next release. Higher priority than label 'High priority'. | #800000 Dark red | Issue, PR | Only needed in modules with a release. The issue or pull request is blocking the next release. This has higher priority to resolve than issues or pull request with the label 'High priority'.
-breaking change | When used on an issue, the issue has been determined to be a breaking change. | #ff9900 Orange | Issue, PR | Only needed in modules with a release. When used on a pull request, when the pull request is merged it will result in the major version number to change on the next release.
+breaking change | When used on an issue, the issue has been found to be a breaking change. | #ff9900 Orange | Issue, PR | Only needed in modules with a release. When used on a pull request, when the pull request is merged it will result in the major version number to change on the next release.
 bug | The issue is a bug. | #ee0701 Red | Issue |  
 by design | The issue is describing an expect behavior.  | #ffffff White | Issue | Indicates reason for closure. Maintainer needs to comment why the issue/PR was closed.
 closed by author | The issue or pull request was closed by the author. | #ffffff White | Issue, PR | Indicates reason for closure.
@@ -57,30 +58,31 @@ external | The issue cannot be resolved within the DSC Resource Kit. | #ffffff W
 help wanted | The issue is up for grabs for anyone in the community. | #128A0C Green | Issue |  
 high priority | The issue or PR should be resolved first. It is of less priority than the label 'Blocking Release'. | #ffcc99 Light orange | Issue, PR | The issue or pull request is of high importance and should be resolved or merged first, but it is of less priority than anything with the label 'Blocking Release'.
 in progress | The issue is being actively worked on by someone. | #99ffcc Turquoise | Issue |  
-needs investigation | The issue needs to be investigated by the maintainers or/and the community. | #ffff99 Yellow | Issue |  The issue needs to be investigated by the maintainers or/and the community to determine the cause of a problem, the fix for a problem, the benefit of a request, or the answer to a question.
+needs investigation | The issue needs to be investigated by the maintainers or/and the community. | #ffff99 Yellow | Issue | The issue needs to be investigated by the maintainers or/and the community to find the cause of a problem, the fix for a problem, the benefit of a request, or the answer to a question.
 needs more information | The issue needs more information from the author or the community. | #ffff99 Yellow | Issue |
 needs review | The pull request needs a code review. | #99ff33 Lime green | PR |  
-new module submission | A request that the community evaluate a resource module for submission into the DSC Resource Kit. | #207de5 Dark blue | Issue | A resource module owner has requested that the community evaluate a resource module for submission into the DSC Resource Kit. ***Note:** This label is only needed in the repository DscResources.*
+new module submission | A request that the community evaluate a resource module for submission into the DSC Resource Kit. | #207de5 Dark blue | Issue | A resource module owner has asked that the community evaluate a resource module for submission into the DSC Resource Kit. ***Note:** This label is only needed in the repository DscResources.*
 not fixed | The issue was closed without being fixed. | #ffffff White | Issue | Indicates reason for closure. Maintainer needs to comment why the issue/PR was closed.
 on hold | The issue or pull request has been put on hold by a maintainer. | #1e1e7b Dark blue | Issue, PR | Maintainer needs to comment why the issue/PR is on hold. The issue/PR cannot be closed or merged until the label is removed with the consent of whoever assigned the label.
 question | The issue is a question. | #cc317c Dark pink | Issue |  
-ready for merge | The pull request was approved  by the community and is ready to be merged by a maintainer. | #215e82 Dark cyan | PR |
+ready for merge | The pull request was approved by the community and is ready to be merged by a maintainer. | #215e82 Dark cyan | PR |
 resource proposal | The issue is proposing a new resource in the resource module. | #fbca04 Dark yellow | Issue | Only needed in resource modules repositories.
-stale | The issue was marked as stale because there hasn't been activity from the community. | #cccccc Grey | Issues |
+stale | The issue was marked as stale because there has not been activity from the community. | #cccccc Grey | Issues |
 tests | The issue or pull request is about tests only. | #c5def5 Lighter blue | Issue, PR |  
-updated by author | The pull request was last updated by the author. | #e3f1dA Lighter Green | PR |
+updated by author | The author last updated the pull request. | #e3f1dA Lighter Green | PR |
 waiting for author response | The pull request is waiting for the author to respond to comments in the pull request. | #ffff99 Yellow | PR | Should *never* be use together with 'Waiting for code fix'.
 waiting for CLA pass | The contributor has not yet signed the CLA so that pull request check is not successful. | #ee0701 Red | PR |  
 waiting for code fix | A review left open comments, and the pull request is waiting for changes to be pushed by the author. | #ffff99 Yellow | PR | A review of the pull request left open comments, and the pull request is waiting for new commits to be push to the pull request by the author. This label takes precedence over 'Waiting for author response'. This label should *never* be use together with 'Waiting for author response'.
 
 ## Events
 
-These are events that have been found to be part of the current workflow for
-issues and pull requests. The events are connected and built around labels.
-These events would preferably be automated as far as we can. In the beginning
-these events need to be done manually.
+These are the events that are part of the current workflow for
+issues and pull requests. The events are using labels to tell when there is a need
+for an action in the workflow.
+These events should preferably be automated as far as we can. For now, the events
+need to be done manually.
 Automating these events are meant to reduce the repetitive work when maintaining
-the resources. Maybe not all of these will be a reality.
+the resources. Not all of these might be a reality.
 
 ### Issues
 
@@ -89,7 +91,7 @@ This list should be updated when more repetitive work is found.
 
 Done | Event | Add label | Remove label | Assigned | Comment
 -- | -- | -- | -- | -- | --
-— | Contributor creates issue | -- | -- | Manually assignment, or assigned automatically to all maintainers individually. | *GitHub support confirmed that it is not possible to assign an issue or PR to a team. Neither is it possible for a team to consist of both collaborators and organizational users.*
+— | Contributor creates issue | -- | -- | Manually assignment or assigned automatically to all maintainers individually. | *GitHub support confirmed that it is not possible to assign an issue or PR to a team. Neither is it possible for a team to consist of both collaborators and organizational users.*
 — | Contributor creates issue for a new resource module submission | **Manual** New module submission | | Entire community, so no assignment on these. | Automated comment linking to the documentation on how, and the requirements, to make a new module submission linking your own resource module to DSC Resource Kit. The issue should remain open for community feedback.
 — | Contributor creates issue for 'resource module proposal' | -- | -- | -- | These issues can be closed with a, preferably automated, comment linking to documentation on how to publish your own resource module and how to link your own module to DSC Resource Kit.
 — | Maintainer comments on issue | **Manual** Question, Bug, Enhancement, Documentation, Tests, Resource proposal, Needs investigation, Needs more information as the maintainer sees fit. 'Good first issue' should be set on those issues that can be taken up by a beginner who wants to learn the process of contribute on GitHub. 'High priority' should only be used in rare circumstances and is up to the maintainer. | **Manual** Needs investigation, Needs more information as the maintainer sees fit | **Manual** Re-assigned by maintainer if needed |
@@ -101,8 +103,8 @@ Done | Event | Add label | Remove label | Assigned | Comment
 — | Issue creator closes issue | Closed by author | Needs investigation, Needs more information | -- |  
 — | Maintainer closes issue | **Manual** Abandoned, By design, Duplicate, External, Not fixed. | Needs investigation, Needs more information | -- | Maintainer also needs to comment why they are closing the PR.
 ✔️ | Issue is closed by PR | -- | Needs investigation, Needs more information, Help Wanted, In progress | -- | Any tag connected to a Waffle board column will be removed on issue close. This is part of the Waffle integration.
-✔️ | Issue has no activity for 30 days | -- | -- | -- | Only when issue is _not assigned_ any of these work-labels 'bug', 'enhancement', 'tests', 'documentation', 'on hold', 'new module submission', 'module proposal', then push automatic comment requesting a response or the issue will be closed. This is being done by the GitHub App Stale.
-️️️✔️ | Issue has no activity for 40 days | -- | -- | -- | Only when issue is _not assigned_ any of these work-labels 'bug', 'enhancement', 'tests', 'documentation', 'on hold', 'new module submission', 'module proposal', then issue will be automatically closed. This is being done by the GitHub App Stale.
+✔️ | Issue has no activity for 30 days | -- | -- | -- | Only when issue is _not assigned_ any of these work-labels 'bug', 'enhancement', 'tests', 'documentation', 'on hold', 'new module submission', 'module proposal', then push automatic comment requesting a response or the issue will be closed. The GitHub App Stale are doing this.
+️️️✔️ | Issue has no activity for 40 days | -- | -- | -- | Only when issue is _not assigned_ any of these work-labels 'bug', 'enhancement', 'tests', 'documentation', 'on hold', 'new module submission', 'module proposal', then issue will be automatically closed. The GitHub App Stale are doing this.
 
 ### Pull requests
 
@@ -111,7 +113,7 @@ This list should be updated when more repetitive work is found.
 
 Done | Event | Add label | Remove label | Assigned | Comment
 -- | -- | -- | -- | -- | --
-— | PR creation | Needs review | -- | Manually assignment, or assigned automatically to all maintainers individually. *Doesn't seem possible to assign an issue or PR collectively to a team. Neither does it look like a team can consist of both collaborators and organizational users.* | Add an automated comment to the PR with a link to our documentation on how the review process works and what will happen next.
+— | PR creation | Needs review | -- | Manually assignment or assigned automatically to all maintainers individually. *Doesn't seem possible to assign an issue or PR collectively to a team. Neither does it look like a team can consist of both collaborators and organizational users.* | Add an automated comment to the PR with a link to our documentation on how the review process works and what will happen next.
 — | CLA bot test fails on PR | Waiting for CLA pass | Needs review, Waiting for author response, Waiting for code fix | -- |  
 — | CLA bot check passes ***and*** Tests check passes on PR | Needs review | Waiting for CLA pass, Waiting for code fix, Waiting for author response | -- |
 — | Tests fail on PR | Waiting for code fix | Needs review, Waiting for author response | -- |  
@@ -132,29 +134,29 @@ Done | Event | Add label | Remove label | Assigned | Comment
 ### Stale
 
 Stale has been added to all repositories in DSC Resource Kit. Stale will not be
-enabled (activated) until each repo opt-in by adding the a configuration to the
+enabled (activated) until each repo opt-in by adding a configuration to the
 file `.github/stale.yml` in the default branch (normally 'dev').
 
 #### Stale issues
 
-When there haven't been activity on an issue for 30 days, the label 'Stale' will
-be added and a comment will be written to the issue, to remind the community to
+When there has not been activity on an issue for 30 days, the label 'stale' is
+added, and a comment will be written to the issue, to remind the community to
 resolve the issue if it is still valid.
 Any other label, like a "waiting..."-label, 'needs more information', 'question'
-or 'discussion' label will be kept when the issue is labeled 'stale'.
+or 'discussion' label are kept when the issue is labeled 'stale'.
 
-If there are no further activity withing 10 days Stale will close the issue.
-When an issue is closed, Stale label will be kept, but any label that are a Waffle
-board column will be removed (see [Waffle automation](#waffle)).
+If there are no further activity within 10 days Stale will close the issue.
+When the issue is closed, the 'stale' label will be kept, but any label that are
+a Waffle board column will be removed (see [Waffle automation](#waffle)).
 
 If a comment is made, or a label is changed, that counts as activity and the
 'Stale' label is removed.
 
 An issue will not be commented on or be closed if the issue is assigned one of
 the (work) labels under *exemptLabels* (the last two of the labels are only needed
-for the DscResources repo). Neither will it close issues that are part of a
-milestone or project. This is just a precaution, because those issues should have
-a (work) label assigned too.
+for the DscResources repository). Neither will it close issues that are part of
+a milestone or project. This is just a precaution, because those issues should
+have a (work) label assigned too.
 
 #### Stale pull requests (PR)
 
@@ -241,12 +243,12 @@ issues:
 
 ### Waffle
 
-DSC Rersource Kit have a [Waffle board](https://waffle.io/powershell/dscresources)
+DSC Resource Kit have a [Waffle board](https://waffle.io/powershell/dscresources)
 which is awesome to keep track of everything that is going on in the repositories
 of the DSC Resource Kit.
 
-In the Waffle board it's possible to drag issue/PR to different columns and that
-way automatically label them. It is basically the same as anyone labeling the
+In the Waffle board it is possible to drag issue/PR to different columns and that
+way automatically label them. It is the same as anyone labeling the
 issue or PR directly, and the issue or PR will move to the new Waffle board column
 automatically, so not an automation per say. Although, it is one difference if
 the Waffle board or user changes a label. There is a property `isBot` that is
@@ -255,11 +257,11 @@ the change. That can affect how other bot threats the label change if it is done
 by the Waffle board or done manually by the user.
 
 There is some automation that is done by thanks to the Waffle board.
-When an issue is closed and the issue is in any (one or more) of the Waffle board
+When an issue is closed, and the issue is in any (one or more) of the Waffle board
 columns (except for the *Backlog* or *Done* column), the assigned label to that
 column is removed. Same happens when a PR is merged or closed.
 
-For example if an issue is in the *Help Wanted* column on the Waffle board,
+For example, if an issue is in the *Help Wanted* column on the Waffle board,
 then the issue will have the label *help wanted* assigned. If the issue is closed,
 the *help wanted* label will be removed (and the issue will be moved to the
 "Closed"-column in the Waffle board).
