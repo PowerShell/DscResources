@@ -4,7 +4,7 @@
 
 ### Next Release
 
-- 07/25/18
+- 09/05/18
 
 All changes for the release should be merged into the `dev` branch before the release date. 
 Resource modules that are not passing their tests in the release pull request from the `dev` branch to the `master` branch cannot be released.  
@@ -13,10 +13,11 @@ Individual resource module hotfixes for urgent issues may be released before the
 
 ### Latest Release
 
-- [06/13/18](https://blogs.msdn.microsoft.com/powershell/2018/06/13/dsc-resource-kit-release-june-2018/)
+- [07/25/18](https://blogs.msdn.microsoft.com/powershell/2018/07/25/dsc-resource-kit-release-july-2018/)
 
 ### Past Releases
 
+- [06/13/18](https://blogs.msdn.microsoft.com/powershell/2018/06/13/dsc-resource-kit-release-june-2018/)
 - [05/02/18](https://blogs.msdn.microsoft.com/powershell/2018/05/02/dsc-resource-kit-release-may-2018/)
 - [03/21/18](https://blogs.msdn.microsoft.com/powershell/2018/03/21/dsc-resource-kit-release-march-2018/)
 - [02/07/18](https://blogs.msdn.microsoft.com/powershell/2018/02/07/dsc-resource-kit-release-february-2018/)
@@ -48,14 +49,15 @@ Individual resource module hotfixes for urgent issues may be released before the
 
 ### Next Call
 
-- [07/18/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-07-18)
+- [08/29/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-08-29)
 
 ### Latest Call
 
-- [06/06/18 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2018-06-06)
+- [07/18/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-07-18)
 
 ### Past Calls
 
+- [06/06/18 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2018-06-06)
 - [04/25/18 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2018-04-25)
 - [03/14/18 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2018-03-14)
 - [01/31/18 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2018-01-31)
