@@ -75,7 +75,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | xExchange | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) |
 | xFailOverCluster | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
 | xFirefox | --- |
-| xHyper-V | Brian Farnhill ([@BrianFarnhill](https://github.com/BrianFarnhill)) |
+| xHyper-V | --- |
 | xInternetExplorerHomePage | --- |
 | xJea | --- |
 | xMySql | --- |
