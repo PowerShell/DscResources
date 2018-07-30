@@ -97,7 +97,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | xSqlPs | DEPRECATED - Replaced by [SqlServerDsc](https://github.com/PowerShell/SqlServerDsc) |
 | xSystemSecurity | --- |
 | xTimeZone | DEPRECATED - Migrated to [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) |
-| xWebAdministration | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) |
+| xWebAdministration | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Reggie Gibson ([@regedit32](https://github.com/regedit32)) |
 | xWebDeploy | --- |
 | xWindowsEventForwarding | --- |
 | xWindowsRestore | --- |
