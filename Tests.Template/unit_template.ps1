@@ -4,10 +4,12 @@
 
     .DESCRIPTION
         To Use:
-        1. Copy to \Tests\Unit\ folder and rename <ResourceName>.tests.ps1 (e.g. MSFT_xFirewall.tests.ps1)
+        1. Copy to \Tests\Unit\ folder and rename <ResourceName>.tests.ps1
+           (e.g. MSFT_xFirewall.tests.ps1).
         2. Customize TODO sections.
-        3. Delete all template comments (TODOs, etc.)
-        4. Remove any unused BeforeAll-, AfterAll-, BeforeEach- and AfterEach-blocks.
+        3. Delete all template comments (TODOs, etc.).
+        4. Remove any unused It-, Context-, BeforeAll-, AfterAll-,
+           BeforeEach- and AfterEach-blocks.
         5. Remove this comment-based help.
 
     .NOTES
@@ -79,6 +81,7 @@ try
 
             BeforeEach {
                 # per-test-initialization
+                Mock -CommandName Get-Something
             }
 
             AfterEach {
@@ -96,6 +99,9 @@ try
 
                 BeforeEach {
                     # per test initialization
+                    Mock -CommandName New-Thing -MockWith {
+                        return 'New thing'
+                    }
                 }
 
                 AfterEach {
@@ -110,7 +116,12 @@ try
                     as an empty string'.
                 #>
                 It 'Should ....test-description' {
-                    # test-code
+                    # TODO: Update test-code
+                    $getTargetResourceResult = Get-TargetResource -Parameter1
+                    $getTargetResourceResult.Value1 | Should -Be 'Expected value'
+
+                    Assert-MockCalled -CommandName Get-Something -Exactly -Times 1 -Scope It
+                    Assert-MockCalled -CommandName New-Thing -Exactly -Times 1 -Scope It
                 }
 
                 It 'Should ....test-description' {
