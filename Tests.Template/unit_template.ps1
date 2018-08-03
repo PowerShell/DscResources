@@ -117,7 +117,7 @@ try
                 #>
                 It 'Should ....test-description' {
                     # TODO: Update test-code
-                    $getTargetResourceResult = Get-TargetResource -Parameter1
+                    $getTargetResourceResult = Get-TargetResource -Parameter1 'Value1'
                     $getTargetResourceResult.Value1 | Should -Be 'Expected value'
 
                     Assert-MockCalled -CommandName Get-Something -Exactly -Times 1 -Scope It
