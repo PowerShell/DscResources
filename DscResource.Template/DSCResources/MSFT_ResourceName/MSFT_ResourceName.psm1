@@ -1,3 +1,8 @@
+# Import Localization Strings
+$localizedData = Get-LocalizedData `
+    -ResourceName 'MSFT_CertReq' `
+    -ResourcePath (Split-Path -Parent $Script:MyInvocation.MyCommand.Path)
+
 <#
     .SYNOPSIS
         Returns ...
@@ -17,6 +22,7 @@ function Get-TargetResource
     )
 
     # TODO: Code that returns the current state.
+    Write-Verbose -Message $script:localizedData.GetConfiguration
 
     return @{
         Ensure                = $ensure
@@ -54,6 +60,7 @@ function Set-TargetResource
     )
 
     # Code that sets the desired state if evaluated to not in desired state.
+    Write-Verbose -Message $script:localizedData.SetConfiguration
 }
 
 <#
@@ -84,6 +91,8 @@ function Test-TargetResource
         [System.String]
         $NonMandatoryParameter
     )
+
+    Write-Verbose -Message $script:localizedData.TestConfiguration
 
     $testTargetResourceResult = $false
 
