@@ -33,10 +33,7 @@
 -->
 - [ ] This PR changes documentation
 - [ ] This PR changes DscResource.Template
-  - [ ] The template version number has been increased appropriately.
-  - [ ] An descriptive entry has been added to the CHANGELOG.md under the
-        DscResource.Template folder.
 - [ ] This PR changes Tests.Template
   - [ ] The template version number has been increased appropriately.
   - [ ] An descriptive entry has been added to the CHANGELOG.md under the
-        DscResource.Template folder.
+        Tests.Template folder.
