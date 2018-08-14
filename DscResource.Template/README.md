@@ -1,7 +1,5 @@
 # {ModuleName}
 
-{AppVeyor build status badge for master branch}
-
 { Description of the module - Please include any requirements for running all resources in this module (e.g. Must run on Windows Server OS, must have Exchange already installed) - Requirements specific to only certain resources in this module may be listed below with the description of those resources. }
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
