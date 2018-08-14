@@ -24,7 +24,7 @@
 $script:DSCModuleName = '<ModuleName>'
 $script:DSCResourceName = '<ResourceName>'
 
-# Unit Test Template Version: 1.2.2
+# Unit Test Template Version: 1.2.3
 $script:moduleRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if ( (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))) -or `
      (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1'))) )
