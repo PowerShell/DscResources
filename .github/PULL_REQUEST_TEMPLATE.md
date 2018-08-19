@@ -17,15 +17,15 @@
 <!--
     Replace this comment block with the list of issues or n/a.
     Use format:
-    Fixes #123
-    Fixes #124
+    - Fixes #123
+    - Fixes #124
 -->
 
 #### Task list
 <!--
     To aid community reviewers in reviewing and merging your PR, please take
     the time to run through the below checklist and make sure your PR has
-    everything updated as needed.
+    everything updated as required.
 
     Change to [x] for each task in the task list that applies to your pull
     request (PR). For those task that don't apply to you pull request (PR),
