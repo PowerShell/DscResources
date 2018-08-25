@@ -1,6 +1,6 @@
 # Import Localization Strings
 $localizedData = Get-LocalizedData `
-    -ResourceName 'MSFT_CertReq' `
+    -ResourceName 'MSFT_ResourceName' `
     -ResourcePath (Split-Path -Parent $Script:MyInvocation.MyCommand.Path)
 
 <#
