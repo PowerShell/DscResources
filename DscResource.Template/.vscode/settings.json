@@ -10,5 +10,5 @@
     "powershell.codeFormatting.preset": "Custom",
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
-    "powershell.scriptAnalysis.settingsPath": ".vscode\\analyzerrules.psd1"
+    "powershell.scriptAnalysis.settingsPath": ".vscode\\analyzersettings.psd1"
 }

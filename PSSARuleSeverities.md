@@ -1,10 +1,12 @@
 # DSC Resource Kit PSSA Rule Severities
 
-These are the rules that must be used for DSC Resources in DSC Resource Kit.
+These are the PS Script Analyzer rules that must be used for DSC resources in
+DSC Resource Kit.
 
-In tests and examples the PS Script Analyzer rules may be suppressed on a case-by-case basis (up to the community and the maintainer).
+In tests and examples the PS Script Analyzer rules may be suppressed on a
+case-by-case basis (up to the community and the maintainer).
 
-These rules are also available as a
+These rules are also available as an
 [analyzer rules settings file](DscResource.Template/.vscode/analyzersettings.psd1)
 in the DscResource.Template, used together with the Visual Studio Code settings
 file, it detects if any code is not compliant with these rules.
