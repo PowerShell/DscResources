@@ -73,6 +73,7 @@ updated by author | The author last updated the pull request. | #e3f1dA Lighter 
 waiting for author response | The pull request is waiting for the author to respond to comments in the pull request. | #ffff99 Yellow | PR | Should *never* be use together with 'Waiting for code fix'.
 waiting for CLA pass | The contributor has not yet signed the CLA so that pull request check is not successful. | #ee0701 Red | PR |  
 waiting for code fix | A review left open comments, and the pull request is waiting for changes to be pushed by the author. | #ffff99 Yellow | PR | A review of the pull request left open comments, and the pull request is waiting for new commits to be push to the pull request by the author. This label takes precedence over 'Waiting for author response'. This label should *never* be use together with 'Waiting for author response'.
+resolved in dev | A fix has been merged into the dev-branch but issue is still open and awaits next release. | #215e82 Dark cyan | Issue | *In the future if we have an automatic release pipeline then each maintainer could push a new version instead of using this label.*
 
 ## Events
 
