@@ -15,7 +15,7 @@
     Copyright         = '(c) 2018 Microsoft Corporation. All rights reserved.'
 
     # Description of the functionality provided by this module
-    Description       = 'Description of <ResourceModule>.'
+    Description       = 'Description of resource module.'
 
     # Minimum version of the Windows PowerShell engine required by this module
     PowerShellVersion = '4.0'
