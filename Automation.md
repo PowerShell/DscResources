@@ -145,7 +145,7 @@ resolve the issue if it is still valid.
 Any other label, like a "waiting..."-label, 'needs more information', 'question'
 or 'discussion' label are kept when the issue is labeled 'stale'.
 
-If there are no further activity within 10 days Stale will close the issue.
+If there are no further activity within 40 days Stale will close the issue.
 When the issue is closed, the 'stale' label will be kept, but any label that are
 a Waffle board column will be removed (see [Waffle automation](#waffle)).
 
