@@ -141,7 +141,7 @@ necessary. No changes are needed for the files in this folder.
 
 #### DSCResources
 
-This folder contains the actual resources in this resource module.
+This folder contains the actual resource(s) in this resource module.
 
 #### Modules
 
