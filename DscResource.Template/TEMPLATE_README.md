@@ -19,7 +19,7 @@ GitHub (but can also be added after).
 
 ### Folder structure
 
-```
+```plaintext
 .
 │   .codecov.yml
 │   .gitattributes
@@ -185,9 +185,9 @@ changes to the environment.
 The template assume som free services (for open source projects on GitHub) are
 used. You should connect to the services to get the most out of the test framework.
 
- - **AppVeyor** - to run automated tests
- - **Codecov** - to get code coverage on PR's and project.
- - **PowerShell Gallery** - to publish examples automatically.
+- **AppVeyor** - to run automated tests
+- **Codecov** - to get code coverage on PR's and project.
+- **PowerShell Gallery** - to publish examples automatically.
 
 ## Plaster
 
