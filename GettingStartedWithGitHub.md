@@ -173,12 +173,12 @@ and
 [**remote**](http://git-scm.com/book/en/v2/Git-Branching-Remote-Branches)
 branches.
 
-- Make you changes and **commit** them with `git commit -a -m "<Commit message>"`.
+- Make your changes and **commit** them with `git commit -a -m "<Commit message>"`.
   `-a` argument tells Git to include all modified files in commit.
   `-m` argument specifies the commit message.
 
-- To get the big picture of current state of your repository, use `gitk --all`
-  command. It opens a UI with a lot of usefull information. You can read more
+- To get the big picture of the current state of your repository, use `gitk --all`
+  command. It opens a UI with a lot of useful information. You can read more
   about **gitk** in the blog post
   [Use gitk to understand git](https://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/).
   ![Gitk.png](Images/Gitk.png)
