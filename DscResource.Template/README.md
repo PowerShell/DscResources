@@ -50,18 +50,3 @@ If you would like to contribute to this repository, please read the DSC Resource
 * {**Property1**: Description of resource 2 property 1}
 * {**Property2**: Description of resource 2 property 2}
 * ...
-
-## Versions
-
-### Unreleased
-
-* {Unreleased change 1}
-* {Unreleased change 2}
-* ...
-
-### {1.0.0.0}
-
-* Initial release with the following resources:
-  * {Resource1}
-  * {Resource2}
-  * ...
