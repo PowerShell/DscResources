@@ -208,5 +208,5 @@ DscResource.Template should be mentioned here for reference by the users.
 ### 2018-09-06
 
 - Added change log for DscResource.Template, there were no change log prior to
-  his date.
+  this date.
 - Added the CODE_OF_CONDUCT.md and updated text for code of conduct in README.md.
