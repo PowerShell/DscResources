@@ -27,6 +27,7 @@ on GitHub (but can also be added after).
 │   .MetaTestOptIn.json
 │   appveyor.yml
 │   CHANGELOG.md
+│   CODE_OF_CONDUCT.md
 │   README.md
 │   ResourceModule.psd1
 │
@@ -107,6 +108,11 @@ This file is used to track changes to the resource module. Update
 {ModuleName} to match the name of the resource module, and update the sections
 to suit your needs.
 
+#### CODE_OF_CONDUCT.md
+
+This file explains the Code of Conduct. This file should be changed to the
+code of conduct that you and your contributors are to follow.
+
 #### README.md
 
 This file is used to show information about the repository and the
@@ -116,8 +122,6 @@ Update:
 
 - {ModuleName} throughout to match the name of the resource module.
 - { Description of the module ... } to match the description of your module.
-- Change the 'Code of Conduct' section to one that you want you and your
-  contributors to follow.
 - {token} to your token for AppVeyor.
 - Update the section "How to contribute". Can also point to your contributing
   guidelines in a CONTRIBUTING.md.
@@ -195,3 +199,14 @@ There is also a community project to create a Plaster template for generating
 a baseline for a DSC resource module. Please see the GitHub repository
 [NewDscHighQualityResourceModule](https://github.com/bgelens/NewDscHighQualityResourceModule)
 for more information.
+
+## Change log
+
+This is the change log for DscResource.Template. Any changes to the
+DscResource.Template should be mentioned here for reference by the users.
+
+### 2018-09-06
+
+- Added change log for DscResource.Template, there were no change log prior to
+  his date.
+- Added the CODE_OF_CONDUCT.md and updated text for code of conduct in README.md.
