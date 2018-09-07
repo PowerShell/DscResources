@@ -168,9 +168,12 @@ $superLongVariableName = Get-MySuperLongVariablePlease @getMySuperLongVariablePl
 ### Correct Format for Arrays
 
 Arrays should be written in the following format.
-Arrays should be written on one line unless they exceed the line character limit.
+If arrays written on a single line tend to be long, please consider using one of
+the alternative ways of writing the array.
 There should be a single space between each element in the array.
-Hashtables should not be declared inside an array.
+Hashtables should not be declared inside an array, instead declare hashtables
+outside of the array declaration and reference the hashtable variable in the
+array.
 
 **Bad:**
 
@@ -189,6 +192,36 @@ $hashtable = @{
 }
 
 $array = @( 'one', 'two', 'three', $hashtable )
+```
+
+**Good:**
+
+```powershell
+$hashtable = @{
+    Key = "Value"
+}
+
+$array = @(
+    'one',
+    'two',
+    'three',
+    $hashtable
+)
+```
+
+**Good:**
+
+```powershell
+$hashtable = @{
+    Key = "Value"
+}
+
+$array = @(
+    'one'
+    'two'
+    'three'
+    $hashtable
+)
 ```
 
 ### Correct Format for Hashtables or Objects
