@@ -167,10 +167,12 @@ $superLongVariableName = Get-MySuperLongVariablePlease @getMySuperLongVariablePl
 
 ### Correct Format for Arrays
 
-Arrays should be written in the following format.
-If arrays written on a single line tend to be long, please consider using one of
-the alternative ways of writing the array.
-There should be a single space between each element in the array.
+Arrays should be written in one of the following formats.
+
+If an array is declared on a single line, then there should be a single space
+between each element in the array. If arrays written on a single line tend to be
+long, please consider using one of the alternative ways of writing the array.
+
 Hashtables should not be declared inside an array, instead declare hashtables
 outside of the array declaration and reference the hashtable variable in the
 array.
