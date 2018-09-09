@@ -33,6 +33,9 @@
 -->
 - [ ] This PR changes documentation
 - [ ] This PR changes DscResource.Template
+  - [ ] Updated documentation as necessary in the TEMPLATE_README.md.
+  - [ ] An descriptive entry has been added to the change log
+        in the TEMPLATE_README.md.
 - [ ] This PR changes Tests.Template
   - [ ] The template version number has been increased appropriately.
   - [ ] An descriptive entry has been added to the CHANGELOG.md under the
