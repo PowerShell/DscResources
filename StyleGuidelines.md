@@ -186,6 +186,54 @@ $array = @( 'one', `
 )
 ```
 
+**Bad:**
+
+```powershell
+$array = @(
+    'one', 'two', `
+    'my long string example', `
+    'three', 'four'
+)
+```
+
+**Bad:**
+
+```powershell
+$array = @(
+    'one',
+    @{
+        MyKey = 'MyValue'
+    },
+    'three'
+)
+```
+
+**Good:**
+
+```powershell
+$array = @( 'one', 'two', 'three')
+```
+
+**Good:**
+
+```powershell
+$array = @(
+    'one',
+    'two',
+    'three'
+)
+```
+
+**Good:**
+
+```powershell
+$array = @(
+    'one'
+    'two'
+    'three'
+)
+```
+
 **Good:**
 
 ```powershell
@@ -207,21 +255,6 @@ $array = @(
     'one',
     'two',
     'three',
-    $hashtable
-)
-```
-
-**Good:**
-
-```powershell
-$hashtable = @{
-    Key = "Value"
-}
-
-$array = @(
-    'one'
-    'two'
-    'three'
     $hashtable
 )
 ```
