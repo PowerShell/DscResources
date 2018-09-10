@@ -55,6 +55,8 @@
     - [`New-InvalidOperationException`](#new-invalidoperationexception)
     - [`New-ObjectNotFoundException`](#new-objectnotfoundexception)
     - [`New-InvalidResultException`](#new-invalidresultexception)
+- [Pester Tests](#pester-tests)
+  - [Capitalized Pester Assertions](#capitalized-pester-assertions)
 
 ## General
 
@@ -1125,4 +1127,26 @@ catch
     New-InvalidResultException -Message $errorMessage -ErrorRecord $_
 }
 
+```
+
+## Pester Tests
+
+### Capitalized Pester Assertions
+
+Pester assertions should all start with capital letters.  This makes code easier to read.
+
+**Bad:**
+
+```powershell
+it 'Should return something' {
+    get-targetresource @testParameters | should -be 'something'
+}
+```
+
+**Good:**
+
+```powershell
+It 'Should return something' {
+    Get-TargetResource @testParameters | Should -Be 'something'
+}
 ```
