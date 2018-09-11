@@ -42,9 +42,6 @@ In order to provide clean and consistent code, please follow the style guideline
   - [Variable Names Use Camel Case](#variable-names-use-camel-case)
   - [Script, Environment and Global Variable Names Include Scope](#script-environment-and-global-variable-names-include-scope)
 - [Best Practices](#best-practices)
-  - [Named Parameters Instead of Positional Parameters](#named-parameters-instead-of-positional-parameters)
-  - [No Cmdlet Aliases](#no-cmdlet-aliases)
-  - [Capitalized Pester Assertions](#capitalized-pester-assertions)
 
 ## Markdown Files
 
@@ -1373,55 +1370,11 @@ function New-File
 
 ## Best Practices
 
-### Named Parameters Instead of Positional Parameters
+The _best practices_ for writing and testing DSC Resource modules can be found
+in the [Best Practices](BestPractices.md) document.
 
-Call cmdlets using named parameters instead of positional parameters.
+Although adoping the _best practices_ is optional, doing so will help improve the
+quality of the DSC resource module.
 
-**Bad:**
-
-```powershell
-Get-ChildItem C:\Documents *.md
-```
-
-**Good:**
-
-```powershell
-Get-ChildItem -Path C:\Documents -Filter *.md
-```
-
-### No Cmdlet Aliases
-
-When calling a function use the full command not an alias.
-You can get the full command an alias is using by calling ```Get-Alias```.
-
-**Bad:**
-
-```powershell
-ls -File $root -Recurse | ? { @('.gitignore', '.mof') -contains $_.Extension }
-```
-
-**Good:**
-
-```powershell
-Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -contains $_.Extension }
-```
-
-### Capitalized Pester Assertions
-
-Pester assertions should all start with capital letters.  This makes code easier to read.
-
-**Bad:**
-
-```powershell
-it 'Should return something' {
-    get-targetresource @testParameters | should -be 'something'
-}
-```
-
-**Good:**
-
-```powershell
-It 'Should return something' {
-    Get-TargetResource @testParameters | Should -Be 'something'
-}
-```
+Note: Modules that aim to meet the [High Quality Resource Module](HighQualityModuleGuidelines.md) standards
+must also implement the _best practices_ whereever possible.
