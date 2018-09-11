@@ -230,7 +230,7 @@ $myArray = @(
 **Good:**
 
 ```powershell
-$array = @( 'one', 'two', 'three')
+$array = @('one', 'two', 'three')
 ```
 
 **Good:**
