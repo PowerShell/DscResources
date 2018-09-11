@@ -173,11 +173,9 @@ If an array is declared on a single line, then there should be a single space
 between each element in the array. If arrays written on a single line tend to be
 long, please consider using one of the alternative ways of writing the array.
 
-Hashtables should not be declared inside an array, instead declare hashtables
-outside of the array declaration and reference the hashtable variable in the
-array.
-
 **Bad:**
+
+Array elements are not format consistently.
 
 ```powershell
 $array = @( 'one', `
@@ -187,6 +185,16 @@ $array = @( 'one', `
 ```
 
 **Bad:**
+
+There are no single space beetween the elements in the array.
+
+```powershell
+$array = @('one','two','three')
+```
+
+**Bad:**
+
+There are multiple array elements on the same row.
 
 ```powershell
 $array = @(
@@ -198,13 +206,24 @@ $array = @(
 
 **Bad:**
 
+Hashtable is not following [Correct Format for Hashtables or Objects](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md#correct-format-for-hashtables-or-objects).
+
 ```powershell
 $array = @(
     'one',
-    @{
-        MyKey = 'MyValue'
-    },
+    @{MyKey = 'MyValue'},
     'three'
+)
+```
+
+**Bad:**
+
+Hashtables are not following [Correct Format for Hashtables or Objects](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md#correct-format-for-hashtables-or-objects).
+
+```powershell
+$myArray = @(
+    @{Key1 = Value1;Key2 = Value2},
+    @{Key1 = Value1;Key2 = Value2}
 )
 ```
 
@@ -256,6 +275,21 @@ $array = @(
     'two',
     'three',
     $hashtable
+)
+```
+
+**Good:**
+
+```powershell
+$myArray = @(
+    @{
+        Key1 = Value1
+        Key2 = Value2
+    },
+    @{
+        Key1 = Value1
+        Key2 = Value2
+    }
 )
 ```
 
