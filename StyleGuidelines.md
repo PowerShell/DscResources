@@ -8,7 +8,7 @@ In order to provide clean and consistent code, please follow the style guideline
 - [General](#general)
   - [Correct File Encoding](#correct-file-encoding)
   - [Descriptive Names](#descriptive-names)
-  - [Correct Format for Long Function Calls](#correct-format-for-long-function-calls)
+  - [Correct Parameter Usage in Function and Cmdlet Calls](#correct-parameter-usage-in-function-and-cmdlet-calls)
   - [Correct Format for Arrays](#correct-format-for-arrays)
   - [Correct Format for Hashtables or Objects](#correct-format-for-hashtables-or-objects)
   - [Correct use of single- and double quotes](#correct-use-of-single--and-double-quotes)
@@ -130,36 +130,161 @@ function Set-ServerName
 }
 ```
 
-### Correct Format for Long Function Calls
+### Correct Parameter Usage in Function and Cmdlet Calls
+
+Use named parameters on function and cmdlet calls, and not positional parameters.
+Named parameters help other developers who are unfamiliar with your code to better
+understand your code.
 
 When calling a function with many long parameters, use parameter splatting.
-More help on splatting can be found using the command:
+More help on splatting can be found in the article
+[About Splatting](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting)
 
-```powershell
-Get-Help -Name 'About_Splatting'
-```
-
-Make sure hashtable parameters are still properly formatted with multiple lines and the proper indentation.
+Make sure hashtable parameters are still properly formatted with multiple lines
+and the proper indentation.
 
 **Bad:**
+
+```powershell
+Get-ChildItem C:\Documents *.md
+```
+
+**Bad:**
+
+The call is very long, and will wrap a lot when viewing it during the review.
+
+```powershell
+$mySuperLongHashtableParameter  = @{
+    MySuperLongKey1 = 'MySuperLongValue1'
+    MySuperLongKey2 = 'MySuperLongValue2'
+}
+
+$superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtableParameter  $mySuperLongHashtableParameter  -MySuperLongStringParameter '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890' -Verbose
+```
+
+**Bad:**
+
+Hashtable is not following [Correct Format for Hashtables or Objects](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md#correct-format-for-hashtables-or-objects).
 
 ```powershell
 $superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtableParameter @{ MySuperLongKey1 = 'MySuperLongValue1'; MySuperLongKey2 = 'MySuperLongValue2' } -MySuperLongStringParameter '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890' -Verbose
 ```
 
+**Bad:**
+
+Hashtable is not following [Correct Format for Hashtables or Objects](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md#correct-format-for-hashtables-or-objects).
+
+```powershell
+$superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtableParameter @{ MySuperLongKey1 = 'MySuperLongValue1'; MySuperLongKey2 = 'MySuperLongValue2' } `
+                                                       -MySuperLongStringParameter '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890' `
+                                                       -Verbose
+```
+
+**Bad:**
+
+Hashtable is not following [Correct Format for Hashtables or Objects](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md#correct-format-for-hashtables-or-objects).
+
+```powershell
+$superLongVariableName = Get-MySuperLongVariablePlease `
+    -MySuperLongHashtableParameter @{ MySuperLongKey1 = 'MySuperLongValue1'; MySuperLongKey2 = 'MySuperLongValue2' } `
+    -MySuperLongStringParameter '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890' `
+    -Verbose
+```
+
+**Bad:**
+
+Passing parameter (`Verbose`) outside of the splat.
+
+```powershell
+$getMySuperLongVariablePleaseParameters = @{
+    MySuperLongHashtableParameter = @{
+        MySuperLongKey1 = 'MySuperLongValue1'
+        MySuperLongKey2 = 'MySuperLongValue2'
+    }
+    MySuperLongStringParameter = '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890'
+}
+
+$superLongVariableName = Get-MySuperLongVariablePlease @getMySuperLongVariablePleaseParameters -Verbose
+```
+
 **Good:**
 
 ```powershell
-$getMySuperLongVariablePleaseParams = @{
+Get-ChildItem -Path C:\Documents -Filter *.md
+```
+
+**Good:**
+
+```powershell
+$superLongVariableName = Get-MyVariablePlease -MyStringParameter '123456789012349012345678901234567890' -Verbose
+```
+
+**Good:**
+
+```powershell
+$superLongVariableName = Get-MyVariablePlease -MyString1 '1234567890' -MyString2 '1234567890' -MyString3 '1234567890' -Verbose
+```
+
+**Good:**
+
+The call is long, so a splat would be recommended, but it is up to the maintainer
+to decide if the repository allows this, or if it should be changed to a splat.
+
+```powershell
+$superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongStringParameter '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890'
+```
+
+**Good:**
+
+```powershell
+$mySuperLongHashtableParameter  = @{
+    MySuperLongKey1 = 'MySuperLongValue1'
+    MySuperLongKey2 = 'MySuperLongValue2'
+}
+
+$superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtableParameter $mySuperLongHashtableParameter -Verbose
+```
+
+**Good:**
+
+Splatting all parameters.
+
+```powershell
+$getMySuperLongVariablePleaseParameters = @{
     MySuperLongHashtableParameter = @{
-        mySuperLongKey1 = 'MySuperLongValue1'
-        mySuperLongKey2 = 'MySuperLongValue2'
+        MySuperLongKey1 = 'MySuperLongValue1'
+        MySuperLongKey2 = 'MySuperLongValue2'
     }
     MySuperLongStringParameter = '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890'
     Verbose = $true
 }
 
-$superLongVariableName = Get-MySuperLongVariablePlease @getMySuperLongVariablePleaseParams
+$superLongVariableName = Get-MySuperLongVariablePlease @getMySuperLongVariablePleaseParameters
+```
+
+**Good:**
+
+Good, but using auto formatting in VS Code will mess this up (?).
+
+```powershell
+$superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtableParameter @{
+                                                            MySuperLongKey1 = 'MySuperLongValue1'
+                                                            MySuperLongKey2 = 'MySuperLongValue2'
+                                                        } `
+                                                       -MySuperLongStringParameter '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890' `
+                                                       -Verbose
+```
+
+**Good:**
+
+```powershell
+$superLongVariableName = Get-MySuperLongVariablePlease `
+    -MySuperLongHashtableParameter @{
+        MySuperLongKey1 = 'MySuperLongValue1'
+        MySuperLongKey2 = 'MySuperLongValue2'
+    } `
+    -MySuperLongStringParameter '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890' `
+    -Verbose
 ```
 
 ### Correct Format for Arrays
