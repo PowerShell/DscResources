@@ -132,9 +132,9 @@ function Set-ServerName
 
 ### Correct Parameter Usage in Function and Cmdlet Calls
 
-Use named parameters on function and cmdlet calls, and not positional parameters.
+Use named parameters for function and cmdlet calls rather than positional parameters.
 Named parameters help other developers who are unfamiliar with your code to better
-understand your code.
+understand it.
 
 When calling a function with many long parameters, use parameter splatting.
 More help on splatting can be found in the article
@@ -153,15 +153,15 @@ Get-ChildItem C:\Documents *.md
 
 **Bad:**
 
-The call is very long, and will wrap a lot when viewing it during the review.
+The call is very long and will wrap a lot when viewing it during the review.
 
 ```powershell
-$mySuperLongHashtableParameter  = @{
+$mySuperLongHashtableParameter = @{
     MySuperLongKey1 = 'MySuperLongValue1'
     MySuperLongKey2 = 'MySuperLongValue2'
 }
 
-$superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtableParameter  $mySuperLongHashtableParameter  -MySuperLongStringParameter '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890' -Verbose
+$superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtableParameter  $mySuperLongHashtableParameter -MySuperLongStringParameter '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890' -Verbose
 ```
 
 **Bad:**
@@ -239,7 +239,7 @@ $superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongStringParamet
 **Good:**
 
 ```powershell
-$mySuperLongHashtableParameter  = @{
+$mySuperLongHashtableParameter = @{
     MySuperLongKey1 = 'MySuperLongValue1'
     MySuperLongKey2 = 'MySuperLongValue2'
 }
