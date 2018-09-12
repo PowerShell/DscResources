@@ -264,7 +264,7 @@ $superLongVariableName = Get-MySuperLongVariablePlease @getMySuperLongVariablePl
 
 **Good:**
 
-Good, but using auto formatting in VS Code will mess this up (?).
+If auto formatting is used in Visual Studio Code this indentation will be removed.
 
 ```powershell
 $superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtableParameter @{
