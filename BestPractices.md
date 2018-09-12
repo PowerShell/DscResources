@@ -14,7 +14,6 @@
   - [Use Variables Rather Than Extensive Piping](#use-variables-rather-than-extensive-piping)
   - [Avoid Unnecessary Type Declarations](#avoid-unnecessary-type-declarations)
 - [Calling Functions](#calling-functions)
-  - [Use Named Parameters Instead of Positional Parameters](#use-named-parameters-instead-of-positional-parameters)
   - [Avoid Cmdlet Aliases](#avoid-cmdlet-aliases)
   - [Avoid Invoke-Expression](#avoid-invoke-expression)
   - [Use the Force Parameter with Calls to ShouldContinue](#use-the-force-parameter-with-calls-to-shouldcontinue)
@@ -246,23 +245,6 @@ $myBoolean = $true
 ```
 
 ## Calling Functions
-
-### Use Named Parameters Instead of Positional Parameters
-
-Call cmdlets using named parameters instead of positional parameters.
-Named parameters help other developers who are unfamiliar with your code to better understand your code.
-
-**Bad:**
-
-```powershell
-Get-ChildItem C:\Documents *.md
-```
-
-**Good:**
-
-```powershell
-Get-ChildItem -Path C:\Documents -Filter *.md
-```
 
 ### Avoid Cmdlet Aliases
 
