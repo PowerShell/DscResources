@@ -138,7 +138,7 @@ understand your code.
 
 When calling a function with many long parameters, use parameter splatting.
 More help on splatting can be found in the article
-[About Splatting](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting)
+[About Splatting](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 Make sure hashtable parameters are still properly formatted with multiple lines
 and the proper indentation.
