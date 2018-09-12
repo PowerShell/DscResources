@@ -145,6 +145,8 @@ and the proper indentation.
 
 **Bad:**
 
+Not using named parameters.
+
 ```powershell
 Get-ChildItem C:\Documents *.md
 ```
