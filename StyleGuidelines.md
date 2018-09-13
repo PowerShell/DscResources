@@ -136,7 +136,8 @@ Use named parameters for function and cmdlet calls rather than positional parame
 Named parameters help other developers who are unfamiliar with your code to better
 understand it.
 
-When calling a function with many long parameters, use parameter splatting.
+When calling a function with many long parameters, use parameter splatting. If
+splatting is used, then all the parameters should be in the splat.
 More help on splatting can be found in the article
 [About Splatting](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting).
 
@@ -153,7 +154,8 @@ Get-ChildItem C:\Documents *.md
 
 **Bad:**
 
-The call is very long and will wrap a lot when viewing it during the review.
+The call is very long and will wrap a lot in the review tool when the code is
+viewed by the reviewer during the review process of the PR.
 
 ```powershell
 $mySuperLongHashtableParameter = @{
@@ -229,15 +231,6 @@ $superLongVariableName = Get-MyVariablePlease -MyString1 '1234567890' -MyString2
 
 **Good:**
 
-The call is long, so a splat would be recommended, but it is up to the maintainer
-to decide if the repository allows this, or if it should be changed to a splat.
-
-```powershell
-$superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongStringParameter '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890'
-```
-
-**Good:**
-
 ```powershell
 $mySuperLongHashtableParameter = @{
     MySuperLongKey1 = 'MySuperLongValue1'
@@ -266,7 +259,11 @@ $superLongVariableName = Get-MySuperLongVariablePlease @getMySuperLongVariablePl
 
 **Good:**
 
-If auto formatting is used in Visual Studio Code this indentation will be removed.
+> **Note:** If the repository has opt-in to add settings for auto formatting for
+> Visual Studio Code (provided in the
+> [DscResource.Template](https://github.com/PowerShell/DscResources/tree/master/DscResource.Template/.vscode)),
+> then this indentation will be removed if a another contributor is applying
+> auto-formatting using Visual Studio Code.
 
 ```powershell
 $superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtableParameter @{
