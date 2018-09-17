@@ -259,23 +259,6 @@ $superLongVariableName = Get-MySuperLongVariablePlease @getMySuperLongVariablePl
 
 **Good:**
 
-> **Note:** If the repository has opt-in to add settings for auto formatting for
-> Visual Studio Code (provided in the
-> [DscResource.Template](https://github.com/PowerShell/DscResources/tree/master/DscResource.Template/.vscode)),
-> then this indentation will be removed if a another contributor is applying
-> auto-formatting using Visual Studio Code.
-
-```powershell
-$superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtableParameter @{
-                                                            MySuperLongKey1 = 'MySuperLongValue1'
-                                                            MySuperLongKey2 = 'MySuperLongValue2'
-                                                        } `
-                                                       -MySuperLongStringParameter '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890' `
-                                                       -Verbose
-```
-
-**Good:**
-
 ```powershell
 $superLongVariableName = Get-MySuperLongVariablePlease `
     -MySuperLongHashtableParameter @{
