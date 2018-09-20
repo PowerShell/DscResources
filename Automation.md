@@ -278,7 +278,12 @@ removed from the pull request (PR) (and the issue will be moved to the
 
 ## Appendix
 
-### Flowchart code for Stale scheduler
+### Flowcharts
+
+The flowcharts have been created using the free service
+[code2flow](https://code2flow.com).
+
+#### Flowchart code for Stale scheduler
 
 ```code2flow
 // Runs approx. every hour.
@@ -364,7 +369,7 @@ switch(Type)
 Finished;
 ```
 
-### Flowchart code for Stale activity
+#### Flowchart code for Stale activity
 
 ```code2flow
 On pull request
@@ -397,7 +402,7 @@ switch(Type)
 Finished;
 ```
 
-### Flowchart code for Waffle on issue close or PR close/merge
+#### Flowchart code for Waffle on issue close or PR close/merge
 
 ```code2flow
 On pull request
