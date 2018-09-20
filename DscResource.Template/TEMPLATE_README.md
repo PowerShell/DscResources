@@ -31,6 +31,14 @@ on GitHub (but can also be added after).
 │   README.md
 │   ResourceModule.psd1
 │
+├───.github
+│   │   PULL_REQUEST_TEMPLATE.md
+│   │
+│   └───ISSUE_TEMPLATE
+│           General.md
+│           Problem_with_resource.md
+│           Resource_proposal.md
+│
 ├───.vscode
 │       analyzersettings.psd1
 │       settings.json
@@ -135,6 +143,13 @@ Replace the content of the properties in this file to match your resource module
 It is important to change the GUID in this file to a new unique GUID for your
 module (i.e by running `New-Guid` to get a unique GUID).
 
+#### .github
+
+This folder contains issues templates and pull request template. They are visible
+to the user in GitHub when a contributor is submitting an issue (they user can
+choose which issue template suits the issue), or when a contributor proposes a
+change in a pull request, the pull request template is shown.
+
 #### .vscode
 
 This folder contains settings file for Visual Studio Code. The settings file
@@ -204,6 +219,10 @@ for more information.
 
 This is the change log for DscResource.Template. Any changes to the
 DscResource.Template should be mentioned here for reference by the users.
+
+### 2018-09-20
+
+- Added GitHub standard issue templates and pull request template.
 
 ### 2018-09-06
 
