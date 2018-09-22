@@ -66,6 +66,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | xChrome | --- |
 | xCredSSP | --- |
 | xDatabase | --- |
+| xDefender | DEPRECATED - Replaced by [WindowsDefenderDsc](https://www.powershellgallery.com/packages/WindowsDefenderDsc). Note: WindowsDefenderDsc is not part of DSC Resource Kit. |
 | xDhcpServer | --- |
 | xDisk | DEPRECATED - Replaced by [StorageDsc](https://github.com/PowerShell/StorageDsc) |
 | xDismFeature | --- |
