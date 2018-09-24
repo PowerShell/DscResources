@@ -40,71 +40,71 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 
 | Repository | Maintainer(s) |
 | ---------- | ------------- |
-| ActiveDirectoryCSDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| AuditPolicyDsc | Adam Haynes ([@athaynes](https://github.com/athaynes)) |
-| CertificateDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| ComputerManagementDsc | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| DFSDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| DscResources | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Zachary Alexander ([@zjalexander](https://github.com/zjalexander)) |
-| DscResource.Tests | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) |
+| [ActiveDirectoryCSDsc](https://github.com/PowerShell/ActiveDirectoryCSDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [AuditPolicyDsc](https://github.com/PowerShell/AuditPolicyDsc) | Adam Haynes ([@athaynes](https://github.com/athaynes)) |
+| [CertificateDsc](https://github.com/PowerShell/CertificateDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [DFSDsc](https://github.com/PowerShell/DFSDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [DscResources](https://github.com/PowerShell/DscResources) | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Zachary Alexander ([@zjalexander](https://github.com/zjalexander)) |
+| [DscResource.Tests](https://github.com/PowerShell/DscResource.Tests) | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) |
 | [FileContentDsc](https://github.com/PlagueHO/FileContentDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [FSRMDsc](https://github.com/PlagueHO/FSRMDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [iSCSIDsc](https://github.com/PlagueHO/iSCSIDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| NetworkingDsc | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| OfficeOnlineServerDsc | Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
-| PSDscResources | Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) <br/> Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
-| SecurityPolicyDsc | Jason Walker ([@jcwalker](https://github.com/jcwalker)) |
-| SharePointDsc | Yorick Kuijs ([@ykuijs](https://github.com/YKuijs))<br/> Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
-| SqlServerDsc | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
-| StorageDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| SystemLocaleDsc | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [NetworkingDsc](https://github.com/PowerShell/NetworkingDsc) | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [OfficeOnlineServerDsc](https://github.com/PowerShell/OfficeOnlineServerDsc) | Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
+| [PSDscResources](https://github.com/PowerShell/PSDscResources) | Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) <br/> Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
+| [SecurityPolicyDsc](https://github.com/PowerShell/SecurityPolicyDsc) | Jason Walker ([@jcwalker](https://github.com/jcwalker)) |
+| [SharePointDsc](https://github.com/PowerShell/SharePointDsc) | Yorick Kuijs ([@ykuijs](https://github.com/YKuijs))<br/> Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
+| [SqlServerDsc](https://github.com/PowerShell/SqlServerDsc) | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
+| [StorageDsc](https://github.com/PowerShell/StorageDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [SystemLocaleDsc](https://github.com/PowerShell/SystemLocaleDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [WSManDsc](https://github.com/PlagueHO/WSManDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| xActiveDirectory | --- |
-| xAzure | --- |
-| xAzurePack | --- |
-| xBitlocker | --- |
-| xChrome | --- |
-| xCredSSP | --- |
-| xDatabase | --- |
+| [xActiveDirectory](https://github.com/PowerShell/xActiveDirectory) | --- |
+| [xAzure](https://github.com/PowerShell/xAzure) | --- |
+| [xAzurePack](https://github.com/PowerShell/xAzurePack) | --- |
+| [xBitlocker](https://github.com/PowerShell/xBitlocker) | --- |
+| [xChrome](https://github.com/PowerShell/xChrome) | --- |
+| [xCredSSP](https://github.com/PowerShell/xCredSSP) | --- |
+| [xDatabase](https://github.com/PowerShell/xDatabase) | --- |
 | xDefender | DEPRECATED - Replaced by [WindowsDefenderDsc](https://www.powershellgallery.com/packages/WindowsDefenderDsc). Note: WindowsDefenderDsc is not part of DSC Resource Kit. |
-| xDhcpServer | --- |
+| [xDhcpServer](https://github.com/PowerShell/xDhcpServer) | --- |
 | xDisk | DEPRECATED - Replaced by [StorageDsc](https://github.com/PowerShell/StorageDsc) |
-| xDismFeature | --- |
-| xDnsServer | --- |
-| xDscDiagnostics | --- |
-| xDSCResourceDesigner | --- |
-| xExchange | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) |
-| xFailOverCluster | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
-| xFirefox | --- |
-| xHyper-V | --- |
-| xInternetExplorerHomePage | --- |
-| xJea | --- |
-| xMySql | --- |
-| xPendingReboot | --- |
-| xPhp | --- |
+| [xDismFeature](https://github.com/PowerShell/xDismFeature) | --- |
+| [xDnsServer](https://github.com/PowerShell/xDnsServer) | --- |
+| [xDscDiagnostics](https://github.com/PowerShell/xDscDiagnostics) | --- |
+| [xDSCResourceDesigner](https://github.com/PowerShell/xDSCResourceDesigner) | --- |
+| [xExchange](https://github.com/PowerShell/xExchange) | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) |
+| [xFailOverCluster](https://github.com/PowerShell/xFailOverCluster) | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
+| [xFirefox](https://github.com/PowerShell/xFirefox) | --- |
+| [xHyper-V](https://github.com/PowerShell/xHyper-V) | --- |
+| [xInternetExplorerHomePage](https://github.com/PowerShell/xInternetExplorerHomePage) | --- |
+| [xJea](https://github.com/PowerShell/xJea) | --- |
+| [xMySql](https://github.com/PowerShell/xMySql) | --- |
+| [xPendingReboot](https://github.com/PowerShell/xPendingReboot) | --- |
+| [xPhp](https://github.com/PowerShell/xPhp) | --- |
 | xPowerShellExecutionPolicy | DEPRECATED - Migrated to [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) |
-| xPSDesiredStateConfiguration | --- |
-| xRemoteDesktopAdmin | --- |
-| xRemoteDesktopSessionHost | Leo D'Arcy ([@ld0614](https://github.com/ld0614)) |
-| xRobocopy | --- |
-| xSafeHarbor | --- |
-| xSCDPM | Leo D'Arcy ([@ld0614](https://github.com/ld0614)) |
-| xSCOM | Leo D'Arcy ([@ld0614](https://github.com/ld0614)) |
-| xSCSMA | --- |
-| xSCSPF | --- |
-| xSCSR | --- |
-| xSCVMM | --- |
-| xSmbShare | --- |
+| [xPSDesiredStateConfiguration](https://github.com/PowerShell/xPSDesiredStateConfiguration) | --- |
+| [xRemoteDesktopAdmin](https://github.com/PowerShell/xRemoteDesktopAdmin) | --- |
+| [xRemoteDesktopSessionHost](https://github.com/PowerShell/xRemoteDesktopSessionHost) | Leo D'Arcy ([@ld0614](https://github.com/ld0614)) |
+| [xRobocopy](https://github.com/PowerShell/xRobocopy) | --- |
+| [xSafeHarbor](https://github.com/PowerShell/xSafeHarbor) | --- |
+| [xSCDPM](https://github.com/PowerShell/xSCDPM) | Leo D'Arcy ([@ld0614](https://github.com/ld0614)) |
+| [xSCOM](https://github.com/PowerShell/xSCOM) | Leo D'Arcy ([@ld0614](https://github.com/ld0614)) |
+| [xSCSMA](https://github.com/PowerShell/xSCSMA) | --- |
+| [xSCSPF](https://github.com/PowerShell/xSCSPF) | --- |
+| [xSCSR](https://github.com/PowerShell/xSCSR) | --- |
+| [xSCVMM](https://github.com/PowerShell/xSCVMM) | --- |
+| [xSmbShare](https://github.com/PowerShell/xSmbShare) | --- |
 | xSqlPs | DEPRECATED - Replaced by [SqlServerDsc](https://github.com/PowerShell/SqlServerDsc) |
-| xSystemSecurity | --- |
+| [xSystemSecurity](https://github.com/PowerShell/xSystemSecurity) | --- |
 | xTimeZone | DEPRECATED - Migrated to [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) |
-| xWebAdministration | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Reggie Gibson ([@regedit32](https://github.com/regedit32)) |
-| xWebDeploy | --- |
-| xWindowsEventForwarding | --- |
-| xWindowsRestore | --- |
-| xWindowsUpdate | --- |
-| xWinEventLog | --- |
-| xWordPress | --- |
+| [xWebAdministration](https://github.com/PowerShell/xWebAdministration) | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Reggie Gibson ([@regedit32](https://github.com/regedit32)) |
+| [xWebDeploy](https://github.com/PowerShell/xWebDeploy) | --- |
+| [xWindowsEventForwarding](https://github.com/PowerShell/xWindowsEventForwarding) | --- |
+| [xWindowsRestore](https://github.com/PowerShell/xWindowsRestore) | --- |
+| [xWindowsUpdate](https://github.com/PowerShell/xWindowsUpdate) | --- |
+| [xWinEventLog](https://github.com/PowerShell/xWinEventLog) | --- |
+| [xWordPress](https://github.com/PowerShell/xWordPress) | --- |
 
 ## Rules
 
