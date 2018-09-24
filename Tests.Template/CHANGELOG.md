@@ -84,6 +84,11 @@ version number of the template file used must be included.
 
 ### Version 1.2.3
 
+- When cloning DscResource.Tests, it using the same casing on the repository folder
+  ([issue #431](https://github.com/PowerShell/DscResources/issues/431))
+
+### Version 1.2.3
+
 - Update description in comment-based help.
 - Added example of placement of mocks (issue #425).
 
