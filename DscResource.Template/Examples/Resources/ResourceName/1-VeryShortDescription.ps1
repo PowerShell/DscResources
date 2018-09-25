@@ -16,3 +16,4 @@ Configuration Example
             NonMandatoryParameter = 'OtherValue'
         }
     }
+}
