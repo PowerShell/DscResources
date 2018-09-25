@@ -38,6 +38,11 @@ version number of the template file used must be included.
 
 ## integration_template.ps1
 
+### Version 1.3.1
+
+- When cloning DscResource.Tests, it using the same casing on the repository folder
+  ([issue #431](https://github.com/PowerShell/DscResources/issues/431)).
+
 ### Version 1.3.0
 
 - Clean up script variables according to style guideline.
@@ -85,7 +90,7 @@ version number of the template file used must be included.
 ### Version 1.2.3
 
 - When cloning DscResource.Tests, it using the same casing on the repository folder
-  ([issue #431](https://github.com/PowerShell/DscResources/issues/431))
+  ([issue #431](https://github.com/PowerShell/DscResources/issues/431)).
 
 ### Version 1.2.3
 
