@@ -1,6 +1,6 @@
 <#
-.EXAMPLE
-    This example shows how to ...
+    .EXAMPLE
+        This example shows how to ...
 #>
 
 Configuration Example

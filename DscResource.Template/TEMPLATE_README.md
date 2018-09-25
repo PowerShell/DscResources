@@ -222,7 +222,8 @@ DscResource.Template should be mentioned here for reference by the users.
 
 ### 2018-09-25
 
-- The example template was missing a closing brace.
+- The example template was missing a closing brace, and the comment-based help
+  was indented wrong.
 
 ### 2018-09-22
 
