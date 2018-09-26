@@ -58,6 +58,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [SqlServerDsc](https://github.com/PowerShell/SqlServerDsc) | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
 | [StorageDsc](https://github.com/PowerShell/StorageDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [SystemLocaleDsc](https://github.com/PowerShell/SystemLocaleDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [WmiNamespaceSecurityDsc](https://github.com/PowerShell/WmiNamespaceSecurityDsc) | --- |
 | [WSManDsc](https://github.com/PlagueHO/WSManDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [xActiveDirectory](https://github.com/PowerShell/xActiveDirectory) | --- |
 | [xAzure](https://github.com/PowerShell/xAzure) | --- |
