@@ -190,3 +190,6 @@
 [submodule "DscResources/NetworkingDsc"]
 	path = DscResources/NetworkingDsc
 	url = https://github.com/PowerShell/NetworkingDsc
+[submodule "DscResources/WmiNamespaceSecurityDsc"]
+	path = DscResources/WmiNamespaceSecurityDsc
+	url = https://github.com/PowerShell/WmiNamespaceSecurityDsc
