@@ -104,7 +104,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [xWindowsEventForwarding](https://github.com/PowerShell/xWindowsEventForwarding) | --- |
 | [xWindowsRestore](https://github.com/PowerShell/xWindowsRestore) | --- |
 | [xWindowsUpdate](https://github.com/PowerShell/xWindowsUpdate) | --- |
-| [xWinEventLog](https://github.com/PowerShell/xWinEventLog) | --- |
+| [xWinEventLog](https://github.com/PowerShell/xWinEventLog) | DEPRECATED - Migrated to [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) |
 | [xWordPress](https://github.com/PowerShell/xWordPress) | --- |
 
 ## Rules
