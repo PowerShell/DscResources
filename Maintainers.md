@@ -135,10 +135,10 @@ If you are maintainer, please follow these rules:
 If you are a maintainer these are the repeating tasks that need to be done
 regularly.
 
-### Change copyright information
+### Check copyright information
 
-Each year, before that years first DSC Resource Kit release, the
-copyright information should be updated with the current year in the modules
+Each year, before that year's first DSC Resource Kit release, the
+copyright information should be updated in the module's
 module manifest (the .psd1 file) and in the LICENSE file.
 
 #### Module manifest
@@ -150,12 +150,12 @@ This is how the copyright information looks for the year 2017.
 Copyright = '(c) 2017 Microsoft Corporation. All rights reserved.'
 ```
 
-At the beginning of the year 2018 (and so on) the copyright information should
-be updated to the current year.
+From the beginning of October 2018, the copyright information should
+be updated as below.
 
 ```powershell
 # Copyright statement for this module
-Copyright = '(c) 2018 Microsoft Corporation. All rights reserved.'
+Copyright = '(c) Microsoft Corporation. All rights reserved.'
 ```
 
 #### License
@@ -166,11 +166,39 @@ This is how the copyright information looks for the year 2017.
 Copyright (c) 2017 Microsoft Corporation
 ```
 
-At the beginning of the year 2018 (and so on) the copyright information should
-be updated to the current year.
+From the beginning of October 2018, the copyright information should
+be updated as below.
 
 ```powershell
-Copyright (c) 2018 Microsoft Corporation
+Copyright (c) Microsoft Corporation. All rights reserved.
+```
+
+#### License File contents
+
+The LICENSE file should appear as below, indentation included.
+
+```powershell
+    MIT License
+
+    Copyright (c) Microsoft Corporation. All rights reserved.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE
 ```
 
 ## Issue Workflow
