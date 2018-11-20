@@ -51,7 +51,8 @@ Individual resource module hotfixes for urgent issues may be released before the
 
 ### Next Call
 
-- [11/21/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-11-21)
+Due to the US holiday, the community call is moving to next week (on 11/28). It will be at 12PM PST per usual. This won't affect the release, so release will be going out the same day.
+- [11/28/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-11-28)
 
 ### Latest Call
 
