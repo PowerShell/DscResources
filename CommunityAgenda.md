@@ -59,7 +59,6 @@ Individual resource module hotfixes for urgent issues may be released before the
 
 ### Past Calls
 
-- [08/29/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-08-29/agenda.md)
 - [07/18/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-07-18/agenda.md)
 - [06/06/18 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2018-06-06/agenda.md)
 - [04/25/18 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2018-04-25/agenda.md)
