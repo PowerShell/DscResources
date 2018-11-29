@@ -51,31 +51,31 @@ Individual resource module hotfixes for urgent issues may be released before the
 
 ### Next Call
 
-- [11/28/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-11-28)
+- [11/28/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-11-28/agenda.md)
 
 ### Latest Call
 
-- [10/10/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-10-10)
+- [10/10/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-10-10/agenda.md)
 
 ### Past Calls
 
-- [08/29/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-08-29)
-- [07/18/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-07-18)
-- [06/06/18 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2018-06-06)
-- [04/25/18 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2018-04-25)
-- [03/14/18 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2018-03-14)
-- [01/31/18 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2018-01-31)
-- [12/20/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-12-20)
-- [11/08/17 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2017-11-08)
-- [09/27/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-09-27)
-- [08/16/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-08-16)
-- [07/05/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-07-05)
-- [05/24/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-05-24)
-- [04/12/17 9-9:30AM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/04-12-17)
-- [03/01/17 9-9:30AM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/03-01-17)
-- [01/18/17 9-9:30AM and 4-4:30PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/01-18-17)
-- [12/07/16 9-9:30AM and 4-4:30PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/12-07-16)
-- [10/26/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/10-26-16)
-- [09/15/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/09-15-16)
-- [08/03/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/08-03-16)
-- [06/30/16 1-3PM PDT](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/06-30-16)
+- [08/29/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-08-29/agenda.md)
+- [07/18/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-07-18/agenda.md)
+- [06/06/18 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2018-06-06/agenda.md)
+- [04/25/18 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2018-04-25/agenda.md)
+- [03/14/18 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2018-03-14/agenda.md)
+- [01/31/18 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2018-01-31/agenda.md)
+- [12/20/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-12-20/agenda.md)
+- [11/08/17 12-1PM PST](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2017-11-08/agenda.md)
+- [09/27/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-09-27/agenda.md)
+- [08/16/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-08-16/agenda.md)
+- [07/05/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-07-05/agenda.md)
+- [05/24/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-05-24/agenda.md)
+- [04/12/17 9-9:30AM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/04-12-17/agenda.md)
+- [03/01/17 9-9:30AM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/03-01-17/agenda.md)
+- [01/18/17 9-9:30AM and 4-4:30PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/01-18-17/agenda.md)
+- [12/07/16 9-9:30AM and 4-4:30PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/12-07-16/agenda.md)
+- [10/26/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/10-26-16/agenda.md)
+- [09/15/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/09-15-16/agenda.md)
+- [08/03/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/08-03-16/agenda.md)
+- [06/30/16 1-3PM PDT](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/06-30-16/agenda.md)
