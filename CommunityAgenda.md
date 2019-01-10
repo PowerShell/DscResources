@@ -4,7 +4,7 @@
 
 ### Next Release
 
-- 01/09/18
+- 02/20/19
 
 All changes for the release should be merged into the `dev` branch before the release date. 
 Resource modules that are not passing their tests in the release pull request from the `dev` branch to the `master` branch cannot be released.  
@@ -13,10 +13,11 @@ Individual resource module hotfixes for urgent issues may be released before the
 
 ### Latest Release
 
-- [11/28/18](https://blogs.msdn.microsoft.com/powershell/2018/11/28/dsc-resource-kit-release-november-2018/)
+- [01/09/18](https://blogs.msdn.microsoft.com/powershell/2019/01/09/dsc-resource-kit-release-january-2019/)
 
 ### Past Releases
 
+- [11/28/18](https://blogs.msdn.microsoft.com/powershell/2018/11/28/dsc-resource-kit-release-november-2018/)
 - [10/24/18](https://blogs.msdn.microsoft.com/powershell/2018/10/25/dsc-resource-kit-release-october-2018/)
 - [09/05/18](https://blogs.msdn.microsoft.com/powershell/2018/09/05/dsc-resource-kit-release-september-2018/)
 - [07/25/18](https://blogs.msdn.microsoft.com/powershell/2018/07/25/dsc-resource-kit-release-july-2018/)
@@ -52,17 +53,17 @@ Individual resource module hotfixes for urgent issues may be released before the
 
 ### Next Call
 
-Due to the US holiday, the community call is moving to next week (on 01/09). It will be at 12PM PST per usual. This won't affect the release, so release will be going out the same day.
-- 01/09/19 12PM-1PM PST
+- 02/13/19 12PM-1PM PST
 
 [Fixed link to call](https://meet.lync.com/microsoft/kakeim/FBKT98R9)
 
 ### Latest Call
 
-- 11/28/18 12-1PM PST - cancelled due to technical issues
+- 01/09/19 12PM-1PM PST [watch here](https://youtu.be/hH2XkR-YZNQ)
 
 ### Past Calls
 
+- 11/28/18 12-1PM PST - cancelled due to technical issues
 - [10/10/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-10-10)
 - [08/29/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-08-29)
 - [07/18/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-07-18)
