@@ -52,9 +52,9 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [iSCSIDsc](https://github.com/PlagueHO/iSCSIDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [NetworkingDsc](https://github.com/PowerShell/NetworkingDsc) | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [OfficeOnlineServerDsc](https://github.com/PowerShell/OfficeOnlineServerDsc) | Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
-| [PSDscResources](https://github.com/PowerShell/PSDscResources) | Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) <br/> Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) |
+| [PSDscResources](https://github.com/PowerShell/PSDscResources) | Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) <br/> Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Mike Hendrickson ([@mhendric](https://github.com/mhendric)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [SecurityPolicyDsc](https://github.com/PowerShell/SecurityPolicyDsc) | Jason Walker ([@jcwalker](https://github.com/jcwalker)) |
-| [SharePointDsc](https://github.com/PowerShell/SharePointDsc) | Yorick Kuijs ([@ykuijs](https://github.com/YKuijs))<br/> Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
+| [SharePointDsc](https://github.com/PowerShell/SharePointDsc) | Yorick Kuijs ([@ykuijs](https://github.com/YKuijs)) <br/> Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
 | [SqlServerDsc](https://github.com/PowerShell/SqlServerDsc) | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
 | [StorageDsc](https://github.com/PowerShell/StorageDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [SystemLocaleDsc](https://github.com/PowerShell/SystemLocaleDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
@@ -84,7 +84,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [xPendingReboot](https://github.com/PowerShell/xPendingReboot) | --- |
 | [xPhp](https://github.com/PowerShell/xPhp) | --- |
 | xPowerShellExecutionPolicy | DEPRECATED - Migrated to [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) |
-| [xPSDesiredStateConfiguration](https://github.com/PowerShell/xPSDesiredStateConfiguration) | --- |
+| [xPSDesiredStateConfiguration](https://github.com/PowerShell/xPSDesiredStateConfiguration) | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [xRemoteDesktopAdmin](https://github.com/PowerShell/xRemoteDesktopAdmin) | --- |
 | [xRemoteDesktopSessionHost](https://github.com/PowerShell/xRemoteDesktopSessionHost) | Leo D'Arcy ([@ld0614](https://github.com/ld0614)) |
 | [xRobocopy](https://github.com/PowerShell/xRobocopy) | --- |
