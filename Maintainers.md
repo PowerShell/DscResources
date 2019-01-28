@@ -49,6 +49,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [DscResource.Tests](https://github.com/PowerShell/DscResource.Tests) | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) |
 | [FileContentDsc](https://github.com/PlagueHO/FileContentDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [FSRMDsc](https://github.com/PlagueHO/FSRMDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [GroupPolicyDsc](https://github.com/corydwood/GroupPolicyDsc) | Cory Wood ([@corydwood](https://github.com/corydwood)) |
 | [iSCSIDsc](https://github.com/PlagueHO/iSCSIDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [NetworkingDsc](https://github.com/PowerShell/NetworkingDsc) | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [OfficeOnlineServerDsc](https://github.com/PowerShell/OfficeOnlineServerDsc) | Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
