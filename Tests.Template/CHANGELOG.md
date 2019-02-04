@@ -38,6 +38,11 @@ version number of the template file used must be included.
 
 ## integration_template.ps1
 
+### Version 1.3.2
+
+- Added a BeforeAll-block to minimize code when having many configurations.
+- Fix typo in variable name, in the header.
+
 ### Version 1.3.1
 
 - When cloning DscResource.Tests, it using the same casing on the repository folder

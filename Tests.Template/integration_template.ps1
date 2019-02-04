@@ -20,10 +20,10 @@
 # TODO: Customize these parameters...
 $script:dscModuleName = '<ModuleName>' # TODO: Example 'NetworkingDsc'
 $script:dscResourceFriendlyName = '<ResourceFriendlyName>' # TODO: Example 'Firewall'
-$script:dcsResourceName = "MSFT_$($script:dscResourceFriendlyName)" # TODO: Update prefix
+$script:dscResourceName = "MSFT_$($script:dscResourceFriendlyName)" # TODO: Update prefix
 
 #region HEADER
-# Integration Test Template Version: 1.3.1
+# Integration Test Template Version: 1.3.2
 [String] $script:moduleRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if ( (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests'))) -or `
     (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCResource.Tests\TestHelper.psm1'))) )
@@ -34,7 +34,7 @@ if ( (-not (Test-Path -Path (Join-Path -Path $script:moduleRoot -ChildPath 'DSCR
 Import-Module -Name (Join-Path -Path $script:moduleRoot -ChildPath (Join-Path -Path 'DSCResource.Tests' -ChildPath 'TestHelper.psm1')) -Force
 $TestEnvironment = Initialize-TestEnvironment `
     -DSCModuleName $script:dscModuleName `
-    -DSCResourceName $script:dcsResourceName `
+    -DSCResourceName $script:dscResourceName `
     -TestType Integration
 #endregion
 
@@ -44,12 +44,16 @@ $TestEnvironment = Initialize-TestEnvironment `
 try
 {
     #region Integration Tests
-    $configurationFile = Join-Path -Path $PSScriptRoot -ChildPath "$($script:dcsResourceName).config.ps1"
+    $configurationFile = Join-Path -Path $PSScriptRoot -ChildPath "$($script:dscResourceName).config.ps1"
     . $configurationFile
 
-    Describe "$($script:dcsResourceName)_Integration" {
+    Describe "$($script:dscResourceName)_Integration" {
+        BeforeAll {
+            $resourceId = "[$($script:dscResourceFriendlyName)]Integration_Test"
+        }
+
         # TODO: Update with the correct name of the configuration.
-        $configurationName = "$($script:dcsResourceName)_<ShortDescriptiveName>_Config"
+        $configurationName = "$($script:dscResourceName)_<ShortDescriptiveName>_Config"
 
         Context ('When using configuration {0}' -f $configurationName) {
             It 'Should compile and apply the MOF without throwing' {
@@ -93,7 +97,7 @@ try
             It 'Should have set the resource and all the parameters should match' {
                 $resourceCurrentState = $script:currentConfiguration | Where-Object -FilterScript {
                     $_.ConfigurationName -eq $configurationName `
-                    -and $_.ResourceId -eq "[$($script:dscResourceFriendlyName)]Integration_Test"
+                    -and $_.ResourceId -eq $resourceId
                 }
 
                 # TODO: Validate the Config was Set Correctly Here...
