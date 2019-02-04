@@ -8,6 +8,10 @@ version number of the template file used must be included.
 
 ## integration_template.config.ps1
 
+### Version 1.2.1
+
+- Added single quotes around the resource configuration name.
+
 ### Version 1.2.0
 
 - Allows reading the configuration data from a JSON file,

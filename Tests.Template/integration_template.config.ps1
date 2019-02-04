@@ -15,7 +15,7 @@
 #>
 
 #region HEADER
-# Integration Test Config Template Version: 1.2.0
+# Integration Test Config Template Version: 1.2.1s
 #endregion
 
 $configFile = [System.IO.Path]::ChangeExtension($MyInvocation.MyCommand.Path, 'json')
@@ -71,7 +71,7 @@ Configuration MSFT_<ResourceName>_<ShortDescriptiveName>_Config
     node $AllNodes.NodeName
     {
         # TODO: Modify ResourceFriendlyName (e.g. Firewall).
-        <ResourceFriendlyName> Integration_Test
+        <ResourceFriendlyName> 'Integration_Test'
         {
             # TODO: Add resource parameters here.
             PsDscRunAsCredential = New-Object `
