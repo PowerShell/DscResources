@@ -135,10 +135,10 @@ If you are maintainer, please follow these rules:
 If you are a maintainer these are the repeating tasks that need to be done
 regularly.
 
-### Change copyright information
+### Check copyright information
 
-Each year, before that years first DSC Resource Kit release, the
-copyright information should be updated with the current year in the modules
+Each year, before that year's first DSC Resource Kit release, the
+copyright information should be updated in the module's
 module manifest (the .psd1 file) and in the LICENSE file.
 
 #### Module manifest
@@ -150,12 +150,12 @@ This is how the copyright information looks for the year 2017.
 Copyright = '(c) 2017 Microsoft Corporation. All rights reserved.'
 ```
 
-At the beginning of the year 2018 (and so on) the copyright information should
-be updated to the current year.
+From the beginning of October 2018, the copyright information should
+be updated as below.
 
 ```powershell
 # Copyright statement for this module
-Copyright = '(c) 2018 Microsoft Corporation. All rights reserved.'
+Copyright = '(c) Microsoft Corporation. All rights reserved.'
 ```
 
 #### License
@@ -166,12 +166,16 @@ This is how the copyright information looks for the year 2017.
 Copyright (c) 2017 Microsoft Corporation
 ```
 
-At the beginning of the year 2018 (and so on) the copyright information should
-be updated to the current year.
+From the beginning of October 2018, the copyright information should
+be updated as below.
 
 ```powershell
-Copyright (c) 2018 Microsoft Corporation
+Copyright (c) Microsoft Corporation. All rights reserved.
 ```
+
+#### License File contents
+
+The LICENSE file should appear as shown in [LICENSE](https://github.com/PowerShell/DscResources/blob/master/LICENSE), indentation included.
 
 ## Issue Workflow
 
