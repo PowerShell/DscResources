@@ -1897,7 +1897,7 @@ Get-CIMInstance -ClassName Win32_Process
 #### Avoid Write-Host
 
 [Write-Host is harmful](http://www.jsnover.com/blog/2013/12/07/write-host-considered-harmful/).
-Use alternatives such as Writ-Verbose, Write-Output, Write-Debug, etc.
+Use alternatives such as Write-Verbose, Write-Output, Write-Debug, etc.
 
 **Bad:**
 
