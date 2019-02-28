@@ -60,7 +60,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [SystemLocaleDsc](https://github.com/PowerShell/SystemLocaleDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [WmiNamespaceSecurityDsc](https://github.com/PowerShell/WmiNamespaceSecurityDsc) | --- |
 | [WSManDsc](https://github.com/PlagueHO/WSManDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| [xActiveDirectory](https://github.com/PowerShell/xActiveDirectory) | --- |
+| [xActiveDirectory](https://github.com/PowerShell/xActiveDirectory) | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
 | [xAzure](https://github.com/PowerShell/xAzure) | --- |
 | [xAzurePack](https://github.com/PowerShell/xAzurePack) | --- |
 | [xBitlocker](https://github.com/PowerShell/xBitlocker) | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) |
