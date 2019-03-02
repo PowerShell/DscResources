@@ -40,7 +40,7 @@
 ## Updating DSC Resource Tests
 
 It is possible that the Unit and Integration test templates may change in future, either to support new functionality or fix an issue.
-When a change is made to a template, it will be documented in the [change log of the repository DscResource.Template](https://github.com/PowerShell/DscResource.Template/blob/master/CHANGELOG.md).
+When a change is made to a template, it will be documented in the [change log of the TEMPLATE_README.md in the repository DscResource.Template](https://github.com/PowerShell/DscResource.Template/blob/master/TEMPLATE_README.md#change-log).
 The version number in any current tests can be compared with the Change List to determine what has changed since the tests were updated.
 If any unit or integration tests based on these templates require any enhancements or fixes then they will need to be updated manually.
 
