@@ -7,8 +7,9 @@ In tests and examples the PS Script Analyzer rules may be suppressed on a
 case-by-case basis (up to the community and the maintainer).
 
 These rules are also available as an
-[analyzer rules settings file](DscResource.Template/.vscode/analyzersettings.psd1)
-in the DscResource.Template, used together with the Visual Studio Code settings
+[analyzer rules settings file](https://github.com/PowerShell/DscResource.Template/blob/master/.vscode/analyzersettings.psd1)
+in the [DscResource.Template](https://github.com/PowerShell/DscResource.Template),
+used together with the Visual Studio Code settings
 file, it detects if any code is not compliant with these rules.
 To manually run PS Script Analyzer using the analyzer rules settings files,
 once the .psd1 file is copied from the template, run the following.

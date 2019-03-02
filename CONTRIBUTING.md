@@ -397,7 +397,7 @@ Make sure to:
     * README.md
     * appveyor.yml
 * Write a set of unit and integration tests for your new resources using Pester.
-* Use the template from the [DscResource.Template folder](DscResource.Template) as a boilerplate for [appveyor.yml] (https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/appveyor.yml) (Continuous Integration configuration file) and [README.md](https://github.com/PowerShell/DscResources/blob/master/DscResource.Template/README.md).
+* Use the template from the repository [DscResource.Template](https://github.com/PowerShell/DscResource.Template) as a boilerplate for [appveyor.yml](https://github.com/PowerShell/DscResource.Template/blob/master/appveyor.yml) (Continuous Integration configuration file) and [README.md](https://github.com/PowerShell/DscResource.Template/blob/master/README.md).
 * Run the common tests located in [DSCResource.Tests](https://github.com/PowerShell/DscResource.Tests) which will be automatically installed into the root folder of your module when your tests are run if your module is accepted in the DSC Resource Kit.
 
 All new resources in existing resource modules should should follow the [High Quality resource module guidelines](HighQualityModuleGuidelines.md).

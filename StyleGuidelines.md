@@ -2600,16 +2600,14 @@ throw ($script:localizedData.FailedToReadProperties -f $property, $path)
 ##### Helper functions for localization
 
 There are also five helper functions to simplify localization. These can be
-currently only be found in other resource modules, for example in the resource
-module SqlServerDsc, in the [CommonResourceHelper](https://github.com/PowerShell/SqlServerDsc/blob/dev/DSCResources/CommonResourceHelper.psm1)
-module. To use it, copy the PowerShell module
-[CommonResourceHelper.psm1](https://github.com/PowerShell/SqlServerDsc/blob/dev/DSCResources/CommonResourceHelper.psm1)
-and the unit tests
-[CommonResourceHelper.Tests.ps1](https://github.com/PowerShell/SqlServerDsc/blob/dev/Tests/Unit/CommonResourceHelper.Tests.ps1)
-to the new resource module.
+be found in the repository [DscResource.Template](https://github.com/PowerShell/DscResource.Template)
+in the module script file [DscResource.LocalizationHelper](https://github.com/PowerShell/DscResource.Template/blob/master/Modules/DscResource.LocalizationHelper/DscResource.LocalizationHelper.psm1)
 
-> **Note:** The CommonResourceHelper module will be moved to DscResource.Template
-> in the future.
+To use it, copy the module folder
+[DscResource.LocalizationHelper](https://github.com/PowerShell/DscResource.Template/blob/master/Modules/DscResource.LocalizationHelper)
+and the unit tests
+[DscResource.LocalizationHelper.Tests.ps1](https://github.com/PowerShell/DscResource.Template/blob/master/Tests/Unit/DscResource.LocalizationHelper.Tests.ps1)
+to the new resource module.
 
 ###### Get-LocalizedData
 
@@ -2618,8 +2616,19 @@ This should be used at the top of each resource PowerShell module script file
 Refer to the comment-based help for more information about this helper function.
 
 ```powershell
-Import-Module -Name (Join-Path -Path (Split-Path -Path $PSScriptRoot -Parent) `
-                               -ChildPath 'CommonResourceHelper.psm1')
+$script:resourceModulePath = Split-Path `
+    -Path (Split-Path -Path $PSScriptRoot -Parent) `
+    -Parent
+
+$script:localizationModulePath = Join-Path `
+    -Path $script:resourceModulePath `
+    -ChildPath 'Modules\DscResource.LocalizationHelper'
+
+Import-Module -Name (
+    Join-Path `
+        -Path $script:localizationModulePath `
+        -ChildPath 'DscResource.LocalizationHelper.psm1'
+    )
 
 $script:localizedData = Get-LocalizedData -ResourceName 'MSFT_SqlSetup'
 ```
