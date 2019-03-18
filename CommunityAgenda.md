@@ -53,16 +53,17 @@ Individual resource module hotfixes for urgent issues may be released before the
 
 ### Next Call
 
-- 02/13/19 12PM-1PM PST
+- [03/27/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-03-27)
 
 [Fixed link to call](https://meet.lync.com/microsoft/kakeim/FBKT98R9)
 
 ### Latest Call
 
-- 01/09/19 12PM-1PM PST [watch here](https://youtu.be/hH2XkR-YZNQ)
+- [02/13/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-02-13)
 
 ### Past Calls
 
+- [01/09/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-01-09) - [watch here](https://youtu.be/hH2XkR-YZNQ)
 - 11/28/18 12-1PM PST - cancelled due to technical issues
 - [10/10/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-10-10)
 - [08/29/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-08-29)
@@ -77,11 +78,11 @@ Individual resource module hotfixes for urgent issues may be released before the
 - [08/16/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-08-16)
 - [07/05/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-07-05)
 - [05/24/17 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-05-24)
-- [04/12/17 9-9:30AM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/04-12-17)
-- [03/01/17 9-9:30AM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/03-01-17)
-- [01/18/17 9-9:30AM and 4-4:30PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/01-18-17)
-- [12/07/16 9-9:30AM and 4-4:30PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/12-07-16)
-- [10/26/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/10-26-16)
-- [09/15/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/09-15-16)
-- [08/03/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/08-03-16)
-- [06/30/16 1-3PM PDT](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/06-30-16)
+- [04/12/17 9-9:30AM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-04-12)
+- [03/01/17 9-9:30AM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-03-01)
+- [01/18/17 9-9:30AM and 4-4:30PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2017-01-18)
+- [12/07/16 9-9:30AM and 4-4:30PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2016-12-07)
+- [10/26/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2016-10-26)
+- [09/15/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2016-09-15)
+- [08/03/16 1-2PM PDT](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2016-08-03)
+- [06/30/16 1-3PM PDT](https://github.com/PowerShell/DscResources/tree/master/CommunityCalls/2016-06-30)
