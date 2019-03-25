@@ -55,7 +55,7 @@ Individual resource module hotfixes for urgent issues may be released before the
 
 - [03/27/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-03-27)
 
-[Fixed link to call](https://meet.lync.com/microsoft/kakeim/FBKT98R9)
+[NEW link to call](https://teams.microsoft.com/l/meetup-join/19%3ameeting_OTc2YThjZGQtNWE4Yi00NDQyLTk5NTktYWIwYjdhMGZjNDRl%40thread.v2/0?context=%7b%22Tid%22%3a%2272f988bf-86f1-41af-91ab-2d7cd011db47%22%2c%22Oid%22%3a%222fd83437-7fe6-4ee4-a109-828a19cb7bff%22%7d)
 
 ### Latest Call
 
