@@ -20,6 +20,21 @@ Participants using the Join by Phone option must dial the full number for call a
 
 ## Agenda
 
+Resources to be released:
+
+- CertificateDsc
+- NetworkingDsc
+- OfficeOnlineServerDsc
+- SecurityPolicyDsc
+- SharePointDsc
+- SqlServerDsc
+- StorageDsc
+- xActiveDirectory
+- xPSDesiredStateConfiguration
+- xWebAdministration
+- xWindowsUpdate
+- xWinEventLog (getting deprecated)
+
 Topics or questions from the community are welcome at any point during the call!
 
 - Closing old, long abandoned PRs, keeping an eye on low hanging fruits
