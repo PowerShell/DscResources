@@ -1,7 +1,7 @@
 
-# DSC Resource Kit & Configurations Community Call - May 09, 2019
+# DSC Resource Kit & Configurations Community Call - May 08, 2019
 
-**12PM (PST) on Wednesday, May 9**
+**12PM (PST) on Wednesday, May 8**
 [Add me to your calendar with this ICS file](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/DSC%20Resource%20Kit%20Community%20Call%20ICS.zip)
 
 ## How to Join
