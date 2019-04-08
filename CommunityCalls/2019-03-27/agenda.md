@@ -1,8 +1,8 @@
 
 # DSC Resource Kit & Configurations Community Call - March 27, 2019
 
-**12PM (PST) on Wednesday, March 27**  
-[ICS file](https://github.com/PowerShell/DscResources/CommunityCalls/DSC%20Resource%20Kit%20Community%20Call%20ICS.zip)
+**12PM (PST) on Wednesday, March 27**
+[ICS file](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/DSC%20Resource%20Kit%20Community%20Call%20ICS.zip)
 
 ## How to Join
 
@@ -12,11 +12,11 @@
 
 
 #### Phone
-+1 323-849-4874 United States, Los Angeles (Toll) 
-Conference ID: 503 431 76# 
-[Local numbers](https://dialin.teams.microsoft.com/8551f4c1-bea3-441a-8738-69aa517a91c5?id=50343176) 
++1 323-849-4874 United States, Los Angeles (Toll)
+Conference ID: 503 431 76#
+[Local numbers](https://dialin.teams.microsoft.com/8551f4c1-bea3-441a-8738-69aa517a91c5?id=50343176)
 
-Participants using the Join by Phone option must dial the full number for call access. 
+Participants using the Join by Phone option must dial the full number for call access.
 
 ## Agenda
 
