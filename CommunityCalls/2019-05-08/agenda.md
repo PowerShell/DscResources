@@ -31,5 +31,6 @@ Participants using the Join by Phone option must dial the full number for call a
 - Topics or questions from the community (welcome at any point during the call)
 - Celebrating new maintainers:
   - Brian Wilhite --> xPendingReboot
+  - Nehru Ali --> xPendingReboot
 - Waffle board will be closing, still looking into a replacement
 - Moving off gitter to PoshCode slack: [the PowerShell slack/discord slack](http://slack.poshcode.org/) (#dsc channel)
