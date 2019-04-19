@@ -31,5 +31,18 @@ Participants using the Join by Phone option must dial the full number for call a
 - Topics or questions from the community (welcome at any point during the call)
 - Celebrating new maintainers:
   - Brian Wilhite --> xPendingReboot
+  - Jason Patton --> xDnsServer
+  - Nehru Ali --> xPendingReboot
+  - Brian Wilhite --> xPendingReboot
+  - Johan Ljunggren --> xSmbShare (this resource is being moced to ComputerManagementDsc)
+  - Jason Ryberg --> xActiveDirectory, ActiveDirectoryCSDsc and xAzure
+  - Mike Beggs --> NetworkingDsc and xDhcpServer
+  - Ryan Christman --> xActiveDirectory
+  - Jan-Hendrik Peters --> xActiveDirectory and xSCVMM
+  - Chase Wilson --> xAzure and xFirefox
 - Waffle board will be closing, still looking into a replacement
-- Moving off gitter to PoshCode slack: [the PowerShell slack/discord slack](http://slack.poshcode.org/) (#dsc channel)
+- Moving off gitter to PoshCode slack: the #dsc channel in either [Slack](https://powershell.slack.com) or [Discord](https://discordapp.com/channels/180528040881815552/447475636487979008). *The form on the page http://slack.poshcode.org/ does not work, though there is a link in the text on that page that works. Joel has said that the form is meant to be removed*. 
+  - Join through Slack: https://j.mp/psslack
+  - Join through Discord: https://j.mp/psdiscord
+- New module submissions (if the module submission is not ready, the item is moved to next community call) 
+  - Office365Dsc
