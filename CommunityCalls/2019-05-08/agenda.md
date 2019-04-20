@@ -34,7 +34,7 @@ Participants using the Join by Phone option must dial the full number for call a
   - Jason Patton --> xDnsServer
   - Nehru Ali --> xPendingReboot
   - Brian Wilhite --> xPendingReboot
-  - Johan Ljunggren --> xSmbShare (this resource is being moced to ComputerManagementDsc)
+  - Johan Ljunggren --> xSmbShare (this resource is being moved to ComputerManagementDsc)
   - Jason Ryberg --> xActiveDirectory, ActiveDirectoryCSDsc and xAzure
   - Mike Beggs --> NetworkingDsc and xDhcpServer
   - Ryan Christman --> xActiveDirectory
