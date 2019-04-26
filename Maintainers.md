@@ -71,7 +71,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [xDhcpServer](https://github.com/PowerShell/xDhcpServer) | Mike Beggs ([@39Delta](https://github.com/39Delta)) |
 | xDisk | DEPRECATED - Replaced by [StorageDsc](https://github.com/PowerShell/StorageDsc) |
 | [xDismFeature](https://github.com/PowerShell/xDismFeature) | --- |
-| [xDnsServer](https://github.com/PowerShell/xDnsServer) | Jason Patton ([@japatton](https://github.com/japatton)) |
+| [xDnsServer](https://github.com/PowerShell/xDnsServer) | Jason Patton ([@japatton](https://github.com/japatton)) <br /> Chris Dent ([@indented-automation](https://github.com/indented-automation)) |
 | [xDscDiagnostics](https://github.com/PowerShell/xDscDiagnostics) | --- |
 | [xDSCResourceDesigner](https://github.com/PowerShell/xDSCResourceDesigner) | --- |
 | [xExchange](https://github.com/PowerShell/xExchange) | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) |
