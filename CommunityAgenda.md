@@ -4,7 +4,7 @@
 
 ### Next Release
 
-- 05/15/19
+- 06/26/19
 
 All changes for the release should be merged into the `dev` branch before the release date. 
 Resource modules that are not passing their tests in the release pull request from the `dev` branch to the `master` branch cannot be released.  
@@ -13,10 +13,11 @@ Individual resource module hotfixes for urgent issues may be released before the
 
 ### Latest Release
 
-- [04/03/19](https://devblogs.microsoft.com/powershell/dsc-resource-kit-release-april-2019/)
+- [05/15/19](https://devblogs.microsoft.com/powershell/dsc-resource-kit-release-may-2019/)
 
 ### Past Releases
 
+- [04/03/19](https://devblogs.microsoft.com/powershell/dsc-resource-kit-release-april-2019/)
 - [02/20/19](https://devblogs.microsoft.com/powershell/dsc-resource-kit-release-february-2019/)
 - [01/09/18](https://blogs.msdn.microsoft.com/powershell/2019/01/09/dsc-resource-kit-release-january-2019/)
 - [11/28/18](https://blogs.msdn.microsoft.com/powershell/2018/11/28/dsc-resource-kit-release-november-2018/)
@@ -55,16 +56,17 @@ Individual resource module hotfixes for urgent issues may be released before the
 
 ### Next Call
 
-- [05/08/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-05-08)
+- [06/19/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-06-19)
 
 [Link to call](https://teams.microsoft.com/l/meetup-join/19%3ameeting_OTc2YThjZGQtNWE4Yi00NDQyLTk5NTktYWIwYjdhMGZjNDRl%40thread.v2/0?context=%7b%22Tid%22%3a%2272f988bf-86f1-41af-91ab-2d7cd011db47%22%2c%22Oid%22%3a%222fd83437-7fe6-4ee4-a109-828a19cb7bff%22%7d)
 
 ### Latest Call
 
-- [03/27/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-03-27)
+- [05/08/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-05-08)
 
 ### Past Calls
 
+- [03/27/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-03-27)
 - [02/13/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-02-13)
 - [01/09/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-01-09) - [watch here](https://youtu.be/hH2XkR-YZNQ)
 - 11/28/18 12-1PM PST - cancelled due to technical issues
