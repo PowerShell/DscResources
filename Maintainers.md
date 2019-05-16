@@ -77,7 +77,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [xExchange](https://github.com/PowerShell/xExchange) | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) |
 | [xFailOverCluster](https://github.com/PowerShell/xFailOverCluster) | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
 | [xFirefox](https://github.com/PowerShell/xFirefox) | Chase Wilson ([@chasewilson](https://github.com/chasewilson)) |
-| [xHyper-V](https://github.com/PowerShell/xHyper-V) | Ben Gelens ([@bgelens](https://github.com/bgelens)) |
+| [xHyper-V](https://github.com/PowerShell/xHyper-V) | --- |
 | [xInternetExplorerHomePage](https://github.com/PowerShell/xInternetExplorerHomePage) | --- |
 | [xJea](https://github.com/PowerShell/xJea) | --- |
 | [xMySql](https://github.com/PowerShell/xMySql) | --- |
