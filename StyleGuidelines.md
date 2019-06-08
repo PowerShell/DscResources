@@ -2709,7 +2709,7 @@ catch
 
 #### Capitalized Pester Assertions
 
-Pester assertions should all start with capital letters.  This makes code easier to read.
+Pester assertions should all start with capital letters. This makes code easier to read.
 
 **Bad:**
 
@@ -2729,7 +2729,7 @@ It 'Should return something' {
 
 #### Assertion Messages Start with Should
 
-Pester assertions should always start with the word 'Should'.  This is to ensure the
+Pester assertions should always start with the word 'Should'. This is to ensure the
 test results read more naturally as well as helping to indentify assertion messages
 that aren't making assertions.
 
@@ -2761,9 +2761,9 @@ It 'Should return something' {
 #### Outer Context Block Messages Start with When
 
 Pester test **outer** `Context` block messages should always start with the word
-'When'.  This is to ensure the test results read more naturally as well as helping to
-indentify context messages that aren't defining context.  This only applies to the
-an **outer** `Context` block if they are being nested.
+'When'. This is to ensure the test results read more naturally as well as helping to
+indentify context messages that aren't defining context. This usually only applies
+to an **outer** `Context` block if they are nested.
 
 **Bad:**
 
