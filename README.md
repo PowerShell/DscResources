@@ -23,9 +23,12 @@ If you are new to DSC, configurations, or resources, you can learn more about th
 The DSC Resource Kit currently contains more than 55 different resource modules.
 
 You can find the source code of a resource module by visiting its GitHub page at:
-https://github.com/PowerShell/< module name >
+
+`https://github.com/PowerShell/< module name >`
+
 For example, for the CertificateDsc module, go to:
-https://github.com/PowerShell/CertificateDsc.
+
+`https://github.com/PowerShell/CertificateDsc`
 
 All DSC resource modules are also listed as submodules of this repository (DscResources) in the [xDscResources folder](https://github.com/PowerShell/DscResources/tree/master/xDscResources) or [DscResources folder](https://github.com/PowerShell/DscResources/tree/master/DscResources).
 Read about the differences in naming under the
@@ -34,12 +37,13 @@ section.
 
 To download the released source code for **all** DSC resource modules, clone this repository with this git command:
 
-```
+```shell
 git clone https://github.com/PowerShell/DscResources.git --recursive
 ```
 
 Alternatively, to download just the documentation provided in this repository, clone this repository with this git command:
-```
+
+```shell
 git clone https://github.com/PowerShell/DscResources.git
 ```
 
@@ -53,20 +57,25 @@ For example:
 http://www.powershellgallery.com/packages/xWebAdministration
 
 We recommend that you use PowerShellGet to install DSC resource modules:
+
 ```powershell
 Install-Module -Name < module name >
 ```
+
 For example:
+
 ```powershell
 Install-Module -Name xWebAdministration
 ```
 
 To update all previously installed modules at once, open an elevated PowerShell prompt and use this command:
+
 ```powershell
 Update-Module
 ```
 
 After installing modules, you can discover all DSC resources available to your local system with this command:
+
 ```powershell
 Get-DscResource
 ```

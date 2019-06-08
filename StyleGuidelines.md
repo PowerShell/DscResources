@@ -97,6 +97,8 @@ It is recommended to also follow the guidance from the [best practices](#best-pr
       - [`New-InvalidResultException`](#new-invalidresultexception)
   - [Pester Tests](#pester-tests)
     - [Capitalized Pester Assertions](#capitalized-pester-assertions)
+    - [Assertion Messages Start with Should](#assertion-messages-start-with-should)
+    - [Outer Context Block Messages Start with When](#outer-context-block-messages-start-with-when)
 
 ## Style Guidelines
 
@@ -2722,5 +2724,75 @@ it 'Should return something' {
 ```powershell
 It 'Should return something' {
     Get-TargetResource @testParameters | Should -Be 'something'
+}
+```
+
+#### Assertion Messages Start with Should
+
+Pester assertions should always start with the word 'Should'.  This is to ensure the
+test results read more naturally as well as helping to indentify assertion messages
+that aren't making assertions.
+
+**Bad:**
+
+```powershell
+# This is not an assertive message
+It 'When calling Get-TargetResource' {
+    Get-TargetResource @testParameters | Should -Be 'something'
+}
+```
+
+**Bad:**
+
+```powershell
+It 'Something is returned' {
+    Get-TargetResource @testParameters | Should -Be 'something'
+}
+```
+
+**Good:**
+
+```powershell
+It 'Should return something' {
+    Get-TargetResource @testParameters | Should -Be 'something'
+}
+```
+
+#### Outer Context Block Messages Start with When
+
+Pester test **outer** `Context` block messages should always start with the word
+'When'.  This is to ensure the test results read more naturally as well as helping to
+indentify context messages that aren't defining context.  This only applies to the
+an **outer** `Context` block if they are being nested.
+
+**Bad:**
+
+```powershell
+Context 'Calling Get-TargetResource with default parameters'
+    It 'Should return something' {
+        Get-TargetResource @testParameters | Should -Be 'something'
+    }
+}
+```
+
+**Good:**
+
+```powershell
+Context 'When Get-TargetResource is called with default parameters'
+    It 'Should return something' {
+        Get-TargetResource @testParameters | Should -Be 'something'
+    }
+}
+```
+
+**Good:**
+
+```powershell
+Context 'When Get-TargetResource is called'
+    Context 'With default parameters'
+        It 'Should return something' {
+            Get-TargetResource @testParameters | Should -Be 'something'
+        }
+    }
 }
 ```
