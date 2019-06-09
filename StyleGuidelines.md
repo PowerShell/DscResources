@@ -98,7 +98,7 @@ It is recommended to also follow the guidance from the [best practices](#best-pr
   - [Pester Tests](#pester-tests)
     - [Capitalized Pester Assertions](#capitalized-pester-assertions)
     - [Assertion Messages Start with Should](#assertion-messages-start-with-should)
-    - [Outer Context Block Messages Start with When](#outer-context-block-messages-start-with-when)
+    - [Context Block Messages Start with When](#context-block-messages-start-with-when)
 
 ## Style Guidelines
 
@@ -2745,6 +2745,7 @@ It 'When calling Get-TargetResource' {
 **Bad:**
 
 ```powershell
+# This does not start with 'Should'
 It 'Something is returned' {
     Get-TargetResource @testParameters | Should -Be 'something'
 }
@@ -2758,19 +2759,32 @@ It 'Should return something' {
 }
 ```
 
-#### Outer Context Block Messages Start with When
+#### Context Block Messages Start with When
 
 Pester test **outer** `Context` block messages should always start with the word
 'When'. This is to ensure the test results read more naturally as well as helping to
-indentify context messages that aren't defining context. This usually only applies
-to an **outer** `Context` block if they are nested.
+indentify context messages that aren't defining context.
 
 **Bad:**
 
 ```powershell
+# Context block not using 'When'
 Context 'Calling Get-TargetResource with default parameters'
     It 'Should return something' {
         Get-TargetResource @testParameters | Should -Be 'something'
+    }
+}
+```
+
+**Bad:**
+
+```powershell
+Context 'When calling Get-TargetResource'
+    # Inner context block not using 'When'
+    Context 'With default parameters'
+        It 'Should return something' {
+            Get-TargetResource @testParameters | Should -Be 'something'
+        }
     }
 }
 ```
@@ -2789,7 +2803,7 @@ Context 'When Get-TargetResource is called with default parameters'
 
 ```powershell
 Context 'When Get-TargetResource is called'
-    Context 'With default parameters'
+    Context 'When passing default parameters'
         It 'Should return something' {
             Get-TargetResource @testParameters | Should -Be 'something'
         }
