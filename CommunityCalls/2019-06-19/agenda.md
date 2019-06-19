@@ -38,7 +38,7 @@ There are 7 modules on track for release on Wednesday June 26:
 ### Discussions
 
 - Topics or questions from the community (welcome at any point during the call)
-- Ben not able to maintain HyperV anymore
+- Ben Gelens not able to maintain [xHyper-V](https://github.com/PowerShell/xHyper-V) anymore
 - [DSC Community Logo](https://github.com/PowerShell/DscResources/issues/507)
 - Waffle board has closed, Migrated to GitHub board, but not great
 - Talk to us on PoshCode slack: the #dsc channel in either [Slack](https://powershell.slack.com) or [Discord](https://discordapp.com/channels/180528040881815552/447475636487979008). *The form on the page http://slack.poshcode.org/ does not work, though there is a link in the text on that page that works. Joel has said that the form is meant to be removed*.
