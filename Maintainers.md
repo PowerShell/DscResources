@@ -95,7 +95,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [xSCSPF](https://github.com/PowerShell/xSCSPF) | --- |
 | [xSCSR](https://github.com/PowerShell/xSCSR) | --- |
 | [xSCVMM](https://github.com/PowerShell/xSCVMM) | Jan-Hendrik Peters ([@nyanhp](https://github.com/nyanhp)) |
-| [xSmbShare](https://github.com/PowerShell/xSmbShare) | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
+| xSmbShare | DEPRECATED - Migrated to [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) |
 | xSqlPs | DEPRECATED - Replaced by [SqlServerDsc](https://github.com/PowerShell/SqlServerDsc) |
 | [xSystemSecurity](https://github.com/PowerShell/xSystemSecurity) | --- |
 | xTimeZone | DEPRECATED - Migrated to [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) |
