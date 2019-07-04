@@ -193,3 +193,6 @@
 [submodule "DscResources/WmiNamespaceSecurityDsc"]
 	path = DscResources/WmiNamespaceSecurityDsc
 	url = https://github.com/PowerShell/WmiNamespaceSecurityDsc
+	[submodule "DscResources/JeaDsc"]
+	path = DscResources/JeaDsc
+	url = https://github.com/ChrisLGardner/JeaDsc
