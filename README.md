@@ -1,6 +1,6 @@
 # DSC Resources
 
-[![Join the chat at https://gitter.im/PowerShell/DscResources](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/PowerShell/DscResources?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat on PowerShell Slack #DSC](https://img.shields.io/badge/Slack-PowerShell-blue.svg)](https://j.mp/psslack)
 
 This is the central repository for the DSC Resource Kit, a collection of DSC
 resources maintained and released by Microsoft.
