@@ -1,6 +1,7 @@
 # DSC Resources
 
 [![Join the chat on PowerShell Slack #DSC](https://img.shields.io/badge/Slack-PowerShell-blue.svg)](https://j.mp/psslack)
+[![Join the chat on PowerShell Slack #DSC Discord](https://img.shields.io/badge/Discord-PowerShell-blue.svg)](https://j.mp/psdiscord)
 
 This is the central repository for the DSC Resource Kit, a collection of DSC
 resources maintained and released by Microsoft.
