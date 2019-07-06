@@ -142,7 +142,7 @@ Here's the general process of fixing an issue in the DSC Resource Kit:
 
 Issues that are currently up-for-grabs are tagged with the ```help wanted``` label.
 You can see all the issues tagged with ```help wanted``` across all the modules
-in the DSC Resource Kit in the Help Wanted column on our [dashboard](https://waffle.io/powershell/dscresources/join).
+in the DSC Resource Kit in the Help Wanted column on our [dashboard](https://github.com/orgs/PowerShell/projects/1).
 
 If you find an issue that you want to work on, but it does not have the
 ```help wanted``` label, make sure to read through the issue and ask if you can
@@ -595,7 +595,7 @@ by community members often help pull requests get merged much faster as there ar
 very few maintainers and a lot of pull requests to review.
 
 All pull requests across all modules in the DSC Resource Kit that are open for
-review can be seen in the Needs Review column on our [dashboard](https://waffle.io/powershell/dscresources/join).
+review can be seen in the Needs Review column on our [dashboard](https://github.com/orgs/PowerShell/projects/1).
 
 **Pull requests should not be reviewed while tests from AppVeyor are failing.**
 If you are confused why tests in AppVeyor are failing, tag a maintainer or ask

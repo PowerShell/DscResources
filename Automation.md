@@ -4,6 +4,11 @@ Some areas and workflows of the DSC Resource Kit are automated, and future
 automation will cover other areas. This document has both information around
 present automations, and potential future automations.
 
+> Important note: the Waffle Board is being deprecated in favor of using a
+> [GitHub Project board](https://github.com/orgs/PowerShell/projects/1).
+> The documentation in this document is yet to be updated to reflect this
+> new board.
+
 ## Table of Contents
 
 - [Labels](#labels)

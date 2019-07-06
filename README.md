@@ -7,7 +7,7 @@ This is the central repository for the DSC Resource Kit, a collection of DSC
 resources maintained and released by Microsoft.
 
 A dashboard of all open issues and pull requests across DSC Resource Kit is
-available on the [DSC Resource Kit Waffle board](http://waffle.io/powershell/dscresources).
+available on the [DSC Resource Kit GitHub Project board](https://github.com/orgs/PowerShell/projects/1).
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)
