@@ -137,10 +137,10 @@ to send changes there.
 
 ```plaintext
 > git remote -v
-my	https://github.com/vors/xActiveDirectory (fetch)
-my	https://github.com/vors/xActiveDirectory (push)
-origin	https://github.com/PowerShell/xActiveDirectory (fetch)
-origin	https://github.com/PowerShell/xActiveDirectory (push)
+my      https://github.com/vors/xActiveDirectory (fetch)
+my      https://github.com/vors/xActiveDirectory (push)
+origin  https://github.com/PowerShell/xActiveDirectory (fetch)
+origin  https://github.com/PowerShell/xActiveDirectory (push)
 ```
 
 Now you have two remote references:
@@ -497,4 +497,5 @@ In a PowerShell prompt, you need to do the following.
    git push my changes-from-PR#<number> --force  # Change to the PR number, i.e. git push my changes-from-PR#34 --force
    ```
 
-1. Now, go to you forked repository on GitHub and create the pull request the normal way.
+1. Now, go to you forked repository on GitHub and create the pull request the
+  normal way.

@@ -79,10 +79,11 @@ When DSC was originally introduced,
 it was communicated that new modules should be prefixed with an "x"
 to help identify that the work might not be suitable for use in a production environment.
 
-The community has now matured and guidelines exist to hold project maintainers accountable
-through the use of CI process where tests are required and the results are publicly available.
-Anyone that would like to evaluate the quality of a module can view the project documentation,
-code, tests, and test results, to understand if the work is suitable for their environment.
+The community has now matured and guidelines exist to hold project maintainers
+accountable through the use of CI process where tests are required and the results
+are publicly available. Anyone that would like to evaluate the quality of a module
+can view the project documentation, code, tests, and test results, to understand
+if the work is suitable for their environment.
 
 The "x" prefix is no longer required.
 Resources that include the prefix are free to deprecate the convention going forward.

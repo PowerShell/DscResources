@@ -8,10 +8,13 @@
 
 - 08/07/19
 
-All changes for the release should be merged into the `dev` branch before the release date. 
-Resource modules that are not passing their tests in the release pull request from the `dev` branch to the `master` branch cannot be released.  
-Resource modules with open issues labeled `blocking release` cannot be released.  
-Individual resource module hotfixes for urgent issues may be released before the official release date on a case-by-case basis.  
+All changes for the release should be merged into the `dev` branch before the
+release date.
+Resource modules that are not passing their tests in the release pull request
+from the `dev` branch to the `master` branch cannot be released.
+Resource modules with open issues labeled `blocking release` cannot be released.
+Individual resource module hotfixes for urgent issues may be released before the
+official release date on a case-by-case basis.
 
 ### Latest Release
 
@@ -72,7 +75,8 @@ Individual resource module hotfixes for urgent issues may be released before the
 - [05/08/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-05-08)
 - [03/27/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-03-27)
 - [02/13/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-02-13)
-- [01/09/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-01-09) - [watch here](https://youtu.be/hH2XkR-YZNQ)
+- [01/09/19 12PM-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2019-01-09)
+  -- [watch here](https://youtu.be/hH2XkR-YZNQ)
 - 11/28/18 12-1PM PST - cancelled due to technical issues
 - [10/10/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-10-10)
 - [08/29/18 12-1PM PST](https://github.com/PowerShell/DscResources/blob/master/CommunityCalls/2018-08-29)
