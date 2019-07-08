@@ -15,8 +15,8 @@ Prior to listing in DSC Resource repository under [DscResources](https://github.
 ## First step
 
 When you think your resource module is ready for listing in DSC Resource Kit,
-then the first step is to create a new issue using the *New resource module submission* issue
-template. It should include all the information needed to make a successful
+then the first step is to create a new issue using the *New resource module submission*
+issue template. It should include all the information needed to make a successful
 resource module submission (including the above information).
 
 >***Note:** You can look at the template to get the information without submitting
