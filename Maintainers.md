@@ -91,7 +91,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [xSafeHarbor](https://github.com/PowerShell/xSafeHarbor) | --- |
 | [xSCDPM](https://github.com/PowerShell/xSCDPM) | Leo D'Arcy ([@ld0614](https://github.com/ld0614)) |
 | [xSCOM](https://github.com/PowerShell/xSCOM) | Leo D'Arcy ([@ld0614](https://github.com/ld0614)) |
-| [xSCSMA](https://github.com/PowerShell/xSCSMA) | --- |
+| [xSCSMA](https://github.com/PowerShell/xSCSMA) | Jason Ryberg ([@devopsjesus](https://github.com/devopsjesus)) |
 | [xSCSPF](https://github.com/PowerShell/xSCSPF) | --- |
 | [xSCSR](https://github.com/PowerShell/xSCSR) | --- |
 | [xSCVMM](https://github.com/PowerShell/xSCVMM) | Jan-Hendrik Peters ([@nyanhp](https://github.com/nyanhp)) |
