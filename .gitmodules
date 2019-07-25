@@ -1,6 +1,3 @@
-[submodule "xDscResources/xActiveDirectory"]
-	path = xDscResources/xActiveDirectory
-	url = https://github.com/PowerShell/xActiveDirectory
 [submodule "xDscResources/xAzure"]
 	path = xDscResources/xAzure
 	url = https://github.com/PowerShell/xAzure
