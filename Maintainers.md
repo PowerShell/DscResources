@@ -43,6 +43,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | Repository | Maintainer(s) |
 | ---------- | ------------- |
 | [ActiveDirectoryCSDsc](https://github.com/PowerShell/ActiveDirectoryCSDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) <br/> Jason Ryberg ([@devopsjesus](https://github.com/devopsjesus)) |
+| [ActiveDirectoryDsc](https://github.com/PowerShell/ActiveDirectoryDsc) | Johan Ljunggren ([@johlju](https://github.com/johlju)) <br/> Jan-Hendrik Peters ([@nyanhp](https://github.com/nyanhp)) <br/> Jason Ryberg ([@devopsjesus](https://github.com/devopsjesus)) <br/> Ryan Christman ([rchristman89](https://github.com/rchristman89)) |
 | [AuditPolicyDsc](https://github.com/PowerShell/AuditPolicyDsc) | Adam Haynes ([@athaynes](https://github.com/athaynes)) |
 | [CertificateDsc](https://github.com/PowerShell/CertificateDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
@@ -62,7 +63,6 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [SystemLocaleDsc](https://github.com/PowerShell/SystemLocaleDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [WmiNamespaceSecurityDsc](https://github.com/PowerShell/WmiNamespaceSecurityDsc) | --- |
 | [WSManDsc](https://github.com/PlagueHO/WSManDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| [xActiveDirectory](https://github.com/PowerShell/xActiveDirectory) | Johan Ljunggren ([@johlju](https://github.com/johlju)) <br/> Jan-Hendrik Peters ([@nyanhp](https://github.com/nyanhp)) <br/> Jason Ryberg ([@devopsjesus](https://github.com/devopsjesus)) <br/> Ryan Christman ([rchristman89](https://github.com/rchristman89)) |
 | [xAzure](https://github.com/PowerShell/xAzure) | Chase Wilson ([@chasewilson](https://github.com/chasewilson)) <br/> Jason Ryberg ([@devopsjesus](https://github.com/devopsjesus)) |
 | [xAzurePack](https://github.com/PowerShell/xAzurePack) | --- |
 | [xBitlocker](https://github.com/PowerShell/xBitlocker) | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) |
