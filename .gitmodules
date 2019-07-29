@@ -190,3 +190,6 @@
 [submodule "DscResources/WmiNamespaceSecurityDsc"]
 	path = DscResources/WmiNamespaceSecurityDsc
 	url = https://github.com/PowerShell/WmiNamespaceSecurityDsc
+[submodule "DscResources\\GroupPolicyDsc"]
+	path = DscResources\\GroupPolicyDsc
+	url = https://github.com/corydwood/GroupPolicyDsc
