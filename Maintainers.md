@@ -47,7 +47,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [AuditPolicyDsc](https://github.com/PowerShell/AuditPolicyDsc) | Adam Haynes ([@athaynes](https://github.com/athaynes)) |
 | [CertificateDsc](https://github.com/PowerShell/CertificateDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| [DFSDsc](https://github.com/PowerShell/DFSDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [DFSDsc](https://github.com/PowerShell/DFSDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) <br/> Matthew Collera ([@mcollera](https://github.com/mcollera)) |
 | [DscResources](https://github.com/PowerShell/DscResources) | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Zachary Alexander ([@zjalexander](https://github.com/zjalexander)) |
 | [DscResource.Tests](https://github.com/PowerShell/DscResource.Tests) | Katie Keim ([@kwirkykat](https://github.com/kwirkykat)) <br/> Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)) |
 | [FileContentDsc](https://github.com/PlagueHO/FileContentDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
@@ -79,7 +79,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [xExchange](https://github.com/PowerShell/xExchange) | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) |
 | [xFailOverCluster](https://github.com/PowerShell/xFailOverCluster) | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
 | [xFirefox](https://github.com/PowerShell/xFirefox) | Chase Wilson ([@chasewilson](https://github.com/chasewilson)) |
-| [xHyper-V](https://github.com/PowerShell/xHyper-V) | Anthony Romano ([@aromano2](https://github.com/aromano2)) |
+| [xHyper-V](https://github.com/PowerShell/xHyper-V) | Anthony Romano ([@aromano2](https://github.com/aromano2)) <br/> Matthew Collera ([@mcollera](https://github.com/mcollera)) |
 | [xInternetExplorerHomePage](https://github.com/PowerShell/xInternetExplorerHomePage) | --- |
 | [xJea](https://github.com/PowerShell/xJea) | --- |
 | [xMySql](https://github.com/PowerShell/xMySql) | --- |
