@@ -87,7 +87,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [xPhp](https://github.com/PowerShell/xPhp) | --- |
 | xPowerShellExecutionPolicy | DEPRECATED - Migrated to [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) |
 | [xPSDesiredStateConfiguration](https://github.com/PowerShell/xPSDesiredStateConfiguration) | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| [xRemoteDesktopAdmin](https://github.com/PowerShell/xRemoteDesktopAdmin) | --- |
+| [xRemoteDesktopAdmin](https://github.com/PowerShell/xRemoteDesktopAdmin) | DEPRECATED - Migrated to [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) |
 | [xRemoteDesktopSessionHost](https://github.com/PowerShell/xRemoteDesktopSessionHost) | Leo D'Arcy ([@ld0614](https://github.com/ld0614)) |
 | [xRobocopy](https://github.com/PowerShell/xRobocopy) | --- |
 | [xSafeHarbor](https://github.com/PowerShell/xSafeHarbor) | --- |
