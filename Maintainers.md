@@ -83,11 +83,11 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [xInternetExplorerHomePage](https://github.com/PowerShell/xInternetExplorerHomePage) | --- |
 | [xJea](https://github.com/PowerShell/xJea) | --- |
 | [xMySql](https://github.com/PowerShell/xMySql) | --- |
-| [xPendingReboot](https://github.com/PowerShell/xPendingReboot) | Brian Wilhite ([@bcwilhite](https://github.com/bcwilhite)) <br/> Nehru Ali ([@nehrua](https://github.com/nehrua)) |
+| [xPendingReboot](https://github.com/PowerShell/xPendingReboot) | DEPRECATED - Migrated to [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) |
 | [xPhp](https://github.com/PowerShell/xPhp) | --- |
 | xPowerShellExecutionPolicy | DEPRECATED - Migrated to [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) |
 | [xPSDesiredStateConfiguration](https://github.com/PowerShell/xPSDesiredStateConfiguration) | Mike Hendrickson ([@mhendric](https://github.com/mhendric)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| [xRemoteDesktopAdmin](https://github.com/PowerShell/xRemoteDesktopAdmin) | --- |
+| [xRemoteDesktopAdmin](https://github.com/PowerShell/xRemoteDesktopAdmin) | DEPRECATED - Migrated to [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) |
 | [xRemoteDesktopSessionHost](https://github.com/PowerShell/xRemoteDesktopSessionHost) | Leo D'Arcy ([@ld0614](https://github.com/ld0614)) |
 | [xRobocopy](https://github.com/PowerShell/xRobocopy) | --- |
 | [xSafeHarbor](https://github.com/PowerShell/xSafeHarbor) | --- |
