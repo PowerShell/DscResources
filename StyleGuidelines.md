@@ -471,6 +471,13 @@ Each property should be on its own line indented once.
 **Bad:**
 
 ```powershell
+$hashtable = @{
+}
+```
+
+**Bad:**
+
+```powershell
 $hashtable = @{Key1 = 'Value1';Key2 = 2;Key3 = '3'}
 ```
 
@@ -480,6 +487,12 @@ $hashtable = @{Key1 = 'Value1';Key2 = 2;Key3 = '3'}
 $hashtable = @{ Key1 = 'Value1'
 Key2 = 2
 Key3 = '3' }
+```
+
+**Good:**
+
+```powershell
+$hashtable = @{}
 ```
 
 **Good:**
