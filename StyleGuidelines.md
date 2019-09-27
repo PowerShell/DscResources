@@ -478,6 +478,12 @@ $hashtable = @{
 **Bad:**
 
 ```powershell
+$hashtable = @{ }
+```
+
+**Bad:**
+
+```powershell
 $hashtable = @{Key1 = 'Value1';Key2 = 2;Key3 = '3'}
 ```
 
