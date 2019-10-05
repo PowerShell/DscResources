@@ -60,7 +60,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | [SharePointDsc](https://github.com/PowerShell/SharePointDsc) | Yorick Kuijs ([@ykuijs](https://github.com/YKuijs)) <br/> Nik Charlebois ([@NikCharlebois](https://github.com/NikCharlebois)) |
 | [SqlServerDsc](https://github.com/PowerShell/SqlServerDsc) | Johan Ljunggren ([@johlju](https://github.com/johlju)) |
 | [StorageDsc](https://github.com/PowerShell/StorageDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
-| [SystemLocaleDsc](https://github.com/PowerShell/SystemLocaleDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
+| [SystemLocaleDsc](https://github.com/PowerShell/SystemLocaleDsc) | DEPRECATED - Migrated to [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) |
 | [WmiNamespaceSecurityDsc](https://github.com/PowerShell/WmiNamespaceSecurityDsc) | --- |
 | [WSManDsc](https://github.com/PlagueHO/WSManDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [xAzure](https://github.com/PowerShell/xAzure) | Chase Wilson ([@chasewilson](https://github.com/chasewilson)) <br/> Jason Ryberg ([@devopsjesus](https://github.com/devopsjesus)) |
