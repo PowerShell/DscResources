@@ -43,7 +43,7 @@ and Mariah Breakey ([@mbreakey3](https://github.com/mbreakey3)).
 | Repository | Maintainer(s) |
 | ---------- | ------------- |
 | [ActiveDirectoryCSDsc](https://github.com/PowerShell/ActiveDirectoryCSDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) <br/> Jason Ryberg ([@devopsjesus](https://github.com/devopsjesus)) |
-| [ActiveDirectoryDsc](https://github.com/PowerShell/ActiveDirectoryDsc) | Johan Ljunggren ([@johlju](https://github.com/johlju)) <br/> Jan-Hendrik Peters ([@nyanhp](https://github.com/nyanhp)) <br/> Jason Ryberg ([@devopsjesus](https://github.com/devopsjesus)) <br/> Ryan Christman ([rchristman89](https://github.com/rchristman89)) |
+| [ActiveDirectoryDsc](https://github.com/PowerShell/ActiveDirectoryDsc) | Johan Ljunggren ([@johlju](https://github.com/johlju)) <br/> Jan-Hendrik Peters ([@nyanhp](https://github.com/nyanhp)) <br/> Jason Ryberg ([@devopsjesus](https://github.com/devopsjesus)) <br/> Ryan Christman ([@rchristman89](https://github.com/rchristman89)) <br/> Simon Heather ([@x-guardian](https://github.com/x-guardian)) |
 | [AuditPolicyDsc](https://github.com/PowerShell/AuditPolicyDsc) | Adam Haynes ([@athaynes](https://github.com/athaynes)) |
 | [CertificateDsc](https://github.com/PowerShell/CertificateDsc) | Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
 | [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc) | Tyson Hayes ([@tysonjhayes](https://github.com/tysonjhayes)) <br/> Daniel Scott-Raynsford ([@PlagueHO](https://github.com/PlagueHO)) |
