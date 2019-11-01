@@ -23,7 +23,7 @@ Please review the DSC Resource Kit support guidelines [here](https://github.com/
 Desired State Configuration (DSC) is a declarative management platform in PowerShell
 to configure, deploy, and manage systems.
 If you are new to DSC, configurations, or resources, you can learn more about
-them [here](https://docs.microsoft.com/en-us/powershell/dsc/overview).
+them [here](https://docs.microsoft.com/en-us/powershell/scripting/dsc/overview/overview).
 
 ## Resource Module Source Code
 
