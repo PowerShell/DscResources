@@ -123,8 +123,8 @@ UTF-8 or ASCII.
 
 #### Descriptive Names
 
-Use descriptive, clear, and full names for all variables, parameters, and functions.
-All names must be at least more than **2** characters.
+Use complete, descriptive, and clear names for all variables, parameters, and functions.
+All names must be more than **2** characters.
 No abbreviations should be used.
 
 **Bad:**
@@ -199,16 +199,15 @@ function Set-ServerName
 #### Correct Parameter Usage in Function and Cmdlet Calls
 
 Use named parameters for function and cmdlet calls rather than positional parameters.
-Named parameters help other developers who are unfamiliar with your code to better
-understand it.
+Named parameters make your code easier to read and understand.
 
 When calling a function with many long parameters, use parameter splatting. If
-splatting is used, then all the parameters should be in the splat.
+splatting is used, all the parameters should be included in the splat.
 More help on splatting can be found in the article
 [About Splatting](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting).
 
-Make sure hashtable parameters are still properly formatted with multiple lines
-and the proper indentation.
+Make sure hashtable parameters are properly formatted with multiple lines
+and proper indentation.
 
 **Bad:**
 
@@ -220,8 +219,7 @@ Get-ChildItem C:\Documents *.md
 
 **Bad:**
 
-The call is very long and will wrap a lot in the review tool when the code is
-viewed by the reviewer during the review process of the PR.
+The call is very long and will wrap in the review tool, making the code less readable by the reviewer during the review process.
 
 ```powershell
 $mySuperLongHashtableParameter = @{
@@ -234,7 +232,7 @@ $superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtablePara
 
 **Bad:**
 
-Hashtable is not following [Correct Format for Hashtables or Objects](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md#correct-format-for-hashtables-or-objects).
+Hashtable does not follow [Correct Format for Hashtables and Objects](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md#correct-format-for-hashtables-and-objects).
 
 ```powershell
 $superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtableParameter @{ MySuperLongKey1 = 'MySuperLongValue1'; MySuperLongKey2 = 'MySuperLongValue2' } -MySuperLongStringParameter '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890' -Verbose
@@ -242,7 +240,7 @@ $superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtablePara
 
 **Bad:**
 
-Hashtable is not following [Correct Format for Hashtables or Objects](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md#correct-format-for-hashtables-or-objects).
+Hashtable does not follow [Correct Format for Hashtables and Objects](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md#correct-format-for-hashtables-and-objects).
 
 ```powershell
 $superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtableParameter @{ MySuperLongKey1 = 'MySuperLongValue1'; MySuperLongKey2 = 'MySuperLongValue2' } `
@@ -252,7 +250,7 @@ $superLongVariableName = Get-MySuperLongVariablePlease -MySuperLongHashtablePara
 
 **Bad:**
 
-Hashtable is not following [Correct Format for Hashtables or Objects](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md#correct-format-for-hashtables-or-objects).
+Hashtable does not follow [Correct Format for Hashtables and Objects](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md#correct-format-for-hashtables-and-objects).
 
 ```powershell
 $superLongVariableName = Get-MySuperLongVariablePlease `
@@ -339,13 +337,13 @@ $superLongVariableName = Get-MySuperLongVariablePlease `
 
 Arrays should be written in one of the following formats.
 
-If an array is declared on a single line, then there should be a single space
-between each element in the array. If arrays written on a single line tend to be
-long, please consider using one of the alternative ways of writing the array.
+If an array is declared on a single line, make sure to include a single space
+between each element in the array. If the array is too long for a single line,
+consider using one of the alternative ways of writing the array.
 
 **Bad:**
 
-Array elements are not format consistently.
+Array elements are not formatted consistently.
 
 ```powershell
 $array = @( 'one', `
@@ -356,7 +354,7 @@ $array = @( 'one', `
 
 **Bad:**
 
-There are no single space beetween the elements in the array.
+There are no single spaces between elements in the array.
 
 ```powershell
 $array = @('one','two','three')
@@ -376,7 +374,7 @@ $array = @(
 
 **Bad:**
 
-Hashtable is not following [Correct Format for Hashtables or Objects](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md#correct-format-for-hashtables-or-objects).
+Hashtable does not follow [Correct Format for Hashtables and Objects](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md#correct-format-for-hashtables-and-objects).
 
 ```powershell
 $array = @(
@@ -388,7 +386,7 @@ $array = @(
 
 **Bad:**
 
-Hashtables are not following [Correct Format for Hashtables or Objects](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md#correct-format-for-hashtables-or-objects).
+Hashtables do not follow [Correct Format for Hashtables and Objects](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md#correct-format-for-hashtables-and-objects).
 
 ```powershell
 $myArray = @(
@@ -463,10 +461,10 @@ $myArray = @(
 )
 ```
 
-#### Correct Format for Hashtables or Objects
+#### Correct Format for Hashtables and Objects
 
 Hashtables and Objects should be written in the following format.
-Each property should be on its own line indented once.
+Each property should be on its own line and indented one tab space.
 
 **Bad:**
 
@@ -526,55 +524,55 @@ $hashtable = @{
 
 #### Correct use of single- and double quotes
 
-Single quotes should always be used to delimit string literals wherever possible.
-Double quoted string literals may only be used when it contains ($) expressions
+Single quotes should be used to delimit string literals whenever possible.
+Double quoted string literals may only be used when the string contains ($) expressions
 that need to be evaluated.
 
 **Bad:**
 
 ```powershell
-$string = "String that do not evaluate variable"
+$string = "String that does not evaluate a variable"
 ```
 
 **Bad:**
 
 ```powershell
-$string = "String that evaluate variable {0}" -f $SomeObject.SomeProperty
+$string = "String that evaluates a variable {0}" -f $SomeObject.SomeProperty
 ```
 
 **Good:**
 
 ```powershell
-$string = 'String that do not evaluate variable'
+$string = 'String that does not evaluate a variable'
 ```
 
 **Good:**
 
 ```powershell
-$string = 'String that evaluate variable {0}' -f $SomeObject.SomeProperty
+$string = 'String that evaluates a variable {0}' -f $SomeObject.SomeProperty
 ```
 
 **Good:**
 
 ```powershell
-$string = "String that evaluate variable $($SomeObject.SomeProperty)"
+$string = "String that evaluates a variable $($SomeObject.SomeProperty)"
 ```
 
 **Good:**
 
 ```powershell
-$string = 'String that evaluate variable ''{0}''' -f $SomeObject.SomeProperty
+$string = 'String that evaluates a variable ''{0}''' -f $SomeObject.SomeProperty
 ```
 
 **Good:**
 
 ```powershell
-$string = "String that evaluate variable '{0}'" -f $SomeObject.SomeProperty
+$string = "String that evaluates a variable '{0}'" -f $SomeObject.SomeProperty
 ```
 
 #### Correct Format for Comments
 
-There should not be any commented-out code in checked-in files.
+There should be no commented-out code in checked-in files.
 The first letter of the comment should be capitalized.
 
 Single line comments should be on their own line and start with a single pound-sign
